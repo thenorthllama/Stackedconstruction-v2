@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#projects", label: "Projects" },
-  { href: "#services", label: "Services" },
+  { href: "/services", label: "Services" },
+  { href: "/areas/fort-myers", label: "Areas" },
   { href: "/process", label: "Process" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "/#projects", label: "Projects" },
 ];
 
 export default function Header() {
@@ -48,12 +48,12 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="rounded-full border border-white/30 px-6 py-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-all hover:border-white hover:bg-white hover:text-warm-900"
           >
             Get Estimate
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -93,13 +93,13 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="mt-2 inline-block rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-warm-900"
                 onClick={() => setMobileOpen(false)}
               >
                 Get Free Estimate
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

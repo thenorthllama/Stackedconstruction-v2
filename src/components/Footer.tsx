@@ -1,25 +1,32 @@
-const serviceAreas = [
-  "Fort Myers",
-  "Cape Coral",
-  "Naples",
-  "Bonita Springs",
+import Link from "next/link";
+
+const serviceLinks = [
+  { name: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
+  { name: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
+  { name: "Home Renovation", href: "/services/home-renovation" },
+  { name: "Outdoor Living & Kitchens", href: "/services/outdoor-living" },
+  { name: "Flooring & Tile", href: "/services/flooring-tile" },
+];
+
+const areaLinks = [
+  { name: "Fort Myers", href: "/areas/fort-myers" },
+  { name: "Cape Coral", href: "/areas/cape-coral" },
+  { name: "Naples", href: "/areas/naples" },
+  { name: "Bonita Springs", href: "/areas/bonita-springs" },
+  { name: "Marco Island", href: "/areas/marco-island" },
+  { name: "Punta Gorda", href: "/areas/punta-gorda" },
+  { name: "Lee County", href: "/areas/lee-county" },
+  { name: "Collier County", href: "/areas/collier-county" },
+  { name: "Charlotte County", href: "/areas/charlotte-county" },
+];
+
+const secondaryAreas = [
   "Estero",
   "Lehigh Acres",
-  "Marco Island",
-  "Punta Gorda",
   "Port Charlotte",
   "North Fort Myers",
   "Fort Myers Beach",
   "Sanibel",
-];
-
-const services = [
-  "Kitchen Remodeling",
-  "Bathroom Renovation",
-  "Outdoor Living & Kitchens",
-  "Full Home Renovation",
-  "Flooring & Tile",
-  "Luxury Home Remodeling",
 ];
 
 export default function Footer() {
@@ -38,8 +45,9 @@ export default function Footer() {
               </span>
             </p>
             <p className="mb-6 text-sm leading-relaxed text-warm-500">
-              Premium home remodeling in Southwest Florida. Built on honesty,
-              quality craftsmanship, and clear communication.
+              Premium home remodeling in Southwest Florida. Kitchen remodeling,
+              bathroom renovation, outdoor living, and full home renovations
+              across Fort Myers, Naples, Cape Coral, and all of SWFL.
             </p>
             <div className="flex gap-4">
               <a
@@ -73,14 +81,14 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-3">
-              {services.map((s) => (
-                <li key={s}>
-                  <a
-                    href="#services"
+              {serviceLinks.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
                     className="text-sm text-warm-500 transition-colors hover:text-white"
                   >
-                    {s}
-                  </a>
+                    {s.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -91,13 +99,21 @@ export default function Footer() {
             <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
               Service Areas
             </h3>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
-              {serviceAreas.map((area) => (
-                <li key={area} className="text-sm text-warm-500">
-                  {area}
+            <ul className="space-y-3">
+              {areaLinks.map((area) => (
+                <li key={area.href}>
+                  <Link
+                    href={area.href}
+                    className="text-sm text-warm-500 transition-colors hover:text-white"
+                  >
+                    {area.name}
+                  </Link>
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-xs text-warm-600">
+              Also serving {secondaryAreas.join(", ")}
+            </p>
           </div>
 
           {/* Contact */}
@@ -131,12 +147,41 @@ export default function Footer() {
                 </li>
               </ul>
             </address>
+
+            <div className="mt-6">
+              <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+                Quick Links
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/process" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Our Process
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#projects" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#testimonials" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Get Free Estimate
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="mt-14 border-t border-warm-800 pt-8 text-center text-xs text-warm-600">
           &copy; {new Date().getFullYear()} Stacked Construction. All rights
-          reserved. Licensed &amp; Insured in Florida.
+          reserved. Licensed &amp; Insured in Florida. Serving Lee County, Collier
+          County, and Charlotte County.
         </div>
       </div>
     </footer>
