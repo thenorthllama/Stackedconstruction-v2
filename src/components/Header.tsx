@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/areas/fort-myers", label: "Areas" },
   { href: "/process", label: "Process" },
+  { href: "/blog", label: "Blog" },
   { href: "/#projects", label: "Projects" },
 ];
 

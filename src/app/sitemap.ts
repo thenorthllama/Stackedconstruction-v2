@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { services, cities, counties, getAllCityServiceParams } from "@/data/seo";
+import { articles, clusters } from "@/data/blog";
 
 const BASE_URL = "https://stackedconstruction.co";
 
@@ -62,11 +63,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
+  // Blog index
+  const blogIndexPage: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Blog article pages
+  const blogArticlePages: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${BASE_URL}/blog/${article.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Blog category pages
+  const blogCategoryPages: MetadataRoute.Sitemap = clusters.map((cluster) => ({
+    url: `${BASE_URL}/blog/category/${cluster.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticPages,
     ...servicePages,
     ...cityPages,
     ...countyPages,
     ...cityServicePages,
+    ...blogIndexPage,
+    ...blogArticlePages,
+    ...blogCategoryPages,
   ];
 }
