@@ -37,6 +37,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://stackedconstruction.co/areas/${citySlug}/${serviceSlug}`,
+    },
     openGraph: { title, description },
   };
 }

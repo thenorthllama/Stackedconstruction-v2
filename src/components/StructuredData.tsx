@@ -1,4 +1,21 @@
 export default function StructuredData() {
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://stackedconstruction.co/#website",
+    name: "Stacked Construction",
+    url: "https://stackedconstruction.co",
+    publisher: { "@id": "https://stackedconstruction.co/#business" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://stackedconstruction.co/blog?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -11,7 +28,7 @@ export default function StructuredData() {
     email: "info@stackedconstruction.co",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
+      streetAddress: "",
       addressLocality: "Fort Myers",
       addressRegion: "FL",
       postalCode: "33901",
@@ -68,8 +85,9 @@ export default function StructuredData() {
       bestRating: "5",
     },
     sameAs: [
-      "https://facebook.com/profile.php?id=61586672805182",
-      "https://instagram.com/stackedconstruction/",
+      "https://www.facebook.com/profile.php?id=61586672805182",
+      "https://www.instagram.com/stackedconstruction/",
+      "https://www.linkedin.com/company/111945969/",
     ],
     priceRange: "$$-$$$$",
     paymentAccepted: "Cash, Credit Card, Check, Financing",
@@ -87,9 +105,15 @@ export default function StructuredData() {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+      />
+    </>
   );
 }

@@ -24,6 +24,9 @@ export async function generateMetadata({
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    alternates: {
+      canonical: `https://stackedconstruction.co/services/${slug}`,
+    },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
@@ -48,6 +51,37 @@ export default async function ServicePage({
   const midpoint = Math.ceil(service.benefits.length / 2);
   const benefitsLeft = service.benefits.slice(0, midpoint);
   const benefitsRight = service.benefits.slice(midpoint);
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.name,
+    description: service.description,
+    url: `https://stackedconstruction.co/services/${slug}`,
+    provider: {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://stackedconstruction.co/#business",
+      name: "Stacked Construction",
+    },
+    areaServed: [
+      { "@type": "City", name: "Fort Myers" },
+      { "@type": "City", name: "Naples" },
+      { "@type": "City", name: "Cape Coral" },
+      { "@type": "City", name: "Bonita Springs" },
+      { "@type": "City", name: "Marco Island" },
+      { "@type": "City", name: "Punta Gorda" },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://stackedconstruction.co" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://stackedconstruction.co/services" },
+      { "@type": "ListItem", position: 3, name: service.name, item: `https://stackedconstruction.co/services/${slug}` },
+    ],
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -407,6 +441,14 @@ export default async function ServicePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );

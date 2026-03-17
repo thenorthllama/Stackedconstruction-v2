@@ -8,6 +8,9 @@ const countyCities = getCitiesForCounty("charlotte-county");
 export const metadata: Metadata = {
   title: county.metaTitle,
   description: county.metaDescription,
+  alternates: {
+    canonical: "https://stackedconstruction.co/areas/charlotte-county",
+  },
   openGraph: {
     title: county.metaTitle,
     description: county.metaDescription,

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Our Process | Stacked Construction – How We Remodel Your Home",
   description:
     "Learn how Stacked Construction takes your remodeling project from vision to reality in four simple steps. Free consultation, detailed proposal, expert build, and final walk-through.",
+  alternates: {
+    canonical: "https://stackedconstruction.co/process",
+  },
   openGraph: {
     title: "Our Process | Stacked Construction",
     description:

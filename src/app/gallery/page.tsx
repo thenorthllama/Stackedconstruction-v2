@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Gallery | Stacked Construction – Kitchen, Bath & Home Remodeling in SWFL",
   description:
     "Browse our gallery of premium kitchen remodels, bathroom renovations, outdoor living spaces, and whole-home transformations across Fort Myers, Naples, and Southwest Florida.",
+  alternates: {
+    canonical: "https://stackedconstruction.co/gallery",
+  },
   openGraph: {
     title:
       "Gallery | Stacked Construction – Kitchen, Bath & Home Remodeling in SWFL",
@@ -151,7 +154,7 @@ const projects = [
     title: "Beachfront Luxury Kitchen",
     category: "Kitchen",
     location: "Fort Myers Beach, FL",
-    image: "/images/kitchen-beachfront-luxury.png",
+    image: "/images/kitchen-beachfront-luxury.jpg",
     description:
       "Beachfront kitchen with white cabinetry, marble waterfall island, palm tree views through floor-to-ceiling windows, and coastal accents.",
   },

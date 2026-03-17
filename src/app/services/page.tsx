@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Our Services | Stacked Construction – Southwest Florida Remodeling",
   description:
     "Kitchen remodeling, bathroom renovation, outdoor living, full home renovation, and flooring & tile services across Southwest Florida. Licensed contractor. Free estimate.",
+  alternates: {
+    canonical: "https://stackedconstruction.co/services",
+  },
   openGraph: {
     title: "Our Services | Stacked Construction",
     description:

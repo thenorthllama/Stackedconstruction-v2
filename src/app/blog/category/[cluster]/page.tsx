@@ -24,6 +24,9 @@ export async function generateMetadata({
   return {
     title: `${cluster.name} | Stacked Construction Blog`,
     description: cluster.description,
+    alternates: {
+      canonical: `https://stackedconstruction.co/blog/category/${slug}`,
+    },
     openGraph: {
       title: `${cluster.name} | Stacked Construction Blog`,
       description: cluster.description,

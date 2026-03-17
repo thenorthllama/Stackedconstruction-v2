@@ -29,6 +29,9 @@ export async function generateMetadata({
   return {
     title: article.metaTitle,
     description: article.metaDescription,
+    alternates: {
+      canonical: `https://stackedconstruction.co/blog/${slug}`,
+    },
     openGraph: {
       title: article.metaTitle,
       description: article.metaDescription,
@@ -77,6 +80,18 @@ export default async function BlogArticlePage({
       "@type": "WebPage",
       "@id": `https://stackedconstruction.co/blog/${article.slug}`,
     },
+    dateModified: article.publishedAt,
+    image: "https://stackedconstruction.co/images/og-image.jpg",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://stackedconstruction.co" },
+      { "@type": "ListItem", position: 2, name: "Articles", item: "https://stackedconstruction.co/blog" },
+      { "@type": "ListItem", position: 3, name: article.title, item: `https://stackedconstruction.co/blog/${article.slug}` },
+    ],
   };
 
   return (
@@ -310,6 +325,10 @@ export default async function BlogArticlePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );

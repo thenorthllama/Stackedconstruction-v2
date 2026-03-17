@@ -29,6 +29,9 @@ export async function generateMetadata({
   return {
     title: city.metaTitle,
     description: city.metaDescription,
+    alternates: {
+      canonical: `https://stackedconstruction.co/areas/${citySlug}`,
+    },
     openGraph: {
       title: city.metaTitle,
       description: city.metaDescription,
@@ -46,6 +49,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   if (!city) notFound();
 
   const cityServices = services.filter((s) => city.serviceIntros[s.slug]);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://stackedconstruction.co" },
+      { "@type": "ListItem", position: 2, name: "Areas", item: "https://stackedconstruction.co/areas/fort-myers" },
+      { "@type": "ListItem", position: 3, name: city.name, item: `https://stackedconstruction.co/areas/${citySlug}` },
+    ],
+  };
 
   return (
     <>
@@ -351,6 +364,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         </section>
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     </>
   );
 }

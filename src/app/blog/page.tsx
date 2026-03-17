@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Remodeling Articles | Stacked Construction – SWFL Tips & Guides",
   description:
     "Expert remodeling advice, project planning tips, and design inspiration for Southwest Florida homeowners. Kitchen, bathroom, outdoor living, and whole-home renovation guides.",
+  alternates: {
+    canonical: "https://stackedconstruction.co/blog",
+  },
   openGraph: {
     title: "Remodeling Articles | Stacked Construction – SWFL Tips & Guides",
     description:

@@ -25,18 +25,6 @@ export const metadata: Metadata = {
   },
   description:
     "Southwest Florida's trusted remodeling contractor. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL. 150+ projects completed. Licensed & insured. Free estimate.",
-  keywords: [
-    "kitchen remodeling Fort Myers",
-    "bathroom remodeling Naples",
-    "home renovation Cape Coral",
-    "remodeling contractor SWFL",
-    "outdoor kitchen Fort Myers",
-    "kitchen remodel Naples FL",
-    "bathroom remodel Cape Coral",
-    "home remodeling Southwest Florida",
-    "luxury remodeling Naples",
-    "remodeling contractor Lee County",
-  ],
   openGraph: {
     title: "Stacked Construction | Premium Home Remodeling in Southwest Florida",
     description:
@@ -45,6 +33,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Stacked Construction",
     url: "https://stackedconstruction.co",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Stacked Construction – Premium Home Remodeling in Southwest Florida",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stacked Construction | Premium Home Remodeling in SWFL",
+    description:
+      "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL.",
+    images: ["/images/og-image.jpg"],
   },
   alternates: {
     canonical: "https://stackedconstruction.co",
