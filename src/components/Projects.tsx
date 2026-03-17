@@ -2,42 +2,42 @@ const projects = [
   {
     title: "Modern Kitchen Transformation",
     category: "Kitchen",
-    image: "/images/project-1.jpg",
+    image: "/images/kitchen-modern-island.jpg",
     span: "lg:col-span-2 lg:row-span-2",
     aspect: "aspect-square",
   },
   {
     title: "Spa-Inspired Master Bath",
     category: "Bathroom",
-    image: "/images/project-2.jpg",
+    image: "/images/service-bathroom.jpg",
     span: "",
     aspect: "aspect-[4/3]",
   },
   {
-    title: "Outdoor Kitchen & Pool Deck",
+    title: "Outdoor Fireplace & Living",
     category: "Outdoor Living",
-    image: "/images/project-3.jpg",
+    image: "/images/service-outdoor.jpg",
     span: "",
     aspect: "aspect-[4/3]",
   },
   {
-    title: "Complete Home Renovation",
-    category: "Full Home",
-    image: "/images/project-4.jpg",
+    title: "Coastal White & Beam Kitchen",
+    category: "Kitchen",
+    image: "/images/kitchen-coastal-white-beams.jpg",
     span: "",
     aspect: "aspect-[4/3]",
   },
   {
-    title: "Luxury Waterfront Remodel",
+    title: "Luxury Living Room Remodel",
     category: "Luxury",
-    image: "/images/project-5.jpg",
+    image: "/images/service-luxury.jpg",
     span: "",
     aspect: "aspect-[4/3]",
   },
   {
-    title: "Contemporary Bath & Tile",
-    category: "Bathroom",
-    image: "/images/project-6.jpg",
+    title: "Poolside Oak Kitchen",
+    category: "Kitchen",
+    image: "/images/kitchen-poolside-oak.jpg",
     span: "lg:col-span-2",
     aspect: "aspect-[2/1]",
   },
@@ -53,12 +53,12 @@ export default function Projects() {
               Our Work
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
-              Recent{" "}
-              <em className="font-light italic">Projects</em>
+              Project{" "}
+              <em className="font-light italic">Gallery</em>
             </h2>
           </div>
           <a
-            href="#contact"
+            href="/gallery"
             className="shrink-0 rounded-full border border-warm-900 px-6 py-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-all hover:bg-warm-900 hover:text-white"
           >
             View All

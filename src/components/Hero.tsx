@@ -37,22 +37,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Supporting text — right side */}
-          <div className="lg:col-span-4 lg:col-start-9">
-            <div className="border-l border-warm-400/30 pl-6">
-              <p className="font-display text-xl font-medium leading-snug text-white lg:text-2xl">
-                Remodeling
-                <br />
-                <em className="font-light italic text-warm-300">Can Mean</em>{" "}
-                Everything
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-warm-400">
-                Premium kitchen, bathroom, and whole-home renovation crafted
-                with honesty, quality craftsmanship, and clear communication
-                across Fort Myers, Naples, and all of SWFL.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 

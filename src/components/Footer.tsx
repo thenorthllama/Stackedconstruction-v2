@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceLinks = [
   { name: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
@@ -36,14 +37,15 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <p className="mb-5">
-              <span className="font-display text-xl font-bold text-white">
-                STACKED
-              </span>{" "}
-              <span className="font-display text-xl font-light italic text-warm-400">
-                Construction
-              </span>
-            </p>
+            <div className="mb-5">
+              <Image
+                src="/images/logo.png"
+                alt="Stacked Construction"
+                width={300}
+                height={54}
+                className="h-[54px] w-auto"
+              />
+            </div>
             <p className="mb-6 text-sm leading-relaxed text-warm-500">
               Premium home remodeling in Southwest Florida. Kitchen remodeling,
               bathroom renovation, outdoor living, and full home renovations
@@ -160,12 +162,12 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/blog" className="text-sm text-warm-500 transition-colors hover:text-white">
-                    Blog
+                    Articles
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#projects" className="text-sm text-warm-500 transition-colors hover:text-white">
-                    Projects
+                  <Link href="/gallery" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Gallery
                   </Link>
                 </li>
                 <li>

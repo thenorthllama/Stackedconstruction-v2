@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import { articles, clusters, getArticlesByCluster } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Remodeling Blog | Stacked Construction – SWFL Tips & Guides",
+  title: "Remodeling Articles | Stacked Construction – SWFL Tips & Guides",
   description:
     "Expert remodeling advice, project planning tips, and design inspiration for Southwest Florida homeowners. Kitchen, bathroom, outdoor living, and whole-home renovation guides.",
   openGraph: {
-    title: "Remodeling Blog | Stacked Construction – SWFL Tips & Guides",
+    title: "Remodeling Articles | Stacked Construction – SWFL Tips & Guides",
     description:
       "Expert remodeling advice, project planning tips, and design inspiration for Southwest Florida homeowners.",
   },
@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
             role="img"
-            aria-label="Stacked Construction remodeling blog"
+            aria-label="Stacked Construction remodeling articles"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
@@ -40,7 +40,7 @@ export default function BlogIndexPage() {
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Remodeling{" "}
-                <em className="font-light italic text-warm-300">Blog</em>
+                <em className="font-light italic text-warm-300">Articles</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
                 Expert advice, planning tips, and design inspiration to help
@@ -62,7 +62,7 @@ export default function BlogIndexPage() {
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     Latest{" "}
                     <em className="font-light italic text-warm-600">
-                      From the Blog
+                      Article
                     </em>
                   </h2>
                 </div>

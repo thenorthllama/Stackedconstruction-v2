@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/areas/fort-myers", label: "Areas" },
   { href: "/process", label: "Process" },
-  { href: "/blog", label: "Blog" },
-  { href: "/#projects", label: "Projects" },
+  { href: "/blog", label: "Articles" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 export default function Header() {
@@ -30,13 +31,15 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <Link href="/" className="flex items-center gap-1.5">
-          <span className="font-display text-xl font-bold tracking-tight text-white lg:text-2xl">
-            STACKED
-          </span>
-          <span className="font-display text-xl font-light italic text-warm-300 lg:text-2xl">
-            Construction
-          </span>
+        <Link href="/" className="block">
+          <Image
+            src="/images/logo.png"
+            alt="Stacked Construction"
+            width={330}
+            height={60}
+            className="h-12 w-auto lg:h-[60px]"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">

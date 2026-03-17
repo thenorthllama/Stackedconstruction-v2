@@ -59,7 +59,7 @@ export default function ProcessPage() {
                 Call (239) 785-0166
               </a>
               <a
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
                 Request Estimate Online

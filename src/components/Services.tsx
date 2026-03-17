@@ -7,7 +7,7 @@ const services = [
     title: "Kitchen Remodeling",
     description:
       "Custom cabinetry, countertops, backsplashes, and complete kitchen transformations that become the heart of your home.",
-    image: "/images/service-kitchen.jpg",
+    image: "/images/kitchen-luxury-white.jpg",
   },
   {
     title: "Bathroom Renovation",
