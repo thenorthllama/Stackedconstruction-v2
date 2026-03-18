@@ -199,6 +199,18 @@ export default function ContactPage() {
                     Counties.
                   </p>
                 </div>
+
+                <div className="mt-8 border-t border-warm-200 pt-8">
+                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                    License
+                  </p>
+                  <p className="text-sm text-warm-600">
+                    Florida Certified Building Contractor
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-warm-900">
+                    #CBC1269972
+                  </p>
+                </div>
               </div>
 
               {/* Right — form */}

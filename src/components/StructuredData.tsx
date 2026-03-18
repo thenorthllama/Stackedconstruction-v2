@@ -89,6 +89,15 @@ export default function StructuredData() {
       "https://www.instagram.com/stackedconstruction/",
       "https://www.linkedin.com/company/111945969/",
     ],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Florida Certified Building Contractor",
+      recognizedBy: {
+        "@type": "GovernmentOrganization",
+        name: "Florida Department of Business and Professional Regulation",
+      },
+      identifier: "CBC1269972",
+    },
     priceRange: "$$-$$$$",
     paymentAccepted: "Cash, Credit Card, Check, Financing",
     currenciesAccepted: "USD",

@@ -167,6 +167,11 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
+                  <Link href="/about" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    About Us
+                  </Link>
+                </li>
+                <li>
                   <Link href="/process" className="text-sm text-warm-500 transition-colors hover:text-white">
                     Our Process
                   </Link>
@@ -197,9 +202,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 border-t border-warm-800 pt-8 text-center text-xs text-warm-600">
-          &copy; {new Date().getFullYear()} Stacked Construction. All rights
-          reserved. Licensed &amp; Insured in Florida. Serving Lee County, Collier
-          County, and Charlotte County.
+          <p>
+            &copy; {new Date().getFullYear()} Stacked Construction. All rights
+            reserved. Serving Lee County, Collier County, and Charlotte County.
+          </p>
+          <p className="mt-2">
+            Licensed &amp; Insured in Florida &middot; License #CBC1269972
+          </p>
         </div>
       </div>
     </footer>
