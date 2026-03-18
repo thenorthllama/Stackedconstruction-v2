@@ -9,11 +9,40 @@ interface ContactFormProps {
 
 export default function ContactForm({ variant = "light" }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire up to Formspree, Netlify Forms, or your own API endpoint
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Something went wrong. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const isDark = variant === "dark";
@@ -142,15 +171,22 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           />
         </div>
 
+        {error && (
+          <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+            {error}
+          </p>
+        )}
+
         <button
           type="submit"
-          className={`w-full rounded-full py-4 text-sm font-semibold transition-all ${
+          disabled={submitting}
+          className={`w-full rounded-full py-4 text-sm font-semibold transition-all disabled:opacity-60 ${
             isDark
               ? "bg-white text-warm-900 hover:bg-warm-100"
               : "bg-warm-900 text-white hover:bg-warm-800"
           }`}
         >
-          Request Free Estimate
+          {submitting ? "Sending..." : "Request Free Estimate"}
         </button>
 
         <p
