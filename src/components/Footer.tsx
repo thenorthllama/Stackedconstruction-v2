@@ -209,6 +209,15 @@ export default function Footer() {
           <p className="mt-2">
             Licensed &amp; Insured in Florida &middot; License #CBC1269972
           </p>
+          <p className="mt-3">
+            <Link href="/privacy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+            {" "}&middot;{" "}
+            <Link href="/terms" className="transition-colors hover:text-white">
+              Terms of Service
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
