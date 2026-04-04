@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const { name, email, phone, message } = body;
+    const { name, email, phone, message, budget, service } = body;
 
     if (!name || !email || !phone) {
       return NextResponse.json(
@@ -37,6 +37,8 @@ export async function POST(request: Request) {
         email,
         phone,
         message: message || "",
+        budget: budget || "",
+        service: service || "",
         source: "stackedconstruction.co",
         submittedAt: new Date().toISOString(),
       }),
