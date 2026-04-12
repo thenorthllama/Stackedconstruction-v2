@@ -7,6 +7,28 @@ interface ContactFormProps {
   variant?: "light" | "dark";
 }
 
+const PROJECT_TYPES = [
+  "Kitchen remodel",
+  "Bathroom remodel",
+  "Whole-home interior",
+  "Exterior siding/paint",
+  "Other",
+];
+
+const TIMELINE_OPTIONS = [
+  "As soon as possible",
+  "Within 1–3 months",
+  "3–6 months",
+  "6+ months / just exploring",
+];
+
+const BUDGET_OPTIONS = [
+  "Under $20k",
+  "$20k–$40k",
+  "$40k–$75k",
+  "$75k+",
+];
+
 export default function ContactForm({ variant = "light" }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -22,7 +44,11 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      address: (form.elements.namedItem("address") as HTMLInputElement).value,
+      projectType: (form.elements.namedItem("projectType") as HTMLSelectElement).value,
+      description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
+      timeline: (form.elements.namedItem("timeline") as HTMLSelectElement).value,
+      budget: (form.elements.namedItem("budget") as HTMLSelectElement).value,
     };
 
     try {
@@ -50,6 +76,10 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
   const inputClasses = isDark
     ? "w-full rounded-lg border border-warm-700 bg-warm-900/60 px-4 py-3 text-sm text-white placeholder:text-warm-600 focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500"
     : "w-full rounded-lg border border-warm-200 bg-white px-4 py-3 text-sm text-warm-900 placeholder:text-warm-400 focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500";
+
+  const selectClasses = isDark
+    ? "w-full rounded-lg border border-warm-700 bg-warm-900/60 px-4 py-3 text-sm text-white focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500 appearance-none"
+    : "w-full rounded-lg border border-warm-200 bg-white px-4 py-3 text-sm text-warm-900 focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500 appearance-none";
 
   const labelClasses = isDark
     ? "mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-400"
@@ -89,15 +119,30 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             isDark ? "text-white" : "text-warm-900"
           }`}
         >
-          Thank You
+          Thank You — We Got Your Project Request
         </h3>
         <p
-          className={`mt-2 text-sm ${
+          className={`mt-3 text-sm font-medium ${
+            isDark ? "text-warm-300" : "text-warm-700"
+          }`}
+        >
+          Your submission is in.
+        </p>
+        <p
+          className={`mt-3 text-sm ${
             isDark ? "text-warm-400" : "text-warm-600"
           }`}
         >
-          We&apos;ve received your request and will be in touch within one
-          business day.
+          Our team is reviewing your project details now.
+        </p>
+        <p
+          className={`mt-3 text-sm ${
+            isDark ? "text-warm-400" : "text-warm-600"
+          }`}
+        >
+          You will get a call within 2 business hours to ask a few quick
+          questions, confirm the scope, and map out the best next step for
+          your project.
         </p>
       </div>
     );
@@ -112,6 +157,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
       }`}
     >
       <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Full Name */}
         <div>
           <label htmlFor="contact-name" className={labelClasses}>
             Full Name
@@ -127,10 +173,11 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           />
         </div>
 
+        {/* Email + Phone */}
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="contact-email" className={labelClasses}>
-              Email
+              Email Address
             </label>
             <input
               type="email"
@@ -144,7 +191,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           </div>
           <div>
             <label htmlFor="contact-phone" className={labelClasses}>
-              Phone
+              Mobile Phone
             </label>
             <input
               type="tel"
@@ -158,17 +205,156 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           </div>
         </div>
 
+        {/* Service Address / ZIP */}
         <div>
-          <label htmlFor="contact-message" className={labelClasses}>
-            Tell Us About Your Project
+          <label htmlFor="contact-address" className={labelClasses}>
+            Service Address or ZIP Code
+          </label>
+          <input
+            type="text"
+            id="contact-address"
+            name="address"
+            required
+            autoComplete="postal-code"
+            placeholder="123 Main St, Fort Myers, FL or 33901"
+            className={inputClasses}
+          />
+        </div>
+
+        {/* Project Type */}
+        <div className="relative">
+          <label htmlFor="contact-projectType" className={labelClasses}>
+            Project Type
+          </label>
+          <div className="relative">
+            <select
+              id="contact-projectType"
+              name="projectType"
+              required
+              defaultValue=""
+              className={selectClasses}
+            >
+              <option value="" disabled>
+                Select a project type…
+              </option>
+              {PROJECT_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+            <div
+              className={`pointer-events-none absolute inset-y-0 right-3 flex items-center ${
+                isDark ? "text-warm-500" : "text-warm-400"
+              }`}
+              aria-hidden="true"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Brief Description */}
+        <div>
+          <label htmlFor="contact-description" className={labelClasses}>
+            Brief Description of Your Project
           </label>
           <textarea
-            id="contact-message"
-            name="message"
-            rows={4}
-            placeholder="Describe what you're looking to remodel, your timeline, budget range, or any other details..."
+            id="contact-description"
+            name="description"
+            rows={3}
+            required
+            placeholder="Describe your project in 2–3 sentences. What are you looking to remodel, and what's most important to you?"
             className={`resize-none ${inputClasses}`}
           />
+        </div>
+
+        {/* Timeline */}
+        <div className="relative">
+          <label htmlFor="contact-timeline" className={labelClasses}>
+            Ideal Start Timeline
+          </label>
+          <div className="relative">
+            <select
+              id="contact-timeline"
+              name="timeline"
+              required
+              defaultValue=""
+              className={selectClasses}
+            >
+              <option value="" disabled>
+                When would you like to start?
+              </option>
+              {TIMELINE_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <div
+              className={`pointer-events-none absolute inset-y-0 right-3 flex items-center ${
+                isDark ? "text-warm-500" : "text-warm-400"
+              }`}
+              aria-hidden="true"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Budget (optional) */}
+        <div className="relative">
+          <label htmlFor="contact-budget" className={labelClasses}>
+            Approximate Budget Range{" "}
+            <span
+              className={`normal-case tracking-normal font-normal ${
+                isDark ? "text-warm-600" : "text-warm-400"
+              }`}
+            >
+              (optional)
+            </span>
+          </label>
+          <div className="relative">
+            <select
+              id="contact-budget"
+              name="budget"
+              defaultValue=""
+              className={selectClasses}
+            >
+              <option value="">Prefer not to say</option>
+              {BUDGET_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <div
+              className={`pointer-events-none absolute inset-y-0 right-3 flex items-center ${
+                isDark ? "text-warm-500" : "text-warm-400"
+              }`}
+              aria-hidden="true"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
 
         {error && (
