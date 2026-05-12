@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "displayName": "Ink",
+        "hex": "#1a1714",
+        "oklch": "oklch(0.13 0.008 50)",
+        "role": "Primary dark background",
+        "tonalRamp": [
+          "oklch(0.08 0.005 50)",
+          "oklch(0.13 0.008 50)",
+          "oklch(0.18 0.010 50)",
+          "oklch(0.24 0.012 50)",
+          "oklch(0.32 0.014 50)",
+          "oklch(0.42 0.016 50)",
+          "oklch(0.55 0.018 50)",
+          "oklch(0.70 0.014 50)"
+        ]
+      },
+      "deep-ash": {
+        "displayName": "Deep Ash",
+        "hex": "#2a2520",
+        "oklch": "oklch(0.18 0.010 50)",
+        "role": "Secondary dark surface",
+        "tonalRamp": [
+          "oklch(0.10 0.006 50)",
+          "oklch(0.15 0.008 50)",
+          "oklch(0.18 0.010 50)",
+          "oklch(0.24 0.012 50)",
+          "oklch(0.32 0.014 50)",
+          "oklch(0.43 0.016 50)",
+          "oklch(0.56 0.018 50)",
+          "oklch(0.71 0.015 50)"
+        ]
+      },
+      "warm-ember": {
+        "displayName": "Warm Ember",
+        "hex": "#3d3530",
+        "oklch": "oklch(0.26 0.012 50)",
+        "role": "Tertiary dark — dividers on dark",
+        "tonalRamp": [
+          "oklch(0.12 0.006 50)",
+          "oklch(0.18 0.009 50)",
+          "oklch(0.26 0.012 50)",
+          "oklch(0.34 0.014 50)",
+          "oklch(0.44 0.016 50)",
+          "oklch(0.55 0.018 50)",
+          "oklch(0.67 0.016 50)",
+          "oklch(0.80 0.012 50)"
+        ]
+      },
+      "warm-stone": {
+        "displayName": "Warm Stone",
+        "hex": "#5a4f47",
+        "oklch": "oklch(0.38 0.016 50)",
+        "role": "Body text on light backgrounds",
+        "tonalRamp": [
+          "oklch(0.20 0.010 50)",
+          "oklch(0.28 0.013 50)",
+          "oklch(0.38 0.016 50)",
+          "oklch(0.48 0.018 50)",
+          "oklch(0.58 0.018 50)",
+          "oklch(0.68 0.016 50)",
+          "oklch(0.78 0.013 50)",
+          "oklch(0.88 0.009 50)"
+        ]
+      },
+      "driftwood": {
+        "displayName": "Driftwood",
+        "hex": "#7a6f65",
+        "oklch": "oklch(0.50 0.016 50)",
+        "role": "Subdued text and eyebrow labels",
+        "tonalRamp": [
+          "oklch(0.28 0.010 50)",
+          "oklch(0.36 0.013 50)",
+          "oklch(0.44 0.015 50)",
+          "oklch(0.50 0.016 50)",
+          "oklch(0.58 0.016 50)",
+          "oklch(0.67 0.015 50)",
+          "oklch(0.77 0.012 50)",
+          "oklch(0.87 0.008 50)"
+        ]
+      },
+      "pale-drift": {
+        "displayName": "Pale Drift",
+        "hex": "#9e9389",
+        "oklch": "oklch(0.63 0.014 50)",
+        "role": "Supporting text, timestamps, placeholders",
+        "tonalRamp": [
+          "oklch(0.38 0.010 50)",
+          "oklch(0.46 0.012 50)",
+          "oklch(0.54 0.013 50)",
+          "oklch(0.63 0.014 50)",
+          "oklch(0.72 0.013 50)",
+          "oklch(0.80 0.011 50)",
+          "oklch(0.88 0.008 50)",
+          "oklch(0.94 0.005 50)"
+        ]
+      },
+      "linen-mist": {
+        "displayName": "Linen Mist",
+        "hex": "#c4b9ad",
+        "oklch": "oklch(0.78 0.014 60)",
+        "role": "Primary light text on dark backgrounds",
+        "tonalRamp": [
+          "oklch(0.50 0.014 60)",
+          "oklch(0.58 0.014 60)",
+          "oklch(0.66 0.014 60)",
+          "oklch(0.78 0.014 60)",
+          "oklch(0.84 0.012 60)",
+          "oklch(0.88 0.010 60)",
+          "oklch(0.92 0.008 60)",
+          "oklch(0.96 0.005 60)"
+        ]
+      },
+      "parchment-edge": {
+        "displayName": "Parchment Edge",
+        "hex": "#e0d6cc",
+        "oklch": "oklch(0.87 0.012 60)",
+        "role": "Borders and dividers on light surfaces",
+        "tonalRamp": [
+          "oklch(0.60 0.012 60)",
+          "oklch(0.68 0.012 60)",
+          "oklch(0.75 0.012 60)",
+          "oklch(0.82 0.012 60)",
+          "oklch(0.87 0.012 60)",
+          "oklch(0.91 0.010 60)",
+          "oklch(0.94 0.008 60)",
+          "oklch(0.97 0.005 60)"
+        ]
+      },
+      "warm-linen": {
+        "displayName": "Warm Linen",
+        "hex": "#f0ebe5",
+        "oklch": "oklch(0.93 0.009 60)",
+        "role": "Alternate section background",
+        "tonalRamp": [
+          "oklch(0.70 0.012 60)",
+          "oklch(0.76 0.012 60)",
+          "oklch(0.82 0.011 60)",
+          "oklch(0.87 0.010 60)",
+          "oklch(0.91 0.010 60)",
+          "oklch(0.93 0.009 60)",
+          "oklch(0.95 0.007 60)",
+          "oklch(0.97 0.005 60)"
+        ]
+      },
+      "plaster-white": {
+        "displayName": "Plaster White",
+        "hex": "#faf7f4",
+        "oklch": "oklch(0.97 0.006 60)",
+        "role": "Primary light background",
+        "tonalRamp": [
+          "oklch(0.78 0.010 60)",
+          "oklch(0.84 0.009 60)",
+          "oklch(0.88 0.008 60)",
+          "oklch(0.92 0.008 60)",
+          "oklch(0.95 0.007 60)",
+          "oklch(0.97 0.006 60)",
+          "oklch(0.98 0.005 60)",
+          "oklch(0.99 0.003 60)"
+        ]
+      },
+      "terracotta-reserve": {
+        "displayName": "Terracotta Reserve",
+        "hex": "#c8956c",
+        "oklch": "oklch(0.67 0.085 55)",
+        "role": "The single warm accent — hover states, credential check icons, category labels",
+        "tonalRamp": [
+          "oklch(0.38 0.080 55)",
+          "oklch(0.47 0.083 55)",
+          "oklch(0.55 0.084 55)",
+          "oklch(0.62 0.085 55)",
+          "oklch(0.67 0.085 55)",
+          "oklch(0.73 0.080 55)",
+          "oklch(0.80 0.068 55)",
+          "oklch(0.88 0.048 55)"
+        ]
+      },
+      "terracotta-deep": {
+        "displayName": "Terracotta Deep",
+        "hex": "#a87a55",
+        "oklch": "oklch(0.57 0.080 55)",
+        "role": "Hover and focus variant for Terracotta Reserve",
+        "tonalRamp": [
+          "oklch(0.30 0.075 55)",
+          "oklch(0.38 0.078 55)",
+          "oklch(0.46 0.079 55)",
+          "oklch(0.57 0.080 55)",
+          "oklch(0.64 0.080 55)",
+          "oklch(0.71 0.076 55)",
+          "oklch(0.78 0.064 55)",
+          "oklch(0.86 0.044 55)"
+        ]
+      }
+    },
+    "shadows": {
+      "ambient-low": {
+        "name": "Ambient Low",
+        "value": "0 1px 3px rgba(26, 23, 20, 0.06)",
+        "usage": "card-light only — barely perceptible lift off surface"
+      },
+      "nav-scroll": {
+        "name": "Nav Scroll",
+        "value": "0 4px 24px rgba(26, 23, 20, 0.20)",
+        "usage": "Sticky header when scrolled — structural separation from page"
+      }
+    },
+    "motion": {
+      "standard": {
+        "name": "Standard",
+        "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "description": "ease-out-quart — all interactive transitions",
+        "duration": "200ms"
+      },
+      "hover": {
+        "name": "Hover",
+        "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "description": "Color and background transitions",
+        "duration": "150ms"
+      }
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    }
+  },
+  "components": [
+    {
+      "name": "ButtonPrimary",
+      "description": "Primary action button — plaster white fill on dark backgrounds",
+      "html": "<button class=\"ds-button-primary\">Get Free Estimate</button>",
+      "css": ".ds-button-primary { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; background-color: #faf7f4; color: #1a1714; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; line-height: 1; border-radius: 9999px; border: none; cursor: pointer; text-decoration: none; transition: background-color 150ms cubic-bezier(0.25, 1, 0.5, 1); outline: none; } .ds-button-primary:hover { background-color: #f0ebe5; } .ds-button-primary:focus-visible { outline: 2px solid #c8956c; outline-offset: 3px; }"
+    },
+    {
+      "name": "ButtonGhost",
+      "description": "Secondary action button — transparent with white border, used alongside Primary",
+      "html": "<button class=\"ds-button-ghost\">View Our Work</button>",
+      "css": ".ds-button-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; background-color: transparent; color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; line-height: 1; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.30); cursor: pointer; text-decoration: none; transition: background-color 150ms cubic-bezier(0.25, 1, 0.5, 1), border-color 150ms cubic-bezier(0.25, 1, 0.5, 1); outline: none; } .ds-button-ghost:hover { background-color: rgba(255,255,255,0.10); border-color: rgba(255,255,255,1); } .ds-button-ghost:focus-visible { outline: 2px solid #c8956c; outline-offset: 3px; }"
+    },
+    {
+      "name": "ButtonNavCTA",
+      "description": "Navigation CTA button — uppercase pill, transitions to white-fill on hover",
+      "html": "<button class=\"ds-button-nav-cta\">Get Estimate</button>",
+      "css": ".ds-button-nav-cta { display: inline-flex; align-items: center; justify-content: center; padding: 8px 24px; background-color: transparent; color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.8125rem; font-weight: 600; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.30); cursor: pointer; text-decoration: none; transition: background-color 150ms cubic-bezier(0.25, 1, 0.5, 1), border-color 150ms cubic-bezier(0.25, 1, 0.5, 1), color 150ms cubic-bezier(0.25, 1, 0.5, 1); outline: none; } .ds-button-nav-cta:hover { background-color: #faf7f4; border-color: #faf7f4; color: #1a1714; } .ds-button-nav-cta:focus-visible { outline: 2px solid #c8956c; outline-offset: 3px; }"
+    },
+    {
+      "name": "InputDark",
+      "description": "Form input for dark section backgrounds",
+      "html": "<div class=\"ds-field-dark\"><label class=\"ds-label-dark\" for=\"name\">Full Name</label><input class=\"ds-input-dark\" id=\"name\" type=\"text\" placeholder=\"Your name\" /></div>",
+      "css": ".ds-field-dark { display: flex; flex-direction: column; gap: 6px; } .ds-label-dark { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #7a6f65; } .ds-input-dark { padding: 12px 16px; background-color: rgba(26,23,20,0.60); color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-size: 1rem; border: 1px solid #3d3530; border-radius: 8px; outline: none; transition: border-color 150ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 150ms cubic-bezier(0.25, 1, 0.5, 1); } .ds-input-dark::placeholder { color: #5a4f47; } .ds-input-dark:focus { border-color: #7a6f65; box-shadow: 0 0 0 1px #7a6f65; }"
+    },
+    {
+      "name": "InputLight",
+      "description": "Form input for light section backgrounds",
+      "html": "<div class=\"ds-field-light\"><label class=\"ds-label-light\" for=\"email\">Email Address</label><input class=\"ds-input-light\" id=\"email\" type=\"email\" placeholder=\"your@email.com\" /></div>",
+      "css": ".ds-field-light { display: flex; flex-direction: column; gap: 6px; } .ds-label-light { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #5a4f47; } .ds-input-light { padding: 12px 16px; background-color: #faf7f4; color: #1a1714; font-family: 'DM Sans', system-ui, sans-serif; font-size: 1rem; border: 1px solid #e0d6cc; border-radius: 8px; outline: none; transition: border-color 150ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 150ms cubic-bezier(0.25, 1, 0.5, 1); } .ds-input-light::placeholder { color: #9e9389; } .ds-input-light:focus { border-color: #7a6f65; box-shadow: 0 0 0 1px #7a6f65; }"
+    },
+    {
+      "name": "SectionEyebrow",
+      "description": "Uppercase label that precedes every section headline — required before every H2",
+      "html": "<p class=\"ds-eyebrow\">Our Services</p>",
+      "css": ".ds-eyebrow { font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: #7a6f65; margin: 0 0 12px 0; line-height: 1.4; }"
+    },
+    {
+      "name": "CredentialPill",
+      "description": "Inline trust badge with optional verification link — license numbers, certifications",
+      "html": "<a href=\"https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=CBC1269972\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ds-credential-pill\"><svg class=\"ds-credential-check\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M13 4L6.5 11.5 3 8\" stroke=\"#22c55e\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>FL License #CBC1269972</a>",
+      "css": ".ds-credential-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background-color: #f0ebe5; color: #3d3530; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; border: 1px solid #e0d6cc; border-radius: 9999px; text-decoration: none; transition: border-color 150ms cubic-bezier(0.25, 1, 0.5, 1); } .ds-credential-pill:hover { border-color: #c4b9ad; } .ds-credential-check { width: 14px; height: 14px; flex-shrink: 0; }"
+    },
+    {
+      "name": "CardDark",
+      "description": "Floating panel over dark cinematic sections — backdrop blur, translucent",
+      "html": "<div class=\"ds-card-dark\"><p class=\"ds-eyebrow\">Process</p><h3>We Show Up and Communicate</h3></div>",
+      "css": ".ds-card-dark { background-color: rgba(42,37,32,0.50); border: 1px solid rgba(61,53,48,0.50); border-radius: 16px; padding: 32px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }"
+    },
+    {
+      "name": "CardLight",
+      "description": "Standard card on light and warm-linen backgrounds",
+      "html": "<div class=\"ds-card-light\"><p class=\"ds-eyebrow\" style=\"color:#5a4f47\">Service</p><h3>Kitchen Remodeling</h3></div>",
+      "css": ".ds-card-light { background-color: #ffffff; border: 1px solid #e0d6cc; border-radius: 16px; padding: 32px; box-shadow: 0 1px 3px rgba(26, 23, 20, 0.06); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Prestige Address",
+    "overview": "Luxury real estate developer energy applied to a Southwest Florida remodeling contractor. The same confidence that sells estates in Naples, now representing the team that builds the kitchens inside them. Warm darkness, heavy serif headlines, editorial pacing. The brand doesn't explain itself, because it doesn't need to.",
+    "sectionRhythm": "The system moves between two modes: cinematic dark sections (ink backgrounds, warm-white type, terracotta Reserve accent) and editorial light sections (plaster-white or warm-linen grounds, ink type, structured columns). The transition between them creates the page's rhythm. Never three dark sections in a row; never three light sections in a row.",
+    "antiReferences": "This system explicitly rejects: the generic contractor site with stock hard-hat photography and blue-orange gradients; the Houzz-style review grid where everything is a thumbnail; the SaaS startup with purple glows and animated counters; and the interior design portfolio that converts nobody because it prioritizes precious aesthetics over trust.",
+    "keyCharacteristics": [
+      "Dark-to-light alternating section rhythm — cinematic depth without monotony",
+      "Pill-shaped controls at every interaction surface (buttons, tags, avatars, progress fills)",
+      "Playfair Display italic as the emotional register; DM Sans uppercase spaced label as the structural register",
+      "Terracotta Reserve as the only warm accent — used sparingly so its presence is decisive",
+      "Credentials (license number, named contractors, project count) treated as design elements, not legal boilerplate"
+    ],
+    "namedRules": {
+      "oneReserveRule": "Terracotta Reserve appears on no more than 10% of any given screen surface. It is never used as a section background, never used in display headlines. It earns attention through constraint. Every second appearance diminishes the first.",
+      "noPureValuesRule": "#000000 and #ffffff are prohibited. Ink and Plaster White are the functional equivalents — both warm-shifted enough to feel chosen, not defaulted.",
+      "italicSecondLineRule": "Display and Headline H1/H2s frequently split with the second line in Playfair Display italic. This is structural, not decorative — it signals the emotional clause vs. the factual clause. Never apply italic to full headlines; always reserve it for the trailing modifier.",
+      "eyebrowRule": "Every section starts with a label in the DM Sans uppercase spaced style (Driftwood, 11px, tracking 0.3em) before the headline. No section headline is permitted to appear without its eyebrow.",
+      "flatByDefaultRule": "No shadow appears at rest on any component except card-light. Shadows are reserved for state (nav scroll, hover on interactive elements) and structural separation (sticky nav).",
+      "noBlurRule": "Backdrop-filter blur is used in one place: dark translucent form card panels layered over section backgrounds. Never use blur on cards, buttons, or inline UI."
+    },
+    "dos": [
+      "Alternate dark and light sections. The rhythm of Ink-to-Plaster-White is how this system creates depth without shadows.",
+      "Pair every headline with an eyebrow label. DM Sans, 0.6875rem, uppercase, tracking 0.3em, Driftwood.",
+      "Split display headlines with an italic second line in Playfair Display.",
+      "Use Terracotta Reserve sparingly. Hover states, credential check icons, blog category labels.",
+      "Keep buttons pill-shaped at every scale. border-radius 9999px on all interactive controls.",
+      "Treat trust signals (FL License #CBC1269972, named contractors, project counts) as design elements.",
+      "Use Plaster White, not pure white, for light backgrounds. #faf7f4 not #ffffff.",
+      "Cap body text at 65-75ch line length."
+    ],
+    "donts": [
+      "Don't use Terracotta Reserve as a section background fill or in display headlines.",
+      "Don't use generic contractor site patterns: stock photos of hard hats, blue or orange gradients.",
+      "Don't build a Houzz-style review grid or comparison-shopping layout.",
+      "Don't add SaaS-style CTAs: purple gradients, glowing buttons, animated counters.",
+      "Don't over-style to the point of not converting — the interior design portfolio trap.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe.",
+      "Don't use gradient text (background-clip: text).",
+      "Don't add shadows to flat-by-default components.",
+      "Don't use DM Sans for display headlines, or Playfair Display for body paragraphs.",
+      "Don't use #000000 or #ffffff."
+    ]
+  }
+}

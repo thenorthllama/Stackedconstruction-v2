@@ -172,6 +172,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/about/credentials" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    License &amp; Credentials
+                  </Link>
+                </li>
+                <li>
                   <Link href="/process" className="text-sm text-warm-500 transition-colors hover:text-white">
                     Our Process
                   </Link>
@@ -187,8 +192,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#testimonials" className="text-sm text-warm-500 transition-colors hover:text-white">
-                    Testimonials
+                  <Link href="/reviews" className="text-sm text-warm-500 transition-colors hover:text-white">
+                    Client Reviews
                   </Link>
                 </li>
                 <li>

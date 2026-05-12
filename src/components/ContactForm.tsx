@@ -1,11 +1,33 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent, type ChangeEvent } from "react";
 
 interface ContactFormProps {
   /** Use dark variant for dark backgrounds (homepage CTA) */
   variant?: "light" | "dark";
 }
+
+interface FormFields {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  projectType: string;
+  description: string;
+  timeline: string;
+}
+
+const STORAGE_KEY = "stacked-contact-form";
+
+const DEFAULT_FIELDS: FormFields = {
+  name: "",
+  email: "",
+  phone: "",
+  address: "",
+  projectType: "",
+  description: "",
+  timeline: "Not sure yet",
+};
 
 const PROJECT_TYPES = [
   "Kitchen remodel",
@@ -16,46 +38,76 @@ const PROJECT_TYPES = [
 ];
 
 const TIMELINE_OPTIONS = [
+  "Not sure yet",
   "As soon as possible",
   "Within 1–3 months",
   "3–6 months",
   "6+ months / just exploring",
 ];
 
-const BUDGET_OPTIONS = [
-  "Under $20k",
-  "$20k–$40k",
-  "$40k–$75k",
-  "$75k+",
-];
+function readStorage(): FormFields {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return DEFAULT_FIELDS;
+    const parsed = JSON.parse(saved) as Partial<FormFields>;
+    return { ...DEFAULT_FIELDS, ...parsed };
+  } catch {
+    return DEFAULT_FIELDS;
+  }
+}
+
+function writeStorage(fields: FormFields): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fields));
+  } catch {
+    // Private browsing or quota exceeded — silent fail
+  }
+}
+
+function clearStorage(): void {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+}
 
 export default function ContactForm({ variant = "light" }: ContactFormProps) {
+  const [fields, setFields] = useState<FormFields>(DEFAULT_FIELDS);
+  const [hydrated, setHydrated] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  // Load persisted values after hydration to avoid SSR mismatch
+  useEffect(() => {
+    setFields(readStorage());
+    setHydrated(true);
+  }, []);
+
+  // Save to localStorage on every field change (skip until hydrated)
+  useEffect(() => {
+    if (!hydrated) return;
+    writeStorage(fields);
+  }, [fields, hydrated]);
+
+  function handleChange(
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) {
+    const { name, value } = e.target;
+    setFields((prev) => ({ ...prev, [name]: value }));
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
     setError("");
 
-    const form = e.currentTarget;
-    const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-      address: (form.elements.namedItem("address") as HTMLInputElement).value,
-      projectType: (form.elements.namedItem("projectType") as HTMLSelectElement).value,
-      description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
-      timeline: (form.elements.namedItem("timeline") as HTMLSelectElement).value,
-      budget: (form.elements.namedItem("budget") as HTMLSelectElement).value,
-    };
-
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(fields),
       });
 
       if (!res.ok) {
@@ -63,6 +115,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
         throw new Error(body.error || "Something went wrong. Please try again.");
       }
 
+      clearStorage();
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
@@ -128,18 +181,10 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
         >
           Your submission is in.
         </p>
-        <p
-          className={`mt-3 text-sm ${
-            isDark ? "text-warm-400" : "text-warm-600"
-          }`}
-        >
+        <p className={`mt-3 text-sm ${isDark ? "text-warm-400" : "text-warm-600"}`}>
           Our team is reviewing your project details now.
         </p>
-        <p
-          className={`mt-3 text-sm ${
-            isDark ? "text-warm-400" : "text-warm-600"
-          }`}
-        >
+        <p className={`mt-3 text-sm ${isDark ? "text-warm-400" : "text-warm-600"}`}>
           You will get a call within 2 business hours to ask a few quick
           questions, confirm the scope, and map out the best next step for
           your project.
@@ -156,7 +201,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           : "border border-warm-200 bg-white shadow-sm"
       }`}
     >
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         {/* Full Name */}
         <div>
           <label htmlFor="contact-name" className={labelClasses}>
@@ -169,6 +214,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             required
             autoComplete="name"
             placeholder="John Smith"
+            value={fields.name}
+            onChange={handleChange}
             className={inputClasses}
           />
         </div>
@@ -186,6 +233,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               required
               autoComplete="email"
               placeholder="john@example.com"
+              value={fields.email}
+              onChange={handleChange}
               className={inputClasses}
             />
           </div>
@@ -200,6 +249,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               required
               autoComplete="tel"
               placeholder="(239) 785-0166"
+              value={fields.phone}
+              onChange={handleChange}
               className={inputClasses}
             />
           </div>
@@ -217,6 +268,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             required
             autoComplete="postal-code"
             placeholder="123 Main St, Fort Myers, FL or 33901"
+            value={fields.address}
+            onChange={handleChange}
             className={inputClasses}
           />
         </div>
@@ -231,7 +284,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               id="contact-projectType"
               name="projectType"
               required
-              defaultValue=""
+              value={fields.projectType}
+              onChange={handleChange}
               className={selectClasses}
             >
               <option value="" disabled>
@@ -271,26 +325,32 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             rows={3}
             required
             placeholder="Describe your project in 2–3 sentences. What are you looking to remodel, and what's most important to you?"
+            value={fields.description}
+            onChange={handleChange}
             className={`resize-none ${inputClasses}`}
           />
         </div>
 
-        {/* Timeline */}
+        {/* Timeline (optional) */}
         <div className="relative">
           <label htmlFor="contact-timeline" className={labelClasses}>
-            Ideal Start Timeline
+            Ideal Start Timeline{" "}
+            <span
+              className={`normal-case tracking-normal font-normal ${
+                isDark ? "text-warm-600" : "text-warm-400"
+              }`}
+            >
+              (optional)
+            </span>
           </label>
           <div className="relative">
             <select
               id="contact-timeline"
               name="timeline"
-              required
-              defaultValue=""
+              value={fields.timeline}
+              onChange={handleChange}
               className={selectClasses}
             >
-              <option value="" disabled>
-                When would you like to start?
-              </option>
               {TIMELINE_OPTIONS.map((option) => (
                 <option key={option} value={option}>
                   {option}
@@ -314,54 +374,20 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           </div>
         </div>
 
-        {/* Budget (optional) */}
-        <div className="relative">
-          <label htmlFor="contact-budget" className={labelClasses}>
-            Approximate Budget Range{" "}
-            <span
-              className={`normal-case tracking-normal font-normal ${
-                isDark ? "text-warm-600" : "text-warm-400"
+        {/* Error — accessible live region */}
+        <div aria-live="polite" aria-atomic="true">
+          {error && (
+            <p
+              className={`rounded-lg px-4 py-3 text-sm ${
+                isDark
+                  ? "bg-red-950/50 text-red-300 border border-red-900/50"
+                  : "bg-red-50 text-red-700"
               }`}
             >
-              (optional)
-            </span>
-          </label>
-          <div className="relative">
-            <select
-              id="contact-budget"
-              name="budget"
-              defaultValue=""
-              className={selectClasses}
-            >
-              <option value="">Prefer not to say</option>
-              {BUDGET_OPTIONS.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-            <div
-              className={`pointer-events-none absolute inset-y-0 right-3 flex items-center ${
-                isDark ? "text-warm-500" : "text-warm-400"
-              }`}
-              aria-hidden="true"
-            >
-              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
+              {error}
+            </p>
+          )}
         </div>
-
-        {error && (
-          <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
-            {error}
-          </p>
-        )}
 
         <button
           type="submit"
@@ -372,7 +398,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               : "bg-warm-900 text-white hover:bg-warm-800"
           }`}
         >
-          {submitting ? "Sending..." : "Request Free Estimate"}
+          {submitting ? "Sending…" : "Request Free Estimate"}
         </button>
 
         <p

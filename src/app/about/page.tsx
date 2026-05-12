@@ -305,6 +305,72 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* ── Meet the Team ────────────────────────────────────── */}
+        <section className="bg-warm-50 py-24 lg:py-36">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
+              <div>
+                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  Our Team
+                </p>
+                <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
+                  The People{" "}
+                  <em className="font-light italic text-warm-600">Behind the Work</em>
+                </h2>
+              </div>
+              <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">
+                Meet the team bringing expertise, craft, and accountability to every remodeling project across Southwest Florida.
+              </p>
+            </div>
+            <div className="grid gap-px bg-warm-200 sm:grid-cols-3">
+              {[
+                {
+                  name: "Junior Da Silva",
+                  title: "Founder & Licensed Contractor",
+                  credentials: "FL License #CBC1269972",
+                  description: "Founder and lead contractor with nearly a decade of hands-on remodeling experience. Builds every project on transparency, accountability, and craftsmanship.",
+                  href: "/about/junior-da-silva",
+                },
+                {
+                  name: "Camila Lage",
+                  title: "Interior Design Consultant",
+                  credentials: "Kitchen & Bathroom Design Specialist",
+                  description: "Helps homeowners navigate material selections, design layouts, and aesthetic decisions that balance beauty with the practical demands of Florida living.",
+                  href: "/about/camila-lage",
+                },
+                {
+                  name: "Caio Alves",
+                  title: "Project Manager",
+                  credentials: "Permitting & Scheduling Specialist",
+                  description: "Oversees project timelines, subcontractor coordination, and daily quality control to ensure every job meets Stacked Construction's execution standards.",
+                  href: "/about/caio-alves",
+                },
+              ].map((member) => (
+                <div key={member.href} className="group bg-white p-8 lg:p-10">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-warm-900">
+                    <span className="font-display text-xl font-bold text-white">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-warm-900">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-warm-600">{member.title}</p>
+                  <p className="mt-1 text-xs text-warm-400">{member.credentials}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-warm-600">{member.description}</p>
+                  <Link
+                    href={member.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-warm-900 transition-colors hover:text-warm-600"
+                  >
+                    View Profile
+                    <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ─────────────────────────────────────────────── */}
         <section className="relative bg-warm-900 py-28 lg:py-40">
           <div

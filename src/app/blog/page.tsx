@@ -19,7 +19,11 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-  const featuredArticle = articles[0];
+  const sorted = [...articles].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+  const featuredArticle = sorted[0];
+  const recentArticles = sorted.slice(1, 5);
 
   return (
     <>
@@ -116,6 +120,168 @@ export default function BlogIndexPage() {
                     </span>
                   </Link>
                 </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── Recent Posts — masonry editorial ────────────────────── */}
+        {recentArticles.length > 0 && (
+          <section className="bg-warm-900 py-24 lg:py-36">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <div className="mb-14 flex items-end justify-between gap-6">
+                <div>
+                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    Fresh Off the Press
+                  </p>
+                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                    Recent{" "}
+                    <em className="font-light italic text-warm-300">Posts</em>
+                  </h2>
+                </div>
+                <Link
+                  href="/blog"
+                  className="hidden shrink-0 items-center gap-2 text-sm font-semibold text-warm-400 transition-colors hover:text-white sm:inline-flex"
+                >
+                  Browse All
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+
+              <div className="space-y-0">
+                {/* Row 1 — full-width horizontal */}
+                {recentArticles[0] && (
+                  <Link
+                    href={`/blog/${recentArticles[0].slug}`}
+                    className="group block border-t border-warm-800 py-10"
+                  >
+                    <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
+                      <div className="lg:flex-1">
+                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                          {clusters.find((c) => c.slug === recentArticles[0].cluster)?.name ?? recentArticles[0].cluster}
+                        </p>
+                        <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
+                          {recentArticles[0].title}
+                        </h3>
+                      </div>
+                      <div className="lg:w-80 lg:shrink-0">
+                        <p className="text-sm leading-relaxed text-warm-400 lg:text-base">
+                          {recentArticles[0].excerpt}
+                        </p>
+                        <div className="mt-4 flex items-center gap-3 text-xs text-warm-600">
+                          <time dateTime={recentArticles[0].publishedAt}>
+                            {new Date(recentArticles[0].publishedAt).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </time>
+                          <span className="h-1 w-1 rounded-full bg-warm-700" />
+                          <span>{recentArticles[0].readTime}</span>
+                        </div>
+                        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-warm-400 transition-colors group-hover:text-white">
+                          Read Article
+                          <svg
+                            className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            aria-hidden="true"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                )}
+
+                {/* Row 2 — half-width pair */}
+                {recentArticles.length > 1 && (
+                  <div className="grid border-t border-warm-800 sm:grid-cols-2 sm:divide-x sm:divide-warm-800">
+                    {recentArticles.slice(1, 3).map((article, i) => (
+                      <Link
+                        key={article.slug}
+                        href={`/blog/${article.slug}`}
+                        className={`group block py-10 ${i === 1 ? "sm:pl-10" : "sm:pr-10"}`}
+                      >
+                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                          {clusters.find((c) => c.slug === article.cluster)?.name ?? article.cluster}
+                        </p>
+                        <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors group-hover:text-warm-300 sm:text-2xl">
+                          {article.title}
+                        </h3>
+                        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-warm-500">
+                          {article.excerpt}
+                        </p>
+                        <div className="mt-4 flex items-center gap-2 text-xs text-warm-600">
+                          <time dateTime={article.publishedAt}>
+                            {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </time>
+                          <span className="h-1 w-1 rounded-full bg-warm-700" />
+                          <span>{article.readTime}</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
+                {/* Row 3 — full-width horizontal, mirrored */}
+                {recentArticles[3] && (
+                  <Link
+                    href={`/blog/${recentArticles[3].slug}`}
+                    className="group block border-t border-warm-800 py-10"
+                  >
+                    <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
+                      <div className="lg:order-1 lg:flex-1">
+                        <p className="text-sm leading-relaxed text-warm-400 lg:text-base">
+                          {recentArticles[3].excerpt}
+                        </p>
+                        <div className="mt-4 flex items-center gap-3 text-xs text-warm-600">
+                          <time dateTime={recentArticles[3].publishedAt}>
+                            {new Date(recentArticles[3].publishedAt).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </time>
+                          <span className="h-1 w-1 rounded-full bg-warm-700" />
+                          <span>{recentArticles[3].readTime}</span>
+                        </div>
+                        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-warm-400 transition-colors group-hover:text-white">
+                          Read Article
+                          <svg
+                            className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            aria-hidden="true"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div className="lg:order-2 lg:w-80 lg:shrink-0">
+                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                          {clusters.find((c) => c.slug === recentArticles[3].cluster)?.name ?? recentArticles[3].cluster}
+                        </p>
+                        <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
+                          {recentArticles[3].title}
+                        </h3>
+                      </div>
+                    </div>
+                  </Link>
+                )}
+
+                <div className="border-t border-warm-800" />
               </div>
             </div>
           </section>

@@ -238,10 +238,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3 lg:grid-cols-4">
               {city.neighborhoods.map((neighborhood) => (
-                <p
-                  key={neighborhood}
-                  className="border-l-2 border-warm-300 pl-4 text-sm text-warm-600"
-                >
+                <p key={neighborhood} className="flex items-baseline gap-2 text-sm text-warm-600">
+                  <span className="mt-[0.45em] h-1 w-1 shrink-0 rounded-full bg-warm-400" aria-hidden="true" />
                   {neighborhood}
                 </p>
               ))}

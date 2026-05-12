@@ -393,6 +393,51 @@ export default async function ServicePage({
                   ))}
                 </div>
               </div>
+
+              {/* Mid-page CTA — for homeowners who are ready after reading FAQs */}
+              <div className="mt-16 border-t border-warm-200 pt-12 lg:mt-20 lg:pt-14">
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                      Start Your Project
+                    </p>
+                    <p className="mt-2 font-display text-2xl font-bold leading-snug text-warm-900 sm:text-3xl">
+                      Questions answered?{" "}
+                      <em className="font-light italic text-warm-600">
+                        Let&apos;s talk.
+                      </em>
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center">
+                    <a
+                      href="tel:+12397850166"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-warm-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-warm-800"
+                    >
+                      <svg
+                        className="h-4 w-4 shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                        />
+                      </svg>
+                      Call (239) 785-0166
+                    </a>
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-warm-500 hover:text-warm-900"
+                    >
+                      Get Free Estimate
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         )}

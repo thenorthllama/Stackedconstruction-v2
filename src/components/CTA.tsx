@@ -30,6 +30,10 @@ export default function CTA() {
               we can bring it to life.
             </p>
 
+            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-600">
+              Licensed Contractor · FL #CBC1269972
+            </p>
+
             {/* Contact info below the copy */}
             <div className="mt-10 flex flex-col gap-3 text-sm text-warm-500">
               <a

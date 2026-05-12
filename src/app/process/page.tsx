@@ -17,6 +17,45 @@ export const metadata: Metadata = {
   },
 };
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How Stacked Construction Remodels Your Home",
+  description:
+    "Our simple four-step remodeling process takes your project from vision to reality in Southwest Florida.",
+  totalTime: "PT6W",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Free Consultation",
+      text: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment. This is where your project begins.",
+      url: "https://stackedconstruction.co/process",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Detailed Proposal",
+      text: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work. No surprises, no hidden fees — ever.",
+      url: "https://stackedconstruction.co/process",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Expert Build",
+      text: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates. You'll always know what's happening and when.",
+      url: "https://stackedconstruction.co/process",
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Final Walk-Through",
+      text: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete. Your satisfaction is non-negotiable.",
+      url: "https://stackedconstruction.co/process",
+    },
+  ],
+};
+
 export default function ProcessPage() {
   return (
     <>
@@ -72,6 +111,10 @@ export default function ProcessPage() {
         </section>
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
     </>
   );
 }

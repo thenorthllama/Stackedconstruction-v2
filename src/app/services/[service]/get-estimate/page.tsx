@@ -51,7 +51,7 @@ export default async function ServiceLandingPage({
       <Header />
       <main>
         {/* ── Full-screen hero with vertically centered content ──── */}
-        <section className="relative flex min-h-screen items-center bg-warm-900">
+        <section className="relative flex min-h-screen items-start bg-warm-900 lg:items-center">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
@@ -61,10 +61,15 @@ export default async function ServiceLandingPage({
           <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/80 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/40 to-transparent" />
 
-          <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-32 lg:px-10">
+          <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-10 lg:py-32">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-              {/* Left — headline & trust signals */}
-              <div className="lg:col-span-6">
+              {/* Form — first in DOM so it's above the fold on mobile */}
+              <div className="order-first lg:order-none lg:col-span-5 lg:col-start-8">
+                <LandingForm serviceName={service.name} serviceSlug={service.slug} />
+              </div>
+
+              {/* Headline & trust signals — below form on mobile, left col on desktop */}
+              <div className="order-last lg:order-none lg:col-span-6 lg:row-start-1">
                 <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
                   Free Estimate
                 </p>
@@ -108,11 +113,6 @@ export default async function ServiceLandingPage({
                   </div>
                   <p className="text-sm text-warm-400">Licensed &amp; Insured &bull; Free Estimates &bull; No Obligation</p>
                 </div>
-              </div>
-
-              {/* Right — multi-step form */}
-              <div className="lg:col-span-5 lg:col-start-8">
-                <LandingForm serviceName={service.name} serviceSlug={service.slug} />
               </div>
             </div>
           </div>
