@@ -8,42 +8,42 @@ const services = [
     title: "Kitchen Remodeling",
     description:
       "Custom cabinetry, countertops, backsplashes, and complete kitchen transformations that become the heart of your home.",
-    image: "/images/kitchen-luxury-white.jpg",
+    image: "/images/kitchen-luxury-white.webp",
     href: "/services/kitchen-remodeling",
   },
   {
     title: "Bathroom Renovation",
     description:
       "Modern vanities, walk-in showers, soaking tubs, and spa-inspired designs that elevate your daily routine.",
-    image: "/images/service-bathroom.jpg",
+    image: "/images/service-bathroom.webp",
     href: "/services/bathroom-remodeling",
   },
   {
     title: "Outdoor Living & Kitchens",
     description:
       "Outdoor kitchens, patios, pool decks, and living spaces designed for the Southwest Florida lifestyle.",
-    image: "/images/service-outdoor.jpg",
+    image: "/images/service-outdoor.webp",
     href: "/services/outdoor-living",
   },
   {
     title: "Full Home Renovation",
     description:
       "Comprehensive whole-home remodels that reimagine your space from floor plan to finishing touches.",
-    image: "/images/service-fullhome.jpg",
+    image: "/images/service-fullhome.webp",
     href: "/services/home-renovation",
   },
   {
     title: "Flooring & Tile",
     description:
       "Expert installation of hardwood, porcelain, natural stone, and luxury vinyl for lasting beauty underfoot.",
-    image: "/images/service-flooring.jpg",
+    image: "/images/service-flooring.webp",
     href: "/services/flooring-tile",
   },
   {
     title: "Luxury Home Remodeling",
     description:
       "High-end finishes, custom millwork, and premium materials for homeowners who expect the finest.",
-    image: "/images/service-luxury.jpg",
+    image: "/images/service-luxury.webp",
     href: "/services/home-renovation",
   },
 ];

@@ -29,7 +29,7 @@ export default function GalleryPage() {
         <section className="relative min-h-[60vh] bg-warm-900">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/kitchen-modern-island.jpg')" }}
+            style={{ backgroundImage: "url('/images/kitchen-modern-island.webp')" }}
             role="img"
             aria-label="Stacked Construction project gallery"
           />
@@ -83,7 +83,7 @@ export default function GalleryPage() {
         <section className="relative bg-warm-900 py-28 lg:py-40">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/kitchen-luxury-white.jpg')" }}
+            style={{ backgroundImage: "url('/images/kitchen-luxury-white.webp')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">

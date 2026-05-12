@@ -17,7 +17,7 @@ const projects = [
     title: "Modern Kitchen Transformation",
     category: "Kitchen",
     location: "Fort Myers, FL",
-    image: "/images/kitchen-modern-island.jpg",
+    image: "/images/kitchen-modern-island.webp",
     description:
       "A sleek, contemporary kitchen featuring dark cabinetry, marble countertops, exposed ceiling beams, and herringbone hardwood flooring.",
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "Classic White Kitchen Remodel",
     category: "Kitchen",
     location: "Naples, FL",
-    image: "/images/kitchen-luxury-white.jpg",
+    image: "/images/kitchen-luxury-white.webp",
     description:
       "Bright, spacious kitchen with custom white cabinetry, industrial pendant lighting, marble island, and artisan tile backsplash.",
   },
@@ -33,7 +33,7 @@ const projects = [
     title: "Spa-Inspired Master Bath",
     category: "Bathroom",
     location: "Cape Coral, FL",
-    image: "/images/service-bathroom.jpg",
+    image: "/images/service-bathroom.webp",
     description:
       "A relaxing master bathroom retreat with a freestanding soaking tub, frameless glass shower, and natural stone finishes.",
   },
@@ -41,7 +41,7 @@ const projects = [
     title: "Outdoor Fireplace & Living",
     category: "Outdoor Living",
     location: "Bonita Springs, FL",
-    image: "/images/service-outdoor.jpg",
+    image: "/images/service-outdoor.webp",
     description:
       "Cozy outdoor living space with stone fireplace, lantern lighting, and lush landscaping designed for year-round Florida entertaining.",
   },
@@ -49,7 +49,7 @@ const projects = [
     title: "Complete Home Renovation",
     category: "Full Home",
     location: "Fort Myers, FL",
-    image: "/images/service-fullhome.jpg",
+    image: "/images/service-fullhome.webp",
     description:
       "Whole-home transformation with modern interiors, refined finishes, and a reimagined floor plan for contemporary Florida living.",
   },
@@ -57,7 +57,7 @@ const projects = [
     title: "Luxury Living Room Remodel",
     category: "Luxury",
     location: "Naples, FL",
-    image: "/images/service-luxury.jpg",
+    image: "/images/service-luxury.webp",
     description:
       "High-end living space renovation with premium furnishings, designer lighting, and custom architectural details throughout.",
   },
@@ -65,7 +65,7 @@ const projects = [
     title: "Modern Flooring & Tile",
     category: "Flooring & Tile",
     location: "Marco Island, FL",
-    image: "/images/service-flooring.jpg",
+    image: "/images/service-flooring.webp",
     description:
       "Contemporary flooring installation with large-format tile, clean lines, and seamless transitions between living spaces.",
   },
@@ -73,7 +73,7 @@ const projects = [
     title: "Coastal Reeded Island Kitchen",
     category: "Kitchen",
     location: "Fort Myers, FL",
-    image: "/images/kitchen-coastal-reeded.jpg",
+    image: "/images/kitchen-coastal-reeded.webp",
     description:
       "Warm coastal kitchen with reeded oak island cabinetry, quartz countertops, floating shelves, and tropical greenery framed by oversized windows.",
   },
@@ -81,7 +81,7 @@ const projects = [
     title: "Poolside Oak Kitchen",
     category: "Kitchen",
     location: "Bonita Springs, FL",
-    image: "/images/kitchen-poolside-oak.jpg",
+    image: "/images/kitchen-poolside-oak.webp",
     description:
       "Light oak cabinetry with waterfall marble island, pool views, open shelving, and a seamless indoor-outdoor Florida living layout.",
   },
@@ -89,7 +89,7 @@ const projects = [
     title: "Marble Waterfall Island Kitchen",
     category: "Kitchen",
     location: "Naples, FL",
-    image: "/images/kitchen-marble-waterfall.jpg",
+    image: "/images/kitchen-marble-waterfall.webp",
     description:
       "Dramatic marble waterfall island with natural wood cabinetry, bronze pendant lighting, and pool-view sliding glass doors.",
   },
@@ -97,7 +97,7 @@ const projects = [
     title: "Coastal White & Beam Kitchen",
     category: "Kitchen",
     location: "Cape Coral, FL",
-    image: "/images/kitchen-coastal-white-beams.jpg",
+    image: "/images/kitchen-coastal-white-beams.webp",
     description:
       "Bright white shaker cabinetry with exposed wood ceiling beams, marble island, floating wood shelves, and lanai views.",
   },
@@ -137,7 +137,7 @@ const projects = [
     title: "Beachfront Luxury Kitchen",
     category: "Kitchen",
     location: "Fort Myers Beach, FL",
-    image: "/images/kitchen-beachfront-luxury.jpg",
+    image: "/images/kitchen-beachfront-luxury.webp",
     description:
       "Beachfront kitchen with white cabinetry, marble waterfall island, palm tree views through floor-to-ceiling windows, and coastal accents.",
   },

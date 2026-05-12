@@ -104,7 +104,7 @@ export default async function ServicePage({
         <section className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
             role="img"
             aria-label={`${service.name} project by Stacked Construction`}
           />
@@ -446,7 +446,7 @@ export default async function ServicePage({
         <section className="relative bg-warm-900 py-28 lg:py-40">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">

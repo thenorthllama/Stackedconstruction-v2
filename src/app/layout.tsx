@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://stackedconstruction.co",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Stacked Construction – Premium Home Remodeling in Southwest Florida",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Stacked Construction | Premium Home Remodeling in SWFL",
     description:
       "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.webp"],
   },
   alternates: {
     canonical: "https://stackedconstruction.co",
@@ -74,6 +74,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" as="image" href="/images/hero-bg.webp" fetchPriority="high" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        <link rel="preconnect" href="https://www.googleadservices.com" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"

@@ -2852,7 +2852,7 @@ export const articles: BlogPost[] = [
     publishedAt: "2026-03-10T08:00:00Z",
     readTime: "15 min read",
     author: "Camila Lage",
-    image: "/images/luxury-kitchen-remodel-naples-2026.jpeg",
+    image: "/images/luxury-kitchen-remodel-naples-2026.webp",
     imageAlt: "Luxury kitchen remodel in Naples featuring custom cabinetry, waterfall island, and professional-grade appliances in an elegant coastal modern design",
     imageTitle: "Luxury Kitchen Remodel Naples | 2026 High-End Design Trends",
     content: `<p class="lead">Imagine stepping into a kitchen where every detail—from the Italian marble waterfall island to the custom-built spice drawer perfectly sized for your collection—was crafted specifically for your lifestyle. In Naples, this level of luxury isn't just aspirational; it's becoming the standard for discerning homeowners planning their 2026 kitchen renovations.</p>
@@ -3054,7 +3054,7 @@ export const articles: BlogPost[] = [
     publishedAt: "2026-03-17T08:00:00Z",
     readTime: "12 min read",
     author: "Junior Da Silva",
-    image: "/images/transitional-kitchen-design-swfl.jpeg",
+    image: "/images/transitional-kitchen-design-swfl.webp",
     imageAlt: "Elegant transitional kitchen design in Southwest Florida home featuring white cabinetry, quartzite island, mixed metals and coastal accents - popular SWFL style",
     imageTitle: "Transitional Kitchen Design SWFL - Modern Traditional Blend for Florida Homes",
     content: `<p class="lead">Standing in a newly renovated Southwest Florida kitchen, you might notice something surprising—it doesn't feel overwhelmingly modern nor traditionally stuffy. Instead, it hits a perfect sweet spot between the two. This isn't by accident. You're experiencing transitional design, and it's taking SWFL by storm.</p>
@@ -3223,7 +3223,7 @@ export const articles: BlogPost[] = [
     publishedAt: "2026-03-24T08:00:00Z",
     readTime: "10 min read",
     author: "Junior Da Silva",
-    image: "/images/white-oak-shaker-cabinets-swfl.jpeg",
+    image: "/images/white-oak-shaker-cabinets-swfl.webp",
     imageAlt: "Modern Southwest Florida kitchen with white oak shaker cabinets, quartz countertops, and coastal design elements perfect for Florida homes",
     imageTitle: "White Oak Shaker Cabinets in Southwest Florida Kitchen Design",
     content: `<p class="lead">Standing in a recently completed Naples kitchen, you immediately notice something different. It's not the gleaming quartz countertops or the statement light fixtures—it's the cabinets. Neither stark white nor dark espresso, they radiate a natural warmth that feels simultaneously modern and timeless.</p>
@@ -3364,7 +3364,7 @@ export const articles: BlogPost[] = [
     publishedAt: "2026-03-31T08:00:00Z",
     readTime: "12 min read",
     author: "Camila Lage",
-    image: "/images/quartzite-island-waterfall-edge-swfl.jpeg",
+    image: "/images/quartzite-island-waterfall-edge-swfl.webp",
     imageAlt: "Luxury kitchen featuring a stunning quartzite island with waterfall edge design, showcasing dramatic veining in a bright Southwest Florida home",
     imageTitle: "Quartzite Island Waterfall Edge - Luxury Kitchen Centerpiece SWFL",
     content: `<p class="lead">Imagine a kitchen island so captivating it becomes the heart of your home, seamlessly blending artistry with resilience. In Southwest Florida, homeowners are turning to quartzite with waterfall edges to achieve just that – a breathtaking centerpiece that stands up to both the tropical climate and daily life.</p>

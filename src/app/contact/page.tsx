@@ -70,7 +70,7 @@ export default function ContactPage() {
         <section className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
             role="img"
             aria-label="Stacked Construction remodeling project"
           />

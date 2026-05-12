@@ -82,7 +82,7 @@ export default function JuniorDaSilvaPage() {
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh]">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }} role="img" aria-label="Junior Da Silva, Founder of Stacked Construction" />
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} role="img" aria-label="Junior Da Silva, Founder of Stacked Construction" />
           <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/70 to-warm-900/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
@@ -251,7 +251,7 @@ export default function JuniorDaSilvaPage() {
 
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="relative bg-warm-900 py-28 lg:py-40">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }} />
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Start Your Project</p>
