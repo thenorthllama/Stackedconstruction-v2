@@ -15,6 +15,13 @@
   --color-accent: #c8956c;
   --color-accent-dark: #a87a55;
 
+  /* Brand semantic tokens — light editorial palette */
+  --color-brand-espresso: #3d2b21;
+  --color-brand-espresso-deep: #2a1d16;
+  --color-brand-cream: #faf7f4;
+  --color-brand-linen: #f0ebe5;
+  --color-brand-ink: #1a1714;
+
   --font-sans: var(--font-dm-sans);
   --font-display: var(--font-playfair-display);
 }
@@ -22,12 +29,68 @@
 body {
   font-family: var(--font-sans);
   color: var(--color-warm-800);
+  background-color: var(--color-brand-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Editorial primitives (reference design language) ──────────────────────── */
+
+/* Dotted eyebrow label: "• About Us" */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* Notched editorial card corner — subtle scooped tab, used on hero/feature imagery */
+.card-notch {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+@supports (mask-image: radial-gradient(circle, black, transparent)) {
+  .card-notch-tl {
+    mask-image: radial-gradient(circle 28px at 0 0, transparent 27px, black 28px);
+    -webkit-mask-image: radial-gradient(circle 28px at 0 0, transparent 27px, black 28px);
+  }
+}
+
+/* Focus visibility — WCAG 2.1 AA keyboard nav */
+:focus-visible {
+  outline: 2px solid var(--color-accent-dark);
+  outline-offset: 3px;
 }
 
 /* ── Blog article prose styles ─────────────────────────────────────────────── */
