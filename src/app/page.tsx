@@ -2,9 +2,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StructuredData from "@/components/StructuredData";
 import TrustBar from "@/components/TrustBar";
-import Services from "@/components/Services";
-import Benefits from "@/components/Benefits";
-import Process from "@/components/Process";
+import {
+  AboutStatement,
+  TeamList,
+  ProjectCategories,
+  CaseStudies,
+} from "@/components/HomeEditorial";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -18,10 +21,11 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <Services />
-        <Benefits />
-        <Process />
+        <AboutStatement />
         <Projects />
+        <TeamList />
+        <ProjectCategories />
+        <CaseStudies />
         <Testimonials />
         <FAQ />
         <CTA />
