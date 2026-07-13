@@ -8,7 +8,6 @@ import {
   ProjectCategories,
   CaseStudies,
 } from "@/components/HomeEditorial";
-import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -19,15 +18,22 @@ export default function Home() {
     <>
       <Header />
       <main>
+        {/* 1. Promise — hero with location + CTA */}
         <Hero />
+        {/* 2. Instant proof — stats strip */}
         <TrustBar />
-        <AboutStatement />
-        <Projects />
-        <TeamList />
+        {/* 3. What we do — services band */}
         <ProjectCategories />
+        {/* 4. Who we are — founder-led about */}
+        <AboutStatement />
+        <TeamList />
+        {/* 5. Local proof — numbered case studies, one per city */}
         <CaseStudies />
+        {/* 6. Social proof — reviews */}
         <Testimonials />
+        {/* 7. Objections — FAQ */}
         <FAQ />
+        {/* 8. Action — contact form */}
         <CTA />
       </main>
       <Footer />
