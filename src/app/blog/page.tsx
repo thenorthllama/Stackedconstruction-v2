@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
             <div>
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <p className="mb-5 eyebrow text-warm-400">
                 Insights &amp; Guides
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
@@ -63,7 +63,7 @@ export default function BlogIndexPage() {
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-500">
                     Featured Article
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -78,7 +78,7 @@ export default function BlogIndexPage() {
                     href={`/blog/${featuredArticle.slug}`}
                     className="group block"
                   >
-                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                    <p className="mb-3 eyebrow text-accent">
                       {clusters.find((c) => c.slug === featuredArticle.cluster)
                         ?.name ?? featuredArticle.cluster}
                     </p>
@@ -131,7 +131,7 @@ export default function BlogIndexPage() {
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="mb-14 flex items-end justify-between gap-6">
                 <div>
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-500">
                     Fresh Off the Press
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -159,7 +159,7 @@ export default function BlogIndexPage() {
                   >
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
                       <div className="lg:flex-1">
-                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                        <p className="mb-3 eyebrow text-accent">
                           {clusters.find((c) => c.slug === recentArticles[0].cluster)?.name ?? recentArticles[0].cluster}
                         </p>
                         <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
@@ -208,7 +208,7 @@ export default function BlogIndexPage() {
                         href={`/blog/${article.slug}`}
                         className={`group block py-10 ${i === 1 ? "sm:pl-10" : "sm:pr-10"}`}
                       >
-                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                        <p className="mb-3 eyebrow text-accent">
                           {clusters.find((c) => c.slug === article.cluster)?.name ?? article.cluster}
                         </p>
                         <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors group-hover:text-warm-300 sm:text-2xl">
@@ -270,7 +270,7 @@ export default function BlogIndexPage() {
                         </span>
                       </div>
                       <div className="lg:order-2 lg:w-80 lg:shrink-0">
-                        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                        <p className="mb-3 eyebrow text-accent">
                           {clusters.find((c) => c.slug === recentArticles[3].cluster)?.name ?? recentArticles[3].cluster}
                         </p>
                         <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
@@ -304,7 +304,7 @@ export default function BlogIndexPage() {
                   {/* Cluster header */}
                   <div className="lg:col-span-4">
                     <p
-                      className={`mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] ${
+                      className={`mb-4 eyebrow ${
                         isEven ? "text-warm-500" : "text-warm-500"
                       }`}
                     >
@@ -434,7 +434,7 @@ export default function BlogIndexPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-5 eyebrow text-warm-500">
               Ready to Start?
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">

@@ -10,25 +10,15 @@ const serviceLinks = [
 ];
 
 const areaLinks = [
-  { name: "Fort Myers", href: "/areas/fort-myers" },
-  { name: "Cape Coral", href: "/areas/cape-coral" },
   { name: "Naples", href: "/areas/naples" },
   { name: "Bonita Springs", href: "/areas/bonita-springs" },
-  { name: "Marco Island", href: "/areas/marco-island" },
-  { name: "Punta Gorda", href: "/areas/punta-gorda" },
+  { name: "Fort Myers", href: "/areas/fort-myers" },
+  { name: "Cape Coral", href: "/areas/cape-coral" },
   { name: "Lee County", href: "/areas/lee-county" },
   { name: "Collier County", href: "/areas/collier-county" },
-  { name: "Charlotte County", href: "/areas/charlotte-county" },
 ];
 
-const secondaryAreas = [
-  "Estero",
-  "Lehigh Acres",
-  "Port Charlotte",
-  "North Fort Myers",
-  "Fort Myers Beach",
-  "Sanibel",
-];
+const secondaryAreas = ["Estero", "North Fort Myers", "Fort Myers Beach"];
 
 export default function Footer() {
   return (
@@ -49,7 +39,7 @@ export default function Footer() {
             <p className="mb-6 text-sm leading-relaxed text-warm-500">
               Premium home remodeling in Southwest Florida. Kitchen remodeling,
               bathroom renovation, outdoor living, and full home renovations
-              across Fort Myers, Naples, Cape Coral, and all of SWFL.
+              across Naples, Bonita Springs, Fort Myers, and Cape Coral.
             </p>
             <div className="flex gap-4">
               <a
@@ -90,7 +80,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+            <h3 className="mb-5 eyebrow text-warm-400">
               Services
             </h3>
             <ul className="space-y-3">
@@ -109,7 +99,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+            <h3 className="mb-5 eyebrow text-warm-400">
               Service Areas
             </h3>
             <ul className="space-y-3">
@@ -131,7 +121,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+            <h3 className="mb-5 eyebrow text-warm-400">
               Contact
             </h3>
             <address className="not-italic">
@@ -152,7 +142,17 @@ export default function Footer() {
                     info@stackedconstruction.co
                   </a>
                 </li>
-                <li>Fort Myers, FL 33901</li>
+                <li>Serving Southwest Florida from Fort Myers, FL</li>
+                <li>
+                  <a
+                    href="https://share.google/CiOmnBxQhr2fIJXjj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-white"
+                  >
+                    Find us on Google
+                  </a>
+                </li>
                 <li className="pt-2 text-xs text-warm-600">
                   Mon–Fri: 7am–6pm
                   <br />
@@ -162,7 +162,7 @@ export default function Footer() {
             </address>
 
             <div className="mt-6">
-              <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <h3 className="mb-3 eyebrow text-warm-400">
                 Quick Links
               </h3>
               <ul className="space-y-2">
@@ -209,7 +209,7 @@ export default function Footer() {
         <div className="mt-14 border-t border-warm-800 pt-8 text-center text-xs text-warm-600">
           <p>
             &copy; {new Date().getFullYear()} Stacked Construction. All rights
-            reserved. Serving Lee County, Collier County, and Charlotte County.
+            reserved. Serving Naples, Bonita Springs, Fort Myers, and Cape Coral.
           </p>
           <p className="mt-2">
             Licensed &amp; Insured in Florida &middot; License #CBC1269972

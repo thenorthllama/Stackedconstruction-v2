@@ -28,7 +28,7 @@ export default function Benefits() {
         <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
           {/* Left: heading + image placeholder */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-500">
               Why Choose Us
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">

@@ -24,7 +24,7 @@ export default function StructuredData() {
         name: "What areas do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve all of Southwest Florida including Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Marco Island, Punta Gorda, and surrounding areas across Lee, Collier, and Charlotte counties.",
+          text: "We proudly serve Naples, Bonita Springs, Fort Myers, and Cape Coral, plus surrounding communities across Lee and Collier counties.",
         },
       },
       {
@@ -77,7 +77,7 @@ export default function StructuredData() {
     "@id": "https://stackedconstruction.co/#business",
     name: "Stacked Construction",
     description:
-      "Premium home remodeling contractor serving Southwest Florida. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, Bonita Springs, Punta Gorda, and Marco Island.",
+      "Premium home remodeling contractor serving Southwest Florida. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral.",
     url: "https://stackedconstruction.co",
     telephone: "+12397850166",
     email: "info@stackedconstruction.co",
@@ -95,18 +95,13 @@ export default function StructuredData() {
       longitude: -81.8723,
     },
     areaServed: [
-      { "@type": "City", name: "Fort Myers", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
-      { "@type": "City", name: "Cape Coral", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
       { "@type": "City", name: "Naples", containedInPlace: { "@type": "AdministrativeArea", name: "Collier County, FL" } },
       { "@type": "City", name: "Bonita Springs", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
-      { "@type": "City", name: "Punta Gorda", containedInPlace: { "@type": "AdministrativeArea", name: "Charlotte County, FL" } },
-      { "@type": "City", name: "Marco Island", containedInPlace: { "@type": "AdministrativeArea", name: "Collier County, FL" } },
+      { "@type": "City", name: "Fort Myers", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
+      { "@type": "City", name: "Cape Coral", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
       { "@type": "City", name: "Estero" },
-      { "@type": "City", name: "Lehigh Acres" },
-      { "@type": "City", name: "Port Charlotte" },
       { "@type": "City", name: "North Fort Myers" },
       { "@type": "City", name: "Fort Myers Beach" },
-      { "@type": "City", name: "Sanibel" },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -207,7 +202,9 @@ export default function StructuredData() {
       "https://www.facebook.com/profile.php?id=61586672805182",
       "https://www.instagram.com/stackedconstruction/",
       "https://www.linkedin.com/company/111945969/",
+      "https://share.google/CiOmnBxQhr2fIJXjj",
     ],
+    hasMap: "https://share.google/CiOmnBxQhr2fIJXjj",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Florida Certified Building Contractor",

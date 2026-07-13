@@ -82,7 +82,7 @@ export default function KitchenCostCalculatorPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-warm-900/95 via-warm-900/90 to-warm-900" />
 
           <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+            <p className="mb-5 eyebrow text-warm-400">
               Free · 60-Second Estimate
             </p>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
@@ -115,7 +115,7 @@ export default function KitchenCostCalculatorPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   How It Works
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -161,7 +161,7 @@ export default function KitchenCostCalculatorPage() {
         <section className="bg-warm-900 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-500">
                 What We Price
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -198,7 +198,7 @@ export default function KitchenCostCalculatorPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Common Questions
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -241,7 +241,7 @@ export default function KitchenCostCalculatorPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-5 eyebrow text-warm-500">
               Prefer to Talk It Through?
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">

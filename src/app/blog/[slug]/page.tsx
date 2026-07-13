@@ -176,7 +176,7 @@ export default async function BlogArticlePage({
               <aside className="lg:col-span-3 lg:sticky lg:top-32">
                 <nav className="space-y-8">
                   <div>
-                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-500">
                       Category
                     </p>
                     <Link
@@ -187,7 +187,7 @@ export default async function BlogArticlePage({
                     </Link>
                   </div>
                   <div>
-                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-500">
                       Published
                     </p>
                     <time
@@ -198,14 +198,14 @@ export default async function BlogArticlePage({
                     </time>
                   </div>
                   <div>
-                    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-500">
                       Read Time
                     </p>
                     <p className="text-sm text-warm-700">{article.readTime}</p>
                   </div>
                   {article.author && (
                     <div>
-                      <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                      <p className="mb-3 eyebrow text-warm-500">
                         Written By
                       </p>
                       {authorData ? (
@@ -225,7 +225,7 @@ export default async function BlogArticlePage({
                     </div>
                   )}
                   <div className="rounded-xl bg-warm-900 p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    <p className="eyebrow text-warm-500">
                       Start Your Project
                     </p>
                     <p className="mt-2.5 font-display text-lg font-semibold leading-snug text-white">
@@ -318,7 +318,7 @@ export default async function BlogArticlePage({
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-500">
                     Keep Reading
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -337,7 +337,7 @@ export default async function BlogArticlePage({
                         className="group flex items-center justify-between py-8 first:pt-0 last:pb-0"
                       >
                         <div className="pr-6">
-                          <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                          <p className="mb-2 eyebrow text-accent">
                             {clusters.find(
                               (c) => c.slug === related.cluster
                             )?.name ?? related.cluster}
@@ -390,7 +390,7 @@ export default async function BlogArticlePage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-5 eyebrow text-warm-500">
               Start Your Project
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">

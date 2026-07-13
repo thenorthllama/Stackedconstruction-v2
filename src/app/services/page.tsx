@@ -36,7 +36,7 @@ export default function ServicesIndexPage() {
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
             <div>
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <p className="mb-5 eyebrow text-warm-400">
                 What We Do
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
@@ -72,7 +72,7 @@ export default function ServicesIndexPage() {
                       <span className="block font-display text-8xl font-bold leading-none text-warm-200 lg:text-9xl">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                      <p className="mt-4 eyebrow text-warm-500">
                         {service.shortName}
                       </p>
                     </div>

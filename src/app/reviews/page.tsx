@@ -130,7 +130,7 @@ export default function ReviewsPage() {
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
             <div className="grid w-full gap-12 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-8">
-                <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+                <p className="mb-5 eyebrow text-warm-400">
                   Client Reviews
                 </p>
                 <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
@@ -167,7 +167,7 @@ export default function ReviewsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
               <div>
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Google Reviews
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
@@ -222,7 +222,7 @@ export default function ReviewsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Share Your Experience
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -266,7 +266,7 @@ export default function ReviewsPage() {
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Start Your Project</p>
+            <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Join{" "}
               <em className="font-light italic text-warm-300">Our Happy Clients?</em>

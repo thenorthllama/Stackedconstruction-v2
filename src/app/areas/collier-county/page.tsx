@@ -23,7 +23,7 @@ export default function CollierCountyPage() {
       county={county}
       countyCities={countyCities}
       services={services}
-      ctaDescription="From Naples estates to Marco Island waterfront homes, Stacked Construction delivers the luxury remodeling craftsmanship that Collier County's finest communities demand."
+      ctaDescription="From Naples estates to golf-course communities, Stacked Construction delivers the luxury remodeling craftsmanship that Collier County's finest communities demand."
     />
   );
 }

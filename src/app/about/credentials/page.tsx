@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Licenses & Credentials | Stacked Construction",
     description:
-      "Florida Certified Building Contractor CBC1269972. Licensed and insured for kitchen remodeling, bathroom renovation, and full-home projects across Lee, Collier, and Charlotte counties.",
+      "Florida Certified Building Contractor CBC1269972. Licensed and insured for kitchen remodeling, bathroom renovation, and full-home projects across Lee and Collier counties.",
   },
 };
 
@@ -102,7 +102,7 @@ export default function CredentialsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   State Licensure
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -204,7 +204,7 @@ export default function CredentialsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Homeowner Protection
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -221,7 +221,7 @@ export default function CredentialsPage() {
                     },
                     {
                       title: "Permit Authority",
-                      desc: "Only licensed contractors can pull permits in Lee, Collier, and Charlotte counties. Unpermitted work must be disclosed at sale and can result in costly corrections.",
+                      desc: "Only licensed contractors can pull permits in Lee and Collier counties. Unpermitted work must be disclosed at sale and can result in costly corrections.",
                     },
                     {
                       title: "DBPR Accountability",
@@ -248,7 +248,7 @@ export default function CredentialsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Licensed Service Area
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -259,9 +259,8 @@ export default function CredentialsPage() {
               <div className="lg:col-span-7 lg:col-start-6">
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
-                    { county: "Lee County", cities: ["Fort Myers", "Cape Coral", "Bonita Springs", "Estero", "Fort Myers Beach", "Sanibel"] },
-                    { county: "Collier County", cities: ["Naples", "Marco Island", "Bonita Springs"] },
-                    { county: "Charlotte County", cities: ["Punta Gorda", "Port Charlotte", "North Port"] },
+                    { county: "Lee County", cities: ["Fort Myers", "Cape Coral", "Bonita Springs", "Estero", "North Fort Myers"] },
+                    { county: "Collier County", cities: ["Naples"] },
                   ].map((area) => (
                     <div key={area.county} className="rounded-xl bg-warm-50 p-6">
                       <h3 className="font-display text-lg font-bold text-warm-900">{area.county}</h3>
@@ -277,7 +276,7 @@ export default function CredentialsPage() {
                   ))}
                 </div>
                 <p className="mt-8 text-sm leading-relaxed text-warm-600">
-                  Our Florida Certified Building Contractor license (CBC1269972) authorizes us to perform residential and commercial construction, remodeling, and renovation work across the entire state of Florida. We primarily serve Southwest Florida across Lee, Collier, and Charlotte counties.
+                  Our Florida Certified Building Contractor license (CBC1269972) authorizes us to perform residential and commercial construction, remodeling, and renovation work across the entire state of Florida. We primarily serve Naples, Bonita Springs, Fort Myers, and Cape Coral across Lee and Collier counties.
                 </p>
               </div>
             </div>
@@ -288,7 +287,7 @@ export default function CredentialsPage() {
         <section className="bg-warm-50 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-500">
                 Our Team
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -354,7 +353,7 @@ export default function CredentialsPage() {
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Start Your Project</p>
+            <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Work With a Contractor{" "}
               <em className="font-light italic text-warm-300">You Can Verify</em>

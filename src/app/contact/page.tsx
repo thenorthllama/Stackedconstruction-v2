@@ -79,7 +79,7 @@ export default function ContactPage() {
 
           <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[60vh] lg:px-10 lg:pb-24">
             <div className="max-w-3xl">
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <p className="mb-5 eyebrow text-warm-400">
                 Contact Us
               </p>
               <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
@@ -100,7 +100,7 @@ export default function ContactPage() {
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               {/* Left — contact info */}
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Get in Touch
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -194,9 +194,8 @@ export default function ContactPage() {
                     Service Areas
                   </p>
                   <p className="text-sm leading-relaxed text-warm-600">
-                    Fort Myers, Cape Coral, Naples, Bonita Springs, Marco
-                    Island, Punta Gorda, and all of Lee, Collier &amp; Charlotte
-                    Counties.
+                    Naples, Bonita Springs, Fort Myers, Cape Coral, and
+                    surrounding communities across Lee &amp; Collier Counties.
                   </p>
                 </div>
 

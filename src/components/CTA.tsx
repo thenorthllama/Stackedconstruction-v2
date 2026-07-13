@@ -15,7 +15,7 @@ export default function CTA() {
         <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
           {/* Left — heading */}
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-500">
               Start Your Project
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
@@ -30,7 +30,7 @@ export default function CTA() {
               we can bring it to life.
             </p>
 
-            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-600">
+            <p className="mt-4 eyebrow text-warm-600">
               Licensed Contractor · FL #CBC1269972
             </p>
 

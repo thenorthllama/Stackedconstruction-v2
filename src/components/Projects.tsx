@@ -49,7 +49,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="eyebrow mb-4 text-warm-500">
               Our Work
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
@@ -59,17 +59,25 @@ export default function Projects() {
           </div>
           <a
             href="/gallery"
-            className="shrink-0 rounded-full border border-warm-900 px-6 py-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-all hover:bg-warm-900 hover:text-white"
+            className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
           >
             View All
+            <span
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            >
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
           </a>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[200px]">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[200px]">
           {projects.map((project) => (
             <article
               key={project.title}
-              className={`group relative overflow-hidden bg-warm-800 ${project.span}`}
+              className={`group relative overflow-hidden rounded-3xl bg-warm-800 ${project.span}`}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"

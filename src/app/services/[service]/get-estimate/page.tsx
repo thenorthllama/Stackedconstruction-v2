@@ -70,7 +70,7 @@ export default async function ServiceLandingPage({
 
               {/* Headline & trust signals — below form on mobile, left col on desktop */}
               <div className="order-last lg:order-none lg:col-span-6 lg:row-start-1">
-                <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+                <p className="mb-5 eyebrow text-warm-400">
                   Free Estimate
                 </p>
                 <h1 className="max-w-xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
@@ -123,7 +123,7 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Our Approach
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -173,7 +173,7 @@ export default async function ServiceLandingPage({
         <section className="bg-warm-900 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-500">
                 What&apos;s Included
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -217,7 +217,7 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   How It Works
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -262,7 +262,7 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-500">
                   Where We Work
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
@@ -321,7 +321,7 @@ export default async function ServiceLandingPage({
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-500">
                     Common Questions
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
@@ -374,7 +374,7 @@ export default async function ServiceLandingPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-5 eyebrow text-warm-500">
               Start Your Project
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">

@@ -8,7 +8,7 @@ export default function NotFound() {
       <Header />
       <main className="bg-warm-50">
         <section className="mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center px-6 py-32 text-center lg:px-10">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+          <p className="mb-4 eyebrow text-warm-500">
             Page Not Found
           </p>
           <h1 className="font-display text-6xl font-bold text-warm-900 sm:text-7xl lg:text-8xl">

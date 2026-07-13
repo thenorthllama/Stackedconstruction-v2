@@ -64,7 +64,7 @@ export default function ProcessPage() {
         {/* Page hero */}
         <section className="bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-500">
               How It Works
             </p>
             <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">

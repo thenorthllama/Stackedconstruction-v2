@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve all of Southwest Florida including Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Marco Island, Punta Gorda, and surrounding areas across Lee, Collier, and Charlotte counties.",
+      "We proudly serve Naples, Bonita Springs, Fort Myers, and Cape Coral, plus surrounding communities across Lee and Collier counties.",
   },
   {
     question: "Are you licensed and insured?",
@@ -42,7 +42,7 @@ export default function FAQ() {
     <section id="faq" className="bg-warm-50 py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-6 lg:px-10">
         <div className="mb-16 text-center">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+          <p className="mb-4 eyebrow text-warm-500">
             FAQ
           </p>
           <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">

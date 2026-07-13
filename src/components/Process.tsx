@@ -31,7 +31,7 @@ export default function Process() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-500">
               How It Works
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">

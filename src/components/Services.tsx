@@ -55,7 +55,7 @@ export default function Services() {
         {/* Section header */}
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="eyebrow mb-4 text-warm-500">
               Our Services
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
@@ -74,7 +74,7 @@ export default function Services() {
           {services.map((service, i) => (
             <Link key={service.title} href={service.href}>
               <TiltCard className="cursor-pointer h-full">
-                <article className="group overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl h-full">
+                <article className="group overflow-hidden rounded-3xl border border-warm-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl h-full">
                   {/* Image area */}
                   <div className="relative aspect-[3/2] overflow-hidden bg-warm-100">
                     <div

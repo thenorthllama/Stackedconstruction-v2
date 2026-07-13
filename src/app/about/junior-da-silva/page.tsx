@@ -135,7 +135,7 @@ export default function JuniorDaSilvaPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">About Junior</p>
+                <p className="mb-4 eyebrow text-warm-500">About Junior</p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   The Person<br />
                   <em className="font-light italic text-warm-600">Behind the Work</em>
@@ -153,7 +153,7 @@ export default function JuniorDaSilvaPage() {
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-warm-400" />
-                    <p className="text-sm text-warm-600">Serving Lee, Collier &amp; Charlotte counties</p>
+                    <p className="text-sm text-warm-600">Serving Lee &amp; Collier counties</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-warm-400" />
@@ -197,7 +197,7 @@ export default function JuniorDaSilvaPage() {
         <section className="bg-warm-900 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Areas of Expertise</p>
+              <p className="mb-4 eyebrow text-warm-500">Areas of Expertise</p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 Deep Knowledge,{" "}<em className="font-light italic text-warm-300">Real Experience</em>
               </h2>
@@ -208,7 +208,7 @@ export default function JuniorDaSilvaPage() {
                 { title: "Bathroom Renovation", desc: "Walk-in showers, spa-inspired vanities, tile work, and aging-in-place modifications." },
                 { title: "Full Home Renovation", desc: "Complete interior overhauls — coordinating trades, managing timelines, and delivering cohesive results." },
                 { title: "Outdoor Living & Kitchens", desc: "Lanai enclosures, outdoor kitchens, pool decks, and covered living spaces built for Florida's climate." },
-                { title: "Florida Building Codes", desc: "Deep familiarity with Lee, Collier, and Charlotte county permitting requirements and inspection processes." },
+                { title: "Florida Building Codes", desc: "Deep familiarity with Lee and Collier county permitting requirements and inspection processes." },
                 { title: "Project Management", desc: "Structured scheduling, subcontractor coordination, and client communication from start to final walk-through." },
               ].map((item, i) => (
                 <div key={i} className="bg-warm-900 p-8 lg:p-10">
@@ -225,7 +225,7 @@ export default function JuniorDaSilvaPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Written by Junior</p>
+                <p className="mb-4 eyebrow text-warm-500">Written by Junior</p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Expert<br /><em className="font-light italic text-warm-600">Articles</em>
                 </h2>
@@ -254,7 +254,7 @@ export default function JuniorDaSilvaPage() {
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Start Your Project</p>
+            <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Work Directly{" "}<em className="font-light italic text-warm-300">With Junior</em>
             </h2>

@@ -10,7 +10,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
       itemScope
       itemType="https://schema.org/Person"
     >
-      <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+      <p className="mb-6 eyebrow text-warm-500">
         About the Author
       </p>
 

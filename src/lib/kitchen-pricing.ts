@@ -17,8 +17,6 @@ export type Region =
   | "cape-coral"
   | "bonita-springs"
   | "naples"
-  | "marco-island"
-  | "punta-gorda"
   | "lehigh-acres"
   | "estero"
   | "north-fort-myers"
@@ -142,9 +140,7 @@ export const REGIONS: Record<Region, { label: string; mult: number }> = {
   "north-fort-myers": { label: "North Fort Myers", mult: 0.98 },
   estero: { label: "Estero", mult: 1.06 },
   "bonita-springs": { label: "Bonita Springs", mult: 1.08 },
-  "punta-gorda": { label: "Punta Gorda / Port Charlotte", mult: 1.02 },
   naples: { label: "Naples", mult: 1.25 },
-  "marco-island": { label: "Marco Island", mult: 1.3 },
   "sanibel-captiva": { label: "Sanibel / Captiva", mult: 1.28 },
   other: { label: "Other SWFL area", mult: 1.0 },
 };

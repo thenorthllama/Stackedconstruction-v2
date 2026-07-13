@@ -27,7 +27,7 @@ const data = [
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
           Free Consultation
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-500 mb-6">
           We come to you
         </p>
         <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
@@ -67,7 +67,7 @@ const data = [
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
           Detailed Proposal
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-500 mb-6">
           Transparent from day one
         </p>
         <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
@@ -107,7 +107,7 @@ const data = [
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
           Expert Build
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-500 mb-6">
           Quality craftsmanship, clean job sites
         </p>
         <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
@@ -147,7 +147,7 @@ const data = [
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
           Final Walk-Through
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-500 mb-6">
           We don&apos;t leave until it&apos;s perfect
         </p>
         <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">

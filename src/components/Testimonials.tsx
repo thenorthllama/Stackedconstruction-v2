@@ -86,7 +86,7 @@ export default function Testimonials() {
           className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end"
         >
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-500">
               Testimonials
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
