@@ -32,15 +32,15 @@ const playfairDisplay = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stackedconstruction.co"),
   title: {
-    default: "Stacked Construction | Kitchen & Bathroom Remodeling Fort Myers, Naples, Cape Coral",
+    default: "Remodeling Contractor Southwest Florida | Stacked Construction",
     template: "%s | Stacked Construction",
   },
   description:
-    "Southwest Florida's trusted remodeling contractor. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL. 150+ projects completed. Licensed & insured. Free estimate.",
+    "Licensed & insured Florida general contractor (CBC1269972). Kitchen, bathroom, outdoor living & whole-home remodeling in Naples, Bonita Springs, Fort Myers & Cape Coral. Free estimate.",
   openGraph: {
     title: "Stacked Construction | Premium Home Remodeling in Southwest Florida",
     description:
-      "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, Bonita Springs, and all of SWFL. 150+ projects. Licensed & insured.",
+      "Expert kitchen, bathroom, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral. 150+ projects. Licensed & insured.",
     type: "website",
     locale: "en_US",
     siteName: "Stacked Construction",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Stacked Construction | Premium Home Remodeling in SWFL",
     description:
-      "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL.",
+      "Expert kitchen, bathroom, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral.",
     images: ["/images/og-image.webp"],
   },
   alternates: {
