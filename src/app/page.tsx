@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StructuredData from "@/components/StructuredData";
 import TrustBar from "@/components/TrustBar";
+import Services from "@/components/Services";
 import {
   AboutStatement,
   TeamList,
@@ -22,18 +23,20 @@ export default function Home() {
         <Hero />
         {/* 2. Instant proof — stats strip */}
         <TrustBar />
-        {/* 3. What we do — services band */}
-        <ProjectCategories />
+        {/* 3. What we do — services grid with SEO copy */}
+        <Services />
         {/* 4. Who we are — founder-led about */}
         <AboutStatement />
         <TeamList />
-        {/* 5. Local proof — numbered case studies, one per city */}
+        {/* 5. Visual interlude + service links — dark categories band */}
+        <ProjectCategories />
+        {/* 6. Local proof — numbered case studies, one per city */}
         <CaseStudies />
-        {/* 6. Social proof — reviews */}
+        {/* 7. Social proof — reviews */}
         <Testimonials />
-        {/* 7. Objections — FAQ */}
+        {/* 8. Objections — FAQ */}
         <FAQ />
-        {/* 8. Action — contact form */}
+        {/* 9. Action — contact form */}
         <CTA />
       </main>
       <Footer />
