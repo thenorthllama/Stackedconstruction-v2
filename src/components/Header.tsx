@@ -88,7 +88,7 @@ export default function Header() {
           <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
             {/* Services dropdown */}
             <div className="group/dd relative">
-              <a
+              <Link
                 href="/services"
                 className="inline-flex items-center gap-1.5 py-3 text-[13px] font-medium uppercase tracking-wider text-warm-600 transition-colors hover:text-warm-900"
                 aria-haspopup="true"
@@ -104,7 +104,7 @@ export default function Header() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
-              </a>
+              </Link>
               <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 group-hover/dd:visible group-hover/dd:opacity-100 group-focus-within/dd:visible group-focus-within/dd:opacity-100">
                 <ul className="overflow-hidden rounded-3xl bg-white p-2.5 shadow-xl shadow-warm-900/10 ring-1 ring-warm-200">
                   {serviceLinks.map((s) => (
