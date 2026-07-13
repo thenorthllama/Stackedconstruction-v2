@@ -244,6 +244,18 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </p>
               ))}
             </div>
+            <div className="mt-14 overflow-hidden rounded-3xl border border-warm-200">
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent(`${city.name}, FL`)}&z=11&output=embed`}
+                title={`Map of ${city.name}, Florida — Stacked Construction service area`}
+                width="100%"
+                height="360"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </section>
 

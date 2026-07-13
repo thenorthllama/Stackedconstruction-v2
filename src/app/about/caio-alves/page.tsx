@@ -152,13 +152,13 @@ export default function CaioAlvesPage() {
                   <p>
                     Caio manages the scheduling of subcontractors, tracks progress against
                     project milestones, and ensures that every job site meets Stacked
-                    Construction's standards for cleanliness, organization, and workmanship.
+                    Construction&apos;s standards for cleanliness, organization, and workmanship.
                     When issues arise — and in remodeling, they always do — Caio is the
                     person who surfaces them quickly and works with the team to resolve
                     them before they affect the homeowner.
                   </p>
                   <p>
-                    Through his writing for Stacked Construction's blog, Caio shares
+                    Through his writing for Stacked Construction&apos;s blog, Caio shares
                     practical guides on topics homeowners care about: permit requirements,
                     project timelines, hurricane season planning, and what to expect at
                     each stage of a renovation.

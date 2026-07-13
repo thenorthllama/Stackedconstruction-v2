@@ -150,12 +150,12 @@ export default function CamilaLagePage() {
                   <p>
                     Camila specializes in space planning, material selection, and the
                     functional details that separate a beautiful kitchen from a beautiful
-                    and practical one. Her understanding of SWFL's climate — the humidity,
+                    and practical one. Her understanding of SWFL&apos;s climate — the humidity,
                     the salt air near the coast, the sun-drenched outdoor living demands —
                     informs every recommendation she makes.
                   </p>
                   <p>
-                    Through her writing for Stacked Construction's resource library, Camila
+                    Through her writing for Stacked Construction&apos;s resource library, Camila
                     translates complex design decisions into clear, actionable guidance for
                     homeowners who want to make informed choices before breaking ground.
                   </p>

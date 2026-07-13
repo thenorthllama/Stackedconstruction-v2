@@ -242,3 +242,37 @@ Trust signals rendered as inline badges. Pill shape (rounded-full), Warm Linen b
 - **Don't** add shadows to flat-by-default components. The tonal section system creates depth without shadows. Adding box-shadows to everything returns us to the SaaS look the brand rejects.
 - **Don't** use DM Sans for display headlines, or Playfair Display for body paragraphs. The pairing works because each font stays in its lane.
 - **Don't** use `#000000` or `#ffffff`. Ink and Plaster White are the system's anchors.
+
+---
+
+## Light Editorial Update (redesign-seo branch, July 2026)
+
+Direction confirmed with Junior: **light editorial** (cream body, espresso anchor), matching the DNOIN-style reference. Dark sections retained as accents only (hero, process, demand-driver bands, CTA, footer).
+
+### New tokens (globals.css `@theme`)
+
+| Token | Value | Use |
+|---|---|---|
+| `brand-espresso` | `#3d2b21` | Anchor accent, dark feature sections |
+| `brand-espresso-deep` | `#2a1d16` | Footer / deepest surfaces |
+| `brand-cream` | `#faf7f4` | Page background (body default) |
+| `brand-linen` | `#f0ebe5` | Alternate light section |
+| `brand-ink` | `#1a1714` | Headline text |
+
+Existing `warm-50…900` scale + `accent` (terracotta) unchanged and still primary.
+
+### Signature components
+
+- **`.eyebrow`** — dotted section label ("• About Us"): 11px, 600, 0.3em tracking, uppercase, leading 6px dot in `currentColor`. Applied sitewide (34 files).
+- **`PillButton`** (`src/components/ui/pill-button.tsx`) — rounded-full CTA with circular arrow chip. Variants: `dark`, `light`, `outline`.
+- **Floating white pill nav** (`Header.tsx`) — white rounded-full bar over hero, espresso phone banner above (collapses on scroll).
+- **Hero carousel** (`Hero.tsx`) — 3 slides, 6s crossfade, dot indicators (`role="tablist"`), pauses on hover, honors `prefers-reduced-motion`.
+- **Imagery** — `rounded-3xl` on cards/grids; optional `.card-notch` / `.card-notch-tl` scooped-corner mask for feature images.
+
+### Typography
+
+Playfair Display (variable, self-hosted at `src/fonts/`, normal+italic) for display; DM Sans (variable, self-hosted) for body/UI. Loaded via `next/font/local` — zero external font requests. Headline pattern: Roman + `<em class="font-light italic">` second word.
+
+### Accessibility
+
+Global `:focus-visible` outline (terracotta-dark, 2px, 3px offset). `prefers-reduced-motion` kills animations/transitions globally.

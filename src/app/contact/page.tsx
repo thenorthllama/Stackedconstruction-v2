@@ -174,8 +174,16 @@ export default function ContactPage() {
                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                       />
                     </svg>
-                    Fort Myers, FL 33901
+                    Serving Southwest Florida from Fort Myers, FL
                   </div>
+                  <a
+                    href="https://share.google/CiOmnBxQhr2fIJXjj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-accent-dark transition-colors hover:text-warm-900"
+                  >
+                    View our Google Business Profile →
+                  </a>
                 </div>
 
                 <div className="mt-10 border-t border-warm-200 pt-8">
@@ -197,6 +205,18 @@ export default function ContactPage() {
                     Naples, Bonita Springs, Fort Myers, Cape Coral, and
                     surrounding communities across Lee &amp; Collier Counties.
                   </p>
+                  <div className="mt-5 overflow-hidden rounded-2xl border border-warm-200">
+                    <iframe
+                      src="https://www.google.com/maps?q=Fort+Myers,+FL&z=9&output=embed"
+                      title="Stacked Construction service area — Southwest Florida"
+                      width="100%"
+                      height="220"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                 </div>
 
                 <div className="mt-8 border-t border-warm-200 pt-8">
