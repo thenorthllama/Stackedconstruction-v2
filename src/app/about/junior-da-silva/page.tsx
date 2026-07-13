@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 
 const featuredArticles = [
   { title: "How Much Does a Kitchen Remodel Cost in Fort Myers? (2026 Guide)", href: "/blog/kitchen-remodel-cost-fort-myers" },
-  { title: "Kitchen Remodel Cost in Cape Coral 2026", href: "/blog/kitchen-remodel-cost-cape-coral" },
-  { title: "Full Home Renovation Budget Guide for Southwest Florida", href: "/blog/home-renovation-budget-guide-swfl" },
-  { title: "Best Time to Remodel in Southwest Florida", href: "/blog/best-time-to-remodel-swfl" },
-  { title: "How to Hire a Remodeling Contractor in SWFL", href: "/blog/how-to-hire-remodeling-contractor-swfl" },
+  { title: "Home Renovation Budget Guide for Southwest Florida Homeowners", href: "/blog/home-renovation-budget-guide-swfl" },
+  { title: "Best Countertop Materials for Florida Kitchens", href: "/blog/best-countertops-florida-kitchens" },
+  { title: "How to Remodel Your Lanai in Florida: Complete Guide", href: "/blog/lanai-remodel-guide-florida" },
+  { title: "Aging-in-Place Bathroom Remodeling in Southwest Florida", href: "/blog/aging-in-place-bathroom-remodeling-swfl" },
 ];
 
 export default function JuniorDaSilvaPage() {

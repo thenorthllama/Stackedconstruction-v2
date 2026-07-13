@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 };
 
 const articles = [
-  { title: "Kitchen Design Trends in Southwest Florida for 2026", href: "/blog/kitchen-design-trends-swfl-2026" },
-  { title: "Bathroom Remodel Design Guide for SWFL Homeowners", href: "/blog/bathroom-remodel-design-guide-swfl" },
-  { title: "Best Countertop Materials for Florida Homes", href: "/blog/best-countertop-materials-florida" },
-  { title: "Open Concept Kitchen Remodeling in Southwest Florida", href: "/blog/open-concept-kitchen-remodeling-swfl" },
-  { title: "Outdoor Kitchen Design Ideas for Southwest Florida", href: "/blog/outdoor-kitchen-design-ideas-swfl" },
+  { title: "How Much Does a Bathroom Remodel Cost in Naples FL?", href: "/blog/bathroom-remodel-cost-naples" },
+  { title: "How Long Does a Kitchen Remodel Take in Florida?", href: "/blog/how-long-kitchen-remodel-florida" },
+  { title: "Best Flooring Options for Southwest Florida Home Remodels", href: "/blog/best-flooring-southwest-florida" },
+  { title: "Outdoor Kitchen Building Guide for Southwest Florida's Climate", href: "/blog/outdoor-kitchen-guide-swfl" },
+  { title: "The Complete Guide to Luxury Kitchen Remodeling in Naples", href: "/blog/luxury-kitchen-remodeling-naples-guide-2026" },
 ];
 
 export default function CamilaLagePage() {

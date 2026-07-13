@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 };
 
 const articles = [
-  { title: "How Long Does a Kitchen Remodel Take in Florida?", href: "/blog/how-long-kitchen-remodel-florida" },
-  { title: "Florida Building Permits for Home Remodeling: What You Need to Know", href: "/blog/florida-building-permits-home-remodeling" },
-  { title: "Bathroom Remodel Cost in Naples FL (2026)", href: "/blog/bathroom-remodel-cost-naples" },
-  { title: "Home Renovation Timeline: What to Expect in Southwest Florida", href: "/blog/home-renovation-timeline-swfl" },
-  { title: "Hurricane Season and Home Remodeling in Southwest Florida", href: "/blog/hurricane-season-home-remodeling-swfl" },
+  { title: "Kitchen Remodel Cost in Cape Coral: What to Expect", href: "/blog/kitchen-remodel-cost-cape-coral" },
+  { title: "Is It Worth Remodeling a Home in Southwest Florida?", href: "/blog/is-it-worth-remodeling-florida" },
+  { title: "Hurricane-Resistant Home Renovation Tips for SWFL Homeowners", href: "/blog/hurricane-resistant-home-renovation-swfl" },
+  { title: "Pool Deck Renovation Options for Fort Myers and Naples Homes", href: "/blog/pool-deck-renovation-fort-myers-naples" },
+  { title: "The Rise of the Butler's Pantry: A Hidden Scullery Kitchen", href: "/blog/butlers-pantry-design-naples" },
 ];
 
 export default function CaioAlvesPage() {

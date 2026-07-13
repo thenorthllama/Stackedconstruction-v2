@@ -476,7 +476,7 @@ export const articles: BlogPost[] = [
 <li><strong><a href="/services/kitchen-remodeling">Kitchen Remodel</a> (mid-range):</strong> 65–80% ROI, with the added benefit of being the #1 factor buyers evaluate</li>
 <li><strong><a href="/services/bathroom-remodeling">Bathroom Remodel</a>:</strong> 60–70% ROI</li>
 <li><strong><a href="/services/outdoor-living">Outdoor Living / Lanai Renovation</a>:</strong> 55–75% ROI — uniquely valuable in Florida where outdoor living space is used year-round</li>
-<li><strong><a href="/services/flooring">Flooring Replacement</a>:</strong> 70–80% ROI</li>
+<li><strong><a href="/services/flooring-tile">Flooring Replacement</a>:</strong> 70–80% ROI</li>
 <li><strong>Impact Windows and Doors:</strong> 60–70% ROI plus annual insurance savings of $1,000–$3,000+</li>
 </ul>
 <p>The real-world ROI also depends on your neighborhood's price ceiling. Renovating a home in Gulf Harbour, Pelican Bay, or Burnt Store Marina to match neighborhood standards is almost always worthwhile. Over-improving a home well beyond your neighborhood's price range is where ROI diminishes.</p>
@@ -1463,7 +1463,7 @@ export const articles: BlogPost[] = [
 <p>If you're purchasing a home in Fort Myers or Cape Coral that needs renovation, an FHA 203(k) loan bundles the purchase price and renovation costs into a single mortgage. This is especially popular for buyers looking at older homes in established neighborhoods like McGregor, Edison Park, or downtown Fort Myers.</p>
 <ul>
 <li><strong>Standard 203(k):</strong> For renovations over $35,000 — covers structural work, room additions, and major remodels.</li>
-<li><strong>Limited 203(k):</strong> For renovations under $35,000 — ideal for cosmetic updates like new <a href="/services/flooring">flooring</a>, paint, and fixture upgrades.</li>
+<li><strong>Limited 203(k):</strong> For renovations under $35,000 — ideal for cosmetic updates like new <a href="/services/flooring-tile">flooring</a>, paint, and fixture upgrades.</li>
 </ul>
 
 <h2>How to Choose the Right Financing for Your SWFL Remodel</h2>
@@ -1592,7 +1592,7 @@ export const articles: BlogPost[] = [
 <h3>Backsplash</h3>
 <p>Vertical-stacked subway tile in a soft white or cream creates a clean, modern coastal look. For accent areas, hand-made zellige tile in seafoam or sky blue adds artisan character. Large-format porcelain slabs offer a seamless, easy-to-clean option.</p>
 <h3>Flooring</h3>
-<p>Luxury vinyl plank (LVP) in a light wood tone is the practical coastal choice — waterproof, durable, and comfortable underfoot. Porcelain wood-look tile is another excellent option for Florida, offering superior moisture resistance. See our <a href="/services/flooring">flooring services</a> for more guidance.</p>
+<p>Luxury vinyl plank (LVP) in a light wood tone is the practical coastal choice — waterproof, durable, and comfortable underfoot. Porcelain wood-look tile is another excellent option for Florida, offering superior moisture resistance. See our <a href="/services/flooring-tile">flooring services</a> for more guidance.</p>
 
 <h2>Layout Tips for Coastal Florida Kitchens</h2>
 <ul>
@@ -1808,7 +1808,7 @@ export const articles: BlogPost[] = [
 <li><strong>Large island as room divider:</strong> The island defines the kitchen zone without walls. We typically recommend a 8–12 foot island with seating on the living-room side.</li>
 <li><strong>Perimeter cabinets along remaining walls:</strong> Tall pantry units and upper cabinets on the back wall maximize storage.</li>
 <li><strong>Sight lines to the lanai:</strong> Position the kitchen so the cook faces the living area and outdoor space, not a blank wall.</li>
-<li><strong>Unified flooring:</strong> Run the same <a href="/services/flooring">flooring material</a> from kitchen through living and dining areas. LVP or porcelain tile in a consistent tone creates visual continuity.</li>
+<li><strong>Unified flooring:</strong> Run the same <a href="/services/flooring-tile">flooring material</a> from kitchen through living and dining areas. LVP or porcelain tile in a consistent tone creates visual continuity.</li>
 </ul>
 
 <h2>Common Challenges and Solutions</h2>
@@ -2097,7 +2097,7 @@ export const articles: BlogPost[] = [
 <ul>
 <li><strong>Quartz countertops:</strong> Non-porous and impervious to humidity — the best choice for canal homes. Budget: $55–$120 per square foot installed.</li>
 <li><strong>Marine-grade hardware:</strong> Standard cabinet hardware can corrode faster near water. Choose stainless steel, brushed nickel, or brass hardware rated for coastal environments.</li>
-<li><strong>LVP or porcelain tile flooring:</strong> Both are waterproof and handle the moisture that gets tracked in from docks, pools, and boats. See our <a href="/services/flooring">flooring options</a>.</li>
+<li><strong>LVP or porcelain tile flooring:</strong> Both are waterproof and handle the moisture that gets tracked in from docks, pools, and boats. See our <a href="/services/flooring-tile">flooring options</a>.</li>
 <li><strong>Moisture-resistant cabinetry:</strong> We recommend plywood box construction (not particleboard) with finishes that resist humidity expansion.</li>
 </ul>
 
@@ -2243,7 +2243,7 @@ export const articles: BlogPost[] = [
 <h2>Kitchen Renovation Tips for Punta Gorda Waterfront Homes</h2>
 <ul>
 <li><strong>Maximize harbor or canal views:</strong> Open the kitchen to the living area and reduce upper cabinets on water-facing walls. Consider a large picture window or slider overlooking the water.</li>
-<li><strong>Coastal-durable materials:</strong> Quartz countertops, porcelain tile <a href="/services/flooring">flooring</a>, and marine-grade hardware that resists salt air corrosion.</li>
+<li><strong>Coastal-durable materials:</strong> Quartz countertops, porcelain tile <a href="/services/flooring-tile">flooring</a>, and marine-grade hardware that resists salt air corrosion.</li>
 <li><strong>Open concept layouts:</strong> Punta Gorda's older homes often have compartmentalized floor plans. Removing a wall between kitchen and living room is one of the highest-impact changes you can make.</li>
 <li><strong>Indoor-outdoor flow:</strong> Connect your kitchen to the lanai or dock area with wide sliders or a pass-through window for entertaining.</li>
 </ul>
@@ -2334,7 +2334,7 @@ export const articles: BlogPost[] = [
 <ul>
 <li><strong>Plumbing stacks:</strong> In condos, plumbing stacks are shared and typically cannot be moved. Your kitchen layout may need to work around existing plumbing locations.</li>
 <li><strong>Load-bearing walls:</strong> Condo walls may be structural. Any wall removal requires engineering review and association approval.</li>
-<li><strong>Flooring restrictions:</strong> Many condo associations require specific sound ratings (STC/IIC) for flooring materials. We ensure all <a href="/services/flooring">flooring selections</a> meet your building's requirements.</li>
+<li><strong>Flooring restrictions:</strong> Many condo associations require specific sound ratings (STC/IIC) for flooring materials. We ensure all <a href="/services/flooring-tile">flooring selections</a> meet your building's requirements.</li>
 </ul>
 
 <h2>Popular Kitchen Layouts for Marco Island Homes</h2>
@@ -2479,7 +2479,7 @@ export const articles: BlogPost[] = [
 <p>For homeowners who want to renovate without triggering full code compliance:</p>
 <ul>
 <li>Focus on <a href="/services/kitchen-remodeling">kitchen</a> and <a href="/services/bathroom-remodeling">bathroom</a> interior remodels that don't involve structural work</li>
-<li>Upgrade <a href="/services/flooring">flooring</a>, cabinetry, countertops, and fixtures</li>
+<li>Upgrade <a href="/services/flooring-tile">flooring</a>, cabinetry, countertops, and fixtures</li>
 <li>Work with a qualified appraiser to determine your home's pre-improvement market value</li>
 <li>Keep detailed records of all improvement costs — Lee County tracks cumulative investments</li>
 </ul>
@@ -2569,7 +2569,7 @@ export const articles: BlogPost[] = [
 </ul>
 
 <h3>Flooring Upgrades</h3>
-<p>Many Babcock Ranch homes come with builder-grade tile or basic LVP. Popular <a href="/services/flooring">flooring upgrades</a> include:</p>
+<p>Many Babcock Ranch homes come with builder-grade tile or basic LVP. Popular <a href="/services/flooring-tile">flooring upgrades</a> include:</p>
 <ul>
 <li><strong>Premium LVP:</strong> Upgrade to a wider plank, higher-quality luxury vinyl from brands like COREtec or Karndean. Budget: $5–$9 per square foot installed.</li>
 <li><strong>Porcelain wood-look tile:</strong> Superior durability and moisture resistance. Budget: $8–$14 per square foot installed.</li>
@@ -2740,7 +2740,7 @@ export const articles: BlogPost[] = [
 <h3>Outdoor Living</h3>
 <p>Ironically, summer is a great time to build your <a href="/services/outdoor-living">outdoor kitchen</a> or remodel your lanai. The work is primarily exterior and covered-area focused, and you'll have it ready for the beautiful fall and winter entertaining months.</p>
 <h3>Flooring</h3>
-<p>Whole-home <a href="/services/flooring">flooring replacement</a> is disruptive but quick (typically 3–7 days for installation). Doing it in summer minimizes disruption to your social calendar.</p>
+<p>Whole-home <a href="/services/flooring-tile">flooring replacement</a> is disruptive but quick (typically 3–7 days for installation). Doing it in summer minimizes disruption to your social calendar.</p>
 
 <h2>Planning Your Summer Renovation</h2>
 <p>To maximize the benefits of summer timing, here's a recommended planning timeline:</p>
@@ -2801,7 +2801,7 @@ export const articles: BlogPost[] = [
 <h3>4. Water Intrusion Prevention</h3>
 <p>Wind damage gets the attention, but water causes the majority of hurricane-related home damage in SWFL. During your renovation, address:</p>
 <ul>
-<li><strong>Waterproof flooring:</strong> Replace carpet and laminate with waterproof <a href="/services/flooring">LVP or porcelain tile</a> throughout the ground floor. If water does enter, waterproof flooring dries out without replacement. Cost: $5–$14 per square foot installed.</li>
+<li><strong>Waterproof flooring:</strong> Replace carpet and laminate with waterproof <a href="/services/flooring-tile">LVP or porcelain tile</a> throughout the ground floor. If water does enter, waterproof flooring dries out without replacement. Cost: $5–$14 per square foot installed.</li>
 <li><strong>Backflow prevention:</strong> Install backflow preventers on drain lines to prevent sewer backup during flooding. Cost: $300–$800.</li>
 <li><strong>Elevated electrical:</strong> During a renovation, raise electrical outlets on ground-floor exterior walls to 18–24 inches above floor level. Minimal additional cost during a remodel.</li>
 <li><strong>Sump pump:</strong> For homes with any history of water intrusion. Cost: $800–$2,000 installed.</li>
