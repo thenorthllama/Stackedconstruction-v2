@@ -149,6 +149,35 @@ export default async function ServicePage({
           </div>
         </section>
 
+        {/* ── Kitchen cost calculator promo — kitchen page only ──────── */}
+        {service.slug === "kitchen-remodeling" && (
+          <section className="bg-warm-50 py-16 lg:py-20">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <div className="flex flex-col items-center gap-8 rounded-2xl border border-warm-200 bg-white p-10 text-center shadow-sm lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                    Free Tool
+                  </p>
+                  <h2 className="font-display text-2xl font-bold leading-tight text-warm-900 sm:text-3xl">
+                    Curious what your kitchen remodel really costs?
+                  </h2>
+                  <p className="mt-3 max-w-xl text-warm-600">
+                    Answer a few questions about your cabinets, countertops & finishes
+                    and get an instant, personalized price range — no phone call
+                    required.
+                  </p>
+                </div>
+                <Link
+                  href="/kitchen-cost-calculator"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full bg-warm-900 px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-warm-800"
+                >
+                  Try the Cost Calculator →
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── Philosophy / Intro — editorial split ──────────────────── */}
         <section className="bg-warm-50 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
