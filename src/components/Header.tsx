@@ -68,7 +68,7 @@ export default function Header() {
         >
           <Link href="/" className="block shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-dark.png"
               alt="Stacked Construction"
               width={330}
               height={60}
