@@ -4,13 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative bg-warm-900 py-24 lg:py-32">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: "url('/images/cta-bg.jpg')" }}
-        aria-hidden="true"
-      />
+    <section id="contact" className="relative bg-white py-24 lg:py-32">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
           {/* Left — heading */}
@@ -18,13 +12,13 @@ export default function CTA() {
             <p className="mb-4 eyebrow text-warm-500">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
               Let&apos;s Build
               <br />
               Something{" "}
-              <em className="not-italic font-semibold text-accent">Beautiful</em>
+              <em className="not-italic font-semibold text-accent-dark">Beautiful</em>
             </h2>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-warm-500">
+            <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
               Schedule your free in-home consultation today. No pressure, no
               obligation — just an honest conversation about your vision and how
               we can bring it to life.
@@ -35,10 +29,10 @@ export default function CTA() {
             </p>
 
             {/* Contact info below the copy */}
-            <div className="mt-10 flex flex-col gap-3 text-sm text-warm-500">
+            <div className="mt-10 flex flex-col gap-3 text-sm text-warm-600">
               <a
                 href="tel:+12397850166"
-                className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-warm-900"
               >
                 <svg
                   className="h-4 w-4 shrink-0"
@@ -58,7 +52,7 @@ export default function CTA() {
               </a>
               <a
                 href="mailto:info@stackedconstruction.co"
-                className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-warm-900"
               >
                 <svg
                   className="h-4 w-4 shrink-0"
@@ -80,7 +74,9 @@ export default function CTA() {
           </div>
 
           {/* Right — contact form */}
-          <ContactForm variant="dark" />
+          <div className="rounded-[2rem] bg-warm-50 p-6 ring-1 ring-warm-200 lg:p-8">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>
