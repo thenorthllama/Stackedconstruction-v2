@@ -72,7 +72,8 @@ export default function KitchenCostCalculatorPage() {
       <Header />
       <main>
         {/* ── Hero + calculator ─────────────────────────────────── */}
-        <section id="top" className="relative bg-warm-900 pb-24 pt-32 lg:pb-32 lg:pt-40">
+        <section id="top" className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative bg-warm-900 pb-24 pt-32 lg:pb-32 lg:pt-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -108,6 +109,7 @@ export default function KitchenCostCalculatorPage() {
           <div className="relative z-10 mx-auto mt-12 max-w-xl px-6 lg:px-10">
             <KitchenCostCalculator />
           </div>
+        </div>
         </section>
 
         {/* ── Methodology — editorial split ──────────────────────── */}
@@ -158,7 +160,8 @@ export default function KitchenCostCalculatorPage() {
         </section>
 
         {/* ── What's included — dark, asymmetric two-col ─────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
               <p className="mb-4 eyebrow text-warm-500">
@@ -191,6 +194,7 @@ export default function KitchenCostCalculatorPage() {
               ))}
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── FAQ — open, editorial ──────────────────────────────── */}
@@ -234,7 +238,8 @@ export default function KitchenCostCalculatorPage() {
         </section>
 
         {/* ── CTA — immersive, full-bleed ─────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -267,6 +272,7 @@ export default function KitchenCostCalculatorPage() {
               </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

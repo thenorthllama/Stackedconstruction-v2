@@ -67,7 +67,8 @@ export default function CaioAlvesPage() {
       <Header />
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh]">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -106,6 +107,7 @@ export default function CaioAlvesPage() {
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Bio ──────────────────────────────────────────────────── */}
@@ -170,7 +172,8 @@ export default function CaioAlvesPage() {
         </section>
 
         {/* ── Expertise ─────────────────────────────────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
               <p className="mb-4 eyebrow text-warm-500">
@@ -197,6 +200,7 @@ export default function CaioAlvesPage() {
               ))}
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Articles by Caio ──────────────────────────────────────── */}
@@ -242,7 +246,8 @@ export default function CaioAlvesPage() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
@@ -263,6 +268,7 @@ export default function CaioAlvesPage() {
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

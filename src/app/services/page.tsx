@@ -24,7 +24,8 @@ export default function ServicesIndexPage() {
       <Header />
       <main>
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -50,6 +51,7 @@ export default function ServicesIndexPage() {
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Services — alternating editorial blocks ──────────────── */}
@@ -123,7 +125,8 @@ export default function ServicesIndexPage() {
         </section>
 
         {/* ── CTA — immersive ──────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -154,6 +157,7 @@ export default function ServicesIndexPage() {
               </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

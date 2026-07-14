@@ -26,7 +26,8 @@ export default function GalleryPage() {
       <Header />
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/kitchen-modern-island.webp')" }}
@@ -51,13 +52,15 @@ export default function GalleryPage() {
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Interactive filter + grid ───────────────────────────── */}
         <GalleryContent />
 
         {/* ── Stats Bar ────────────────────────────────────────────── */}
-        <section className="bg-warm-900 py-20 lg:py-24">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-20 lg:py-24 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 text-center sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -77,10 +80,12 @@ export default function GalleryPage() {
               ))}
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── CTA ──────────────────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/kitchen-luxury-white.webp')" }}
@@ -115,6 +120,7 @@ export default function GalleryPage() {
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

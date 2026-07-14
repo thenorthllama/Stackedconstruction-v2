@@ -62,7 +62,8 @@ export default function ProcessPage() {
       <Header />
       <main>
         {/* Page hero */}
-        <section className="bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <p className="mb-4 eyebrow text-warm-500">
               How It Works
@@ -77,13 +78,15 @@ export default function ProcessPage() {
               organized, and on track from start to finish.
             </p>
           </div>
+        </div>
         </section>
 
         {/* Timeline section */}
         <ProcessTimeline />
 
         {/* CTA */}
-        <section className="bg-warm-900 py-24 lg:py-32">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl">
               Ready to Start{" "}
@@ -108,6 +111,7 @@ export default function ProcessPage() {
               </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

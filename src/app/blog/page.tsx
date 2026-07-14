@@ -30,7 +30,8 @@ export default function BlogIndexPage() {
       <Header />
       <main>
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -55,6 +56,7 @@ export default function BlogIndexPage() {
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Featured Article — editorial split ─────────────────── */}
@@ -127,7 +129,8 @@ export default function BlogIndexPage() {
 
         {/* ── Recent Posts — masonry editorial ────────────────────── */}
         {recentArticles.length > 0 && (
-          <section className="bg-warm-900 py-24 lg:py-36">
+          <section className="bg-warm-50 px-3 py-6 lg:px-4">
+            <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="mb-14 flex items-end justify-between gap-6">
                 <div>
@@ -284,6 +287,7 @@ export default function BlogIndexPage() {
                 <div className="border-t border-warm-800" />
               </div>
             </div>
+          </div>
           </section>
         )}
 
@@ -427,7 +431,8 @@ export default function BlogIndexPage() {
         })}
 
         {/* ── CTA — immersive ──────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -462,6 +467,7 @@ export default function BlogIndexPage() {
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

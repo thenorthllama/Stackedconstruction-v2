@@ -17,7 +17,8 @@ export default function PrivacyPolicyPage() {
       <Header />
       <main>
         {/* ── Hero ─────────────────────────────────────────────── */}
-        <section className="bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <p className="mb-4 eyebrow text-warm-500">
               Legal
@@ -30,6 +31,7 @@ export default function PrivacyPolicyPage() {
               Last updated: March 17, 2026
             </p>
           </div>
+        </div>
         </section>
 
         {/* ── Content ──────────────────────────────────────────── */}

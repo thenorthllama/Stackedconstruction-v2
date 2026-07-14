@@ -126,7 +126,8 @@ export default async function BlogArticlePage({
       <Header />
       <main>
         {/* ── Hero — cinematic article header ──────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh]">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('${article.image ?? "/images/hero-bg.webp"}')` }}
@@ -166,6 +167,7 @@ export default async function BlogArticlePage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Article Content — sidebar + content layout ──────────── */}
@@ -314,7 +316,8 @@ export default async function BlogArticlePage({
 
         {/* ── Related Articles — dark section ─────────────────────── */}
         {relatedArticles.length > 0 && (
-          <section className="bg-warm-900 py-24 lg:py-36">
+          <section className="bg-warm-50 px-3 py-6 lg:px-4">
+            <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4">
@@ -379,11 +382,13 @@ export default async function BlogArticlePage({
                 </div>
               </div>
             </div>
+          </div>
           </section>
         )}
 
         {/* ── CTA — immersive ──────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -419,6 +424,7 @@ export default async function BlogArticlePage({
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

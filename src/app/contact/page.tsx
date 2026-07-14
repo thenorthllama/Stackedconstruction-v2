@@ -67,7 +67,8 @@ export default function ContactPage() {
       <Header />
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh]">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -92,6 +93,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Contact section — form + info ─────────────────────────── */}

@@ -51,7 +51,8 @@ export default async function ServiceLandingPage({
       <Header />
       <main>
         {/* ── Full-screen hero with vertically centered content ──── */}
-        <section className="relative flex min-h-screen items-start bg-warm-900 lg:items-center">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative flex min-h-screen items-start bg-warm-900 lg:items-center overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -116,6 +117,7 @@ export default async function ServiceLandingPage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Philosophy / Intro — editorial split ──────────────────── */}
@@ -170,7 +172,8 @@ export default async function ServiceLandingPage({
         </section>
 
         {/* ── What's Included — dark, asymmetric two-col ────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
               <p className="mb-4 eyebrow text-warm-500">
@@ -210,6 +213,7 @@ export default async function ServiceLandingPage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Process strip — inline, editorial ─────────────────────── */}
@@ -258,7 +262,8 @@ export default async function ServiceLandingPage({
         </section>
 
         {/* ── Service Areas — dark, editorial grid ──────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
@@ -313,6 +318,7 @@ export default async function ServiceLandingPage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── FAQ — open, editorial ─────────────────────────────────── */}
@@ -367,7 +373,8 @@ export default async function ServiceLandingPage({
         )}
 
         {/* ── CTA — immersive, full-bleed ──────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -403,6 +410,7 @@ export default async function ServiceLandingPage({
               </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

@@ -68,7 +68,8 @@ export default function CredentialsPage() {
       <Header />
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[50vh] bg-warm-900">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[50vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
@@ -95,6 +96,7 @@ export default function CredentialsPage() {
               </h1>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Primary License ───────────────────────────────────────── */}
@@ -200,7 +202,8 @@ export default function CredentialsPage() {
         </section>
 
         {/* ── Why Licensing Matters ─────────────────────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
@@ -241,6 +244,7 @@ export default function CredentialsPage() {
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Service Areas Authorized ──────────────────────────────── */}
@@ -349,7 +353,8 @@ export default function CredentialsPage() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
@@ -370,6 +375,7 @@ export default function CredentialsPage() {
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />
