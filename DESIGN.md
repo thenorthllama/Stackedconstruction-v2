@@ -276,3 +276,7 @@ Playfair Display (variable, self-hosted at `src/fonts/`, normal+italic) for disp
 ### Accessibility
 
 Global `:focus-visible` outline (terracotta-dark, 2px, 3px offset). `prefers-reduced-motion` kills animations/transitions globally.
+
+### Emphasis update (July 2026)
+
+Italic Playfair emphasis retired per Junior. Emphasized headline words now use the same serif, `font-semibold`, colored terracotta: `text-accent-dark` (#a87a55) on light sections, `text-accent` (#c8956c) on dark sections. Footer lightened from ink (#1a1714) to `brand-espresso` (#3d2b21) with `warm-200/300` text for AA contrast.
