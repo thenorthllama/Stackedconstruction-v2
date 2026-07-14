@@ -41,7 +41,7 @@ export default function ServicesIndexPage() {
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Our{" "}
-                <em className="font-light italic text-warm-300">Services</em>
+                <em className="not-italic font-semibold text-accent">Services</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
                 From kitchens and bathrooms to full home renovations and outdoor
@@ -87,7 +87,7 @@ export default function ServicesIndexPage() {
                     >
                       <h2 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 sm:text-4xl lg:text-5xl">
                         {service.headline}{" "}
-                        <em className="font-light italic text-warm-600">
+                        <em className="not-italic font-semibold text-accent-dark">
                           {service.headlineItalic}
                         </em>
                       </h2>
@@ -132,7 +132,7 @@ export default function ServicesIndexPage() {
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Not Sure Where{" "}
-              <em className="font-light italic text-warm-300">to Start?</em>
+              <em className="not-italic font-semibold text-accent">to Start?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               That&apos;s what the free consultation is for. Tell us about your

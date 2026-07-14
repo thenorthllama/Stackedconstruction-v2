@@ -36,7 +36,7 @@ export default function Process() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
               From Vision{" "}
-              <em className="font-light italic text-warm-300">to Reality</em>
+              <em className="not-italic font-semibold text-accent">to Reality</em>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-warm-500 lg:text-right">

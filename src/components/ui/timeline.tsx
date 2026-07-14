@@ -43,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
         <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl max-w-4xl">
           From Vision{" "}
-          <em className="font-light italic">to Reality</em>
+          <em className="not-italic font-semibold text-accent-dark">to Reality</em>
         </h2>
         <p className="mt-4 text-base leading-relaxed text-warm-600 max-w-xl">
           Remodeling your home should be exciting, not stressful. Our

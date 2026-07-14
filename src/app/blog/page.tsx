@@ -47,7 +47,7 @@ export default function BlogIndexPage() {
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Remodeling{" "}
-                <em className="font-light italic text-warm-300">Articles</em>
+                <em className="not-italic font-semibold text-accent">Articles</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
                 Expert advice, planning tips, and design inspiration to help
@@ -68,7 +68,7 @@ export default function BlogIndexPage() {
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     Latest{" "}
-                    <em className="font-light italic text-warm-600">
+                    <em className="not-italic font-semibold text-accent-dark">
                       Article
                     </em>
                   </h2>
@@ -136,7 +136,7 @@ export default function BlogIndexPage() {
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                     Recent{" "}
-                    <em className="font-light italic text-warm-300">Posts</em>
+                    <em className="not-italic font-semibold text-accent">Posts</em>
                   </h2>
                 </div>
                 <Link
@@ -439,7 +439,7 @@ export default function BlogIndexPage() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Turn Inspiration{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 Into Reality
               </em>
             </h2>

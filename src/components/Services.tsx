@@ -60,7 +60,7 @@ export default function Services() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
               What We{" "}
-              <em className="font-light italic">Build</em>
+              <em className="not-italic font-semibold text-accent-dark">Build</em>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">

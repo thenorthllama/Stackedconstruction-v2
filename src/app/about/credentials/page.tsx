@@ -91,7 +91,7 @@ export default function CredentialsPage() {
               </Link>
               <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Licenses &amp;{" "}
-                <em className="font-light italic text-warm-300">Credentials</em>
+                <em className="not-italic font-semibold text-accent">Credentials</em>
               </h1>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function CredentialsPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Florida{" "}
-                  <em className="font-light italic text-warm-600">Certified</em>
+                  <em className="not-italic font-semibold text-accent-dark">Certified</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
                   Hiring a licensed contractor in Florida protects your home, your investment, and your legal rights as a homeowner. Verify ours anytime through the Florida DBPR.
@@ -209,7 +209,7 @@ export default function CredentialsPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   Why Licensing{" "}
-                  <em className="font-light italic text-warm-300">Matters</em>
+                  <em className="not-italic font-semibold text-accent">Matters</em>
                 </h2>
               </div>
               <div className="lg:col-span-6 lg:col-start-7">
@@ -253,7 +253,7 @@ export default function CredentialsPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Where We&apos;re{" "}
-                  <em className="font-light italic text-warm-600">Authorized</em>
+                  <em className="not-italic font-semibold text-accent-dark">Authorized</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
@@ -292,7 +292,7 @@ export default function CredentialsPage() {
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 The Experts{" "}
-                <em className="font-light italic text-warm-600">Behind the Work</em>
+                <em className="not-italic font-semibold text-accent-dark">Behind the Work</em>
               </h2>
             </div>
             <div className="grid gap-6 lg:grid-cols-3">
@@ -356,7 +356,7 @@ export default function CredentialsPage() {
             <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Work With a Contractor{" "}
-              <em className="font-light italic text-warm-300">You Can Verify</em>
+              <em className="not-italic font-semibold text-accent">You Can Verify</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Our license, insurance, and credentials are publicly verifiable. Schedule your free consultation and ask us anything.

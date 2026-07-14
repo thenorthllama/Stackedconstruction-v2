@@ -84,7 +84,7 @@ export default function ContactPage() {
               </p>
               <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Let&apos;s Build Something{" "}
-                <em className="font-light italic text-warm-300">Beautiful</em>
+                <em className="not-italic font-semibold text-accent">Beautiful</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
                 Schedule your free in-home consultation. No pressure, no
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Reach{" "}
-                  <em className="font-light italic text-warm-600">Out</em>
+                  <em className="not-italic font-semibold text-accent-dark">Out</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
                   Whether you&apos;re ready to start or just exploring options,

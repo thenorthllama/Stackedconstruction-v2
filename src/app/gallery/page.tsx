@@ -43,7 +43,7 @@ export default function GalleryPage() {
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Project{" "}
-                <em className="font-light italic text-warm-300">Gallery</em>
+                <em className="not-italic font-semibold text-accent">Gallery</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
                 Every project tells a story of collaboration, craftsmanship, and
@@ -92,7 +92,7 @@ export default function GalleryPage() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Build{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 Something Beautiful?
               </em>
             </h2>

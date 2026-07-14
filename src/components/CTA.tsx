@@ -22,7 +22,7 @@ export default function CTA() {
               Let&apos;s Build
               <br />
               Something{" "}
-              <em className="font-light italic text-warm-300">Beautiful</em>
+              <em className="not-italic font-semibold text-accent">Beautiful</em>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-warm-500">
               Schedule your free in-home consultation today. No pressure, no

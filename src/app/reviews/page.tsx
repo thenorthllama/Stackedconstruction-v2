@@ -135,7 +135,7 @@ export default function ReviewsPage() {
                 </p>
                 <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
                   What Our Clients{" "}
-                  <em className="font-light italic text-warm-300">Say</em>
+                  <em className="not-italic font-semibold text-accent">Say</em>
                 </h1>
                 <div className="mt-8 flex items-center gap-6">
                   <div className="flex items-center gap-2">
@@ -172,7 +172,7 @@ export default function ReviewsPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
                   Trusted by Homeowners{" "}
-                  <em className="font-light italic text-warm-600">Across SWFL</em>
+                  <em className="not-italic font-semibold text-accent-dark">Across SWFL</em>
                 </h2>
               </div>
               <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">
@@ -227,7 +227,7 @@ export default function ReviewsPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   Did We Work{" "}
-                  <em className="font-light italic text-warm-300">On Your Home?</em>
+                  <em className="not-italic font-semibold text-accent">On Your Home?</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-400">
                   Your feedback helps other Southwest Florida homeowners find a contractor they can trust.
@@ -269,7 +269,7 @@ export default function ReviewsPage() {
             <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Join{" "}
-              <em className="font-light italic text-warm-300">Our Happy Clients?</em>
+              <em className="not-italic font-semibold text-accent">Our Happy Clients?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule your free in-home consultation. No pressure, no obligation — just an honest conversation about your vision.

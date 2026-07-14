@@ -115,7 +115,7 @@ export default async function ClusterPage({
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   {cluster.name}{" "}
-                  <em className="font-light italic text-warm-600">Guides</em>
+                  <em className="not-italic font-semibold text-accent-dark">Guides</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
@@ -186,7 +186,7 @@ export default async function ClusterPage({
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                     Other{" "}
-                    <em className="font-light italic text-warm-300">Topics</em>
+                    <em className="not-italic font-semibold text-accent">Topics</em>
                   </h2>
                 </div>
                 <div className="lg:col-span-7 lg:col-start-6">
@@ -241,7 +241,7 @@ export default async function ClusterPage({
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Get{" "}
-              <em className="font-light italic text-warm-300">Started?</em>
+              <em className="not-italic font-semibold text-accent">Started?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule your free in-home consultation. No pressure, no

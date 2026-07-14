@@ -47,7 +47,7 @@ export default function FAQ() {
           </p>
           <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
             Common{" "}
-            <em className="font-light italic">Questions</em>
+            <em className="not-italic font-semibold text-accent-dark">Questions</em>
           </h2>
         </div>
 

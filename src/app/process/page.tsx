@@ -69,7 +69,7 @@ export default function ProcessPage() {
             </p>
             <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               Our{" "}
-              <em className="font-light italic text-warm-300">Process</em>
+              <em className="not-italic font-semibold text-accent">Process</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
               Remodeling your home should be exciting, not stressful. We&apos;ve
@@ -87,7 +87,7 @@ export default function ProcessPage() {
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl">
               Ready to Start{" "}
-              <em className="font-light italic text-warm-300">Your Project?</em>
+              <em className="not-italic font-semibold text-accent">Your Project?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-warm-500">
               The first step is a free, no-obligation consultation. Let&apos;s

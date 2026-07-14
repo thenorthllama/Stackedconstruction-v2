@@ -91,7 +91,7 @@ export default function CaioAlvesPage() {
                 </Link>
                 <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   Caio{" "}
-                  <em className="font-light italic text-warm-300">Alves</em>
+                  <em className="not-italic font-semibold text-accent">Alves</em>
                 </h1>
                 <p className="mt-4 text-lg font-medium text-warm-400">
                   Project Manager &amp; Remodeling Specialist
@@ -119,7 +119,7 @@ export default function CaioAlvesPage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Execution
                   <br />
-                  <em className="font-light italic text-warm-600">Without Compromise</em>
+                  <em className="not-italic font-semibold text-accent-dark">Without Compromise</em>
                 </h2>
                 <div className="mt-8 space-y-3">
                   <div className="flex items-start gap-3">
@@ -178,7 +178,7 @@ export default function CaioAlvesPage() {
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 What Caio{" "}
-                <em className="font-light italic text-warm-300">Manages</em>
+                <em className="not-italic font-semibold text-accent">Manages</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 sm:grid-cols-2 lg:grid-cols-3">
@@ -210,7 +210,7 @@ export default function CaioAlvesPage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Planning
                   <br />
-                  <em className="font-light italic text-warm-600">Guides</em>
+                  <em className="not-italic font-semibold text-accent-dark">Guides</em>
                 </h2>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -249,7 +249,7 @@ export default function CaioAlvesPage() {
             <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Let&apos;s Plan{" "}
-              <em className="font-light italic text-warm-300">Your Remodel</em>
+              <em className="not-italic font-semibold text-accent">Your Remodel</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule a free consultation and we&apos;ll walk you through a realistic timeline and clear plan for your project.

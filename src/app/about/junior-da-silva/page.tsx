@@ -93,7 +93,7 @@ export default function JuniorDaSilvaPage() {
                   About Stacked Construction
                 </Link>
                 <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
-                  Junior{" "}<em className="font-light italic text-warm-300">Da Silva</em>
+                  Junior{" "}<em className="not-italic font-semibold text-accent">Da Silva</em>
                 </h1>
                 <p className="mt-4 text-lg font-medium text-warm-400">{author.title}</p>
               </div>
@@ -138,7 +138,7 @@ export default function JuniorDaSilvaPage() {
                 <p className="mb-4 eyebrow text-warm-500">About Junior</p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   The Person<br />
-                  <em className="font-light italic text-warm-600">Behind the Work</em>
+                  <em className="not-italic font-semibold text-accent-dark">Behind the Work</em>
                 </h2>
                 <div className="mt-8 space-y-3">
                   <div className="flex items-start gap-3">
@@ -199,7 +199,7 @@ export default function JuniorDaSilvaPage() {
             <div className="mb-16 max-w-2xl">
               <p className="mb-4 eyebrow text-warm-500">Areas of Expertise</p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                Deep Knowledge,{" "}<em className="font-light italic text-warm-300">Real Experience</em>
+                Deep Knowledge,{" "}<em className="not-italic font-semibold text-accent">Real Experience</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 sm:grid-cols-2 lg:grid-cols-3">
@@ -227,7 +227,7 @@ export default function JuniorDaSilvaPage() {
               <div className="lg:col-span-4">
                 <p className="mb-4 eyebrow text-warm-500">Written by Junior</p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Expert<br /><em className="font-light italic text-warm-600">Articles</em>
+                  Expert<br /><em className="not-italic font-semibold text-accent-dark">Articles</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">Practical guides for Southwest Florida homeowners planning their next remodeling project.</p>
               </div>
@@ -256,7 +256,7 @@ export default function JuniorDaSilvaPage() {
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Work Directly{" "}<em className="font-light italic text-warm-300">With Junior</em>
+              Work Directly{" "}<em className="not-italic font-semibold text-accent">With Junior</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule a free in-home consultation and speak directly with Junior about your vision, budget, and timeline.

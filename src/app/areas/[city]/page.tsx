@@ -83,7 +83,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </p>
                 <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
                   {city.headline}{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     {city.headlineItalic}
                   </em>
                 </h1>
@@ -125,7 +125,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Why Homeowners
                   <br />
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     Choose Stacked
                   </em>
                 </h2>
@@ -176,7 +176,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   Our Services in
                   <br />
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     {city.name}
                   </em>
                 </h2>
@@ -233,7 +233,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 {city.name} Neighborhoods{" "}
-                <em className="font-light italic text-warm-600">We Serve</em>
+                <em className="not-italic font-semibold text-accent-dark">We Serve</em>
               </h2>
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3 lg:grid-cols-4">
@@ -270,7 +270,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     {city.name}{" "}
-                    <em className="font-light italic text-warm-600">
+                    <em className="not-italic font-semibold text-accent-dark">
                       Landmarks
                     </em>
                   </h2>
@@ -309,7 +309,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                     Why Homeowners Are{" "}
-                    <em className="font-light italic text-warm-300">
+                    <em className="not-italic font-semibold text-accent">
                       Remodeling
                     </em>
                   </h2>
@@ -349,7 +349,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Remodel in{" "}
-              <em className="font-light italic text-warm-300">{city.name}?</em>
+              <em className="not-italic font-semibold text-accent">{city.name}?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule your free in-home consultation. No pressure, no

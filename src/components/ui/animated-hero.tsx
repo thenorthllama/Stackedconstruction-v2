@@ -26,7 +26,7 @@ function AnimatedHero() {
         {titles.map((title, index) => (
           <motion.span
             key={index}
-            className="absolute font-light italic text-warm-200"
+            className="absolute not-italic font-semibold text-accent"
             initial={index === 0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             animate={

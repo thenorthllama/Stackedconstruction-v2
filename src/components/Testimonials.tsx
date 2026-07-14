@@ -91,7 +91,7 @@ export default function Testimonials() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
               What Our Clients{" "}
-              <em className="font-light italic">Say</em>
+              <em className="not-italic font-semibold text-accent-dark">Say</em>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">

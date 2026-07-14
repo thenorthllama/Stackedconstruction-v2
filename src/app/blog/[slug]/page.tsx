@@ -323,7 +323,7 @@ export default async function BlogArticlePage({
                   </p>
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                     Related{" "}
-                    <em className="font-light italic text-warm-300">
+                    <em className="not-italic font-semibold text-accent">
                       Articles
                     </em>
                   </h2>
@@ -395,7 +395,7 @@ export default async function BlogArticlePage({
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Discuss{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 Your Project?
               </em>
             </h2>

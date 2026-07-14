@@ -87,7 +87,7 @@ export default function KitchenCostCalculatorPage() {
             </p>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               See what your kitchen{" "}
-              <em className="font-light italic text-warm-300">really costs</em> — before
+              <em className="not-italic font-semibold text-accent">really costs</em> — before
               you ever pick up the phone.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
@@ -121,7 +121,7 @@ export default function KitchenCostCalculatorPage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Built From
                   <br />
-                  <em className="font-light italic text-warm-600">Real Job Costs</em>
+                  <em className="not-italic font-semibold text-accent-dark">Real Job Costs</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
@@ -166,7 +166,7 @@ export default function KitchenCostCalculatorPage() {
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 Every Line Item{" "}
-                <em className="font-light italic text-warm-300">That Matters</em>
+                <em className="not-italic font-semibold text-accent">That Matters</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 lg:grid-cols-2">
@@ -204,7 +204,7 @@ export default function KitchenCostCalculatorPage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Frequently
                   <br />
-                  <em className="font-light italic text-warm-600">Asked</em>
+                  <em className="not-italic font-semibold text-accent-dark">Asked</em>
                 </h2>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -246,7 +246,7 @@ export default function KitchenCostCalculatorPage() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Skip the Calculator —{" "}
-              <em className="font-light italic text-warm-300">Talk to a Human</em>
+              <em className="not-italic font-semibold text-accent">Talk to a Human</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Schedule your free in-home consultation. No pressure, no obligation —

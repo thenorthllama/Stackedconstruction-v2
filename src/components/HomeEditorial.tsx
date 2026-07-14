@@ -11,7 +11,7 @@ export function AboutStatement() {
           <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl lg:text-6xl">
             A Decade of Hands-On
             <br />
-            <em className="font-light italic text-warm-600">Craftsmanship</em>
+            <em className="not-italic font-semibold text-accent-dark">Craftsmanship</em>
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-600">
             We&apos;re not the biggest contractor in Southwest Florida — and
@@ -143,7 +143,7 @@ export function ProjectCategories() {
               <h2 className="font-display text-5xl font-bold leading-[1.02] text-white sm:text-6xl">
                 Project
                 <br />
-                <em className="font-light italic text-warm-200">Categories</em>
+                <em className="not-italic font-semibold text-accent">Categories</em>
               </h2>
             </div>
             <div className="lg:col-span-4">
@@ -231,7 +231,7 @@ export function CaseStudies() {
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl lg:text-6xl">
               Built in Your
               <br />
-              <em className="font-light italic text-warm-600">Neighborhood</em>
+              <em className="not-italic font-semibold text-accent-dark">Neighborhood</em>
             </h2>
           </div>
           <div className="lg:col-span-5 lg:text-right">

@@ -109,7 +109,7 @@ export default async function CityServicePage({
                 </p>
                 <h1 className="max-w-4xl font-display text-4xl font-bold leading-[0.92] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                   {service.headline}{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     {service.headlineItalic}
                   </em>
                   <span className="mt-3 block font-display text-2xl font-light text-warm-400 sm:text-3xl lg:text-4xl">
@@ -145,7 +145,7 @@ export default async function CityServicePage({
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Local{" "}
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     Expertise
                   </em>
                 </h2>
@@ -210,7 +210,7 @@ export default async function CityServicePage({
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 {service.shortName}{" "}
-                <em className="font-light italic text-warm-300">Benefits</em>
+                <em className="not-italic font-semibold text-accent">Benefits</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 lg:grid-cols-2">
@@ -253,7 +253,7 @@ export default async function CityServicePage({
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   {city.name}
                   <br />
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     Neighborhoods
                   </em>
                 </h2>
@@ -284,7 +284,7 @@ export default async function CityServicePage({
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     Frequently
                     <br />
-                    <em className="font-light italic text-warm-600">Asked</em>
+                    <em className="not-italic font-semibold text-accent-dark">Asked</em>
                   </h2>
                 </div>
                 <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -325,7 +325,7 @@ export default async function CityServicePage({
                   <div>
                     <p className="eyebrow text-warm-500">Start Your Project</p>
                     <p className="mt-2 font-display text-2xl font-bold leading-snug text-warm-900 sm:text-3xl">
-                      Questions answered? <em className="font-light italic text-warm-600">Let&apos;s talk.</em>
+                      Questions answered? <em className="not-italic font-semibold text-accent-dark">Let&apos;s talk.</em>
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center">
@@ -375,7 +375,7 @@ export default async function CityServicePage({
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready for{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 {service.name}
               </em>{" "}
               in {city.name}?

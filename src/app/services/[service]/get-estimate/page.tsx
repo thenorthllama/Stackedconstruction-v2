@@ -75,7 +75,7 @@ export default async function ServiceLandingPage({
                 </p>
                 <h1 className="max-w-xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
                   {service.headline}{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     {service.headlineItalic}
                   </em>
                 </h1>
@@ -129,7 +129,7 @@ export default async function ServiceLandingPage({
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Why Stacked
                   <br />
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     for {service.shortName}
                   </em>
                 </h2>
@@ -178,7 +178,7 @@ export default async function ServiceLandingPage({
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 {service.shortName}{" "}
-                <em className="font-light italic text-warm-300">
+                <em className="not-italic font-semibold text-accent">
                   Scope of Work
                 </em>
               </h2>
@@ -223,7 +223,7 @@ export default async function ServiceLandingPage({
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   From Vision
                   <br />
-                  <em className="font-light italic text-warm-600">to Reality</em>
+                  <em className="not-italic font-semibold text-accent-dark">to Reality</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
                   A transparent process that keeps you informed and in control at every stage.
@@ -268,7 +268,7 @@ export default async function ServiceLandingPage({
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   {service.shortName} Experts
                   <br />
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Across SWFL
                   </em>
                 </h2>
@@ -327,7 +327,7 @@ export default async function ServiceLandingPage({
                   <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     Frequently
                     <br />
-                    <em className="font-light italic text-warm-600">Asked</em>
+                    <em className="not-italic font-semibold text-accent-dark">Asked</em>
                   </h2>
                 </div>
                 <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -379,7 +379,7 @@ export default async function ServiceLandingPage({
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Discuss{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 Your {service.shortName} Project?
               </em>
             </h2>

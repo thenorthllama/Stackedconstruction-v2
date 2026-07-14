@@ -47,7 +47,7 @@ export default function Projects() {
             <h2 className="font-display text-5xl font-bold leading-[1.02] text-warm-900 sm:text-6xl">
               Recent
               <br />
-              <em className="font-light italic text-warm-600">Projects</em>
+              <em className="not-italic font-semibold text-accent-dark">Projects</em>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-4">

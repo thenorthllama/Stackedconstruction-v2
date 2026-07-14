@@ -46,7 +46,7 @@ export default function CountyPageLayout({
               </p>
               <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 {county.headline}{" "}
-                <em className="font-light italic text-warm-300">
+                <em className="not-italic font-semibold text-accent">
                   {county.headlineItalic}
                 </em>
               </h1>
@@ -65,7 +65,7 @@ export default function CountyPageLayout({
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   {county.name}
                   <br />
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     by the Numbers
                   </em>
                 </h2>
@@ -101,7 +101,7 @@ export default function CountyPageLayout({
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   Why Homeowners{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Are Remodeling
                   </em>
                 </h2>
@@ -139,7 +139,7 @@ export default function CountyPageLayout({
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 Across{" "}
-                <em className="font-light italic text-warm-600">
+                <em className="not-italic font-semibold text-accent-dark">
                   {county.name}
                 </em>
               </h2>
@@ -194,7 +194,7 @@ export default function CountyPageLayout({
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   What We Build in{" "}
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     {county.name}
                   </em>
                 </h2>
@@ -237,7 +237,7 @@ export default function CountyPageLayout({
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Remodel in{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 {county.name}?
               </em>
             </h2>

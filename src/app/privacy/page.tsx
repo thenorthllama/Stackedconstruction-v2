@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               Privacy{" "}
-              <em className="font-light italic text-warm-300">Policy</em>
+              <em className="not-italic font-semibold text-accent">Policy</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
               Last updated: March 17, 2026

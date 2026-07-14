@@ -92,7 +92,7 @@ export default function CamilaLagePage() {
                 </Link>
                 <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   Camila{" "}
-                  <em className="font-light italic text-warm-300">Lage</em>
+                  <em className="not-italic font-semibold text-accent">Lage</em>
                 </h1>
                 <p className="mt-4 text-lg font-medium text-warm-400">
                   Interior Design Consultant
@@ -120,7 +120,7 @@ export default function CamilaLagePage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Design With
                   <br />
-                  <em className="font-light italic text-warm-600">Purpose</em>
+                  <em className="not-italic font-semibold text-accent-dark">Purpose</em>
                 </h2>
                 <div className="mt-8 space-y-3">
                   <div className="flex items-start gap-3">
@@ -174,7 +174,7 @@ export default function CamilaLagePage() {
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                 Where Camila{" "}
-                <em className="font-light italic text-warm-300">Focuses</em>
+                <em className="not-italic font-semibold text-accent">Focuses</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 sm:grid-cols-2 lg:grid-cols-3">
@@ -206,7 +206,7 @@ export default function CamilaLagePage() {
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Design
                   <br />
-                  <em className="font-light italic text-warm-600">Guides</em>
+                  <em className="not-italic font-semibold text-accent-dark">Guides</em>
                 </h2>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -245,7 +245,7 @@ export default function CamilaLagePage() {
             <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Ready to Design{" "}
-              <em className="font-light italic text-warm-300">Your Space?</em>
+              <em className="not-italic font-semibold text-accent">Your Space?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
               Contact Stacked Construction for a free consultation and let us help you bring your vision to life.

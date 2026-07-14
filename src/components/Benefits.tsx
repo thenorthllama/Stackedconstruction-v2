@@ -34,7 +34,7 @@ export default function Benefits() {
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
               Built on Trust,
               <br />
-              <em className="font-light italic">Delivered with Pride</em>
+              <em className="not-italic font-semibold text-accent-dark">Delivered with Pride</em>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-warm-600">
               We&apos;re not the biggest contractor in Southwest Florida — and

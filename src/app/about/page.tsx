@@ -93,7 +93,7 @@ export default function AboutPage() {
                 </p>
                 <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
                   Built on Trust,{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Not Promises
                   </em>
                 </h1>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   The Standard{" "}
-                  <em className="font-light italic text-warm-600">
+                  <em className="not-italic font-semibold text-accent-dark">
                     Has Changed
                   </em>
                 </h2>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                 </p>
                 <h2 className="mb-8 font-display text-3xl font-bold leading-[1.1] text-white sm:text-4xl">
                   Precision, Transparency,{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Protection
                   </em>
                 </h2>
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 </p>
                 <h2 className="mb-8 font-display text-3xl font-bold leading-[1.1] text-white sm:text-4xl">
                   Raising the{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Standard
                   </em>
                 </h2>
@@ -240,7 +240,7 @@ export default function AboutPage() {
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 The Objective Is{" "}
-                <em className="font-light italic text-warm-600">Bigger</em>
+                <em className="not-italic font-semibold text-accent-dark">Bigger</em>
               </h2>
               <p className="mt-8 text-lg leading-[1.8] text-warm-600 lg:text-xl">
                 The objective is not just to complete a project. The objective is
@@ -269,7 +269,7 @@ export default function AboutPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
                   Core{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic font-semibold text-accent">
                     Values
                   </em>
                 </h2>
@@ -315,7 +315,7 @@ export default function AboutPage() {
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
                   The People{" "}
-                  <em className="font-light italic text-warm-600">Behind the Work</em>
+                  <em className="not-italic font-semibold text-accent-dark">Behind the Work</em>
                 </h2>
               </div>
               <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">
@@ -384,7 +384,7 @@ export default function AboutPage() {
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Let&apos;s Talk About{" "}
-              <em className="font-light italic text-warm-300">
+              <em className="not-italic font-semibold text-accent">
                 Your Vision
               </em>
             </h2>
