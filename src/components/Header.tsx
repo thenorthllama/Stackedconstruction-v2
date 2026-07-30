@@ -13,6 +13,7 @@ const serviceLinks = [
 ];
 
 const navLinks = [
+  { href: "/projects", label: "Projects" },
   { href: "/process", label: "Process" },
   { href: "/about", label: "About Us" },
   { href: "/areas/fort-myers", label: "Areas" },

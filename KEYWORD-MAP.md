@@ -45,3 +45,18 @@ Each city page uses genuinely localized copy (neighborhoods, landmarks, demand d
 ## Blog clusters (already live, support the money pages)
 
 Cost & planning (e.g. "kitchen remodel cost cape coral"), design inspiration, Florida living, permits & codes. Internal links flow: blog → service page → city page → contact.
+
+## Project pages (added July 2026)
+
+Built from the 93-photo `web-ready-seo` set. 47 photos selected, converted to WebP at two sizes, and served through `next/image` with responsive `srcset`. Alt text carried over from the shoot's SEO image map — every image on these pages has descriptive, location-bearing alt text.
+
+| Page | Primary keyword | Photos |
+|---|---|---|
+| `/projects` | remodeling projects southwest florida | 3 hero images |
+| `/projects/sage-green-kitchen-remodel-cape-coral` | sage green kitchen remodel cape coral | 13 |
+| `/projects/white-shaker-kitchen-remodel-cape-coral` | white shaker kitchen remodel cape coral | 14 |
+| `/projects/modern-walnut-kitchen-remodel-naples` | modern walnut kitchen remodel naples | 20 (incl. fireplace feature wall) |
+
+Each detail page carries: unique title (50–53 chars) + meta description, one H1, BreadcrumbList + CreativeWork (with ImageObject per photo, `locationCreated`, and `about` → Service) + FAQPage JSON-LD, a 4-question FAQ written to local intent, and internal links to the matching service page, city page, city+service page, and sibling projects.
+
+Photos not used (46 of 93) were near-duplicate angles, tight countertop crops, and blank-wall frames — excluded to keep page weight down and quality high. Originals remain untouched in the source folder.

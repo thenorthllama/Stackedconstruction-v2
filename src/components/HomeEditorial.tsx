@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { projects } from "@/data/projects";
 
 /* ── About — founder-led section (najlepszeokna: "30 Lat Precyzji" + quote) ── */
 
@@ -185,40 +186,15 @@ export function ProjectCategories() {
 
 /* ── Case studies — editorial rows (reference: "• Recent case studies") ───── */
 
-const caseStudies = [
-  {
-    title: "Marble Waterfall Island Kitchen",
-    location: "Naples, FL",
-    href: "/areas/naples",
-    description:
-      "Dramatic marble waterfall island with natural wood cabinetry, bronze pendant lighting, and pool-view sliding glass doors.",
-    image: "/images/kitchen-marble-waterfall.webp",
-  },
-  {
-    title: "Poolside Oak Kitchen",
-    location: "Bonita Springs, FL",
-    href: "/areas/bonita-springs",
-    description:
-      "Light oak cabinetry with waterfall marble island, pool views, open shelving, and a seamless indoor-outdoor Florida living layout.",
-    image: "/images/kitchen-poolside-oak.webp",
-  },
-  {
-    title: "Coastal Reeded Island Kitchen",
-    location: "Fort Myers, FL",
-    href: "/areas/fort-myers",
-    description:
-      "Warm coastal kitchen with reeded oak island cabinetry, quartz countertops, floating shelves, and tropical greenery framed by oversized windows.",
-    image: "/images/kitchen-coastal-reeded.webp",
-  },
-  {
-    title: "Coastal White & Beam Kitchen",
-    location: "Cape Coral, FL",
-    href: "/areas/cape-coral",
-    description:
-      "Bright white shaker cabinetry with exposed wood ceiling beams, marble island, floating wood shelves, and lanai views.",
-    image: "/images/kitchen-coastal-white-beams.webp",
-  },
-];
+const caseStudies = projects.map((p) => ({
+  title: p.name,
+  location: `${p.city}, FL`,
+  href: `/projects/${p.slug}`,
+  description: p.summary,
+  image: p.hero.src,
+  alt: p.hero.alt,
+  cta: "View project",
+}));
 
 export function CaseStudies() {
   return (
@@ -266,7 +242,7 @@ export function CaseStudies() {
                   href={cs.href}
                   className="group mt-8 inline-flex items-center gap-3 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
                 >
-                  Remodeling in {cs.location.replace(", FL", "")}
+                  {cs.cta}
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
                     aria-hidden="true"
@@ -282,7 +258,7 @@ export function CaseStudies() {
                   className="aspect-[16/10] w-full rounded-[2rem] bg-cover bg-center"
                   style={{ backgroundImage: `url('${cs.image}')` }}
                   role="img"
-                  aria-label={`${cs.title} — ${cs.location}`}
+                  aria-label={cs.alt}
                 />
               </div>
             </div>
@@ -291,7 +267,7 @@ export function CaseStudies() {
 
         <div className="mt-16 text-center">
           <Link
-            href="/gallery"
+            href="/projects"
             className="group inline-flex items-center gap-3 rounded-full border border-warm-900/25 py-2.5 pl-7 pr-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-all hover:border-warm-900"
           >
             View all projects

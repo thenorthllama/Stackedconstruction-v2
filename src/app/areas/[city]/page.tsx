@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { cities, services, getCityBySlug } from "@/data/seo";
+import { getProjectsByCity } from "@/data/projects";
 
 // ---------------------------------------------------------------------------
 // Static params
@@ -49,6 +51,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   if (!city) notFound();
 
   const cityServices = services.filter((s) => city.serviceIntros[s.slug]);
+  const cityProjects = getProjectsByCity(citySlug);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -262,6 +265,50 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             </div>
           </div>
         </section>
+
+        {/* ── Completed projects in this city — real work, local proof ── */}
+        {cityProjects.length > 0 && (
+          <section className="bg-white py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
+                <div className="lg:col-span-7">
+                  <p className="eyebrow mb-5 text-warm-900">Completed projects</p>
+                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                    Our Work in{" "}
+                    <em className="not-italic font-semibold text-accent-dark">
+                      {city.name}
+                    </em>
+                  </h2>
+                </div>
+                <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-5 lg:ml-auto lg:text-right">
+                  Photographed at handover — real {city.name} homes, not stock
+                  photography.
+                </p>
+              </div>
+              <div className="grid gap-8 sm:grid-cols-2">
+                {cityProjects.map((project) => (
+                  <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-warm-200">
+                      <Image
+                        src={project.hero.src}
+                        alt={project.hero.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                    </div>
+                    <h3 className="mt-5 font-display text-xl font-semibold text-warm-900 transition-colors group-hover:text-accent-dark">
+                      {project.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-warm-600">
+                      {project.summary}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── Landmarks — warm bg, editorial cards ──────────────────── */}
         {city.landmarks.length > 0 && (

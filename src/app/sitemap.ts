@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services, cities, counties, getAllCityServiceParams } from "@/data/seo";
 import { articles, clusters } from "@/data/blog";
+import { projects } from "@/data/projects";
 
 const BASE_URL = "https://stackedconstruction.co";
 
@@ -23,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/contact`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/projects`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -149,12 +156,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // Project detail pages
+  const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
+    url: `${BASE_URL}/projects/${project.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...servicePages,
     ...cityPages,
     ...countyPages,
     ...cityServicePages,
+    ...projectPages,
     ...blogIndexPage,
     ...blogArticlePages,
     ...blogCategoryPages,
