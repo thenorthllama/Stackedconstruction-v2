@@ -196,7 +196,7 @@ export const cities: CityData[] = [
     headline: "Fort Myers",
     headlineItalic: "Remodeling",
     metaTitle: "Home Remodeling Fort Myers FL | Stacked Construction",
-    metaDescription: "Expert home remodeling in Fort Myers, FL. Kitchen, bathroom, outdoor living, and full home renovations. Licensed Lee County contractor. 150+ projects. Free estimate.",
+    metaDescription: "Expert home remodeling in Fort Myers, FL. Kitchen, bathroom, outdoor living, and full home renovations. Licensed Lee County contractor. 40+ projects. Free estimate.",
     intro: "Fort Myers is the heart of Lee County and one of Southwest Florida's most dynamic remodeling markets. From historic homes near the Edison and Ford Winter Estates to modern builds along the Daniels Corridor, Fort Myers homeowners are investing in kitchen remodels, bathroom renovations, outdoor living upgrades, and full home transformations. Stacked Construction serves Fort Myers with the same values that define our work across SWFL: honest pricing, quality craftsmanship, and clear communication.",
     neighborhoods: ["River District", "McGregor Boulevard", "Daniels Corridor", "Summerlin Road", "Gulf Harbour", "The Plantation", "Pelican Preserve", "Gateway", "Whiskey Creek", "South Fort Myers"],
     landmarks: [

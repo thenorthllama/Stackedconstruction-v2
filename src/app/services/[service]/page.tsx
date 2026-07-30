@@ -201,7 +201,7 @@ export default async function ServicePage({
                 <div className="mt-10 grid grid-cols-3 gap-8 border-t border-warm-200 pt-10">
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
-                      150+
+                      40+
                     </p>
                     <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
                       Projects

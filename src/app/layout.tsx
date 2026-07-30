@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stacked Construction | Premium Home Remodeling in Southwest Florida",
     description:
-      "Expert kitchen, bathroom, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral. 150+ projects. Licensed & insured.",
+      "Expert kitchen, bathroom, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral. 40+ projects. Licensed & insured.",
     type: "website",
     locale: "en_US",
     siteName: "Stacked Construction",

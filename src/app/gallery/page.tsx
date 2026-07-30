@@ -64,7 +64,7 @@ export default function GalleryPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 text-center sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { value: "150+", label: "Projects Completed" },
+                { value: "40+", label: "Projects Completed" },
                 { value: "98%", label: "Client Satisfaction" },
                 { value: "15+", label: "Years Experience" },
                 { value: "3", label: "Counties Served" },

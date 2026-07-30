@@ -87,7 +87,7 @@ export default async function ServiceLandingPage({
                 {/* Trust signals */}
                 <div className="mt-12 grid grid-cols-3 gap-8 border-t border-warm-700/50 pt-10">
                   <div>
-                    <p className="font-display text-3xl font-bold text-white lg:text-4xl">150+</p>
+                    <p className="font-display text-3xl font-bold text-white lg:text-4xl">40+</p>
                     <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
                       Projects
                     </p>
@@ -143,7 +143,7 @@ export default async function ServiceLandingPage({
                 <div className="mt-10 grid grid-cols-3 gap-8 border-t border-warm-200 pt-10">
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
-                      150+
+                      40+
                     </p>
                     <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
                       Projects

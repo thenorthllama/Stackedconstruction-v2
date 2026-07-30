@@ -53,7 +53,7 @@ export const authors: AuthorData[] = [
     instagram: "https://www.instagram.com/stackedconstruction/",
     schemaUrl: "https://stackedconstruction.co/about/junior-da-silva",
     yearsExperience: "10",
-    projectCount: "150+",
+    projectCount: "40+",
   },
   {
     name: "Camila Lage",

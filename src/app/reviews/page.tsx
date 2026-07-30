@@ -250,7 +250,7 @@ export default function ReviewsPage() {
               <div className="space-y-0 divide-y divide-warm-800">
                 {[
                   { stat: "5/5", label: "Average Rating" },
-                  { stat: "150+", label: "Completed Projects" },
+                  { stat: "40+", label: "Completed Projects" },
                   { stat: "3", label: "Counties Served" },
                   { stat: "10yr", label: "In Business" },
                 ].map((item) => (
