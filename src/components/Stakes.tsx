@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { stakes, cta, planSteps as planStepsList } from "@/data/brand";
+import { stakes, cta, guide, planSteps as planStepsList } from "@/data/brand";
 
 /**
  * StoryBrand "stakes" section — what's at risk without a good builder.
@@ -20,6 +20,14 @@ export default function Stakes() {
                 more than money
               </em>
             </h2>
+            {/* Relocated from the hero, where it floated as an orphan above the
+                H1 and competed for first fixation. It opens this section
+                properly — the empathy statement that earns the stakes below. */}
+            <blockquote className="mt-7 border-l-2 border-accent-dark pl-6">
+              <p className="font-display text-xl leading-snug text-warm-900 sm:text-2xl">
+                {guide.empathy}
+              </p>
+            </blockquote>
             <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
               You already know this, which is probably why you&apos;ve been
               putting the project off. Almost everyone we sit down with has
