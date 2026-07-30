@@ -133,7 +133,7 @@ export default async function ServicePage({
                     href="/contact"
                     className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
                   >
-                    Get Free Estimate
+                    Schedule a Consultation
                   </a>
                 </div>
               </div>
@@ -466,7 +466,7 @@ export default async function ServicePage({
                       href="/contact"
                       className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-warm-500 hover:text-warm-900"
                     >
-                      Get Free Estimate
+                      Schedule a Consultation
                     </a>
                   </div>
                 </div>

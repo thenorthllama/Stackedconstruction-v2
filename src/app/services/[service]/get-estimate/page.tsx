@@ -72,7 +72,7 @@ export default async function ServiceLandingPage({
               {/* Headline & trust signals — below form on mobile, left col on desktop */}
               <div className="order-last lg:order-none lg:col-span-6 lg:row-start-1">
                 <p className="mb-5 eyebrow text-warm-400">
-                  Free Estimate
+                  Schedule a Consultation
                 </p>
                 <h1 className="max-w-xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
                   {service.headline}{" "}
@@ -112,7 +112,7 @@ export default async function ServiceLandingPage({
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <p className="text-sm text-warm-400">Licensed &amp; Insured &bull; Free Estimates &bull; No Obligation</p>
+                  <p className="text-sm text-warm-400">Licensed &amp; Insured &bull; FL #CBC1269972 &bull; No Obligation</p>
                 </div>
               </div>
             </div>

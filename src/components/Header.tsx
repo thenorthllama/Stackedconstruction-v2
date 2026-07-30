@@ -142,7 +142,7 @@ export default function Header() {
               href="/contact"
               className="group inline-flex items-center gap-2.5 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
             >
-              Get Estimate
+              Schedule a Consult
               <span
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
                 aria-hidden="true"
@@ -240,7 +240,7 @@ export default function Header() {
                   className="mt-2 inline-block rounded-full bg-warm-900 px-6 py-3 text-sm font-semibold text-white hover:bg-warm-800"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Get Free Estimate
+                  Schedule a Consultation
                 </Link>
               </li>
             </ul>

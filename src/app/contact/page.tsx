@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Free Estimate | Stacked Construction – Fort Myers, Naples, Cape Coral",
+  title: { absolute: "Schedule a Consultation | Stacked Construction" },
   description:
     "Request a free remodeling estimate from Stacked Construction. Kitchen, bathroom, outdoor living, and full home renovation across Fort Myers, Naples, Cape Coral, and all of Southwest Florida. Call (239) 785-0166.",
   openGraph: {
-    title: "Contact Stacked Construction | Free Estimate",
+    title: "Schedule a Consultation | Stacked Construction",
     description:
       "Schedule your free in-home consultation. Premium remodeling across Southwest Florida.",
   },

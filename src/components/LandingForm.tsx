@@ -383,7 +383,7 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
           disabled={submitting}
           className="mt-6 w-full rounded-full bg-white py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100 disabled:opacity-60"
         >
-          {submitting ? "Sending..." : isLast ? "Get My Free Estimate" : "Continue"}
+          {submitting ? "Sending..." : isLast ? "Schedule My Consultation" : "Continue"}
         </button>
       )}
 

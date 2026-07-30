@@ -13,7 +13,7 @@ export default function StructuredData() {
       },
       {
         "@type": "Question",
-        name: "Do you provide free estimates?",
+        name: "What happens at the first consultation?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes. We offer free, no-obligation in-home consultations where we assess your space, discuss your goals, and provide a detailed, line-item estimate — no hidden fees.",
@@ -48,7 +48,7 @@ export default function StructuredData() {
         name: "How do I get started?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Simply click 'Get Free Estimate' or call us at (239) 785-0166. We'll schedule a convenient time to visit your home, listen to your vision, and put together a plan that fits your goals and budget.",
+          text: "Click 'Schedule a Consultation' or call (239) 785-0166. We'll set a time to walk your space, listen to how you want to live in it, and talk honestly about scope and budget before anyone draws anything.",
         },
       },
     ],

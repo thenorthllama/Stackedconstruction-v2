@@ -466,7 +466,7 @@ export default async function ProjectPage({
                 href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-warm-900 py-2.5 pl-7 pr-2.5 text-sm font-semibold text-white transition-colors hover:bg-warm-800"
               >
-                Request a Free Estimate
+                Schedule a Consultation
                 <span
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
                   aria-hidden="true"

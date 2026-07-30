@@ -257,7 +257,7 @@ export default async function BlogArticlePage({
                       href="/contact"
                       className="mt-2 flex w-full items-center justify-center gap-1.5 py-2 text-sm font-medium text-warm-400 transition-colors hover:text-white"
                     >
-                      Get Free Estimate
+                      Schedule a Consultation
                       <svg
                         className="h-3.5 w-3.5"
                         fill="none"
