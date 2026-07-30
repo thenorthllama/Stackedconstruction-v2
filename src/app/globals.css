@@ -34,8 +34,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Route changes must land instantly at the top — no animated scroll.
+   Smooth scrolling is scoped to in-page anchor jumps (e.g. #contact) only. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(:target) {
+    scroll-behavior: smooth;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
