@@ -2,18 +2,19 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProcessTimeline } from "./process-timeline";
+import { promises } from "@/data/brand";
 
 export const metadata: Metadata = {
-  title: "Our Process | Stacked Construction – How We Remodel Your Home",
+  title: { absolute: "How We Work | Design-Build Process | Stacked Construction" },
   description:
-    "Learn how Stacked Construction takes your remodeling project from vision to reality in four simple steps. Free consultation, detailed proposal, expert build, and final walk-through.",
+    "How a Stacked Construction project actually runs — consultation, design and line-item proposal, then build. Plus the promises we make to every client in writing.",
   alternates: {
     canonical: "https://stackedconstruction.co/process",
   },
   openGraph: {
-    title: "Our Process | Stacked Construction",
+    title: "How We Work | Stacked Construction",
     description:
-      "From free consultation to final walk-through — a transparent, stress-free remodeling process in Southwest Florida.",
+      "Consultation, design and proposal, then build. See exactly how your project runs before you commit to anything.",
   },
 };
 
@@ -65,17 +66,19 @@ export default function ProcessPage() {
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <p className="mb-4 eyebrow text-warm-500">
-              How It Works
+            <p className="mb-4 eyebrow text-warm-400">
+              How we work
             </p>
             <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-              Our{" "}
-              <em className="not-italic font-semibold text-accent">Process</em>
+              You&apos;ll always know{" "}
+              <em className="not-italic font-semibold text-accent">
+                the next step
+              </em>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
-              Remodeling your home should be exciting, not stressful. We&apos;ve
-              built a simple four-step process that keeps things transparent,
-              organized, and on track from start to finish.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
+              The worst part of a renovation is not knowing what happens next,
+              or what it&apos;s going to cost when it does. Here is the whole
+              process, start to finish, before you commit to anything.
             </p>
           </div>
         </div>
@@ -84,17 +87,53 @@ export default function ProcessPage() {
         {/* Timeline section */}
         <ProcessTimeline />
 
+        {/* ── The agreement plan — our promises ─────────────────────── */}
+        <section className="bg-white py-24 lg:py-32" aria-label="Our promises to every client">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+              <div className="lg:col-span-5">
+                <p className="eyebrow mb-5 text-warm-500">What you can hold us to</p>
+                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  Six promises we make{" "}
+                  <em className="not-italic font-semibold text-accent-dark">
+                    to every client
+                  </em>
+                </h2>
+                <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
+                  These aren&apos;t marketing lines. They&apos;re how we run
+                  every project, and you should expect the same from anyone you
+                  hire.
+                </p>
+              </div>
+              <ol className="divide-y divide-warm-200 border-t border-warm-200 lg:col-span-6 lg:col-start-7">
+                {promises.map((promise, i) => (
+                  <li key={promise} className="flex items-start gap-5 py-5">
+                    <span className="font-display text-lg font-semibold text-warm-400">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-base leading-relaxed text-warm-700">
+                      {promise}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl">
-              Ready to Start{" "}
-              <em className="not-italic font-semibold text-accent">Your Project?</em>
+              Step one is a{" "}
+              <em className="not-italic font-semibold text-accent">
+                conversation
+              </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-warm-500">
-              The first step is a free, no-obligation consultation. Let&apos;s
-              talk about your vision and put together a plan.
+            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-warm-300">
+              We come to you, walk the space, and tell you honestly what&apos;s
+              realistic at your budget. No charge and no obligation.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
@@ -107,7 +146,7 @@ export default function ProcessPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Request Estimate Online
+                Schedule a Consultation
               </a>
             </div>
           </div>

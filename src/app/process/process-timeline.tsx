@@ -25,15 +25,15 @@ const data = [
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Free Consultation
+          Consultation
         </h3>
         <p className="eyebrow text-warm-500 mb-6">
           We come to you
         </p>
         <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
-          We visit your home, listen to your vision, assess the space, and
-          discuss your goals and budget — no pressure, no commitment. This is
-          where your project begins.
+          We come to you. We walk the space, ask how you actually use it, and
+          talk honestly about scope and budget — including whether what you
+          want is realistic at the number you have in mind.
         </p>
         <div className="rounded-2xl border border-warm-200 bg-white p-6 md:p-8">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
@@ -65,7 +65,7 @@ const data = [
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Detailed Proposal
+          Design &amp; Proposal
         </h3>
         <p className="eyebrow text-warm-500 mb-6">
           Transparent from day one
@@ -105,7 +105,7 @@ const data = [
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Expert Build
+          Build
         </h3>
         <p className="eyebrow text-warm-500 mb-6">
           Quality craftsmanship, clean job sites
@@ -145,7 +145,7 @@ const data = [
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Final Walk-Through
+          Walk-Through &amp; Warranty
         </h3>
         <p className="eyebrow text-warm-500 mb-6">
           We don&apos;t leave until it&apos;s perfect

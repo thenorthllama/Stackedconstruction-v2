@@ -231,7 +231,7 @@ export default async function BlogArticlePage({
                       Start Your Project
                     </p>
                     <p className="mt-2.5 font-display text-lg font-semibold leading-snug text-white">
-                      Ready to bring your vision to life?
+                      Ready to design it and build it with one team?
                     </p>
                     <a
                       href="tel:+12397850166"
@@ -399,14 +399,14 @@ export default async function BlogArticlePage({
               Start Your Project
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready to Discuss{" "}
+              Let&apos;s Talk About{" "}
               <em className="not-italic font-semibold text-accent">
                 Your Project?
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
-              obligation — just an honest conversation about your vision and a
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
+              obligation — just a straight conversation about your project and a
               clear path forward.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -253,7 +253,7 @@ export default function CamilaLagePage() {
               <em className="not-italic font-semibold text-accent">Your Space?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Contact Stacked Construction for a free consultation and let us help you bring your vision to life.
+              Contact Stacked Construction for a consultation and let us help you design it and build it with one team.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="tel:+12397850166" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100">

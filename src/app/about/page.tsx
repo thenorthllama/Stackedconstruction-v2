@@ -396,7 +396,7 @@ export default function AboutPage() {
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
               obligation — just an honest conversation about your project and a
               clear path forward.
             </p>

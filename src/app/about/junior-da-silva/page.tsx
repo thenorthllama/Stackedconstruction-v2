@@ -266,7 +266,7 @@ export default function JuniorDaSilvaPage() {
               Work Directly{" "}<em className="not-italic font-semibold text-accent">With Junior</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule a free in-home consultation and speak directly with Junior about your vision, budget, and timeline.
+              Schedule a in-home consultation and speak directly with Junior about your vision, budget, and timeline.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="tel:+12397850166" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100">

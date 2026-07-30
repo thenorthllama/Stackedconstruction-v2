@@ -235,7 +235,7 @@ export default async function ServiceLandingPage({
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
                 {[
-                  { step: "01", title: "Free Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
+                  { step: "01", title: "Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
                   { step: "02", title: "Detailed Proposal", desc: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work." },
                   { step: "03", title: "Expert Build", desc: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates." },
                   { step: "04", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
@@ -385,14 +385,14 @@ export default async function ServiceLandingPage({
               Start Your Project
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready to Discuss{" "}
+              Let&apos;s Talk About{" "}
               <em className="not-italic font-semibold text-accent">
                 Your {service.shortName} Project?
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
-              obligation — just an honest conversation about your vision and a
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
+              obligation — just a straight conversation about your project and a
               clear path forward.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

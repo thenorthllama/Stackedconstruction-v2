@@ -364,7 +364,7 @@ export default function CredentialsPage() {
               <em className="not-italic font-semibold text-accent">You Can Verify</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Our license, insurance, and credentials are publicly verifiable. Schedule your free consultation and ask us anything.
+              Our license, insurance, and credentials are publicly verifiable. Schedule your consultation and ask us anything.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="tel:+12397850166" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100">

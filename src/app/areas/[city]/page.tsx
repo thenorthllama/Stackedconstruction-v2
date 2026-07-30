@@ -406,8 +406,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <em className="not-italic font-semibold text-accent">{city.name}?</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
-              obligation — just an honest conversation about your vision and how
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
+              obligation — just a straight conversation about your project and how
               we can bring it to life.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

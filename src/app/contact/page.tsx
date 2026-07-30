@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Schedule a Consultation | Stacked Construction",
     description:
-      "Schedule your free in-home consultation. Premium remodeling across Southwest Florida.",
+      "Schedule your in-home consultation. Premium remodeling across Southwest Florida.",
   },
   alternates: {
     canonical: "https://stackedconstruction.co/contact",
@@ -88,8 +88,8 @@ export default function ContactPage() {
                 <em className="not-italic font-semibold text-accent">Beautiful</em>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
-                Schedule your free in-home consultation. No pressure, no
-                obligation — just an honest conversation about your vision.
+                We come to you and tell you honestly what&apos;s realistic. No charge, no
+                obligation — just a straight conversation about your project.
               </p>
             </div>
           </div>

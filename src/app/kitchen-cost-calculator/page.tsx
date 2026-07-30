@@ -254,7 +254,7 @@ export default function KitchenCostCalculatorPage() {
               <em className="not-italic font-semibold text-accent">Talk to a Human</em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no obligation —
+              We come to you and tell you honestly what&apos;s realistic. No charge, no obligation —
               just an honest conversation about your vision and a clear path forward.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -5,14 +5,14 @@ import Footer from "@/components/Footer";
 import { services } from "@/data/seo";
 
 export const metadata: Metadata = {
-  title: "Our Services | Stacked Construction – Southwest Florida Remodeling",
+  title: { absolute: "Design-Build Services in Southwest Florida | Stacked" },
   description:
     "Kitchen remodeling, bathroom renovation, outdoor living, full home renovation, and flooring & tile services across Southwest Florida. Licensed contractor. Free estimate.",
   alternates: {
     canonical: "https://stackedconstruction.co/services",
   },
   openGraph: {
-    title: "Our Services | Stacked Construction",
+    title: "Design-Build Services | Stacked Construction",
     description:
       "Premium remodeling services in Fort Myers, Naples, Cape Coral, and all of SWFL.",
   },
@@ -37,17 +37,19 @@ export default function ServicesIndexPage() {
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
             <div>
-              <p className="mb-5 eyebrow text-warm-400">
-                What We Do
+              <p className="mb-5 eyebrow text-warm-300">
+                What we do
               </p>
               <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
-                Our{" "}
-                <em className="not-italic font-semibold text-accent">Services</em>
+                Design and build,{" "}
+                <em className="not-italic font-semibold text-accent">
+                  under one roof
+                </em>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
-                From kitchens and bathrooms to full home renovations and outdoor
-                living, we bring your vision to life with expert craftsmanship
-                and transparent pricing.
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
+                Kitchens, bathrooms, outdoor living, and whole-home
+                renovations. Whichever you start with, one team designs it,
+                prices it line by line, and builds it.
               </p>
             </div>
           </div>
