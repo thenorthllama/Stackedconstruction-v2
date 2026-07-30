@@ -103,17 +103,37 @@ export default function ContactPage() {
               {/* Left — contact info */}
               <div className="lg:col-span-4 lg:sticky lg:top-32">
                 <p className="mb-4 eyebrow text-warm-500">
-                  Get in Touch
+                  What happens next
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Reach{" "}
-                  <em className="not-italic font-semibold text-accent-dark">Out</em>
+                  Tell us what you have in{" "}
+                  <em className="not-italic font-semibold text-accent-dark">mind</em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  Whether you&apos;re ready to start or just exploring options,
-                  we&apos;d love to hear about your project. Reach out by phone,
-                  email, or fill out the form.
+                  Two short steps. We only ask for what we need to call you
+                  back — the rest we&apos;ll work out together.
                 </p>
+
+                {/* What happens next — the anxiety this audience actually has */}
+                <ol className="mt-8 space-y-3.5 border-t border-warm-200 pt-7">
+                  {[
+                    "We call you within one business day",
+                    "We set a time that works and come to you",
+                    "You get a line-item proposal — no obligation",
+                  ].map((item, i) => (
+                    <li key={item} className="flex items-start gap-3.5">
+                      <span
+                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-warm-900 text-[11px] font-semibold text-white"
+                        aria-hidden="true"
+                      >
+                        {i + 1}
+                      </span>
+                      <span className="text-sm leading-relaxed text-warm-700">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
 
                 <div className="mt-10 space-y-5">
                   <a
