@@ -23,7 +23,7 @@ export default function GalleryPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
@@ -115,7 +115,7 @@ export default function GalleryPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Request Estimate Online
+                Request a Consultation
               </Link>
             </div>
           </div>

@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Schedule a Consultation | Stacked Construction" },
+  title: { absolute: "Request a Consultation | Stacked Construction" },
   description:
     "Request a free remodeling estimate from Stacked Construction. Kitchen, bathroom, outdoor living, and full home renovation across Fort Myers, Naples, Cape Coral, and all of Southwest Florida. Call (239) 785-0166.",
   openGraph: {
-    title: "Schedule a Consultation | Stacked Construction",
+    title: "Request a Consultation | Stacked Construction",
     description:
       "Schedule your in-home consultation. Premium remodeling across Southwest Florida.",
   },
@@ -65,7 +65,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">

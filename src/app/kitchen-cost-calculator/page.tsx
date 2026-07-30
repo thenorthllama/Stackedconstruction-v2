@@ -70,7 +70,7 @@ export default function KitchenCostCalculatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero + calculator ─────────────────────────────────── */}
         <section id="top" className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative bg-warm-900 pb-24 pt-32 lg:pb-32 lg:pt-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">

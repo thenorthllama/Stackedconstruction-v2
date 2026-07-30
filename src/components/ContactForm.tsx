@@ -398,7 +398,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               : "bg-warm-900 text-white hover:bg-warm-800"
           }`}
         >
-          {submitting ? "Sending…" : "Schedule a Consultation"}
+          {submitting ? "Sending…" : "Request a Consultation"}
         </button>
 
         <p

@@ -34,10 +34,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Header offset ─────────────────────────────────────────────────────────────
+   The header is fixed, so anything scrolled to must be pushed clear of it or the
+   nav covers the heading. One variable drives every offset; Header.tsx flips
+   --header-h when the announcement bar collapses on scroll. */
+:root {
+  --announce-h: 2.5rem; /* espresso phone strip */
+  --nav-h: 4.25rem; /* floating pill nav + its top padding */
+  --header-h: calc(var(--announce-h) + var(--nav-h));
+}
+
+/* Announcement bar is hidden once scrolled — offset shrinks to match */
+:root[data-scrolled="true"] {
+  --header-h: var(--nav-h);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 4.75rem;
+  }
+}
+
 /* Route changes must land instantly at the top — no animated scroll.
    Smooth scrolling is scoped to in-page anchor jumps (e.g. #contact) only. */
 html {
   scroll-behavior: auto;
+  /* anchor targets stop below the header instead of behind it */
+  scroll-padding-top: calc(var(--header-h) + 1.5rem);
+}
+
+/* Belt-and-braces for any element scrolled into view programmatically */
+section[id],
+[id]:target {
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,10 +142,50 @@ html {
   }
 }
 
-/* Focus visibility — WCAG 2.1 AA keyboard nav */
+/* Focus visibility — WCAG 2.1 AA keyboard nav.
+   Components that set their own focus-visible ring (see ui/cta.tsx) opt out. */
 :focus-visible {
   outline: 2px solid var(--color-accent-dark);
   outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* On dark sections a terracotta outline is too low-contrast — use white */
+.on-dark :focus-visible,
+[data-surface="dark"] :focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Skip link — first thing in the tab order, visible only when focused */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  border-radius: 9999px;
+  background-color: var(--color-warm-900);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Minimum touch target for small interactive controls */
+.tap-target {
+  position: relative;
+}
+
+.tap-target::after {
+  content: "";
+  position: absolute;
+  inset: 50% 50% 50% 50%;
+  min-width: 44px;
+  min-height: 44px;
+  translate: -50% -50%;
 }
 
 /* ── Blog article prose styles ─────────────────────────────────────────────── */

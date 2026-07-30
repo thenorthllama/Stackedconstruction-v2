@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* 1. Promise — hero with location + CTA */}
         <Hero />
         {/* 2. Instant proof — stats strip */}

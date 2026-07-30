@@ -124,7 +124,7 @@ export default async function BlogArticlePage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero — cinematic article header ──────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
@@ -257,7 +257,7 @@ export default async function BlogArticlePage({
                       href="/contact"
                       className="mt-2 flex w-full items-center justify-center gap-1.5 py-2 text-sm font-medium text-warm-400 transition-colors hover:text-white"
                     >
-                      Schedule a Consultation
+                      Request a Consultation
                       <svg
                         className="h-3.5 w-3.5"
                         fill="none"
@@ -420,7 +420,7 @@ export default async function BlogArticlePage({
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Request Estimate Online
+                Request a Consultation
               </Link>
             </div>
           </div>

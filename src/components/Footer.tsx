@@ -203,7 +203,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/contact" className="text-sm text-warm-600 transition-colors hover:text-warm-900">
-                    Schedule a Consultation
+                    Request a Consultation
                   </Link>
                 </li>
               </ul>

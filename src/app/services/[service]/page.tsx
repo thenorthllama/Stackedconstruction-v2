@@ -98,7 +98,7 @@ export default async function ServicePage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero — cinematic, image-led ───────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
@@ -125,17 +125,17 @@ export default async function ServicePage({
                 </h1>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
-                    href="tel:+12397850166"
-                    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
-                  >
-                    Call (239) 785-0166
-                  </a>
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
-                  >
-                    Schedule a Consultation
-                  </a>
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+              >
+                Request a Consultation
+              </a>
+              <a
+                href="tel:+12397850166"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
+              >
+                Call (239) 785-0166
+              </a>
                 </div>
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
@@ -491,7 +491,7 @@ export default async function ServicePage({
                       href="/contact"
                       className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-warm-500 hover:text-warm-900"
                     >
-                      Schedule a Consultation
+                      Request a Consultation
                     </a>
                   </div>
                 </div>
@@ -525,16 +525,16 @@ export default async function ServicePage({
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="tel:+12397850166"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
               >
-                Call (239) 785-0166
+                Request a Consultation
               </a>
               <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
+                href="tel:+12397850166"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Request Estimate Online
+                Call (239) 785-0166
               </a>
             </div>
           </div>

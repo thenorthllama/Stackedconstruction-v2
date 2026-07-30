@@ -97,8 +97,8 @@ export const promises = [
 
 /** Calls to action. One direct CTA label, used identically sitewide. */
 export const cta = {
-  direct: "Schedule a Consultation",
-  directShort: "Schedule a Consult",
+  direct: "Request a Consultation",
+  directShort: "Request a Consult",
   directHref: "/contact",
   phone: `Call ${brand.phone}`,
   transitional: "Get the Planning Guide",

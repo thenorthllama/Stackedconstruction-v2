@@ -73,7 +73,7 @@ export default function Hero() {
                   href="#contact"
                   className="group inline-flex items-center justify-center gap-3 rounded-full bg-white py-2.5 pl-7 pr-2.5 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
                 >
-                  Schedule a Consultation
+                  Request a Consultation
                   <span
                     className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-warm-900 text-white transition-transform duration-300 group-hover:translate-x-0.5"
                     aria-hidden="true"
