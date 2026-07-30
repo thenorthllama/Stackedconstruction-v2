@@ -7,7 +7,7 @@ import { getAuthorBySlug } from "@/data/authors";
 const author = getAuthorBySlug("junior-da-silva")!;
 
 export const metadata: Metadata = {
-  title: "Junior Da Silva — Founder & Licensed Contractor | Stacked Construction",
+  title: "Junior Da Silva — Founder",
   description: author.shortBio,
   alternates: {
     canonical: "https://stackedconstruction.co/about/junior-da-silva",

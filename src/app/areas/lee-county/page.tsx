@@ -6,7 +6,7 @@ const county = getCountyBySlug("lee-county")!;
 const countyCities = getCitiesForCounty("lee-county");
 
 export const metadata: Metadata = {
-  title: county.metaTitle,
+  title: { absolute: county.metaTitle },
   description: county.metaDescription,
   alternates: {
     canonical: "https://stackedconstruction.co/areas/lee-county",

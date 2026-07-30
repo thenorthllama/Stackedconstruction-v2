@@ -29,7 +29,7 @@ export async function generateMetadata({
   if (!city) return {};
 
   return {
-    title: city.metaTitle,
+    title: { absolute: city.metaTitle },
     description: city.metaDescription,
     alternates: {
       canonical: `https://stackedconstruction.co/areas/${citySlug}`,

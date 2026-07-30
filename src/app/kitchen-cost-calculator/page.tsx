@@ -4,16 +4,16 @@ import Footer from "@/components/Footer";
 import KitchenCostCalculator from "@/components/KitchenCostCalculator";
 
 export const metadata: Metadata = {
-  title: "Kitchen Remodel Cost Calculator | Instant Estimate | Stacked Construction",
+  title: { absolute: "Kitchen Remodel Cost Calculator | SWFL Planning Tool" },
   description:
-    "Get an instant, personalized kitchen remodel cost estimate for Fort Myers, Naples, Cape Coral & SWFL. Answer a few questions about your cabinets, countertops & finishes and see a real price range in 60 seconds.",
+    "Plan your kitchen budget before you talk to anyone. Answer a few questions about cabinets, countertops, and finishes and see a realistic Southwest Florida range \u2014 and what drives the number.",
   alternates: {
     canonical: "https://stackedconstruction.co/kitchen-cost-calculator",
   },
   openGraph: {
     title: "Kitchen Remodel Cost Calculator | Stacked Construction",
     description:
-      "Answer a few quick questions and get a real Southwest Florida kitchen remodel price range — free, instant, no obligation.",
+      "Understand what your kitchen should cost in Southwest Florida, and which decisions move the number most.",
   },
 };
 

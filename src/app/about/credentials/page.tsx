@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Licenses, Credentials & Certifications | Stacked Construction",
+  title: "Licenses, Credentials & Insurance",
   description:
     "Stacked Construction holds Florida Certified Building Contractor license CBC1269972. View our verified credentials, insurance, and professional qualifications for remodeling in Southwest Florida.",
   alternates: {

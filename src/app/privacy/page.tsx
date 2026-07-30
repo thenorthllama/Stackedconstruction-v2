@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Stacked Construction",
+  title: "Privacy Policy",
   description:
     "Privacy policy for Stacked Construction. Learn how we collect, use, and protect your personal information.",
   alternates: {

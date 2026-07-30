@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Client Reviews | Stacked Construction — SWFL Remodeling",
+  title: { absolute: "Client Reviews | Stacked Construction" },
   description:
     "Read real reviews from Southwest Florida homeowners who've worked with Stacked Construction. Honest feedback on kitchen remodels, bathroom renovations, and full-home projects.",
   alternates: {

@@ -5,8 +5,7 @@ import Footer from "@/components/Footer";
 import GalleryContent from "./gallery-content";
 
 export const metadata: Metadata = {
-  title:
-    "Gallery | Stacked Construction – Kitchen, Bath & Home Remodeling in SWFL",
+  title: { absolute: "Project Gallery | Stacked Construction" },
   description:
     "Browse our gallery of premium kitchen remodels, bathroom renovations, outdoor living spaces, and whole-home transformations across Fort Myers, Naples, and Southwest Florida.",
   alternates: {

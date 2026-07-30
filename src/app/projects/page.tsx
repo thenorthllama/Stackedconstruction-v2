@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { projects, getProjectPhotoCount } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: { absolute: "Remodeling Projects in Southwest Florida | Stacked Construction" },
+  title: { absolute: "Renovation Projects in Southwest Florida | Stacked" },
   description:
     "Browse completed kitchen remodels and home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral. Real projects, real photos, from a licensed Florida contractor.",
   alternates: {

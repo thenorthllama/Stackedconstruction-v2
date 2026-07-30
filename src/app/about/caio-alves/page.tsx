@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Caio Alves — Project Manager & Remodeling Specialist | Stacked Construction",
+  title: "Caio Alves — Project Manager",
   description:
     "Caio Alves is a project manager and remodeling specialist at Stacked Construction, guiding Southwest Florida homeowners through every stage of their kitchen, bathroom, and home renovation projects.",
   alternates: {

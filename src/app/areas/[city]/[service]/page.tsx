@@ -31,11 +31,11 @@ export async function generateMetadata({
   const service = getServiceBySlug(serviceSlug);
   if (!city || !service) return {};
 
-  const title = `${service.name} ${city.name} FL | Stacked Construction`;
-  const description = `Expert ${service.name.toLowerCase()} in ${city.name}, FL. ${service.description} Licensed ${city.county} contractor. Free estimate.`;
+  const title = `${service.shortName} Remodeling in ${city.name}, FL | Stacked`;
+  const description = `${service.name} in ${city.name}, FL. ${service.description} Licensed design-build contractor in ${city.county}. Schedule a consultation.`;
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://stackedconstruction.co/areas/${citySlug}/${serviceSlug}`,

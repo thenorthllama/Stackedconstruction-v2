@@ -23,7 +23,7 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: `Get a Free ${service.name} Estimate | Stacked Construction`,
+    title: { absolute: `${service.name} Consultation | Stacked Construction` },
     description: `Request your free ${service.name.toLowerCase()} estimate from Stacked Construction. Serving Fort Myers, Naples, Cape Coral & all of Southwest Florida. Licensed & insured.`,
     robots: { index: false, follow: false },
   };

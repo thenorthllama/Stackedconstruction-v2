@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Camila Lage — Interior Design Consultant | Stacked Construction",
+  title: "Camila Lage — Design Consultant",
   description:
     "Camila Lage is an interior design consultant at Stacked Construction, specializing in kitchen and bathroom design, material selection, and remodeling guidance for Southwest Florida homeowners.",
   alternates: {

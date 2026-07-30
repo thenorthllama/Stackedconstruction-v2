@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { articles, clusters, getArticlesByCluster } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Remodeling Articles | Stacked Construction – SWFL Tips & Guides",
+  title: "Renovation Guides & Articles",
   description:
     "Expert remodeling advice, project planning tips, and design inspiration for Southwest Florida homeowners. Kitchen, bathroom, outdoor living, and whole-home renovation guides.",
   alternates: {

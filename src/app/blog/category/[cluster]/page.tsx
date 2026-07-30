@@ -22,13 +22,13 @@ export async function generateMetadata({
   const cluster = clusters.find((c) => c.slug === slug);
   if (!cluster) return {};
   return {
-    title: `${cluster.name} | Stacked Construction Blog`,
+    title: `${cluster.name} — Renovation Guides`,
     description: cluster.description,
     alternates: {
       canonical: `https://stackedconstruction.co/blog/category/${slug}`,
     },
     openGraph: {
-      title: `${cluster.name} | Stacked Construction Blog`,
+      title: `${cluster.name} — Renovation Guides`,
       description: cluster.description,
     },
   };

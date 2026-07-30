@@ -7,7 +7,7 @@ import { services } from "@/data/seo";
 export const metadata: Metadata = {
   title: { absolute: "Design-Build Services in Southwest Florida | Stacked" },
   description:
-    "Kitchen remodeling, bathroom renovation, outdoor living, full home renovation, and flooring & tile services across Southwest Florida. Licensed contractor. Free estimate.",
+    "Kitchen, bathroom, outdoor living, whole-home renovation, and flooring across Southwest Florida. One team designs and builds it. Licensed \u2014 FL #CBC1269972.",
   alternates: {
     canonical: "https://stackedconstruction.co/services",
   },

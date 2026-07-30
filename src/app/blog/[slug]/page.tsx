@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!article) return {};
   const authorData = article.author ? getAuthorByName(article.author) : undefined;
   return {
-    title: article.metaTitle,
+    title: { absolute: article.metaTitle },
     description: article.metaDescription,
     ...(article.author && {
       authors: [

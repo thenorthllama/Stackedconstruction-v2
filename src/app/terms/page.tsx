@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Stacked Construction",
+  title: "Terms of Service",
   description:
     "Terms of service for Stacked Construction. Review the terms governing your use of our website and services.",
   alternates: {

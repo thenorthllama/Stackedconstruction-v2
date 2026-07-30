@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About Us | Stacked Construction – Licensed Remodeling in SWFL",
+  title: "About Us — Licensed Design-Build",
   description:
     "Licensed and insured remodeling company in Southwest Florida. Nearly a decade of experience in kitchen, bathroom, and full-home renovations built on trust, transparency, and disciplined execution.",
   alternates: {
