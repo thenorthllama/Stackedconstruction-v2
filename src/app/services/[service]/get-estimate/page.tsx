@@ -129,7 +129,7 @@ export default async function ServiceLandingPage({
                   Our Approach
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Why Stacked
+                  Why homeowners
                   <br />
                   <em className="not-italic font-semibold text-accent-dark">
                     for {service.shortName}
@@ -222,22 +222,24 @@ export default async function ServiceLandingPage({
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
                 <p className="mb-4 eyebrow text-warm-500">
-                  How It Works
+                  How we work
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  From Vision
+                  You&apos;ll always know
                   <br />
-                  <em className="not-italic font-semibold text-accent-dark">to Reality</em>
+                  <em className="not-italic font-semibold text-accent-dark">
+                    the next step
+                  </em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  A transparent process that keeps you informed and in control at every stage.
+                  Three steps from first conversation to final walk-through.
                 </p>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
                 {[
                   { step: "01", title: "Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
-                  { step: "02", title: "Detailed Proposal", desc: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work." },
-                  { step: "03", title: "Expert Build", desc: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates." },
+                  { step: "02", title: "Design & Proposal", desc: "We design the space and hand you a line-item proposal — drawings, selections, and real numbers — before a tool comes out." },
+                  { step: "03", title: "Build", desc: "We pull the permits, schedule the trades, and keep you updated without you having to ask — through final walk-through." },
                   { step: "04", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
                 ].map((s) => (
                   <div key={s.step} className="py-10 first:pt-0 last:pb-0">
@@ -387,7 +389,7 @@ export default async function ServiceLandingPage({
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Let&apos;s Talk About{" "}
               <em className="not-italic font-semibold text-accent">
-                Your {service.shortName} Project?
+                your {service.shortName.toLowerCase()}
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">

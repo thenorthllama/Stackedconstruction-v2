@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { planSteps, promises } from "@/data/brand";
 import {
   getCityBySlug,
   getServiceBySlug,
@@ -109,12 +110,12 @@ export default async function CityServicePage({
                   {city.county} &middot; {city.name}, {city.state}
                 </p>
                 <h1 className="max-w-4xl font-display text-4xl font-bold leading-[0.92] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                  {service.headline}{" "}
+                  {service.name}{" "}
                   <em className="not-italic font-semibold text-accent">
-                    {service.headlineItalic}
-                  </em>
-                  <span className="mt-3 block font-display text-2xl font-light text-warm-400 sm:text-3xl lg:text-4xl">
                     in {city.name}
+                  </em>
+                  <span className="mt-3 block font-display text-2xl font-light text-warm-300 sm:text-3xl lg:text-4xl">
+                    Designed and built by one team
                   </span>
                 </h1>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -146,11 +147,15 @@ export default async function CityServicePage({
                   {service.name} in {city.name}
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Local{" "}
+                  We know these{" "}
                   <em className="not-italic font-semibold text-accent-dark">
-                    Expertise
+                    houses
                   </em>
                 </h2>
+                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                  Licensed &amp; insured design-build contractor — FL
+                  #CBC1269972. One team designs it and builds it.
+                </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
                 <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
@@ -208,12 +213,14 @@ export default async function CityServicePage({
           <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 eyebrow text-warm-500">
-                What&apos;s Included
+              <p className="mb-4 eyebrow text-warm-400">
+                What&apos;s included
               </p>
               <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                {service.shortName}{" "}
-                <em className="not-italic font-semibold text-accent">Benefits</em>
+                What&apos;s in your{" "}
+                <em className="not-italic font-semibold text-accent">
+                  proposal
+                </em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 lg:grid-cols-2">
@@ -244,6 +251,59 @@ export default async function CityServicePage({
             </div>
           </div>
         </div>
+        </section>
+
+
+        {/* ── The plan — same three steps as everywhere else ────────── */}
+        <section className="bg-white py-24 lg:py-32" aria-label="How we work">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
+              <div className="lg:col-span-7">
+                <p className="eyebrow mb-5 text-warm-500">How we work</p>
+                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  Three steps, and you{" "}
+                  <em className="not-italic font-semibold text-accent-dark">
+                    always know the next one
+                  </em>
+                </h2>
+              </div>
+              <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-4 lg:col-start-9">
+                The same process on every project, whether it&apos;s one room or
+                the whole house.
+              </p>
+            </div>
+            <ol className="grid gap-10 border-t border-warm-200 pt-10 lg:grid-cols-3 lg:gap-8">
+              {planSteps.map((step) => (
+                <li key={step.number}>
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-display text-3xl font-bold text-accent-dark">
+                      {step.number}
+                    </span>
+                    <p className="eyebrow text-warm-500">{step.summary}</p>
+                  </div>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-warm-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-warm-600">
+                    {step.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-12 rounded-3xl bg-warm-50 p-7 lg:p-8">
+              <p className="font-display text-lg font-semibold text-warm-900">
+                What you can hold us to
+              </p>
+              <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
+                {promises.map((promise) => (
+                  <li key={promise} className="flex items-start gap-2.5 text-sm leading-relaxed text-warm-600">
+                    <span className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark" aria-hidden="true" />
+                    {promise}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* ── Neighborhoods — light, minimal ────────────────────────── */}
@@ -375,20 +435,19 @@ export default async function CityServicePage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
-              Start Your Project
+            <p className="mb-5 eyebrow text-warm-400">
+              Start the conversation
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready for{" "}
+              Let&apos;s walk your{" "}
               <em className="not-italic font-semibold text-accent">
-                {service.name}
-              </em>{" "}
-              in {city.name}?
+                {city.name} home
+              </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              We come to you and tell you honestly what&apos;s realistic. No charge, no
-              obligation — just a straight conversation about your project and how
-              we can bring it to life.
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
+              We come to you, look at the space, and tell you honestly
+              what&apos;s realistic at your budget. No charge, no obligation,
+              and no pressure to decide that day.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a

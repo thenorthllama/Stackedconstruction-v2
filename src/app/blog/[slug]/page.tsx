@@ -401,7 +401,7 @@ export default async function BlogArticlePage({
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               Let&apos;s Talk About{" "}
               <em className="not-italic font-semibold text-accent">
-                Your Project?
+                your project
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">

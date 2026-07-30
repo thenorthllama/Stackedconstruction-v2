@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services, cities, getServiceBySlug } from "@/data/seo";
+import { planSteps, promises } from "@/data/brand";
 import { notFound } from "next/navigation";
 
 // ─── Static generation ──────────────────────────────────────────────────────────
@@ -184,15 +185,20 @@ export default async function ServicePage({
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
                 <p className="mb-4 eyebrow text-warm-500">
-                  Our Approach
+                  What usually goes wrong
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Why Stacked
+                  The part most people
                   <br />
                   <em className="not-italic font-semibold text-accent-dark">
-                    for {service.shortName}
+                    find out too late
                   </em>
                 </h2>
+                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                  You shouldn&apos;t have to chase anyone for an update, and you
+                  shouldn&apos;t learn what something costs after it&apos;s
+                  built.
+                </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
                 <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
@@ -280,23 +286,23 @@ export default async function ServicePage({
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
                 <p className="mb-4 eyebrow text-warm-500">
-                  How It Works
+                  How we work
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  From Vision
+                  You&apos;ll always know
                   <br />
-                  <em className="not-italic font-semibold text-accent-dark">to Reality</em>
+                  <em className="not-italic font-semibold text-accent-dark">
+                    the next step
+                  </em>
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  A transparent process that keeps you informed and in control at every stage.
+                  Three steps from first conversation to final walk-through. No
+                  mystery about what happens after you call.
                 </p>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
                 {[
-                  { step: "01", title: "Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
-                  { step: "02", title: "Detailed Proposal", desc: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work." },
-                  { step: "03", title: "Expert Build", desc: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates." },
-                  { step: "04", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
+                  ...planSteps.map((p) => ({ step: p.number, title: p.title, desc: p.body })),
                 ].map((s) => (
                   <div key={s.step} className="py-10 first:pt-0 last:pb-0">
                     <div className="flex items-start gap-6">
@@ -314,6 +320,25 @@ export default async function ServicePage({
                     </div>
                   </div>
                 ))}
+                <div className="mt-12 rounded-3xl bg-white p-7 lg:p-8">
+                  <p className="font-display text-lg font-semibold text-warm-900">
+                    What you can hold us to
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {promises.map((promise) => (
+                      <li
+                        key={promise}
+                        className="flex items-start gap-2.5 text-sm leading-relaxed text-warm-600"
+                      >
+                        <span
+                          className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark"
+                          aria-hidden="true"
+                        />
+                        {promise}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -329,15 +354,15 @@ export default async function ServicePage({
                   Where We Work
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  {service.shortName} Experts
+                  We may have worked
                   <br />
                   <em className="not-italic font-semibold text-accent">
-                    Across SWFL
+                    on your street
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
-                  We provide expert {service.name.toLowerCase()} across three
-                  counties and six major cities in Southwest Florida.
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
+                  {service.name} across Naples, Bonita Springs, Fort Myers, and
+                  Cape Coral — and the communities around them.
                 </p>
               </div>
               <div className="lg:col-span-6 lg:col-start-7">
@@ -484,13 +509,13 @@ export default async function ServicePage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
-              Start Your Project
+            <p className="mb-5 eyebrow text-warm-400">
+              Start the conversation
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Let&apos;s Talk About{" "}
+              Tell us about your{" "}
               <em className="not-italic font-semibold text-accent">
-                Your {service.shortName} Project?
+                {service.shortName.toLowerCase()}
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">

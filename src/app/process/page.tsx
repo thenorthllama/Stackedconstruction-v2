@@ -36,14 +36,14 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       position: 2,
-      name: "Detailed Proposal",
+      name: "Design & Proposal",
       text: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work. No surprises, no hidden fees — ever.",
       url: "https://stackedconstruction.co/process",
     },
     {
       "@type": "HowToStep",
       position: 3,
-      name: "Expert Build",
+      name: "Build",
       text: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates. You'll always know what's happening and when.",
       url: "https://stackedconstruction.co/process",
     },

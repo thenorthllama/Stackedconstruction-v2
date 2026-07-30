@@ -440,16 +440,16 @@ export default function BlogIndexPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 eyebrow text-warm-500">
-              Let&apos;s Start?
+              Start the conversation
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Turn Inspiration{" "}
+              Done reading? Let&apos;s{" "}
               <em className="not-italic font-semibold text-accent">
-                Into Reality
+                talk
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Ready to bring your remodeling vision to life? Schedule a free
+              We come to you, walk the space, and tell you honestly what&apos;s realistic. Schedule a
               consultation and let&apos;s talk about your project.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

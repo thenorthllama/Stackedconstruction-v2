@@ -39,15 +39,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <p className="mb-4 eyebrow text-warm-500">
-          Our Process
+          How we work
         </p>
         <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl max-w-4xl">
-          From Vision{" "}
-          <em className="not-italic font-semibold text-accent-dark">to Reality</em>
+          You&apos;ll always know{" "}
+          <em className="not-italic font-semibold text-accent-dark">
+            the next step
+          </em>
         </h2>
         <p className="mt-4 text-base leading-relaxed text-warm-600 max-w-xl">
-          Remodeling your home should be exciting, not stressful. Our
-          four-step process keeps things simple, transparent, and on track
+          The worst part of a renovation is not knowing what happens next.
+          Here is the whole process, start to finish, before you commit
           from start to finish.
         </p>
       </div>

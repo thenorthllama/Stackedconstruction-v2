@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { planSteps, promises } from "@/data/brand";
 import type { CountyData, CityData, ServiceData } from "@/data/seo";
 
 interface CountyPageLayoutProps {
@@ -99,16 +100,16 @@ export default function CountyPageLayout({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
-                  Renovation Demand
+                <p className="mb-4 eyebrow text-warm-400">
+                  In this area
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  Why Homeowners{" "}
+                  What we keep getting{" "}
                   <em className="not-italic font-semibold text-accent">
-                    Are Remodeling
+                    called about
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
                   {county.positioning}
                 </p>
               </div>
@@ -197,7 +198,7 @@ export default function CountyPageLayout({
                   Our Services
                 </p>
                 <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  What We Build in{" "}
+                  Where we can help in{" "}
                   <em className="not-italic font-semibold text-accent-dark">
                     {county.name}
                   </em>
@@ -228,6 +229,53 @@ export default function CountyPageLayout({
           </div>
         </section>
 
+        {/* ── The plan — same three steps as everywhere else ────────── */}
+        <section className="bg-white py-24 lg:py-32" aria-label="How we work">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="mb-14 max-w-2xl">
+              <p className="eyebrow mb-5 text-warm-500">How we work</p>
+              <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                Three steps, and you{" "}
+                <em className="not-italic font-semibold text-accent-dark">
+                  always know the next one
+                </em>
+              </h2>
+            </div>
+            <ol className="grid gap-10 border-t border-warm-200 pt-10 lg:grid-cols-3 lg:gap-8">
+              {planSteps.map((step) => (
+                <li key={step.number}>
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-display text-3xl font-bold text-accent-dark">
+                      {step.number}
+                    </span>
+                    <p className="eyebrow text-warm-500">{step.summary}</p>
+                  </div>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-warm-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-warm-600">
+                    {step.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-12 rounded-3xl bg-warm-50 p-7 lg:p-8">
+              <p className="font-display text-lg font-semibold text-warm-900">
+                What you can hold us to
+              </p>
+              <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
+                {promises.map((promise) => (
+                  <li key={promise} className="flex items-start gap-2.5 text-sm leading-relaxed text-warm-600">
+                    <span className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark" aria-hidden="true" />
+                    {promise}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
@@ -238,12 +286,12 @@ export default function CountyPageLayout({
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 eyebrow text-warm-500">
-              Start Your Project
+              Start the conversation
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready to Remodel in{" "}
+              Let&apos;s walk your home in{" "}
               <em className="not-italic font-semibold text-accent">
-                {county.name}?
+                {county.name}
               </em>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
