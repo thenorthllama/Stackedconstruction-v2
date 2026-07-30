@@ -1,8 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { useCallback, useId, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedHero } from "@/components/ui/animated-hero";
 import { brand, cta } from "@/data/brand";
 
@@ -11,15 +10,16 @@ import { brand, cta } from "@/data/brand";
  *
  * Accessibility model adapted from the 21st.dev "Accessible Image Slider Card"
  * (moumensoliman): arrow/Home/End keyboard paging, roving tabindex on the dots,
- * an sr-only live region announcing position, aria-roledescription="carousel",
- * and framer-motion's useReducedMotion. Restyled in brand tokens — the
- * full-bleed rounded card, cream frame, and pill CTAs are unchanged.
+ * an sr-only live region announcing position, and aria-roledescription.
+ * Restyled in brand tokens — the full-bleed rounded card, cream frame, and
+ * pill CTAs are unchanged.
  *
  * Fixes from the UX audit:
- *  - prev/next controls and a pause toggle (previously dots only)
+ *  - prev/next controls (previously dots only)
  *  - 44px hit areas on the dots (previously 8px tall)
- *  - pauses on focus as well as hover (keyboard users no longer get slides
- *    changing underneath them)
+ *  - autoplay removed entirely. It required a pause control to satisfy WCAG
+ *    2.2.2, and a hero that shifts on its own works against an already anxious
+ *    buyer. Three slides with visible controls browse fine by hand.
  *  - a dedicated right-edge scrim so the proof column stays legible on every
  *    slide, not just the first
  */
@@ -39,8 +39,6 @@ const slides = [
   },
 ];
 
-const AUTOPLAY_MS = 6000;
-
 const proofPoints = [
   "A line-item proposal, not a lump sum",
   "One point of contact, start to finish",
@@ -49,24 +47,11 @@ const proofPoints = [
 
 export default function Hero() {
   const [active, setActive] = useState(0);
-  const [userPaused, setUserPaused] = useState(false);
-  const [hovering, setHovering] = useState(false);
-  const [focusWithin, setFocusWithin] = useState(false);
-  const shouldReduceMotion = useReducedMotion();
   const regionId = useId();
-  const dotsRef = useRef<HTMLDivElement>(null);
-
-  const playing = !userPaused && !hovering && !focusWithin && !shouldReduceMotion;
 
   const paginate = useCallback((delta: number) => {
     setActive((i) => (i + delta + slides.length) % slides.length);
   }, []);
-
-  useEffect(() => {
-    if (!playing) return;
-    const id = setInterval(() => paginate(1), AUTOPLAY_MS);
-    return () => clearInterval(id);
-  }, [playing, paginate]);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
@@ -96,12 +81,6 @@ export default function Hero() {
         role="group"
         aria-roledescription="carousel"
         aria-label="Recent Stacked Construction projects"
-        onMouseEnter={() => setHovering(true)}
-        onMouseLeave={() => setHovering(false)}
-        onFocus={() => setFocusWithin(true)}
-        onBlur={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node)) setFocusWithin(false);
-        }}
         onKeyDown={onKeyDown}
       >
         {/* Slides */}
@@ -198,7 +177,6 @@ export default function Hero() {
 
           {/* Dots — 44px targets via padding, 2px visual bar, roving tabindex */}
           <div
-            ref={dotsRef}
             className="flex items-center"
             role="tablist"
             aria-label="Choose slide"
@@ -238,23 +216,6 @@ export default function Hero() {
           >
             <ChevronRight className="h-4 w-4" aria-hidden="true" />
           </button>
-
-          {/* Pause is hidden when reduced-motion is on — autoplay never starts */}
-          {!shouldReduceMotion && (
-            <button
-              type="button"
-              onClick={() => setUserPaused((p) => !p)}
-              aria-label={userPaused ? "Resume slideshow" : "Pause slideshow"}
-              aria-pressed={userPaused}
-              className="ml-0.5 flex h-11 w-11 items-center justify-center rounded-full border-l border-white/15 text-white/80 transition-colors hover:bg-white/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            >
-              {userPaused ? (
-                <Play className="h-3.5 w-3.5" aria-hidden="true" />
-              ) : (
-                <Pause className="h-3.5 w-3.5" aria-hidden="true" />
-              )}
-            </button>
-          )}
         </div>
       </div>
     </section>
