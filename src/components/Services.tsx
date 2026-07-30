@@ -7,42 +7,42 @@ const services = [
   {
     title: "Kitchen Remodeling",
     description:
-      "Custom cabinetry, countertops, backsplashes, and complete kitchen transformations that become the heart of your home.",
+      "A layout that works while you cook, not just in photos. Custom cabinetry, quartz and stone counters, and the storage you actually need.",
     image: "/images/kitchen-luxury-white.webp",
     href: "/services/kitchen-remodeling",
   },
   {
     title: "Bathroom Renovation",
     description:
-      "Modern vanities, walk-in showers, soaking tubs, and spa-inspired designs that elevate your daily routine.",
+      "A bathroom you look forward to using. Walk-in showers, custom vanities, soaking tubs, and aging-in-place details done properly.",
     image: "/images/service-bathroom.webp",
     href: "/services/bathroom-remodeling",
   },
   {
     title: "Outdoor Living & Kitchens",
     description:
-      "Outdoor kitchens, patios, pool decks, and living spaces designed for the Southwest Florida lifestyle.",
+      "The reason you moved to Florida, finally usable. Outdoor kitchens, lanai renovations, and pool decks built for the climate.",
     image: "/images/service-outdoor.webp",
     href: "/services/outdoor-living",
   },
   {
     title: "Full Home Renovation",
     description:
-      "Comprehensive whole-home remodels that reimagine your space from floor plan to finishing touches.",
+      "When one room isn\u2019t the problem. We rework the whole floor plan \u2014 designed, permitted, and built as one project.",
     image: "/images/service-fullhome.webp",
     href: "/services/home-renovation",
   },
   {
     title: "Flooring & Tile",
     description:
-      "Expert installation of hardwood, porcelain, natural stone, and luxury vinyl for lasting beauty underfoot.",
+      "Flooring chosen for Florida humidity and installed to stay flat. Porcelain, natural stone, hardwood, and luxury vinyl.",
     image: "/images/service-flooring.webp",
     href: "/services/flooring-tile",
   },
   {
     title: "Luxury Home Remodeling",
     description:
-      "High-end finishes, custom millwork, and premium materials for homeowners who expect the finest.",
+      "Handleless cabinetry, waterfall stone, integrated appliances \u2014 the details that only work when they\u2019re measured right.",
     image: "/images/service-luxury.webp",
     href: "/services/home-renovation",
   },
@@ -59,13 +59,13 @@ export default function Services() {
               Our Services
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
-              What We{" "}
-              <em className="not-italic font-semibold text-accent-dark">Build</em>
+              Where we can{" "}
+              <em className="not-italic font-semibold text-accent-dark">help</em>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">
-            From kitchens to complete home transformations, we bring your vision
-            to life with expert craftsmanship and transparent pricing.
+            Whichever of these you start with, the process is the same: we
+            design it, price it line by line, and build it with one team.
           </p>
         </div>
 

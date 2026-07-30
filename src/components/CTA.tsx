@@ -10,22 +10,25 @@ export default function CTA() {
           {/* Left — heading */}
           <div>
             <p className="mb-4 eyebrow text-warm-500">
-              Start Your Project
+              Start the conversation
             </p>
             <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
-              Let&apos;s Build
+              Tell us what you
               <br />
-              Something{" "}
-              <em className="not-italic font-semibold text-accent-dark">Beautiful</em>
+              have in{" "}
+              <em className="not-italic font-semibold text-accent-dark">mind</em>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
-              Schedule your free in-home consultation today. No pressure, no
-              obligation — just an honest conversation about your vision and how
-              we can bring it to life.
+              We&apos;ll walk your space, talk through what&apos;s realistic at
+              your budget, and show you the plan before anyone picks up a tool.
+              No charge, no obligation, and no pressure to decide on the spot.
+            </p>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-warm-500">
+              We reply within one business day.
             </p>
 
-            <p className="mt-4 eyebrow text-warm-600">
-              Licensed Contractor · FL #CBC1269972
+            <p className="mt-6 eyebrow text-warm-600">
+              Licensed &amp; Insured · FL #CBC1269972
             </p>
 
             {/* Contact info below the copy */}

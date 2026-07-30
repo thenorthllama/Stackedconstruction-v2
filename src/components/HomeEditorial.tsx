@@ -10,14 +10,17 @@ export function AboutStatement() {
         <div className="mb-16 max-w-3xl">
           <p className="eyebrow mb-5 text-warm-900">About Us</p>
           <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl lg:text-6xl">
-            A Decade of Hands-On
+            You should be excited
             <br />
-            <em className="not-italic font-semibold text-accent-dark">Craftsmanship</em>
+            <em className="not-italic font-semibold text-accent-dark">
+              about this, not anxious
+            </em>
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-600">
-            We&apos;re not the biggest contractor in Southwest Florida — and
-            that&apos;s by design. We stay hands-on so every project gets the
-            attention it deserves.
+            We&apos;re not the biggest contractor in Southwest Florida, and
+            that&apos;s deliberate. Junior is on your project. You&apos;ll know
+            who is in your home and who to call — for ten years and 40+
+            projects, that hasn&apos;t changed.
           </p>
         </div>
 
@@ -81,7 +84,19 @@ export function TeamList() {
   return (
     <section className="bg-white py-24 lg:py-32" aria-label="Our team">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="eyebrow mb-12 text-warm-900">Our Team</p>
+        <div className="mb-12 max-w-2xl">
+          <p className="eyebrow mb-5 text-warm-900">Our Team</p>
+          <h2 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 sm:text-4xl">
+            The people who will actually be{" "}
+            <em className="not-italic font-semibold text-accent-dark">
+              in your home
+            </em>
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-warm-600">
+            Not a call center. These are the three people you&apos;ll be working
+            with, and their licenses and credentials are public.
+          </p>
+        </div>
         <div className="divide-y divide-warm-200 border-t border-warm-200">
           {team.map((member) => (
             <div
@@ -142,9 +157,11 @@ export function ProjectCategories() {
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-6">
               <h2 className="font-display text-5xl font-bold leading-[1.02] text-white sm:text-6xl">
-                Project
+                Design and build,
                 <br />
-                <em className="not-italic font-semibold text-accent">Categories</em>
+                <em className="not-italic font-semibold text-accent">
+                  under one roof
+                </em>
               </h2>
             </div>
             <div className="lg:col-span-4">
@@ -166,7 +183,7 @@ export function ProjectCategories() {
                 href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-white py-2.5 pl-7 pr-2.5 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
               >
-                Contact us
+                Schedule a Consultation
                 <span
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-warm-900 text-white transition-transform duration-300 group-hover:translate-x-0.5"
                   aria-hidden="true"
@@ -212,8 +229,9 @@ export function CaseStudies() {
           </div>
           <div className="lg:col-span-5 lg:text-right">
             <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:ml-auto">
-              Naples, Bonita Springs, Fort Myers, Cape Coral, and surrounding
-              communities across Lee &amp; Collier counties.
+              Real homes in Naples, Bonita Springs, Fort Myers, and Cape Coral.
+              Every photo is finished work we handed over — no renderings, no
+              stock.
             </p>
           </div>
         </div>
