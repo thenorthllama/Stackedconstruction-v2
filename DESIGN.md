@@ -280,3 +280,9 @@ Global `:focus-visible` outline (terracotta-dark, 2px, 3px offset). `prefers-red
 ### Emphasis update (July 2026)
 
 Italic Playfair emphasis retired per Junior. Emphasized headline words now use the same serif, `font-semibold`, colored terracotta: `text-accent-dark` (#a87a55) on light sections, `text-accent` (#c8956c) on dark sections. Footer lightened from ink (#1a1714) to `brand-espresso` (#3d2b21) with `warm-200/300` text for AA contrast.
+
+### Page transitions (July 2026)
+
+Navigation lands instantly at the top — `scroll-behavior: smooth` is scoped to `html:has(:target)` so only in-page anchor links glide.
+
+Route changes get a 200ms opacity fade via `.page-fade` on the wrapper in `src/app/template.tsx` (template remounts per navigation; layout does not). Opacity only — no transform, so nothing reflows and the compositor handles it on the GPU. Zero JS. Suppressed under `prefers-reduced-motion: reduce` by the global guard.

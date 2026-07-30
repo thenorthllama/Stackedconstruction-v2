@@ -60,6 +60,24 @@ html {
   }
 }
 
+/* ── Page transition ───────────────────────────────────────────────────────────
+   Opacity-only fade, 200ms. No transform, so nothing shifts (CLS-safe) and the
+   browser can composite it on the GPU. Pure CSS — no JS, no hydration cost.
+   Lives on the wrapper in app/template.tsx, which remounts on every navigation. */
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade {
+  animation: page-fade-in 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* ── Editorial primitives (reference design language) ──────────────────────── */
 
 /* Dotted eyebrow label: "• About Us" */
