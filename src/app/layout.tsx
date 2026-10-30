@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { CookieConsent } from "@/components/CookieConsent";
+import { CONSENT_KEY } from "@/lib/consent";
 import "./globals.css";
 
 // Self-hosted variable fonts — zero external requests, no layout shift
@@ -77,7 +79,12 @@ export default function RootLayout({
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            // Consent Mode v2: non-essential storage stays denied until the visitor
+            // opts in via <CookieConsent />; a stored choice is re-applied before GTM loads.
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+try{var c=JSON.parse(localStorage.getItem('${CONSENT_KEY}'));if(c){var a=c.advertising?'granted':'denied';gtag('consent','update',{analytics_storage:c.analytics?'granted':'denied',ad_storage:a,ad_user_data:a,ad_personalization:a});}}catch(e){}
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -86,19 +93,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body className={`${dmSans.variable} antialiased`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N5ZBGB7P"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+        {/* No GTM <noscript> iframe — it can't read consent, so it would track
+            visitors who never had the chance to opt in. */}
         {/* First stop in the tab order — lets keyboard users bypass the nav */}
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

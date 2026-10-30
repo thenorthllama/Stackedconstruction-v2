@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { CookieSettingsLink } from "@/components/CookieConsent";
 
 const serviceLinks = [
   { name: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
@@ -227,6 +228,8 @@ export default function Footer() {
             <Link href="/terms" className="transition-colors hover:text-warm-900">
               Terms of Service
             </Link>
+            {" "}&middot;{" "}
+            <CookieSettingsLink className="transition-colors hover:text-warm-900" />
           </p>
         </div>
       </div>

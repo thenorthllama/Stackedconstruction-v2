@@ -164,7 +164,14 @@ export default function PrivacyPolicyPage() {
                 </li>
               </ul>
               <p>
-                You can control cookies through your browser settings. Disabling
+                Analytics and advertising cookies are off until you allow them.
+                When you first visit, a banner lets you accept all, reject all,
+                or choose by category, and you can change that choice at any
+                time with the &ldquo;Cookie settings&rdquo; link at the bottom
+                of every page.
+              </p>
+              <p>
+                You can also control cookies through your browser settings. Disabling
                 cookies may affect the functionality of certain features on our
                 website.
               </p>
