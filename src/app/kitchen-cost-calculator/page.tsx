@@ -75,34 +75,28 @@ export default function KitchenCostCalculatorPage() {
       <main id="main">
         {/* ── Hero + calculator ─────────────────────────────────── */}
         <section id="top" className="bg-warm-50 px-3 pt-2 lg:px-4">
-          <div className="relative bg-warm-900 pb-24 pt-32 lg:pb-32 lg:pt-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <div className="relative overflow-hidden rounded-[2rem] bg-warm-900 pb-3 pt-32 sm:pb-6 lg:rounded-[2.5rem] lg:pb-16 lg:pt-36">
           <HeroImage {...pageHeroes.calculator} />
           <div className="absolute inset-0 bg-gradient-to-b from-warm-900/95 via-warm-900/90 to-warm-900" />
 
-          <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-400">
-              Free · 60-Second Estimate
-            </p>
-            <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              See what your kitchen really costs
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
-              Answer a few quick questions about your cabinets, countertops & finishes
-              and get a real Southwest Florida price range built from actual Stacked
-              Construction project data.
-            </p>
-
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-warm-300">
-              <span className="font-medium text-warm-400">Licensed CBC1269972</span>
-              <span className="text-warm-300">&bull;</span>
-              <span className="font-medium text-warm-400">5/5 Rating</span>
-              <span className="text-warm-300">&bull;</span>
-              <span className="font-medium text-warm-400">Insured &amp; Bonded</span>
+          <div className="relative z-10 mx-auto grid max-w-7xl gap-6 px-3 sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-14 lg:px-10">
+            <div className="px-3 sm:px-0 lg:col-span-5 lg:pt-10">
+              <h1 className="font-display text-[2.25rem] font-bold leading-[1.02] text-white sm:text-5xl lg:text-6xl">
+                What will your kitchen really cost?
+              </h1>
+              <p className="mt-4 max-w-md text-lg leading-relaxed text-warm-200 lg:mt-6">
+                Twelve quick questions, then a real Southwest Florida price range built from our own project costs.
+              </p>
+              <ul className="mt-8 hidden space-y-2 text-base font-medium text-warm-300 lg:block">
+                <li>Licensed CBC1269972</li>
+                <li>Insured &amp; bonded</li>
+                <li>5/5 rating from SWFL homeowners</li>
+              </ul>
             </div>
-          </div>
 
-          <div className="relative z-10 mx-auto mt-12 max-w-xl px-6 lg:px-10">
-            <KitchenCostCalculator />
+            <div className="lg:col-span-7">
+              <KitchenCostCalculator />
+            </div>
           </div>
         </div>
         </section>
