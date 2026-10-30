@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { planSteps, promises } from "@/data/brand";
 import type { CountyData, CityData, ServiceData } from "@/data/seo";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 interface CountyPageLayoutProps {
   county: CountyData;
@@ -27,31 +30,28 @@ export default function CountyPageLayout({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`Home remodeling in ${county.fullName}`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...pageHeroes.county} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
             <div>
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <p className="mb-5 eyebrow text-warm-400">
                 {county.fullName}
               </p>
-              <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 {county.headline}{" "}
-                <em className="font-light italic text-warm-300">
+                <em className="not-italic">
                   {county.headlineItalic}
                 </em>
               </h1>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Intro + Stats — editorial split ──────────────────────── */}
@@ -59,19 +59,17 @@ export default function CountyPageLayout({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Market Overview
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  {county.name}
-                  <br />
-                  <em className="font-light italic text-warm-600">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  {county.name}{" "}<em className="not-italic">
                     by the Numbers
                   </em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   {county.intro}
                 </p>
                 <div className="mt-10 grid grid-cols-2 gap-8 border-t border-warm-200 pt-10 sm:grid-cols-3 lg:grid-cols-5">
@@ -80,7 +78,7 @@ export default function CountyPageLayout({
                       <p className="font-display text-2xl font-bold text-warm-900 lg:text-3xl">
                         {stat.value}
                       </p>
-                      <p className="mt-1 text-[10px] font-medium uppercase tracking-widest text-warm-500">
+                      <p className="mt-1 text-sm font-medium text-warm-600">
                         {stat.label}
                       </p>
                     </div>
@@ -92,20 +90,18 @@ export default function CountyPageLayout({
         </section>
 
         {/* ── Demand Drivers — dark, numbered list ─────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-                  Renovation Demand
+                <p className="mb-4 eyebrow text-warm-400">
+                  In this area
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  Why Homeowners{" "}
-                  <em className="font-light italic text-warm-300">
-                    Are Remodeling
-                  </em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
+                  What we get called for most
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
                   {county.positioning}
                 </p>
               </div>
@@ -117,9 +113,9 @@ export default function CountyPageLayout({
                       className="flex items-start gap-5 py-6 first:pt-0 last:pb-0"
                     >
                       <span className="font-display text-3xl font-bold leading-none text-warm-800">
-                        {String(i + 1).padStart(2, "0")}
+                        {i + 1}
                       </span>
-                      <p className="text-base leading-relaxed text-warm-400 pt-0.5">
+                      <p className="text-base leading-relaxed text-warm-200 pt-0.5">
                         {pattern}
                       </p>
                     </div>
@@ -128,18 +124,19 @@ export default function CountyPageLayout({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Cities — light, row links ────────────────────────────── */}
         <section className="bg-white py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-600">
                 Cities We Serve
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 Across{" "}
-                <em className="font-light italic text-warm-600">
+                <em className="not-italic">
                   {county.name}
                 </em>
               </h2>
@@ -155,16 +152,16 @@ export default function CountyPageLayout({
                     <h3 className="font-display text-2xl font-semibold text-warm-900 transition-colors group-hover:text-accent sm:text-3xl">
                       {city.name}
                     </h3>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Pop. {city.population}
                     </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-warm-600 lg:col-span-7">
+                  <p className="text-base leading-relaxed text-warm-700 lg:col-span-7">
                     {city.intro.slice(0, 200)}...
                   </p>
                   <div className="flex justify-end lg:col-span-2">
                     <svg
-                      className="h-5 w-5 text-warm-400 transition-all group-hover:translate-x-1 group-hover:text-accent"
+                      className="h-5 w-5 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-accent"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -189,12 +186,12 @@ export default function CountyPageLayout({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Our Services
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  What We Build in{" "}
-                  <em className="font-light italic text-warm-600">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Where we can help in{" "}
+                  <em className="not-italic">
                     {county.name}
                   </em>
                 </h2>
@@ -207,13 +204,13 @@ export default function CountyPageLayout({
                     className="group flex items-start gap-6 py-8 transition-colors first:pt-0 last:pb-0"
                   >
                     <span className="font-display text-4xl font-bold leading-none text-warm-200 transition-colors group-hover:text-warm-400">
-                      {String(i + 1).padStart(2, "0")}
+                      {i + 1}
                     </span>
                     <div>
                       <h3 className="font-display text-xl font-semibold text-warm-900 transition-colors group-hover:text-accent">
                         {service.name}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-warm-600">
+                      <p className="mt-2 text-base leading-relaxed text-warm-700">
                         {service.description}
                       </p>
                     </div>
@@ -224,41 +221,82 @@ export default function CountyPageLayout({
           </div>
         </section>
 
+        {/* ── The plan — same three steps as everywhere else ────────── */}
+        <section className="bg-white py-24 lg:py-32" aria-label="How we work">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="mb-14 max-w-2xl">
+              <p className="eyebrow mb-5 text-warm-600">How we work</p>
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                Three steps, no guesswork
+              </h2>
+            </div>
+            <ol className="grid gap-10 border-t border-warm-200 pt-10 lg:grid-cols-3 lg:gap-8">
+              {planSteps.map((step) => (
+                <li key={step.number}>
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-display text-3xl font-bold text-accent-dark">
+                      {step.number}
+                    </span>
+                    <p className="eyebrow text-warm-600">{step.summary}</p>
+                  </div>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-warm-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2.5 text-base leading-relaxed text-warm-700">
+                    {step.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-12 rounded-3xl bg-warm-50 p-7 lg:p-8">
+              <p className="font-display text-lg font-semibold text-warm-900">
+                What you can hold us to
+              </p>
+              <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
+                {promises.map((promise) => (
+                  <li key={promise} className="flex items-start gap-2.5 text-base leading-relaxed text-warm-700">
+                    <span className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark" aria-hidden="true" />
+                    {promise}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
         {/* ── CTA — immersive ──────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-              Start Your Project
+            <p className="mb-5 eyebrow text-warm-300">
+              Start the conversation
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready to Remodel in{" "}
-              <em className="font-light italic text-warm-300">
-                {county.name}?
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
+              Let&apos;s walk your home in{" "}
+              <em className="not-italic">
+                {county.name}
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               {ctaDescription}
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+              >
+                Request a Consultation
+              </a>
+              <a
                 href="tel:+12397850166"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
                 Call (239) 785-0166
               </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
-              >
-                Request Estimate Online
-              </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

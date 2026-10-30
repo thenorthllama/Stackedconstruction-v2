@@ -476,7 +476,7 @@ export const articles: BlogPost[] = [
 <li><strong><a href="/services/kitchen-remodeling">Kitchen Remodel</a> (mid-range):</strong> 65–80% ROI, with the added benefit of being the #1 factor buyers evaluate</li>
 <li><strong><a href="/services/bathroom-remodeling">Bathroom Remodel</a>:</strong> 60–70% ROI</li>
 <li><strong><a href="/services/outdoor-living">Outdoor Living / Lanai Renovation</a>:</strong> 55–75% ROI — uniquely valuable in Florida where outdoor living space is used year-round</li>
-<li><strong><a href="/services/flooring">Flooring Replacement</a>:</strong> 70–80% ROI</li>
+<li><strong><a href="/services/flooring-tile">Flooring Replacement</a>:</strong> 70–80% ROI</li>
 <li><strong>Impact Windows and Doors:</strong> 60–70% ROI plus annual insurance savings of $1,000–$3,000+</li>
 </ul>
 <p>The real-world ROI also depends on your neighborhood's price ceiling. Renovating a home in Gulf Harbour, Pelican Bay, or Burnt Store Marina to match neighborhood standards is almost always worthwhile. Over-improving a home well beyond your neighborhood's price range is where ROI diminishes.</p>
@@ -1463,7 +1463,7 @@ export const articles: BlogPost[] = [
 <p>If you're purchasing a home in Fort Myers or Cape Coral that needs renovation, an FHA 203(k) loan bundles the purchase price and renovation costs into a single mortgage. This is especially popular for buyers looking at older homes in established neighborhoods like McGregor, Edison Park, or downtown Fort Myers.</p>
 <ul>
 <li><strong>Standard 203(k):</strong> For renovations over $35,000 — covers structural work, room additions, and major remodels.</li>
-<li><strong>Limited 203(k):</strong> For renovations under $35,000 — ideal for cosmetic updates like new <a href="/services/flooring">flooring</a>, paint, and fixture upgrades.</li>
+<li><strong>Limited 203(k):</strong> For renovations under $35,000 — ideal for cosmetic updates like new <a href="/services/flooring-tile">flooring</a>, paint, and fixture upgrades.</li>
 </ul>
 
 <h2>How to Choose the Right Financing for Your SWFL Remodel</h2>
@@ -1592,7 +1592,7 @@ export const articles: BlogPost[] = [
 <h3>Backsplash</h3>
 <p>Vertical-stacked subway tile in a soft white or cream creates a clean, modern coastal look. For accent areas, hand-made zellige tile in seafoam or sky blue adds artisan character. Large-format porcelain slabs offer a seamless, easy-to-clean option.</p>
 <h3>Flooring</h3>
-<p>Luxury vinyl plank (LVP) in a light wood tone is the practical coastal choice — waterproof, durable, and comfortable underfoot. Porcelain wood-look tile is another excellent option for Florida, offering superior moisture resistance. See our <a href="/services/flooring">flooring services</a> for more guidance.</p>
+<p>Luxury vinyl plank (LVP) in a light wood tone is the practical coastal choice — waterproof, durable, and comfortable underfoot. Porcelain wood-look tile is another excellent option for Florida, offering superior moisture resistance. See our <a href="/services/flooring-tile">flooring services</a> for more guidance.</p>
 
 <h2>Layout Tips for Coastal Florida Kitchens</h2>
 <ul>
@@ -1690,7 +1690,7 @@ export const articles: BlogPost[] = [
 </ul>
 
 <h2>Start Your Bathroom Transformation</h2>
-<p><strong><a href="/services/bathroom-remodeling">Stacked Construction</a></strong> specializes in bathroom remodeling across <a href="/areas/fort-myers">Fort Myers</a>, <a href="/areas/naples">Naples</a>, <a href="/areas/cape-coral">Cape Coral</a>, Bonita Springs, Marco Island, and Punta Gorda. We design bathrooms that look stunning and are built to withstand Florida's unique climate conditions.</p>
+<p><strong><a href="/services/bathroom-remodeling">Stacked Construction</a></strong> specializes in bathroom remodeling across <a href="/areas/fort-myers">Fort Myers</a>, <a href="/areas/naples">Naples</a>, <a href="/areas/cape-coral">Cape Coral</a>, Bonita Springs, Marco Island, and Punta Gorda. We design bathrooms that look striking and are built to withstand Florida's unique climate conditions.</p>
 <p>Call <strong>(239) 785-0166</strong> to schedule your free bathroom design consultation.</p>`,
   relatedSlugs: ["bathroom-remodel-cost-naples", "luxury-bathroom-remodel-naples", "aging-in-place-bathroom-remodeling-swfl"],
 },
@@ -1808,7 +1808,7 @@ export const articles: BlogPost[] = [
 <li><strong>Large island as room divider:</strong> The island defines the kitchen zone without walls. We typically recommend a 8–12 foot island with seating on the living-room side.</li>
 <li><strong>Perimeter cabinets along remaining walls:</strong> Tall pantry units and upper cabinets on the back wall maximize storage.</li>
 <li><strong>Sight lines to the lanai:</strong> Position the kitchen so the cook faces the living area and outdoor space, not a blank wall.</li>
-<li><strong>Unified flooring:</strong> Run the same <a href="/services/flooring">flooring material</a> from kitchen through living and dining areas. LVP or porcelain tile in a consistent tone creates visual continuity.</li>
+<li><strong>Unified flooring:</strong> Run the same <a href="/services/flooring-tile">flooring material</a> from kitchen through living and dining areas. LVP or porcelain tile in a consistent tone creates visual continuity.</li>
 </ul>
 
 <h2>Common Challenges and Solutions</h2>
@@ -1922,14 +1922,14 @@ export const articles: BlogPost[] = [
   readTime: "8 min read",
   author: "Caio Alves",
   content: `<h2>Luxury Bathroom Remodel Inspiration from Naples FL Projects</h2>
-<p>Naples, Florida is home to some of the most stunning residential properties in the country, and the bathrooms in these homes reflect that standard. Whether you're in Pelican Bay, Port Royal, Grey Oaks, or Talis Park, a luxury bathroom remodel should deliver a spa-caliber experience with materials and craftsmanship that match your home's pedigree. At <strong>Stacked Construction</strong>, we've completed luxury bathroom renovations throughout <a href="/areas/naples">Naples</a> and Collier County. Here's what defines a truly premium bathroom remodel in Southwest Florida.</p>
+<p>Naples, Florida is home to some of the most striking residential properties in the country, and the bathrooms in these homes reflect that standard. Whether you're in Pelican Bay, Port Royal, Grey Oaks, or Talis Park, a luxury bathroom remodel should deliver a spa-caliber experience with materials and craftsmanship that match your home's pedigree. At <strong>Stacked Construction</strong>, we've completed luxury bathroom renovations throughout <a href="/areas/naples">Naples</a> and Collier County. Here's what defines a truly premium bathroom remodel in Southwest Florida.</p>
 
 <h2>Premium Material Selections</h2>
 <h3>Italian Porcelain and Natural Stone</h3>
 <p>Luxury Naples bathrooms start with exceptional surfaces. Our most popular selections include:</p>
 <ul>
 <li><strong>Italian porcelain slabs (Florim, Atlas Concorde):</strong> Large-format 60x120cm panels that create a seamless, grout-minimal surface. Ideal for shower walls and feature walls. Budget: $25–$50 per square foot for material.</li>
-<li><strong>Book-matched marble:</strong> Two slabs cut from the same block and opened like a book to create a mirrored pattern. A stunning statement wall behind the tub or in the shower. Budget: $80–$200+ per square foot for premium selections.</li>
+<li><strong>Book-matched marble:</strong> Two slabs cut from the same block and opened like a book to create a mirrored pattern. A striking statement wall behind the tub or in the shower. Budget: $80–$200+ per square foot for premium selections.</li>
 <li><strong>Dolomite and quartzite:</strong> For homeowners who want natural stone with better durability than marble. Budget: $60–$150 per square foot.</li>
 </ul>
 
@@ -2097,7 +2097,7 @@ export const articles: BlogPost[] = [
 <ul>
 <li><strong>Quartz countertops:</strong> Non-porous and impervious to humidity — the best choice for canal homes. Budget: $55–$120 per square foot installed.</li>
 <li><strong>Marine-grade hardware:</strong> Standard cabinet hardware can corrode faster near water. Choose stainless steel, brushed nickel, or brass hardware rated for coastal environments.</li>
-<li><strong>LVP or porcelain tile flooring:</strong> Both are waterproof and handle the moisture that gets tracked in from docks, pools, and boats. See our <a href="/services/flooring">flooring options</a>.</li>
+<li><strong>LVP or porcelain tile flooring:</strong> Both are waterproof and handle the moisture that gets tracked in from docks, pools, and boats. See our <a href="/services/flooring-tile">flooring options</a>.</li>
 <li><strong>Moisture-resistant cabinetry:</strong> We recommend plywood box construction (not particleboard) with finishes that resist humidity expansion.</li>
 </ul>
 
@@ -2243,7 +2243,7 @@ export const articles: BlogPost[] = [
 <h2>Kitchen Renovation Tips for Punta Gorda Waterfront Homes</h2>
 <ul>
 <li><strong>Maximize harbor or canal views:</strong> Open the kitchen to the living area and reduce upper cabinets on water-facing walls. Consider a large picture window or slider overlooking the water.</li>
-<li><strong>Coastal-durable materials:</strong> Quartz countertops, porcelain tile <a href="/services/flooring">flooring</a>, and marine-grade hardware that resists salt air corrosion.</li>
+<li><strong>Coastal-durable materials:</strong> Quartz countertops, porcelain tile <a href="/services/flooring-tile">flooring</a>, and marine-grade hardware that resists salt air corrosion.</li>
 <li><strong>Open concept layouts:</strong> Punta Gorda's older homes often have compartmentalized floor plans. Removing a wall between kitchen and living room is one of the highest-impact changes you can make.</li>
 <li><strong>Indoor-outdoor flow:</strong> Connect your kitchen to the lanai or dock area with wide sliders or a pass-through window for entertaining.</li>
 </ul>
@@ -2334,7 +2334,7 @@ export const articles: BlogPost[] = [
 <ul>
 <li><strong>Plumbing stacks:</strong> In condos, plumbing stacks are shared and typically cannot be moved. Your kitchen layout may need to work around existing plumbing locations.</li>
 <li><strong>Load-bearing walls:</strong> Condo walls may be structural. Any wall removal requires engineering review and association approval.</li>
-<li><strong>Flooring restrictions:</strong> Many condo associations require specific sound ratings (STC/IIC) for flooring materials. We ensure all <a href="/services/flooring">flooring selections</a> meet your building's requirements.</li>
+<li><strong>Flooring restrictions:</strong> Many condo associations require specific sound ratings (STC/IIC) for flooring materials. We ensure all <a href="/services/flooring-tile">flooring selections</a> meet your building's requirements.</li>
 </ul>
 
 <h2>Popular Kitchen Layouts for Marco Island Homes</h2>
@@ -2414,7 +2414,7 @@ export const articles: BlogPost[] = [
 <p>Master bathroom budget: <strong>$30,000–$75,000</strong></p>
 
 <h2>Outdoor Living Upgrades</h2>
-<p>Bonita Bay's championship golf courses and Miromar Lakes' waterski lake provide stunning backdrops for <a href="/services/outdoor-living">outdoor living renovations</a>:</p>
+<p>Bonita Bay's championship golf courses and Miromar Lakes' waterski lake provide striking backdrops for <a href="/services/outdoor-living">outdoor living renovations</a>:</p>
 <ul>
 <li><strong>Lanai remodel:</strong> Premium flooring, ceiling upgrades, motorized screens, and outdoor entertainment systems</li>
 <li><strong>Outdoor kitchen:</strong> Built-in grills, refrigeration, and bar areas for lakefront or golf-view entertaining</li>
@@ -2479,7 +2479,7 @@ export const articles: BlogPost[] = [
 <p>For homeowners who want to renovate without triggering full code compliance:</p>
 <ul>
 <li>Focus on <a href="/services/kitchen-remodeling">kitchen</a> and <a href="/services/bathroom-remodeling">bathroom</a> interior remodels that don't involve structural work</li>
-<li>Upgrade <a href="/services/flooring">flooring</a>, cabinetry, countertops, and fixtures</li>
+<li>Upgrade <a href="/services/flooring-tile">flooring</a>, cabinetry, countertops, and fixtures</li>
 <li>Work with a qualified appraiser to determine your home's pre-improvement market value</li>
 <li>Keep detailed records of all improvement costs — Lee County tracks cumulative investments</li>
 </ul>
@@ -2565,11 +2565,11 @@ export const articles: BlogPost[] = [
 <ul>
 <li><strong>Master shower upgrade:</strong> Replace the builder's standard shower pan and tile with a custom curbless shower, linear drain, and large-format porcelain tile. Budget: $6,000–$15,000.</li>
 <li><strong>Vanity replacement:</strong> Swap the builder mirror and vanity for a floating custom vanity with a quartz top and LED-backlit mirror. Budget: $3,000–$8,000.</li>
-<li><strong>Freestanding tub:</strong> If your master bath has a builder-grade drop-in tub, replacing it with a freestanding soaking tub creates a stunning focal point. Budget: $3,000–$8,000 including plumbing modifications.</li>
+<li><strong>Freestanding tub:</strong> If your master bath has a builder-grade drop-in tub, replacing it with a freestanding soaking tub creates a striking focal point. Budget: $3,000–$8,000 including plumbing modifications.</li>
 </ul>
 
 <h3>Flooring Upgrades</h3>
-<p>Many Babcock Ranch homes come with builder-grade tile or basic LVP. Popular <a href="/services/flooring">flooring upgrades</a> include:</p>
+<p>Many Babcock Ranch homes come with builder-grade tile or basic LVP. Popular <a href="/services/flooring-tile">flooring upgrades</a> include:</p>
 <ul>
 <li><strong>Premium LVP:</strong> Upgrade to a wider plank, higher-quality luxury vinyl from brands like COREtec or Karndean. Budget: $5–$9 per square foot installed.</li>
 <li><strong>Porcelain wood-look tile:</strong> Superior durability and moisture resistance. Budget: $8–$14 per square foot installed.</li>
@@ -2740,7 +2740,7 @@ export const articles: BlogPost[] = [
 <h3>Outdoor Living</h3>
 <p>Ironically, summer is a great time to build your <a href="/services/outdoor-living">outdoor kitchen</a> or remodel your lanai. The work is primarily exterior and covered-area focused, and you'll have it ready for the beautiful fall and winter entertaining months.</p>
 <h3>Flooring</h3>
-<p>Whole-home <a href="/services/flooring">flooring replacement</a> is disruptive but quick (typically 3–7 days for installation). Doing it in summer minimizes disruption to your social calendar.</p>
+<p>Whole-home <a href="/services/flooring-tile">flooring replacement</a> is disruptive but quick (typically 3–7 days for installation). Doing it in summer minimizes disruption to your social calendar.</p>
 
 <h2>Planning Your Summer Renovation</h2>
 <p>To maximize the benefits of summer timing, here's a recommended planning timeline:</p>
@@ -2801,7 +2801,7 @@ export const articles: BlogPost[] = [
 <h3>4. Water Intrusion Prevention</h3>
 <p>Wind damage gets the attention, but water causes the majority of hurricane-related home damage in SWFL. During your renovation, address:</p>
 <ul>
-<li><strong>Waterproof flooring:</strong> Replace carpet and laminate with waterproof <a href="/services/flooring">LVP or porcelain tile</a> throughout the ground floor. If water does enter, waterproof flooring dries out without replacement. Cost: $5–$14 per square foot installed.</li>
+<li><strong>Waterproof flooring:</strong> Replace carpet and laminate with waterproof <a href="/services/flooring-tile">LVP or porcelain tile</a> throughout the ground floor. If water does enter, waterproof flooring dries out without replacement. Cost: $5–$14 per square foot installed.</li>
 <li><strong>Backflow prevention:</strong> Install backflow preventers on drain lines to prevent sewer backup during flooding. Cost: $300–$800.</li>
 <li><strong>Elevated electrical:</strong> During a renovation, raise electrical outlets on ground-floor exterior walls to 18–24 inches above floor level. Minimal additional cost during a remodel.</li>
 <li><strong>Sump pump:</strong> For homes with any history of water intrusion. Cost: $800–$2,000 installed.</li>
@@ -2846,7 +2846,7 @@ export const articles: BlogPost[] = [
     slug: "luxury-kitchen-remodeling-naples-guide-2026",
     title: "The Complete Guide to Luxury Kitchen Remodeling in Naples: What to Expect in 2026",
     excerpt: "Discover the ultimate guide to luxury kitchen remodeling in Naples for 2026. Expert insights on premium materials, smart technology, and creating the perfect high-end culinary space.",
-    metaTitle: "Luxury Kitchen Remodel Naples | 2026 High-End Design Trends",
+    metaTitle: "Luxury Kitchen Remodel Naples | 2026 High-End Design Trend",
     metaDescription: "Discover the ultimate guide to luxury kitchen remodeling in Naples for 2026. Expert insights on premium materials, smart technology, and creating the perfect high-end culinary space.",
     cluster: "design-inspiration",
     publishedAt: "2026-03-10T08:00:00Z",
@@ -3017,7 +3017,7 @@ export const articles: BlogPost[] = [
 
 <h3>Design and Planning Errors</h3>
 <ul>
-  <li><strong>Prioritizing aesthetics over functionality:</strong> A kitchen that looks stunning but doesn't work efficiently for your lifestyle will ultimately disappoint</li>
+  <li><strong>Prioritizing aesthetics over functionality:</strong> A kitchen that looks striking but doesn't work efficiently for your lifestyle will ultimately disappoint</li>
   <li><strong>Inadequate lighting design:</strong> Luxury kitchens require sophisticated, layered lighting plans that address task, ambient, and accent lighting needs</li>
   <li><strong>Poor space planning:</strong> Failing to optimize workflow and create appropriate zones for cooking, cleaning, and socializing</li>
   <li><strong>Overlooking storage needs:</strong> Not accounting for specific storage requirements unique to your cooking style and entertaining patterns</li>
@@ -3048,7 +3048,7 @@ export const articles: BlogPost[] = [
     slug: "transitional-kitchen-design-swfl-2026",
     title: "Transitional Kitchen Design: Why 70% of Designers Predict This Style Will Dominate Through 2026",
     excerpt: "Discover why transitional kitchen design dominates Southwest Florida homes. Expert insights on blending traditional warmth with modern clean lines for your perfect SWFL kitchen remodel.",
-    metaTitle: "Transitional Kitchen Design SWFL | Top 2026 Kitchen Style Trend",
+    metaTitle: "Transitional Kitchen Design SWFL | Top 2026 Kitchen Style",
     metaDescription: "Discover why transitional kitchen design dominates Southwest Florida homes. Expert insights on blending traditional warmth with modern clean lines for your perfect SWFL kitchen remodel.",
     cluster: "design-inspiration",
     publishedAt: "2026-03-17T08:00:00Z",
@@ -3061,7 +3061,7 @@ export const articles: BlogPost[] = [
 
 <p>According to a recent industry survey, over 70% of interior designers predict transitional kitchens will remain the dominant style choice for Southwest Florida homeowners through 2026. This staying power is remarkable in a region where design trends can shift as quickly as our afternoon thunderstorms.</p>
 
-<p>In this guide, we'll explore why transitional kitchen design has captured the hearts of SWFL homeowners, what exactly defines this versatile style, and how you can implement these principles in your own kitchen renovation—whether you're in Naples, Fort Myers, or anywhere along our stunning coastline.</p>
+<p>In this guide, we'll explore why transitional kitchen design has captured the hearts of SWFL homeowners, what exactly defines this versatile style, and how you can implement these principles in your own kitchen renovation—whether you're in Naples, Fort Myers, or anywhere along our striking coastline.</p>
 
 <h2>What Exactly Makes a Kitchen "Transitional"?</h2>
 
@@ -3092,7 +3092,7 @@ export const articles: BlogPost[] = [
 <p>The magic of transitional design often lies in thoughtful material selections that bridge different design eras. In Southwest Florida, these choices must also stand up to our unique climate challenges.</p>
 
 <blockquote>
-  <p>"The most successful transitional kitchens in Southwest Florida incorporate natural materials that reference our environment—think quartzite that mimics the movement of water or wood tones that echo our stunning sunsets—while maintaining clean lines and a sense of timeless elegance."</p>
+  <p>"The most successful transitional kitchens in Southwest Florida incorporate natural materials that reference our environment—think quartzite that mimics the movement of water or wood tones that echo our striking sunsets—while maintaining clean lines and a sense of timeless elegance."</p>
 </blockquote>
 
 <p>Material selection becomes even more important in our humid climate, where durability and moisture resistance are essential considerations alongside aesthetics. This is where <a href="/services/kitchen-remodeling">experienced kitchen remodeling contractors</a> provide invaluable guidance.</p>
@@ -3217,7 +3217,7 @@ export const articles: BlogPost[] = [
     slug: "white-oak-shaker-cabinets-southwest-florida",
     title: "White Oak Shaker Cabinets: The Timeless Choice for Southwest Florida Kitchens",
     excerpt: "Discover why white oak shaker cabinets are perfect for Florida kitchens. Explore durability benefits, design versatility, and how they complement coastal living in SWFL.",
-    metaTitle: "White Oak Shaker Cabinets Florida: Timeless Kitchen Design Guide",
+    metaTitle: "White Oak Shaker Cabinets Florida: Timeless Kitchen Design",
     metaDescription: "Discover why white oak shaker cabinets are perfect for Florida kitchens. Explore durability benefits, design versatility, and how they complement coastal living in SWFL.",
     cluster: "design-inspiration",
     publishedAt: "2026-03-24T08:00:00Z",
@@ -3357,21 +3357,21 @@ export const articles: BlogPost[] = [
   {
     slug: "quartzite-island-waterfall-edge-swfl",
     title: "Quartzite Islands with Waterfall Edges: The Ultimate Statement Piece for Your Southwest Florida Kitchen",
-    excerpt: "Discover why quartzite islands with waterfall edges are the perfect centerpiece for Southwest Florida kitchens. Durable, heat-resistant, and breathtakingly beautiful in humid climates.",
-    metaTitle: "Quartzite Island Waterfall Edge: Stunning SWFL Kitchen Centerpieces",
-    metaDescription: "Discover why quartzite islands with waterfall edges are the perfect centerpiece for Southwest Florida kitchens. Durable, heat-resistant, and breathtakingly beautiful in humid climates.",
+    excerpt: "Discover why quartzite islands with waterfall edges are the perfect centerpiece for Southwest Florida kitchens. Durable, heat-resistant, and remarkablely beautiful in humid climates.",
+    metaTitle: "Quartzite Island Waterfall Edge: Striking SWFL Kitchen Cen",
+    metaDescription: "Discover why quartzite islands with waterfall edges are the perfect centerpiece for Southwest Florida kitchens. Durable, heat-resistant, and remarkablely beautiful in humid climates.",
     cluster: "design-inspiration",
     publishedAt: "2026-03-31T08:00:00Z",
     readTime: "12 min read",
     author: "Camila Lage",
     image: "/images/quartzite-island-waterfall-edge-swfl.webp",
-    imageAlt: "Luxury kitchen featuring a stunning quartzite island with waterfall edge design, showcasing dramatic veining in a bright Southwest Florida home",
+    imageAlt: "Luxury kitchen featuring a striking quartzite island with waterfall edge design, showcasing dramatic veining in a bright Southwest Florida home",
     imageTitle: "Quartzite Island Waterfall Edge - Luxury Kitchen Centerpiece SWFL",
-    content: `<p class="lead">Imagine a kitchen island so captivating it becomes the heart of your home, seamlessly blending artistry with resilience. In Southwest Florida, homeowners are turning to quartzite with waterfall edges to achieve just that – a breathtaking centerpiece that stands up to both the tropical climate and daily life.</p>
+    content: `<p class="lead">Imagine a kitchen island so captivating it becomes the heart of your home, seamlessly blending artistry with resilience. In Southwest Florida, homeowners are turning to quartzite with waterfall edges to achieve just that – a remarkable centerpiece that stands up to both the tropical climate and daily life.</p>
 
 <p>It's no surprise that according to <a href="https://www.edgeinteriorsfl.com/southwest-florida-interior-design-trends-for-2025/" target="_blank" rel="noopener">Southwest Florida interior design forecasts for 2025</a>, natural materials and statement pieces continue to dominate luxury kitchen design. A quartzite island with waterfall edges delivers both – combining exceptional durability with the visual impact of a high-end sculpture in your kitchen.</p>
 
-<p>In this guide, we'll explore why this stunning combination is rapidly becoming the must-have feature in upscale SWFL homes, what makes quartzite ideal for our unique climate, and everything you need to know before investing in this showstopping kitchen centerpiece.</p>
+<p>In this guide, we'll explore why this striking combination is rapidly becoming the must-have feature in upscale SWFL homes, what makes quartzite ideal for our unique climate, and everything you need to know before investing in this showstopping kitchen centerpiece.</p>
 
 <h2>Why Quartzite Is Surging in Popularity for Southwest Florida Kitchens</h2>
 
@@ -3396,7 +3396,7 @@ export const articles: BlogPost[] = [
 
 <p>When it comes to kitchen islands, the waterfall edge design has revolutionized how we think about countertops. Rather than stopping at the edge of the horizontal surface, the material continues seamlessly down one or both sides of the island to the floor, creating a dramatic, continuous visual flow.</p>
 
-<p>This architectural feature transforms your island from a mere functional element into a sculptural centerpiece – the perfect canvas for showcasing quartzite's stunning natural patterns.</p>
+<p>This architectural feature transforms your island from a mere functional element into a sculptural centerpiece – the perfect canvas for showcasing quartzite's striking natural patterns.</p>
 
 <blockquote>
   <p>"A quartzite waterfall island isn't just a countertop; it's a sculptural element that brings natural beauty, incredible durability, and undeniable luxury to the heart of your Southwest Florida home."</p>
@@ -3468,9 +3468,9 @@ export const articles: BlogPost[] = [
 
 <p>This comparison reveals why quartzite has emerged as the premier choice for waterfall edge islands in Southwest Florida. While marble offers undeniable beauty, its poor durability and high maintenance make it impractical for many busy households in our humid climate. Engineered quartz, while durable, lacks the heat resistance and natural uniqueness of quartzite – particularly important for a statement piece like a waterfall island.</p>
 
-<p>For homeowners in <a href="/areas/fort-myers">Fort Myers</a>, <a href="/areas/naples">Naples</a>, and throughout SWFL, quartzite delivers the perfect balance of breathtaking aesthetics and practical performance.</p>
+<p>For homeowners in <a href="/areas/fort-myers">Fort Myers</a>, <a href="/areas/naples">Naples</a>, and throughout SWFL, quartzite delivers the perfect balance of remarkable aesthetics and practical performance.</p>
 
-<h2>The Secret to Stunning Waterfall Edges: Book-Matching and Expert Fabrication</h2>
+<h2>The Secret to Striking Waterfall Edges: Book-Matching and Expert Fabrication</h2>
 
 <p>What separates an ordinary waterfall island from a truly spectacular one often comes down to two factors many homeowners overlook: book-matching and fabrication expertise.</p>
 
@@ -3513,7 +3513,7 @@ export const articles: BlogPost[] = [
 
 <h2>Maximizing Your Investment: Care and Maintenance for Quartzite Waterfall Islands</h2>
 
-<p>While quartzite is remarkably durable, proper care ensures your waterfall island remains stunning for decades. Here are essential maintenance tips for Southwest Florida homeowners:</p>
+<p>While quartzite is remarkably durable, proper care ensures your waterfall island remains striking for decades. Here are essential maintenance tips for Southwest Florida homeowners:</p>
 
 <h3>Essential Care for Quartzite in Florida's Climate</h3>
 <ul>
@@ -3538,7 +3538,7 @@ export const articles: BlogPost[] = [
   <li><strong>Timeline requirements:</strong> Standard timing vs. expedited projects can affect overall investment</li>
 </ul>
 
-<p>While it's a premium feature, many homeowners find that a quartzite waterfall island delivers exceptional value through its dual benefits of stunning aesthetics and practical performance. Additionally, this type of high-end feature is increasingly sought after in the SWFL luxury home market, potentially enhancing resale value.</p>
+<p>While it's a premium feature, many homeowners find that a quartzite waterfall island delivers exceptional value through its dual benefits of striking aesthetics and practical performance. Additionally, this type of high-end feature is increasingly sought after in the SWFL luxury home market, potentially enhancing resale value.</p>
 
 <p>For specific investment planning, <a href="/contact">schedule a consultation</a> with a specialist who can provide guidance based on your exact specifications and chosen quartzite variety.</p>
 
@@ -3561,7 +3561,7 @@ export const articles: BlogPost[] = [
 
 <h2>Planning Your Quartzite Waterfall Island Project</h2>
 
-<p>Ready to bring this stunning centerpiece into your Southwest Florida kitchen? Here's a roadmap to ensure success:</p>
+<p>Ready to bring this striking centerpiece into your Southwest Florida kitchen? Here's a roadmap to ensure success:</p>
 
 <ol>
   <li><strong>Inspiration and Vision:</strong> Gather ideas from <a href="/gallery">design galleries</a> and showrooms to clarify your aesthetic preferences</li>
@@ -3574,15 +3574,15 @@ export const articles: BlogPost[] = [
   <li><strong>Installation:</strong> Prepare for a 1-2 day installation process by a skilled team</li>
 </ol>
 
-<p>Working with an experienced <a href="/services/kitchen-remodeling">kitchen remodeling contractor</a> who understands the intricacies of quartzite waterfall edges will ensure your project proceeds smoothly from concept to stunning completion.</p>
+<p>Working with an experienced <a href="/services/kitchen-remodeling">kitchen remodeling contractor</a> who understands the intricacies of quartzite waterfall edges will ensure your project proceeds smoothly from concept to striking completion.</p>
 
-<h2>Creating Your Southwest Florida Dream Kitchen</h2>
+<h2>Creating Your Southwest Florida Kitchen You Want</h2>
 
 <p>A quartzite island with waterfall edges isn't just a countertop – it's a statement about your appreciation for natural beauty, quality craftsmanship, and thoughtful design. In Southwest Florida's luxury kitchen landscape, it represents the perfect marriage of show-stopping aesthetics and practical performance.</p>
 
 <p>Whether you're building new, completely renovating, or simply updating your kitchen island, this investment delivers both immediate visual impact and long-term durability that will serve your household beautifully for years to come.</p>
 
-<p>At <a href="/about">Stacked Construction</a>, we've helped countless Southwest Florida homeowners transform their kitchens with stunning quartzite waterfall islands tailored to their unique style and needs. When you're ready to explore this option for your home, <a href="/contact">reach out for a consultation</a> with our team of kitchen design specialists who understand both the art and science of creating these remarkable centerpieces.</p>`,
+<p>At <a href="/about">Stacked Construction</a>, we've helped countless Southwest Florida homeowners transform their kitchens with striking quartzite waterfall islands tailored to their unique style and needs. When you're ready to explore this option for your home, <a href="/contact">reach out for a consultation</a> with our team of kitchen design specialists who understand both the art and science of creating these remarkable centerpieces.</p>`,
     relatedSlugs: ["best-countertops-florida-kitchens", "luxury-kitchen-remodeling-naples-guide-2026", "coastal-kitchen-design-ideas-naples-fort-myers"],
   },
 
@@ -3590,7 +3590,7 @@ export const articles: BlogPost[] = [
     slug: "butlers-pantry-design-naples",
     title: "The Rise of the Butler's Pantry: Creating a Hidden Scullery Kitchen in Your Naples Home",
     excerpt: "Explore butler's pantry design trends in Naples homes. Learn how to create a functional, stylish scullery kitchen that elevates your entertaining space and home value.",
-    metaTitle: "Butler's Pantry Design Naples | Luxury Scullery Kitchen Ideas",
+    metaTitle: "Butler's Pantry Design Naples | Luxury Scullery Kitchen Id",
     metaDescription: "Explore butler's pantry design trends in Naples homes. Learn how to create a functional, stylish scullery kitchen that elevates your entertaining space and home value.",
     cluster: "design-inspiration",
     publishedAt: "2026-04-07T08:00:00Z",

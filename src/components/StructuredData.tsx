@@ -5,18 +5,58 @@ export default function StructuredData() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How long does a typical kitchen remodel take?",
+        name: "How do I know you'll actually finish?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most kitchen remodels take 6–10 weeks depending on the scope. During your free consultation, we'll provide a realistic timeline based on your specific project and material selections.",
+          text: "It's the right question to ask, and the honest answer is that you check. Verify our license (CBC1269972) with the Florida DBPR, ask for our insurance certificate, and ask to see a project we finished more than two years ago. We'll also give you a written schedule and a single point of contact — so if we ever slip, you'll know before you have to ask.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you provide free estimates?",
+        name: "What happens at the first consultation?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. We offer free, no-obligation in-home consultations where we assess your space, discuss your goals, and provide a detailed, line-item estimate — no hidden fees.",
+          text: "We come to you. We walk the space, ask how you actually use it, and talk honestly about scope and budget — including whether what you want is realistic at the number you have in mind. No charge, no obligation, and no pressure to decide anything that day.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you design, or do I need my own designer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We do both. Design and construction sit under one roof, so the people drawing your space know what it costs to build it — which means budget problems surface during design instead of after. If you already have an architect or designer you like, we're glad to build from their drawings.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do you price a project?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Line by line, not as a lump sum. You'll see what the cabinetry costs, what the stone costs, what the labor costs. It takes us longer to prepare, but it's the only way you can compare bids honestly or decide where to spend and where to pull back.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What happens if something changes mid-project?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Scope changes on almost every job. When it happens, we price the change and get your written approval before the work continues. Nothing appears on your final invoice that you haven't already seen and agreed to.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long will it take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most kitchens run 6–10 weeks; bathrooms are usually shorter and whole-home projects longer. Material lead times and county permit review drive most of the variation, and we build both into the schedule you get with your proposal.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I live in my home during the work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Usually yes for a kitchen or bathroom. We isolate the work area, protect floors and finishes, and clean the site down each day. Whole-home renovations are harder to live through, and we'll tell you straight if we think you should plan to be out.",
         },
       },
       {
@@ -24,35 +64,12 @@ export default function StructuredData() {
         name: "What areas do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve all of Southwest Florida including Fort Myers, Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Marco Island, Punta Gorda, and surrounding areas across Lee, Collier, and Charlotte counties.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Are you licensed and insured?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Absolutely. Stacked Construction is fully licensed and insured in the state of Florida. License #CBC1269972. We're happy to provide documentation upon request.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I stay in my home during the renovation?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "In most cases, yes. We work cleanly and efficiently to minimize disruption. For larger whole-home renovations, we'll discuss logistics during the planning phase to find the best arrangement.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How do I get started?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Simply click 'Get Free Estimate' or call us at (239) 785-0166. We'll schedule a convenient time to visit your home, listen to your vision, and put together a plan that fits your goals and budget.",
+          text: "Naples, Bonita Springs, Fort Myers, and Cape Coral, plus surrounding communities across Lee and Collier counties.",
         },
       },
     ],
   };
+
 
   const webSite = {
     "@context": "https://schema.org",
@@ -77,8 +94,9 @@ export default function StructuredData() {
     "@id": "https://stackedconstruction.co/#business",
     name: "Stacked Construction",
     description:
-      "Premium home remodeling contractor serving Southwest Florida. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, Bonita Springs, Punta Gorda, and Marco Island.",
+      "Premium home remodeling contractor serving Southwest Florida. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral.",
     url: "https://stackedconstruction.co",
+    logo: "https://stackedconstruction.co/images/logo-stacked-dark.png",
     telephone: "+12397850166",
     email: "info@stackedconstruction.co",
     address: {
@@ -95,18 +113,13 @@ export default function StructuredData() {
       longitude: -81.8723,
     },
     areaServed: [
-      { "@type": "City", name: "Fort Myers", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
-      { "@type": "City", name: "Cape Coral", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
       { "@type": "City", name: "Naples", containedInPlace: { "@type": "AdministrativeArea", name: "Collier County, FL" } },
       { "@type": "City", name: "Bonita Springs", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
-      { "@type": "City", name: "Punta Gorda", containedInPlace: { "@type": "AdministrativeArea", name: "Charlotte County, FL" } },
-      { "@type": "City", name: "Marco Island", containedInPlace: { "@type": "AdministrativeArea", name: "Collier County, FL" } },
+      { "@type": "City", name: "Fort Myers", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
+      { "@type": "City", name: "Cape Coral", containedInPlace: { "@type": "AdministrativeArea", name: "Lee County, FL" } },
       { "@type": "City", name: "Estero" },
-      { "@type": "City", name: "Lehigh Acres" },
-      { "@type": "City", name: "Port Charlotte" },
       { "@type": "City", name: "North Fort Myers" },
       { "@type": "City", name: "Fort Myers Beach" },
-      { "@type": "City", name: "Sanibel" },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -207,7 +220,9 @@ export default function StructuredData() {
       "https://www.facebook.com/profile.php?id=61586672805182",
       "https://www.instagram.com/stackedconstruction/",
       "https://www.linkedin.com/company/111945969/",
+      "https://share.google/CiOmnBxQhr2fIJXjj",
     ],
+    hasMap: "https://share.google/CiOmnBxQhr2fIJXjj",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Florida Certified Building Contractor",

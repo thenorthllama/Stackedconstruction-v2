@@ -21,22 +21,22 @@ const checkIcon = (
 
 const data = [
   {
-    title: "Step 01",
+    title: "Step 1",
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Free Consultation
+          Consultation
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-600 mb-6">
           We come to you
         </p>
-        <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
-          We visit your home, listen to your vision, assess the space, and
-          discuss your goals and budget — no pressure, no commitment. This is
-          where your project begins.
+        <p className="text-warm-700 text-base md:text-base leading-relaxed mb-8">
+          We come to you. We walk the space, ask how you actually use it, and
+          talk honestly about scope and budget — including whether what you
+          want is realistic at the number you have in mind.
         </p>
         <div className="rounded-2xl border border-warm-200 bg-white p-6 md:p-8">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+          <p className="mb-4 text-sm font-semibold text-warm-600">
             What to expect
           </p>
           <ul className="space-y-3">
@@ -49,7 +49,7 @@ const data = [
             ].map((item) => (
               <li
                 key={item}
-                className="flex gap-3 text-sm leading-relaxed text-warm-700"
+                className="flex gap-3 text-base leading-relaxed text-warm-700"
               >
                 {checkIcon}
                 {item}
@@ -61,22 +61,22 @@ const data = [
     ),
   },
   {
-    title: "Step 02",
+    title: "Step 2",
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Detailed Proposal
+          Design &amp; Proposal
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-600 mb-6">
           Transparent from day one
         </p>
-        <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
+        <p className="text-warm-700 text-base md:text-base leading-relaxed mb-8">
           You receive a clear, line-item estimate with material options, a
           realistic timeline, and a transparent scope of work. No surprises, no
           hidden fees — ever.
         </p>
         <div className="rounded-2xl border border-warm-200 bg-white p-6 md:p-8">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+          <p className="mb-4 text-sm font-semibold text-warm-600">
             What to expect
           </p>
           <ul className="space-y-3">
@@ -89,7 +89,7 @@ const data = [
             ].map((item) => (
               <li
                 key={item}
-                className="flex gap-3 text-sm leading-relaxed text-warm-700"
+                className="flex gap-3 text-base leading-relaxed text-warm-700"
               >
                 {checkIcon}
                 {item}
@@ -101,22 +101,22 @@ const data = [
     ),
   },
   {
-    title: "Step 03",
+    title: "Step 3",
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Expert Build
+          Build
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-600 mb-6">
           Quality craftsmanship, clean job sites
         </p>
-        <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
+        <p className="text-warm-700 text-base md:text-base leading-relaxed mb-8">
           Our skilled crew brings your project to life with quality materials,
           clean job sites, and consistent progress updates. You&apos;ll always know
           what&apos;s happening and when.
         </p>
         <div className="rounded-2xl border border-warm-200 bg-white p-6 md:p-8">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+          <p className="mb-4 text-sm font-semibold text-warm-600">
             What to expect
           </p>
           <ul className="space-y-3">
@@ -129,7 +129,7 @@ const data = [
             ].map((item) => (
               <li
                 key={item}
-                className="flex gap-3 text-sm leading-relaxed text-warm-700"
+                className="flex gap-3 text-base leading-relaxed text-warm-700"
               >
                 {checkIcon}
                 {item}
@@ -141,22 +141,22 @@ const data = [
     ),
   },
   {
-    title: "Step 04",
+    title: "Step 4",
     content: (
       <div>
         <h3 className="font-display text-2xl font-bold text-warm-900 sm:text-3xl mb-2">
-          Final Walk-Through
+          Walk-Through &amp; Warranty
         </h3>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500 mb-6">
+        <p className="eyebrow text-warm-600 mb-6">
           We don&apos;t leave until it&apos;s perfect
         </p>
-        <p className="text-warm-700 text-sm md:text-base leading-relaxed mb-8">
+        <p className="text-warm-700 text-base md:text-base leading-relaxed mb-8">
           We walk every detail together. If anything isn&apos;t perfect, we make it
           right before the project is complete. Your satisfaction is
           non-negotiable.
         </p>
         <div className="rounded-2xl border border-warm-200 bg-white p-6 md:p-8">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+          <p className="mb-4 text-sm font-semibold text-warm-600">
             What to expect
           </p>
           <ul className="space-y-3">
@@ -169,7 +169,7 @@ const data = [
             ].map((item) => (
               <li
                 key={item}
-                className="flex gap-3 text-sm leading-relaxed text-warm-700"
+                className="flex gap-3 text-base leading-relaxed text-warm-700"
               >
                 {checkIcon}
                 {item}

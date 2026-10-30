@@ -15,31 +15,206 @@
   --color-accent: #c8956c;
   --color-accent-dark: #a87a55;
 
+  /* Brand semantic tokens — light editorial palette */
+  --color-brand-espresso: #3d2b21;
+  --color-brand-espresso-deep: #2a1d16;
+  --color-brand-cream: #faf7f4;
+  --color-brand-linen: #f0ebe5;
+  --color-brand-ink: #1a1714;
+
   --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-playfair-display);
+  /* Headlines share the geometric sans with the body so they sit with the
+     rounded geometric logo; weight and tight tracking do the display work. */
+  --font-display: var(--font-dm-sans);
+}
+
+.font-display {
+  letter-spacing: -0.03em;
 }
 
 body {
   font-family: var(--font-sans);
   color: var(--color-warm-800);
+  background-color: var(--color-brand-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Header offset ─────────────────────────────────────────────────────────────
+   The header is fixed, so anything scrolled to must be pushed clear of it or the
+   nav covers the heading. One variable drives every offset; Header.tsx flips
+   --header-h when the announcement bar collapses on scroll. */
+:root {
+  --announce-h: 2.5rem; /* espresso phone strip */
+  --nav-h: 4.25rem; /* floating pill nav + its top padding */
+  --header-h: calc(var(--announce-h) + var(--nav-h));
+}
+
+/* Announcement bar is hidden once scrolled — offset shrinks to match */
+:root[data-scrolled="true"] {
+  --header-h: var(--nav-h);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 4.75rem;
+  }
+}
+
+/* Route changes must land instantly at the top — no animated scroll.
+   Smooth scrolling is scoped to in-page anchor jumps (e.g. #contact) only. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  /* anchor targets stop below the header instead of behind it */
+  scroll-padding-top: calc(var(--header-h) + 1.5rem);
+}
+
+/* Belt-and-braces for any element scrolled into view programmatically */
+section[id],
+[id]:target {
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Page transition ───────────────────────────────────────────────────────────
+   Opacity-only fade, 200ms. No transform, so nothing shifts (CLS-safe) and the
+   browser can composite it on the GPU. Pure CSS — no JS, no hydration cost.
+   Lives on the wrapper in app/template.tsx, which remounts on every navigation. */
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade {
+  animation: page-fade-in 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Editorial primitives (reference design language) ──────────────────────── */
+
+/* Section label: "• About us". Readable size, sentence case — the old 11px
+   tracked caps were too small for the audience. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* Notched editorial card corner — subtle scooped tab, used on hero/feature imagery */
+.card-notch {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+@supports (mask-image: radial-gradient(circle, black, transparent)) {
+  .card-notch-tl {
+    mask-image: radial-gradient(circle 28px at 0 0, transparent 27px, black 28px);
+    -webkit-mask-image: radial-gradient(circle 28px at 0 0, transparent 27px, black 28px);
+  }
+}
+
+/* Focus visibility — WCAG 2.1 AA keyboard nav.
+   Components that set their own focus-visible ring (see ui/cta.tsx) opt out. */
+:focus-visible {
+  outline: 2px solid var(--color-accent-dark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* On dark sections a terracotta outline is too low-contrast — use white */
+.on-dark :focus-visible,
+[data-surface="dark"] :focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Skip link — first thing in the tab order, visible only when focused */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  border-radius: 9999px;
+  background-color: var(--color-warm-900);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Minimum touch target for small interactive controls */
+.tap-target {
+  position: relative;
+}
+
+.tap-target::after {
+  content: "";
+  position: absolute;
+  inset: 50% 50% 50% 50%;
+  min-width: 44px;
+  min-height: 44px;
+  translate: -50% -50%;
 }
 
 /* ── Blog article prose styles ─────────────────────────────────────────────── */
 
+/* ~70 characters a line at 18px — comfortable reading for long articles */
+.prose-warm {
+  max-width: 70ch;
+}
+
 .prose-warm h2 {
   font-family: var(--font-display);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-warm-900);
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .prose-warm h2 {
+    font-size: 1.875rem;
+  }
 }
 
 .prose-warm h3 {
@@ -53,9 +228,9 @@ html {
 }
 
 .prose-warm p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--color-warm-600);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-warm-800);
   margin-bottom: 1.25rem;
 }
 
@@ -69,9 +244,9 @@ html {
 }
 
 .prose-warm li {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--color-warm-600);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-warm-800);
 }
 
 .prose-warm strong {
@@ -79,15 +254,19 @@ html {
   color: var(--color-warm-900);
 }
 
+/* Copper fails contrast as text colour, so links are ink with a copper underline */
 .prose-warm a {
-  color: var(--color-accent);
+  color: var(--color-warm-900);
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.15s ease;
+  text-decoration-color: var(--color-accent-dark);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
 }
 
 .prose-warm a:hover {
-  color: var(--color-accent-dark);
+  text-decoration-color: var(--color-warm-900);
 }
 
 .prose-warm > :first-child {

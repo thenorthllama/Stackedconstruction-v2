@@ -36,7 +36,7 @@ export function TestimonialsColumn({
           <React.Fragment key={index}>
             {testimonials.map(({ text, name, role, initial, initialBg }, i) => (
               <div
-                className="rounded-2xl border border-warm-200 bg-white p-8 shadow-sm max-w-xs w-full"
+                className="rounded-2xl border border-warm-200 bg-white p-8 max-w-xs w-full"
                 key={i}
               >
                 {/* Stars */}
@@ -56,7 +56,7 @@ export function TestimonialsColumn({
                   ))}
                 </div>
 
-                <p className="text-sm leading-relaxed text-warm-700">
+                <p className="text-base leading-relaxed text-warm-700">
                   &ldquo;{text}&rdquo;
                 </p>
 
@@ -71,7 +71,7 @@ export function TestimonialsColumn({
                     <p className="text-sm font-semibold tracking-tight text-warm-900">
                       {name}
                     </p>
-                    <p className="text-xs tracking-tight text-warm-500">
+                    <p className="text-xs tracking-tight text-warm-600">
                       {role}
                     </p>
                   </div>

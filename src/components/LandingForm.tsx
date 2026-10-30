@@ -207,7 +207,7 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
   const inputClasses =
     "w-full rounded-lg border border-warm-700 bg-warm-900/60 px-5 py-4 text-base text-white placeholder:text-warm-600 focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500";
 
-  const labelClasses = "mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500";
+  const labelClasses = "mb-1.5 block text-sm font-semibold text-warm-200";
 
   if (submitted) {
     return (
@@ -247,14 +247,14 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
       {/* Progress bar */}
       <div className="mb-8">
         <div className="mb-3 flex items-center justify-between">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+          <span className="text-sm font-semibold text-warm-300">
             Step {step + 1} of {STEPS.length}
           </span>
           {step > 0 && (
             <button
               type="button"
               onClick={handleBack}
-              className="text-xs font-medium text-warm-400 transition-colors hover:text-white"
+              className="text-sm font-medium text-warm-300 transition-colors hover:text-white"
             >
               &larr; Back
             </button>
@@ -273,7 +273,7 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
         {current.label}
       </h2>
       {current.optional && (
-        <p className="-mt-4 mb-5 text-sm text-warm-500">Optional — helps us prepare a more accurate estimate.</p>
+        <p className="-mt-4 mb-5 text-sm text-warm-300">Optional — helps us prepare a more accurate estimate.</p>
       )}
 
       {/* Field */}
@@ -343,7 +343,7 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
                     setError("");
                   }
                 }}
-                className="col-span-2 mt-1 text-center text-xs font-medium text-warm-600 transition-colors hover:text-warm-400"
+                className="col-span-2 mt-1 text-center text-sm font-medium text-warm-300 transition-colors hover:text-white"
               >
                 Skip for now
               </button>
@@ -383,12 +383,12 @@ export default function LandingForm({ serviceName, serviceSlug }: LandingFormPro
           disabled={submitting}
           className="mt-6 w-full rounded-full bg-white py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100 disabled:opacity-60"
         >
-          {submitting ? "Sending..." : isLast ? "Get My Free Estimate" : "Continue"}
+          {submitting ? "Sending..." : isLast ? "Request My Consultation" : "Continue"}
         </button>
       )}
 
       {isLast && current.type !== "choice" && (
-        <p className="mt-4 text-center text-xs text-warm-600">
+        <p className="mt-4 text-center text-sm text-warm-300">
           No spam, no obligation. We typically respond within 24 hours.
         </p>
       )}

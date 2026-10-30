@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const categories = [
@@ -170,7 +171,7 @@ export default function GalleryContent() {
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`shrink-0 rounded-full px-5 py-2 text-[12px] font-semibold uppercase tracking-wider transition-colors ${
+                className={`shrink-0 rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
                   cat === activeCategory
                     ? "bg-warm-900 text-white"
                     : "text-warm-600 hover:bg-warm-100 hover:text-warm-900"
@@ -190,7 +191,7 @@ export default function GalleryContent() {
             {filtered.map((project, i) => (
               <article
                 key={project.title}
-                className={`group overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl ${
+                className={`group overflow-hidden rounded-2xl border border-warm-200 bg-white transition-shadow duration-300 hover:shadow-xl ${
                   i === 0 ? "sm:col-span-2 lg:col-span-2" : ""
                 }`}
               >
@@ -199,14 +200,14 @@ export default function GalleryContent() {
                     i === 0 ? "aspect-[16/9]" : "aspect-[4/3]"
                   }`}
                 >
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url('${project.image}')` }}
-                    role="img"
-                    aria-label={project.title}
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes={i === 0 ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03] motion-reduce:transition-none"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-warm-900/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <span className="absolute top-5 left-5 rounded-full bg-white/90 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-warm-900 backdrop-blur-sm">
+                  <span className="absolute top-5 left-5 rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-warm-900">
                     {project.category}
                   </span>
                 </div>
@@ -215,10 +216,10 @@ export default function GalleryContent() {
                   <h2 className="font-display text-xl font-semibold text-warm-900 lg:text-2xl">
                     {project.title}
                   </h2>
-                  <p className="mt-1 text-xs font-medium uppercase tracking-wider text-warm-500">
+                  <p className="mt-1 text-sm font-medium text-warm-600">
                     {project.location}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-warm-600">
+                  <p className="mt-3 text-base leading-relaxed text-warm-700">
                     {project.description}
                   </p>
                 </div>

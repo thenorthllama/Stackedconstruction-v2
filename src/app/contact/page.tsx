@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Free Estimate | Stacked Construction – Fort Myers, Naples, Cape Coral",
+  title: { absolute: "Request a Consultation | Stacked Construction" },
   description:
     "Request a free remodeling estimate from Stacked Construction. Kitchen, bathroom, outdoor living, and full home renovation across Fort Myers, Naples, Cape Coral, and all of Southwest Florida. Call (239) 785-0166.",
   openGraph: {
-    title: "Contact Stacked Construction | Free Estimate",
+    title: "Request a Consultation | Stacked Construction",
     description:
-      "Schedule your free in-home consultation. Premium remodeling across Southwest Florida.",
+      "Schedule your in-home consultation. Premium remodeling across Southwest Florida.",
   },
   alternates: {
     canonical: "https://stackedconstruction.co/contact",
@@ -65,33 +67,30 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Stacked Construction remodeling project"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...pageHeroes.contact} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[60vh] lg:px-10 lg:pb-24">
             <div className="max-w-3xl">
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+              <p className="mb-5 eyebrow text-warm-400">
                 Contact Us
               </p>
-              <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Let&apos;s Build Something{" "}
-                <em className="font-light italic text-warm-300">Beautiful</em>
+                <em className="not-italic">Beautiful</em>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
-                Schedule your free in-home consultation. No pressure, no
-                obligation — just an honest conversation about your vision.
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
+                We come to you and tell you honestly what&apos;s realistic. No charge, no
+                obligation — just a straight conversation about your project.
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Contact section — form + info ─────────────────────────── */}
@@ -100,18 +99,38 @@ export default function ContactPage() {
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               {/* Left — contact info */}
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-                  Get in Touch
+                <p className="mb-4 eyebrow text-warm-600">
+                  What happens next
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Reach{" "}
-                  <em className="font-light italic text-warm-600">Out</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Tell us what you have in{" "}
+                  <em className="not-italic">mind</em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  Whether you&apos;re ready to start or just exploring options,
-                  we&apos;d love to hear about your project. Reach out by phone,
-                  email, or fill out the form.
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
+                  Two short steps. We only ask for what we need to call you
+                  back — the rest we&apos;ll work out together.
                 </p>
+
+                {/* What happens next — the anxiety this audience actually has */}
+                <ol className="mt-8 space-y-3.5 border-t border-warm-200 pt-7">
+                  {[
+                    "We call you within one business day",
+                    "We set a time that works and come to you",
+                    "You get a line-item proposal — no obligation",
+                  ].map((item, i) => (
+                    <li key={item} className="flex items-start gap-3.5">
+                      <span
+                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-warm-900 text-[11px] font-semibold text-white"
+                        aria-hidden="true"
+                      >
+                        {i + 1}
+                      </span>
+                      <span className="text-base leading-relaxed text-warm-700">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
 
                 <div className="mt-10 space-y-5">
                   <a
@@ -154,7 +173,7 @@ export default function ContactPage() {
                     </svg>
                     info@stackedconstruction.co
                   </a>
-                  <div className="flex items-start gap-3 text-base text-warm-600">
+                  <div className="flex items-start gap-3 text-base text-warm-700">
                     <svg
                       className="mt-0.5 h-5 w-5 shrink-0 text-warm-400"
                       fill="none"
@@ -174,15 +193,23 @@ export default function ContactPage() {
                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                       />
                     </svg>
-                    Fort Myers, FL 33901
+                    Serving Southwest Florida from Fort Myers, FL
                   </div>
+                  <a
+                    href="https://share.google/CiOmnBxQhr2fIJXjj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-warm-900 underline decoration-accent-dark decoration-2 underline-offset-4 transition-colors hover:decoration-warm-900"
+                  >
+                    View our Google Business Profile →
+                  </a>
                 </div>
 
                 <div className="mt-10 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     Hours
                   </p>
-                  <div className="space-y-1 text-sm text-warm-600">
+                  <div className="space-y-1 text-base text-warm-700">
                     <p>Monday – Friday: 7am – 6pm</p>
                     <p>Saturday: 8am – 2pm</p>
                     <p>Sunday: Closed</p>
@@ -190,24 +217,35 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     Service Areas
                   </p>
-                  <p className="text-sm leading-relaxed text-warm-600">
-                    Fort Myers, Cape Coral, Naples, Bonita Springs, Marco
-                    Island, Punta Gorda, and all of Lee, Collier &amp; Charlotte
-                    Counties.
+                  <p className="text-base leading-relaxed text-warm-700">
+                    Naples, Bonita Springs, Fort Myers, Cape Coral, and
+                    surrounding communities across Lee &amp; Collier Counties.
                   </p>
+                  <div className="mt-5 overflow-hidden rounded-2xl border border-warm-200">
+                    <iframe
+                      src="https://www.google.com/maps?q=Fort+Myers,+FL&z=9&output=embed"
+                      title="Stacked Construction service area — Southwest Florida"
+                      width="100%"
+                      height="220"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
                 </div>
 
                 <div className="mt-8 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     License
                   </p>
-                  <p className="text-sm text-warm-600">
+                  <p className="text-base text-warm-700">
                     Florida Certified Building Contractor
                   </p>
-                  <p className="mt-1 text-sm font-medium text-warm-900">
+                  <p className="mt-1 text-base font-medium text-warm-900">
                     #CBC1269972
                   </p>
                 </div>

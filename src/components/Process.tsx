@@ -7,19 +7,19 @@ const steps = [
   },
   {
     step: "02",
-    title: "Detailed Proposal",
+    title: "Design & Proposal",
     description:
       "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work.",
   },
   {
     step: "03",
-    title: "Expert Build",
+    title: "Build",
     description:
       "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates.",
   },
   {
     step: "04",
-    title: "Final Walk-Through",
+    title: "Walk-Through & Warranty",
     description:
       "We walk every detail together. If anything isn't perfect, we make it right before the project is complete.",
   },
@@ -31,17 +31,19 @@ export default function Process() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-              How It Works
+            <p className="mb-4 eyebrow text-warm-400">
+              How we work
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-              From Vision{" "}
-              <em className="font-light italic text-warm-300">to Reality</em>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-white sm:text-5xl">
+              You&apos;ll always know{" "}
+              <em className="not-italic">
+                the next step
+              </em>
             </h2>
           </div>
-          <p className="max-w-md text-base leading-relaxed text-warm-500 lg:text-right">
-            A simple, transparent process that keeps you informed and in control
-            from start to finish.
+          <p className="max-w-md text-base leading-relaxed text-warm-300 lg:text-right">
+            No mystery about what happens after you call. Here is the whole
+            process, start to finish.
           </p>
         </div>
 
@@ -54,7 +56,7 @@ export default function Process() {
               <h3 className="mb-3 font-display text-lg font-semibold text-white">
                 {s.title}
               </h3>
-              <p className="text-sm leading-relaxed text-warm-500">
+              <p className="text-base leading-relaxed text-warm-300">
                 {s.description}
               </p>
             </div>

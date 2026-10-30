@@ -1,44 +1,14 @@
-"use client";
-
-import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+// Static hero headline — the offer, stated plainly.
+// StoryBrand: an offer above the fold, not a mood. The previous rotating-word
+// animation ("Building Spaces / Homes / Stories") was replaced because it
+// delayed comprehension and said nothing about what we actually do.
 
 function AnimatedHero() {
-  const [titleNumber, setTitleNumber] = useState(0);
-  const titles = useMemo(() => ["Spaces", "Homes", "Stories"], []);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (titleNumber === titles.length - 1) {
-        setTitleNumber(0);
-      } else {
-        setTitleNumber(titleNumber + 1);
-      }
-    }, 2000);
-    return () => clearTimeout(timeoutId);
-  }, [titleNumber, titles]);
-
   return (
-    <h1 className="font-display text-6xl leading-[0.95] font-bold tracking-tight text-white sm:text-7xl lg:text-8xl xl:text-9xl">
-      Building
-      <span className="relative flex w-full overflow-hidden md:pb-4 md:pt-1">
-        &nbsp;
-        {titles.map((title, index) => (
-          <motion.span
-            key={index}
-            className="absolute font-light italic text-warm-200"
-            initial={index === 0 ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
-            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            animate={
-              titleNumber === index
-                ? { y: 0, opacity: 1 }
-                : { y: titleNumber > index ? -150 : 150, opacity: 0 }
-            }
-          >
-            {title}
-          </motion.span>
-        ))}
-      </span>
+    <h1 className="font-display text-5xl leading-[0.95] font-bold tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+      From idea to
+      <br />
+      <em className="not-italic">finished home</em>
     </h1>
   );
 }

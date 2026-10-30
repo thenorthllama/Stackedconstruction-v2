@@ -4,41 +4,32 @@ import ContactForm from "@/components/ContactForm";
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative bg-warm-900 py-24 lg:py-32">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: "url('/images/cta-bg.jpg')" }}
-        aria-hidden="true"
-      />
+    <section id="contact" className="relative bg-white py-24 lg:py-32">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
           {/* Left — heading */}
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-              Start Your Project
-            </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-              Let&apos;s Build
-              <br />
-              Something{" "}
-              <em className="font-light italic text-warm-300">Beautiful</em>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              Tell us about your project
             </h2>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-warm-500">
-              Schedule your free in-home consultation today. No pressure, no
-              obligation — just an honest conversation about your vision and how
-              we can bring it to life.
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-warm-700">
+              We&apos;ll walk your space, talk through what&apos;s realistic at
+              your budget, and show you the plan before anyone picks up a tool.
+              No charge, no obligation, and no pressure to decide on the spot.
+            </p>
+            <p className="mt-4 max-w-md text-base font-semibold leading-relaxed text-warm-900">
+              We reply within one business day.
             </p>
 
-            <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-600">
-              Licensed Contractor · FL #CBC1269972
+            <p className="mt-6 text-sm font-medium text-warm-700">
+              Licensed &amp; Insured · FL #CBC1269972
             </p>
 
             {/* Contact info below the copy */}
-            <div className="mt-10 flex flex-col gap-3 text-sm text-warm-500">
+            <div className="mt-10 flex flex-col gap-3 text-base text-warm-700">
               <a
                 href="tel:+12397850166"
-                className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-warm-900"
               >
                 <svg
                   className="h-4 w-4 shrink-0"
@@ -58,7 +49,7 @@ export default function CTA() {
               </a>
               <a
                 href="mailto:info@stackedconstruction.co"
-                className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-warm-900"
               >
                 <svg
                   className="h-4 w-4 shrink-0"
@@ -80,7 +71,9 @@ export default function CTA() {
           </div>
 
           {/* Right — contact form */}
-          <ContactForm variant="dark" />
+          <div className="rounded-[2rem] bg-warm-50 p-6 ring-1 ring-warm-200 lg:p-8">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

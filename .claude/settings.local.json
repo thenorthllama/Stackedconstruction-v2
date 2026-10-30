@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(cp \"/Users/manoeldasilva/Library/CloudStorage/GoogleDrive-junior@stackedconstruction.co/My Drive/0 - Stacked Construction /9 - Blog Posts/Luxury Kitchen Remodel Naples | 2026 High-End Design Trends.jpeg\" \"/Users/manoeldasilva/Desktop/Stackedconstruction-v2/public/images/luxury-kitchen-remodel-naples-2026.jpeg\")",
+      "Bash(cp \"/Users/manoeldasilva/Library/CloudStorage/GoogleDrive-junior@stackedconstruction.co/My Drive/0 - Stacked Construction /9 - Blog Posts/Transitional Kitchen Design SWFL - Modern Traditional Blend for Florida Homes.jpeg\" \"/Users/manoeldasilva/Desktop/Stackedconstruction-v2/public/images/transitional-kitchen-design-swfl.jpeg\")",
+      "Bash(cp \"/Users/manoeldasilva/Library/CloudStorage/GoogleDrive-junior@stackedconstruction.co/My Drive/0 - Stacked Construction /9 - Blog Posts/White Oak Shaker Cabinets in Southwest Florida Kitchen Design.jpeg\" \"/Users/manoeldasilva/Desktop/Stackedconstruction-v2/public/images/white-oak-shaker-cabinets-swfl.jpeg\")",
+      "Bash(cp \"/Users/manoeldasilva/Library/CloudStorage/GoogleDrive-junior@stackedconstruction.co/My Drive/0 - Stacked Construction /9 - Blog Posts/Quartzite Island Waterfall Edge - Luxury Kitchen Centerpiece SWFL.jpeg\" \"/Users/manoeldasilva/Desktop/Stackedconstruction-v2/public/images/quartzite-island-waterfall-edge-swfl.jpeg\")",
+      "Bash(cp \"/Users/manoeldasilva/Library/CloudStorage/GoogleDrive-junior@stackedconstruction.co/My Drive/0 - Stacked Construction /9 - Blog Posts/Butler's Pantry Design Naples | Luxury Hidden Kitchen Workspace.png\" \"/Users/manoeldasilva/Desktop/Stackedconstruction-v2/public/images/butlers-pantry-design-naples.png\")",
+      "WebSearch",
+      "WebFetch(domain:napleskb.com)",
+      "WebFetch(domain:kgtremodeling.com)",
+      "WebFetch(domain:reeddesignbuild.com)",
+      "WebFetch(domain:cornerstonebuildersswfl.com)",
+      "WebFetch(domain:curtisallendesigns.com)",
+      "Bash(node *)",
+      "Bash(npx lighthouse *)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git commit *)",
+      "Bash(npx tsx *)",
+      "Bash(npx eslint *)"
+    ]
+  }
+}

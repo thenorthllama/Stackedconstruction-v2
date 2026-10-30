@@ -38,16 +38,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-          Our Process
+        <p className="mb-4 eyebrow text-warm-600">
+          How we work
         </p>
-        <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl max-w-4xl">
-          From Vision{" "}
-          <em className="font-light italic">to Reality</em>
+        <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-warm-900 sm:text-5xl max-w-4xl">
+          You&apos;ll always know{" "}
+          <em className="not-italic">
+            the next step
+          </em>
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-warm-600 max-w-xl">
-          Remodeling your home should be exciting, not stressful. Our
-          four-step process keeps things simple, transparent, and on track
+        <p className="mt-4 text-base leading-relaxed text-warm-700 max-w-xl">
+          The worst part of a renovation is not knowing what happens next.
+          Here is the whole process, start to finish, before you commit
           from start to finish.
         </p>
       </div>
@@ -62,13 +64,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-warm-50 flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-warm-200 border border-warm-300 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold font-display text-warm-400">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold font-display text-warm-900">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold font-display text-warm-400">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold font-display text-warm-900">
                 {item.title}
               </h3>
               {item.content}

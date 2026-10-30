@@ -13,7 +13,22 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const { name, email, phone, address, projectType, description, timeline, budget, service } = body;
+    const {
+      name,
+      email,
+      phone,
+      address,
+      projectType,
+      description,
+      timeline,
+      budget,
+      service,
+      estimateLow,
+      estimateHigh,
+      estimatePoint,
+      leadScore,
+      leadBand,
+    } = body;
 
     if (!name || !email || !phone) {
       return NextResponse.json(
@@ -42,6 +57,11 @@ export async function POST(request: Request) {
         timeline: timeline || "",
         budget: budget || "",
         service: service || "",
+        estimateLow: estimateLow ?? null,
+        estimateHigh: estimateHigh ?? null,
+        estimatePoint: estimatePoint ?? null,
+        leadScore: leadScore ?? null,
+        leadBand: leadBand ?? null,
         source: "stackedconstruction.co",
         submittedAt: new Date().toISOString(),
       }),

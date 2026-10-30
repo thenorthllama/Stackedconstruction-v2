@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { clusters, getArticlesByCluster } from "@/data/blog";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 // ─── Static generation ──────────────────────────────────────────────────────────
 
@@ -22,13 +24,13 @@ export async function generateMetadata({
   const cluster = clusters.find((c) => c.slug === slug);
   if (!cluster) return {};
   return {
-    title: `${cluster.name} | Stacked Construction Blog`,
+    title: `${cluster.name} — Renovation Guides`,
     description: cluster.description,
     alternates: {
       canonical: `https://stackedconstruction.co/blog/category/${slug}`,
     },
     openGraph: {
-      title: `${cluster.name} | Stacked Construction Blog`,
+      title: `${cluster.name} — Renovation Guides`,
       description: cluster.description,
     },
   };
@@ -51,16 +53,12 @@ export default async function ClusterPage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
-        <section className="relative min-h-[60vh] bg-warm-900">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`${cluster.name} articles`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...pageHeroes.blog} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
@@ -68,7 +66,7 @@ export default async function ClusterPage({
               <div className="lg:col-span-8">
                 <Link
                   href="/blog"
-                  className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400 transition-colors hover:text-white"
+                  className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-warm-400 transition-colors hover:text-white"
                 >
                   <svg
                     className="h-3 w-3"
@@ -86,16 +84,16 @@ export default async function ClusterPage({
                   </svg>
                   Blog
                 </Link>
-                <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   {cluster.name}
                 </h1>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
                   {cluster.description}
                 </p>
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm text-warm-500">
+                  <p className="text-sm text-warm-300">
                     {clusterArticles.length}{" "}
                     {clusterArticles.length === 1 ? "article" : "articles"}
                   </p>
@@ -103,6 +101,7 @@ export default async function ClusterPage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Articles list — editorial divider layout ────────────── */}
@@ -110,12 +109,12 @@ export default async function ClusterPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   All Articles
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   {cluster.name}{" "}
-                  <em className="font-light italic text-warm-600">Guides</em>
+                  <em className="not-italic">Guides</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
@@ -131,10 +130,10 @@ export default async function ClusterPage({
                           <h3 className="font-display text-xl font-semibold leading-snug text-warm-900 transition-colors group-hover:text-warm-700 sm:text-2xl">
                             {article.title}
                           </h3>
-                          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-warm-600">
+                          <p className="mt-2 line-clamp-2 text-base leading-relaxed text-warm-700">
                             {article.excerpt}
                           </p>
-                          <div className="mt-3 flex items-center gap-3 text-xs text-warm-500">
+                          <div className="mt-3 flex items-center gap-3 text-sm text-warm-600">
                             <time dateTime={article.publishedAt}>
                               {new Date(
                                 article.publishedAt
@@ -149,7 +148,7 @@ export default async function ClusterPage({
                           </div>
                         </div>
                         <svg
-                          className="h-5 w-5 shrink-0 text-warm-400 transition-all group-hover:translate-x-1 group-hover:text-warm-900"
+                          className="h-5 w-5 shrink-0 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-900"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -177,16 +176,17 @@ export default async function ClusterPage({
 
         {/* ── Other Categories — dark ─────────────────────────────── */}
         {otherClusters.length > 0 && (
-          <section className="bg-warm-900 py-24 lg:py-36">
+          <section className="bg-warm-50 px-3 py-6 lg:px-4">
+            <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-300">
                     Explore More
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
                     Other{" "}
-                    <em className="font-light italic text-warm-300">Topics</em>
+                    <em className="not-italic">Topics</em>
                   </h2>
                 </div>
                 <div className="lg:col-span-7 lg:col-start-6">
@@ -201,12 +201,12 @@ export default async function ClusterPage({
                           <h3 className="font-display text-2xl font-semibold text-white transition-colors group-hover:text-warm-300">
                             {otherCluster.name}
                           </h3>
-                          <p className="mt-2 text-sm leading-relaxed text-warm-500">
+                          <p className="mt-2 text-base leading-relaxed text-warm-300">
                             {otherCluster.description}
                           </p>
                         </div>
                         <svg
-                          className="h-5 w-5 shrink-0 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
+                          className="h-5 w-5 shrink-0 text-warm-300 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -225,27 +225,24 @@ export default async function ClusterPage({
                 </div>
               </div>
             </div>
+          </div>
           </section>
         )}
 
         {/* ── CTA — immersive ──────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Ready to Get{" "}
-              <em className="font-light italic text-warm-300">Started?</em>
+              <em className="not-italic">Started?</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
-              obligation — just an honest conversation about your vision.
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
+              obligation — just a straight conversation about your project.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
@@ -258,10 +255,11 @@ export default async function ClusterPage({
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
-                Request Estimate Online
+                Request a Consultation
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

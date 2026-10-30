@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
-  title: "Licenses, Credentials & Certifications | Stacked Construction",
+  title: "Licenses, Credentials & Insurance",
   description:
     "Stacked Construction holds Florida Certified Building Contractor license CBC1269972. View our verified credentials, insurance, and professional qualifications for remodeling in Southwest Florida.",
   alternates: {
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Licenses & Credentials | Stacked Construction",
     description:
-      "Florida Certified Building Contractor CBC1269972. Licensed and insured for kitchen remodeling, bathroom renovation, and full-home projects across Lee, Collier, and Charlotte counties.",
+      "Florida Certified Building Contractor CBC1269972. Licensed and insured for kitchen remodeling, bathroom renovation, and full-home projects across Lee and Collier counties.",
   },
 };
 
@@ -66,35 +68,32 @@ export default function CredentialsPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero ─────────────────────────────────────────────────── */}
-        <section className="relative min-h-[50vh] bg-warm-900">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Stacked Construction licenses and credentials"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/70 to-warm-900/40" />
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[50vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...pageHeroes.credentials} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/70 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
             <div>
               <Link
                 href="/about"
-                className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400 transition-colors hover:text-warm-200"
+                className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-warm-400 transition-colors hover:text-warm-200"
               >
                 <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                 </svg>
                 About Stacked Construction
               </Link>
-              <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Licenses &amp;{" "}
-                <em className="font-light italic text-warm-300">Credentials</em>
+                <em className="not-italic">Credentials</em>
               </h1>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Primary License ───────────────────────────────────────── */}
@@ -102,14 +101,14 @@ export default function CredentialsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   State Licensure
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   Florida{" "}
-                  <em className="font-light italic text-warm-600">Certified</em>
+                  <em className="not-italic">Certified</em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
                   Hiring a licensed contractor in Florida protects your home, your investment, and your legal rights as a homeowner. Verify ours anytime through the Florida DBPR.
                 </p>
               </div>
@@ -123,7 +122,7 @@ export default function CredentialsPage() {
                           <svg className="h-5 w-5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                           </svg>
-                          <span className="text-xs font-semibold uppercase tracking-widest text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
+                          <span className="text-sm font-semibold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
                             Active License
                           </span>
                         </div>
@@ -137,15 +136,15 @@ export default function CredentialsPage() {
                     </div>
                     <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
                       <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">License Number</p>
-                        <p className="mt-1 font-mono text-lg font-bold text-warm-900">CBC1269972</p>
+                        <p className="text-sm font-semibold text-warm-600">License Number</p>
+                        <p className="mt-1 text-lg font-bold tabular-nums text-warm-900">CBC1269972</p>
                       </div>
                       <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">License Holder</p>
+                        <p className="text-sm font-semibold text-warm-600">License Holder</p>
                         <p className="mt-1 text-sm font-semibold text-warm-900">Junior Da Silva</p>
                       </div>
                       <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">Issuing Authority</p>
+                        <p className="text-sm font-semibold text-warm-600">Issuing Authority</p>
                         <p className="mt-1 text-sm text-warm-700">Florida DBPR</p>
                       </div>
                     </div>
@@ -172,7 +171,7 @@ export default function CredentialsPage() {
                       </svg>
                       <div>
                         <h3 className="font-display text-xl font-bold text-warm-900">General Liability Insurance</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-warm-600">
+                        <p className="mt-2 text-base leading-relaxed text-warm-700">
                           Stacked Construction carries general liability insurance protecting your home and property throughout every project. Certificate of insurance available upon request.
                         </p>
                       </div>
@@ -187,7 +186,7 @@ export default function CredentialsPage() {
                       </svg>
                       <div>
                         <h3 className="font-display text-xl font-bold text-warm-900">Workers Compensation</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-warm-600">
+                        <p className="mt-2 text-base leading-relaxed text-warm-700">
                           All work on your property is covered under proper workers compensation, protecting both our team and our clients from liability.
                         </p>
                       </div>
@@ -200,16 +199,17 @@ export default function CredentialsPage() {
         </section>
 
         {/* ── Why Licensing Matters ─────────────────────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   Homeowner Protection
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
                   Why Licensing{" "}
-                  <em className="font-light italic text-warm-300">Matters</em>
+                  <em className="not-italic">Matters</em>
                 </h2>
               </div>
               <div className="lg:col-span-6 lg:col-start-7">
@@ -221,7 +221,7 @@ export default function CredentialsPage() {
                     },
                     {
                       title: "Permit Authority",
-                      desc: "Only licensed contractors can pull permits in Lee, Collier, and Charlotte counties. Unpermitted work must be disclosed at sale and can result in costly corrections.",
+                      desc: "Only licensed contractors can pull permits in Lee and Collier counties. Unpermitted work must be disclosed at sale and can result in costly corrections.",
                     },
                     {
                       title: "DBPR Accountability",
@@ -234,13 +234,14 @@ export default function CredentialsPage() {
                   ].map((item, i) => (
                     <div key={i} className="py-8 first:pt-0 last:pb-0">
                       <h3 className="font-display text-xl font-semibold text-white">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-warm-500">{item.desc}</p>
+                      <p className="mt-2 text-base leading-relaxed text-warm-300">{item.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Service Areas Authorized ──────────────────────────────── */}
@@ -248,20 +249,19 @@ export default function CredentialsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Licensed Service Area
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   Where We&apos;re{" "}
-                  <em className="font-light italic text-warm-600">Authorized</em>
+                  <em className="not-italic">Authorized</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
                 <div className="grid gap-4 sm:grid-cols-3">
                   {[
-                    { county: "Lee County", cities: ["Fort Myers", "Cape Coral", "Bonita Springs", "Estero", "Fort Myers Beach", "Sanibel"] },
-                    { county: "Collier County", cities: ["Naples", "Marco Island", "Bonita Springs"] },
-                    { county: "Charlotte County", cities: ["Punta Gorda", "Port Charlotte", "North Port"] },
+                    { county: "Lee County", cities: ["Fort Myers", "Cape Coral", "Bonita Springs", "Estero", "North Fort Myers"] },
+                    { county: "Collier County", cities: ["Naples"] },
                   ].map((area) => (
                     <div key={area.county} className="rounded-xl bg-warm-50 p-6">
                       <h3 className="font-display text-lg font-bold text-warm-900">{area.county}</h3>
@@ -276,8 +276,8 @@ export default function CredentialsPage() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-8 text-sm leading-relaxed text-warm-600">
-                  Our Florida Certified Building Contractor license (CBC1269972) authorizes us to perform residential and commercial construction, remodeling, and renovation work across the entire state of Florida. We primarily serve Southwest Florida across Lee, Collier, and Charlotte counties.
+                <p className="mt-8 text-base leading-relaxed text-warm-700">
+                  Our Florida Certified Building Contractor license (CBC1269972) authorizes us to perform residential and commercial construction, remodeling, and renovation work across the entire state of Florida. We primarily serve Naples, Bonita Springs, Fort Myers, and Cape Coral across Lee and Collier counties.
                 </p>
               </div>
             </div>
@@ -288,12 +288,12 @@ export default function CredentialsPage() {
         <section className="bg-warm-50 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-600">
                 Our Team
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 The Experts{" "}
-                <em className="font-light italic text-warm-600">Behind the Work</em>
+                <em className="not-italic">Behind the Work</em>
               </h2>
             </div>
             <div className="grid gap-6 lg:grid-cols-3">
@@ -321,13 +321,13 @@ export default function CredentialsPage() {
                 <div key={member.href} className="rounded-2xl bg-white p-8">
                   <h3 className="font-display text-xl font-bold text-warm-900">{member.name}</h3>
                   <p className="mt-1 text-sm text-warm-600">{member.title}</p>
-                  <p className="mt-3 text-xs font-medium text-warm-500">{member.credential}</p>
+                  <p className="mt-3 text-sm font-medium text-warm-600">{member.credential}</p>
                   {member.verifyUrl && (
                     <a
                       href={member.verifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 transition-colors hover:text-green-900"
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 transition-colors hover:text-green-900"
                     >
                       <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -350,27 +350,27 @@ export default function CredentialsPage() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">Start Your Project</p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <p className="mb-5 eyebrow text-warm-300">Start Your Project</p>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Work With a Contractor{" "}
-              <em className="font-light italic text-warm-300">You Can Verify</em>
+              <em className="not-italic">You Can Verify</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Our license, insurance, and credentials are publicly verifiable. Schedule your free consultation and ask us anything.
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
+              Our license, insurance, and credentials are publicly verifiable. Schedule your consultation and ask us anything.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href="tel:+12397850166" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100">
                 Call (239) 785-0166
               </a>
               <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10">
-                Request Free Estimate
+                Request a Consultation
               </Link>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />

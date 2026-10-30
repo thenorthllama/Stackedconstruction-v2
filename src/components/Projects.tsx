@@ -1,45 +1,39 @@
 const projects = [
   {
-    title: "Modern Kitchen Transformation",
-    category: "Kitchen",
-    image: "/images/kitchen-modern-island.webp",
-    span: "lg:col-span-2 lg:row-span-2",
-    aspect: "aspect-square",
+    title: "Marble Waterfall Island Kitchen",
+    location: "Naples, FL",
+    image: "/images/kitchen-marble-waterfall.webp",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    title: "Coastal Reeded Island Kitchen",
+    location: "Fort Myers, FL",
+    image: "/images/kitchen-coastal-reeded.webp",
+    aspect: "aspect-[4/3]",
   },
   {
     title: "Spa-Inspired Master Bath",
-    category: "Bathroom",
+    location: "Cape Coral, FL",
     image: "/images/service-bathroom.webp",
-    span: "",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    title: "Poolside Oak Kitchen",
+    location: "Bonita Springs, FL",
+    image: "/images/kitchen-poolside-oak.webp",
     aspect: "aspect-[4/3]",
   },
   {
     title: "Outdoor Fireplace & Living",
-    category: "Outdoor Living",
+    location: "Fort Myers, FL",
     image: "/images/service-outdoor.webp",
-    span: "",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    title: "Coastal White & Beam Kitchen",
-    category: "Kitchen",
-    image: "/images/kitchen-coastal-white-beams.webp",
-    span: "",
-    aspect: "aspect-[4/3]",
+    aspect: "aspect-[4/5]",
   },
   {
     title: "Luxury Living Room Remodel",
-    category: "Luxury",
+    location: "Naples, FL",
     image: "/images/service-luxury.webp",
-    span: "",
     aspect: "aspect-[4/3]",
-  },
-  {
-    title: "Poolside Oak Kitchen",
-    category: "Kitchen",
-    image: "/images/kitchen-poolside-oak.webp",
-    span: "lg:col-span-2",
-    aspect: "aspect-[2/1]",
   },
 ];
 
@@ -47,46 +41,57 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-warm-50 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-              Our Work
-            </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
-              Project{" "}
-              <em className="font-light italic">Gallery</em>
+        {/* Header — reference layout: big serif left, copy middle, pill right */}
+        <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-5">
+            <h2 className="font-display text-5xl font-bold leading-[1.02] text-warm-900 sm:text-6xl">
+              Recent{" "}<em className="not-italic">Projects</em>
             </h2>
           </div>
-          <a
-            href="/gallery"
-            className="shrink-0 rounded-full border border-warm-900 px-6 py-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-all hover:bg-warm-900 hover:text-white"
-          >
-            View All
-          </a>
+          <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-4">
+            From kitchens to complete home transformations, we bring your
+            vision to life with expert craftsmanship and transparent pricing.
+          </p>
+          <div className="lg:col-span-3 lg:text-right">
+            <a
+              href="/gallery"
+              className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors hover:bg-warm-800"
+            >
+              View All
+              <span
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[200px]">
+        {/* Reference card style — image with rounded corners, location bullet + title below */}
+        <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <article
-              key={project.title}
-              className={`group relative overflow-hidden bg-warm-800 ${project.span}`}
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-                style={{ backgroundImage: `url('${project.image}')` }}
-                role="img"
-                aria-label={project.title}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-warm-900/80 via-warm-900/10 to-transparent opacity-80 transition-opacity group-hover:opacity-100" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
-                <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.2em] text-warm-300">
-                  {project.category}
-                </span>
-                <h3 className="font-display text-base font-semibold text-white lg:text-lg">
+            <a key={project.title} href="/gallery" className="group block">
+              <article>
+                <div className={`relative overflow-hidden rounded-3xl bg-warm-200 ${project.aspect}`}>
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                    style={{ backgroundImage: `url('${project.image}')` }}
+                    role="img"
+                    aria-label={`${project.title} — ${project.location}`}
+                  />
+                </div>
+                <p className="mt-5 flex items-center gap-2 text-xs font-medium text-warm-600">
+                  <span className="h-1.5 w-1.5 rounded-full bg-warm-400" aria-hidden="true" />
+                  {project.location}
+                </p>
+                <h3 className="mt-1.5 font-display text-xl font-semibold text-warm-900 transition-colors group-hover:text-warm-700">
                   {project.title}
                 </h3>
-              </div>
-            </article>
+              </article>
+            </a>
           ))}
         </div>
       </div>

@@ -1,35 +1,30 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+// Self-hosted variable fonts — zero external requests, no layout shift
+const dmSans = localFont({
+  src: "../fonts/dm-sans-latin-wght-normal.woff2",
   variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: "100 900",
+  style: "normal",
   display: "swap",
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stackedconstruction.co"),
   title: {
-    default: "Stacked Construction | Kitchen & Bathroom Remodeling Fort Myers, Naples, Cape Coral",
+    default: "Design-Build Contractor in Southwest Florida | Stacked",
     template: "%s | Stacked Construction",
   },
   description:
-    "Southwest Florida's trusted remodeling contractor. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL. 150+ projects completed. Licensed & insured. Free estimate.",
+    "Licensed design-build contractor guiding Southwest Florida homeowners from first idea to final walk-through. Kitchens, baths & whole-home renovations. FL #CBC1269972.",
   openGraph: {
-    title: "Stacked Construction | Premium Home Remodeling in Southwest Florida",
+    title: "Stacked Construction | Design-Build in Southwest Florida",
     description:
-      "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, Bonita Springs, and all of SWFL. 150+ projects. Licensed & insured.",
+      "One team designs and builds your project, from first idea to final walk-through. Naples, Bonita Springs, Fort Myers, and Cape Coral. Licensed & insured.",
     type: "website",
     locale: "en_US",
     siteName: "Stacked Construction",
@@ -45,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stacked Construction | Premium Home Remodeling in SWFL",
+    title: "Stacked Construction | Design-Build in SWFL",
     description:
-      "Expert kitchen, bathroom, outdoor living, and full home renovations across Fort Myers, Naples, Cape Coral, and all of SWFL.",
+      "Design-build renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral — guided from first idea to final walk-through.",
     images: ["/images/og-image.webp"],
   },
   alternates: {
@@ -90,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className={`${dmSans.variable} ${playfairDisplay.variable} antialiased`}>
+      <body className={`${dmSans.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N5ZBGB7P"
@@ -99,6 +94,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* First stop in the tab order — lets keyboard users bypass the nav */}
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

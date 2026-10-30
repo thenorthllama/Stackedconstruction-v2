@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Stacked Construction",
+  title: "Privacy Policy",
   description:
     "Privacy policy for Stacked Construction. Learn how we collect, use, and protect your personal information.",
   alternates: {
@@ -15,21 +15,23 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero ─────────────────────────────────────────────── */}
-        <section className="bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative bg-warm-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+            <p className="mb-4 eyebrow text-warm-300">
               Legal
             </p>
-            <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               Privacy{" "}
-              <em className="font-light italic text-warm-300">Policy</em>
+              <em className="not-italic">Policy</em>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
               Last updated: March 17, 2026
             </p>
           </div>
+        </div>
         </section>
 
         {/* ── Content ──────────────────────────────────────────── */}

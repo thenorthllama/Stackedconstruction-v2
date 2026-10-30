@@ -3,7 +3,12 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services, cities, getServiceBySlug } from "@/data/seo";
+import { planSteps, promises } from "@/data/brand";
 import { notFound } from "next/navigation";
+import { HeroImage } from "@/components/ui/hero-image";
+import { serviceHeroes, pageHeroes } from "@/data/images";
+import { getProjectsByService } from "@/data/projects";
+import RelatedProjects from "@/components/RelatedProjects";
 
 // ─── Static generation ──────────────────────────────────────────────────────────
 
@@ -22,7 +27,7 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: service.metaTitle,
+    title: { absolute: service.metaTitle },
     description: service.metaDescription,
     alternates: {
       canonical: `https://stackedconstruction.co/services/${slug}`,
@@ -68,8 +73,6 @@ export default async function ServicePage({
       { "@type": "City", name: "Naples" },
       { "@type": "City", name: "Cape Coral" },
       { "@type": "City", name: "Bonita Springs" },
-      { "@type": "City", name: "Marco Island" },
-      { "@type": "City", name: "Punta Gorda" },
     ],
   };
 
@@ -99,82 +102,109 @@ export default async function ServicePage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* ── Hero — cinematic, image-led ───────────────────────────── */}
-        <section className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`${service.name} project by Stacked Construction`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+        <section className="bg-warm-50 px-3 pt-2 lg:px-4">
+          <div className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...(serviceHeroes[service.slug] ?? pageHeroes.default)} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[80vh] lg:px-10 lg:pb-24">
             <div className="grid w-full gap-12 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-8">
-                <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400">
+                <p className="mb-5 eyebrow text-warm-400">
                   Our Services
                 </p>
-                <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+                <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   {service.headline}{" "}
-                  <em className="font-light italic text-warm-300">
+                  <em className="not-italic">
                     {service.headlineItalic}
                   </em>
                 </h1>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
-                    href="tel:+12397850166"
-                    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
-                  >
-                    Call (239) 785-0166
-                  </a>
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
-                  >
-                    Get Free Estimate
-                  </a>
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+              >
+                Request a Consultation
+              </a>
+              <a
+                href="tel:+12397850166"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
+              >
+                Call (239) 785-0166
+              </a>
                 </div>
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm leading-relaxed text-warm-400">
+                  <p className="text-base leading-relaxed text-warm-200">
                     {service.description}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </section>
+
+        {/* ── Kitchen cost calculator promo — kitchen page only ──────── */}
+        {service.slug === "kitchen-remodeling" && (
+          <section className="bg-warm-50 py-16 lg:py-20">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <div className="flex flex-col items-center gap-8 rounded-2xl border border-warm-200 bg-white p-10 text-center lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <p className="mb-3 eyebrow text-warm-700">
+                    Free Tool
+                  </p>
+                  <h2 className="font-display text-2xl font-bold leading-tight text-warm-900 sm:text-3xl">
+                    Curious what your kitchen remodel really costs?
+                  </h2>
+                  <p className="mt-3 max-w-xl text-warm-600">
+                    Answer a few questions about your cabinets, countertops & finishes
+                    and get an instant, personalized price range — no phone call
+                    required.
+                  </p>
+                </div>
+                <Link
+                  href="/kitchen-cost-calculator"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full bg-warm-900 px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-warm-800"
+                >
+                  Try the Cost Calculator →
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── Philosophy / Intro — editorial split ──────────────────── */}
         <section className="bg-warm-50 py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-                  Our Approach
+                <p className="mb-4 eyebrow text-warm-600">
+                  What usually goes wrong
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Why Stacked
-                  <br />
-                  <em className="font-light italic text-warm-600">
-                    for {service.shortName}
-                  </em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  What most people learn too late
                 </h2>
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
+                  You shouldn&apos;t have to chase anyone for an update, and you
+                  shouldn&apos;t learn what something costs after it&apos;s
+                  built.
+                </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   {service.intro}
                 </p>
                 <div className="mt-10 grid grid-cols-3 gap-8 border-t border-warm-200 pt-10">
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
-                      150+
+                      40+
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Projects
                     </p>
                   </div>
@@ -182,7 +212,7 @@ export default async function ServicePage({
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       5/5
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Rating
                     </p>
                   </div>
@@ -190,7 +220,7 @@ export default async function ServicePage({
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       10+
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Years
                     </p>
                   </div>
@@ -201,15 +231,16 @@ export default async function ServicePage({
         </section>
 
         {/* ── What's Included — dark, asymmetric two-col ────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+              <p className="mb-4 eyebrow text-warm-300">
                 What&apos;s Included
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                 {service.shortName}{" "}
-                <em className="font-light italic text-warm-300">
+                <em className="not-italic">
                   Scope of Work
                 </em>
               </h2>
@@ -219,9 +250,9 @@ export default async function ServicePage({
                 {benefitsLeft.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + 1).padStart(2, "0")}
+                      {i + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -231,9 +262,9 @@ export default async function ServicePage({
                 {benefitsRight.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + midpoint + 1).padStart(2, "0")}
+                      {i + midpoint + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -241,6 +272,7 @@ export default async function ServicePage({
               </div>
             </div>
           </div>
+        </div>
         </section>
 
         {/* ── Process strip — inline, editorial ─────────────────────── */}
@@ -248,24 +280,22 @@ export default async function ServicePage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-                  How It Works
+                <p className="mb-4 eyebrow text-warm-600">
+                  How we work
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  From Vision
-                  <br />
-                  <em className="font-light italic text-warm-600">to Reality</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  You&apos;ll always know{" "}<em className="not-italic">
+                    the next step
+                  </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  A transparent process that keeps you informed and in control at every stage.
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
+                  Three steps from first conversation to final walk-through. No
+                  mystery about what happens after you call.
                 </p>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
                 {[
-                  { step: "01", title: "Free Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
-                  { step: "02", title: "Detailed Proposal", desc: "You receive a clear, line-item estimate with material options, a realistic timeline, and a transparent scope of work." },
-                  { step: "03", title: "Expert Build", desc: "Our skilled crew brings your project to life with quality materials, clean job sites, and consistent progress updates." },
-                  { step: "04", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
+                  ...planSteps.map((p) => ({ step: p.number, title: p.title, desc: p.body })),
                 ].map((s) => (
                   <div key={s.step} className="py-10 first:pt-0 last:pb-0">
                     <div className="flex items-start gap-6">
@@ -276,36 +306,54 @@ export default async function ServicePage({
                         <h3 className="mb-2 font-display text-xl font-semibold text-warm-900">
                           {s.title}
                         </h3>
-                        <p className="text-sm leading-relaxed text-warm-600">
+                        <p className="text-base leading-relaxed text-warm-700">
                           {s.desc}
                         </p>
                       </div>
                     </div>
                   </div>
                 ))}
+                <div className="mt-12 rounded-3xl bg-white p-7 lg:p-8">
+                  <p className="font-display text-lg font-semibold text-warm-900">
+                    What you can hold us to
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {promises.map((promise) => (
+                      <li
+                        key={promise}
+                        className="flex items-start gap-2.5 text-base leading-relaxed text-warm-700"
+                      >
+                        <span
+                          className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark"
+                          aria-hidden="true"
+                        />
+                        {promise}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ── Service Areas — dark, editorial grid ──────────────────── */}
-        <section className="bg-warm-900 py-24 lg:py-36">
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   Where We Work
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  {service.shortName} Experts
-                  <br />
-                  <em className="font-light italic text-warm-300">
-                    Across SWFL
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
+                  We may have worked{" "}<em className="not-italic">
+                    on your street
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
-                  We provide expert {service.name.toLowerCase()} across three
-                  counties and six major cities in Southwest Florida.
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
+                  {service.name} across Naples, Bonita Springs, Fort Myers, and
+                  Cape Coral — and the communities around them.
                 </p>
               </div>
               <div className="lg:col-span-6 lg:col-start-7">
@@ -320,12 +368,12 @@ export default async function ServicePage({
                         <span className="font-display text-2xl font-semibold text-white transition-colors group-hover:text-warm-300">
                           {city.name}
                         </span>
-                        <span className="ml-4 text-xs font-medium uppercase tracking-widest text-warm-600">
+                        <span className="ml-4 text-sm font-medium text-warm-300">
                           {city.county}
                         </span>
                       </div>
                       <svg
-                        className="h-5 w-5 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
+                        className="h-5 w-5 text-warm-300 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -344,7 +392,14 @@ export default async function ServicePage({
               </div>
             </div>
           </div>
+        </div>
         </section>
+
+        <RelatedProjects
+          projects={getProjectsByService(service.slug)}
+          heading={`Recent ${service.name.toLowerCase()} projects`}
+          intro="Finished homes across Southwest Florida, photographed as we handed them over."
+        />
 
         {/* ── FAQ — open, editorial ─────────────────────────────────── */}
         {service.faqs.length > 0 && (
@@ -352,13 +407,11 @@ export default async function ServicePage({
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-600">
                     Common Questions
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                    Frequently
-                    <br />
-                    <em className="font-light italic text-warm-600">Asked</em>
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                    Frequently{" "}<em className="not-italic">Asked</em>
                   </h2>
                 </div>
                 <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -372,7 +425,7 @@ export default async function ServicePage({
                           {faq.question}
                         </h3>
                         <svg
-                          className="mt-1 h-5 w-5 shrink-0 text-warm-400 transition-transform group-open:rotate-45"
+                          className="mt-1 h-5 w-5 shrink-0 text-warm-600 transition-transform group-open:rotate-45"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -386,7 +439,7 @@ export default async function ServicePage({
                           />
                         </svg>
                       </summary>
-                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-600">
+                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-700">
                         {faq.answer}
                       </p>
                     </details>
@@ -398,12 +451,12 @@ export default async function ServicePage({
               <div className="mt-16 border-t border-warm-200 pt-12 lg:mt-20 lg:pt-14">
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
+                    <p className="eyebrow text-warm-600">
                       Start Your Project
                     </p>
                     <p className="mt-2 font-display text-2xl font-bold leading-snug text-warm-900 sm:text-3xl">
                       Questions answered?{" "}
-                      <em className="font-light italic text-warm-600">
+                      <em className="not-italic">
                         Let&apos;s talk.
                       </em>
                     </p>
@@ -431,9 +484,9 @@ export default async function ServicePage({
                     </a>
                     <a
                       href="/contact"
-                      className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-warm-500 hover:text-warm-900"
+                      className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-900 transition-all hover:border-warm-500 hover:text-warm-900"
                     >
-                      Get Free Estimate
+                      Request a Consultation
                     </a>
                   </div>
                 </div>
@@ -443,42 +496,39 @@ export default async function ServicePage({
         )}
 
         {/* ── CTA — immersive, full-bleed ──────────────────────────── */}
-        <section className="relative bg-warm-900 py-28 lg:py-40">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
+        <section className="bg-warm-50 px-3 py-6 lg:px-4">
+          <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-500">
-              Start Your Project
+            <p className="mb-5 eyebrow text-warm-400">
+              Start the conversation
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Ready to Discuss{" "}
-              <em className="font-light italic text-warm-300">
-                Your {service.shortName} Project?
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
+              Tell us about your{" "}
+              <em className="not-italic">
+                {service.shortName.toLowerCase()}
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
-              Schedule your free in-home consultation. No pressure, no
-              obligation — just an honest conversation about your vision and a
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
+              We come to you and tell you honestly what&apos;s realistic. No charge, no
+              obligation — just a straight conversation about your project and a
               clear path forward.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+              >
+                Request a Consultation
+              </a>
+              <a
                 href="tel:+12397850166"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
               >
                 Call (239) 785-0166
               </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10"
-              >
-                Request Estimate Online
-              </a>
             </div>
           </div>
+        </div>
         </section>
       </main>
       <Footer />
