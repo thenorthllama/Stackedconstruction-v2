@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: { absolute: "Request a Consultation | Stacked Construction" },
@@ -69,13 +71,8 @@ export default function ContactPage() {
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[50vh] bg-warm-900 lg:min-h-[60vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Stacked Construction remodeling project"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...pageHeroes.contact} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[60vh] lg:px-10 lg:pb-24">
@@ -83,11 +80,11 @@ export default function ContactPage() {
               <p className="mb-5 eyebrow text-warm-400">
                 Contact Us
               </p>
-              <h1 className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Let&apos;s Build Something{" "}
-                <em className="not-italic font-semibold text-accent">Beautiful</em>
+                <em className="not-italic">Beautiful</em>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
                 We come to you and tell you honestly what&apos;s realistic. No charge, no
                 obligation — just a straight conversation about your project.
               </p>
@@ -102,14 +99,14 @@ export default function ContactPage() {
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               {/* Left — contact info */}
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   What happens next
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   Tell us what you have in{" "}
-                  <em className="not-italic font-semibold text-accent-dark">mind</em>
+                  <em className="not-italic">mind</em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
                   Two short steps. We only ask for what we need to call you
                   back — the rest we&apos;ll work out together.
                 </p>
@@ -128,7 +125,7 @@ export default function ContactPage() {
                       >
                         {i + 1}
                       </span>
-                      <span className="text-sm leading-relaxed text-warm-700">
+                      <span className="text-base leading-relaxed text-warm-700">
                         {item}
                       </span>
                     </li>
@@ -176,7 +173,7 @@ export default function ContactPage() {
                     </svg>
                     info@stackedconstruction.co
                   </a>
-                  <div className="flex items-start gap-3 text-base text-warm-600">
+                  <div className="flex items-start gap-3 text-base text-warm-700">
                     <svg
                       className="mt-0.5 h-5 w-5 shrink-0 text-warm-400"
                       fill="none"
@@ -202,17 +199,17 @@ export default function ContactPage() {
                     href="https://share.google/CiOmnBxQhr2fIJXjj"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-accent-dark transition-colors hover:text-warm-900"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-warm-900 underline decoration-accent-dark decoration-2 underline-offset-4 transition-colors hover:decoration-warm-900"
                   >
                     View our Google Business Profile →
                   </a>
                 </div>
 
                 <div className="mt-10 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     Hours
                   </p>
-                  <div className="space-y-1 text-sm text-warm-600">
+                  <div className="space-y-1 text-base text-warm-700">
                     <p>Monday – Friday: 7am – 6pm</p>
                     <p>Saturday: 8am – 2pm</p>
                     <p>Sunday: Closed</p>
@@ -220,10 +217,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     Service Areas
                   </p>
-                  <p className="text-sm leading-relaxed text-warm-600">
+                  <p className="text-base leading-relaxed text-warm-700">
                     Naples, Bonita Springs, Fort Myers, Cape Coral, and
                     surrounding communities across Lee &amp; Collier Counties.
                   </p>
@@ -242,13 +239,13 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 border-t border-warm-200 pt-8">
-                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                  <p className="mb-3 text-sm font-semibold text-warm-900">
                     License
                   </p>
-                  <p className="text-sm text-warm-600">
+                  <p className="text-base text-warm-700">
                     Florida Certified Building Contractor
                   </p>
-                  <p className="mt-1 text-sm font-medium text-warm-900">
+                  <p className="mt-1 text-base font-medium text-warm-900">
                     #CBC1269972
                   </p>
                 </div>

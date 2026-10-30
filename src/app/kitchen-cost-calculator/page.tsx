@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KitchenCostCalculator from "@/components/KitchenCostCalculator";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: { absolute: "Kitchen Remodel Cost Calculator | SWFL Planning Tool" },
@@ -74,12 +76,7 @@ export default function KitchenCostCalculatorPage() {
         {/* ── Hero + calculator ─────────────────────────────────── */}
         <section id="top" className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative bg-warm-900 pb-24 pt-32 lg:pb-32 lg:pt-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Kitchen remodel by Stacked Construction"
-          />
+          <HeroImage {...pageHeroes.calculator} />
           <div className="absolute inset-0 bg-gradient-to-b from-warm-900/95 via-warm-900/90 to-warm-900" />
 
           <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
@@ -87,21 +84,19 @@ export default function KitchenCostCalculatorPage() {
               Free · 60-Second Estimate
             </p>
             <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              See what your kitchen{" "}
-              <em className="not-italic font-semibold text-accent">really costs</em> — before
-              you ever pick up the phone.
+              See what your kitchen really costs
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
               Answer a few quick questions about your cabinets, countertops & finishes
               and get a real Southwest Florida price range built from actual Stacked
               Construction project data.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-warm-500">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-warm-300">
               <span className="font-medium text-warm-400">Licensed CBC1269972</span>
-              <span className="text-warm-700">&bull;</span>
+              <span className="text-warm-300">&bull;</span>
               <span className="font-medium text-warm-400">5/5 Rating</span>
-              <span className="text-warm-700">&bull;</span>
+              <span className="text-warm-300">&bull;</span>
               <span className="font-medium text-warm-400">Insured &amp; Bonded</span>
             </div>
           </div>
@@ -117,17 +112,15 @@ export default function KitchenCostCalculatorPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   How It Works
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Built From
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">Real Job Costs</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Built From{" "}<em className="not-italic">Real Job Costs</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   Most online calculators quote a single national average and call it
                   a day. Ours is built the way we actually price a job — cabinets by
                   the linear foot, countertops and flooring by the square foot,
@@ -137,19 +130,19 @@ export default function KitchenCostCalculatorPage() {
                 <div className="mt-10 grid grid-cols-1 gap-8 border-t border-warm-200 pt-10 sm:grid-cols-3">
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">7</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Cost Categories
                     </p>
                   </div>
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">10</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       SWFL Cities Priced
                     </p>
                   </div>
                   <div>
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">60s</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       To Your Estimate
                     </p>
                   </div>
@@ -164,12 +157,12 @@ export default function KitchenCostCalculatorPage() {
           <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 eyebrow text-warm-500">
+              <p className="mb-4 eyebrow text-warm-300">
                 What We Price
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                 Every Line Item{" "}
-                <em className="not-italic font-semibold text-accent">That Matters</em>
+                <em className="not-italic">That Matters</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 lg:grid-cols-2">
@@ -187,9 +180,9 @@ export default function KitchenCostCalculatorPage() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-5 border-t border-warm-800 p-8 first:border-t-0 lg:p-10 lg:odd:border-t-0">
                   <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                    {String(i + 1).padStart(2, "0")}
+                    {i + 1}
                   </span>
-                  <p className="pt-1 text-base leading-relaxed text-warm-400">{item}</p>
+                  <p className="pt-1 text-base leading-relaxed text-warm-200">{item}</p>
                 </div>
               ))}
             </div>
@@ -202,13 +195,11 @@ export default function KitchenCostCalculatorPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Common Questions
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Frequently
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">Asked</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Frequently{" "}<em className="not-italic">Asked</em>
                 </h2>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -219,7 +210,7 @@ export default function KitchenCostCalculatorPage() {
                         {faq.question}
                       </h3>
                       <svg
-                        className="mt-1 h-5 w-5 shrink-0 text-warm-400 transition-transform group-open:rotate-45"
+                        className="mt-1 h-5 w-5 shrink-0 text-warm-600 transition-transform group-open:rotate-45"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -229,7 +220,7 @@ export default function KitchenCostCalculatorPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                       </svg>
                     </summary>
-                    <p className="mt-4 pr-12 text-base leading-relaxed text-warm-600">{faq.answer}</p>
+                    <p className="mt-4 pr-12 text-base leading-relaxed text-warm-700">{faq.answer}</p>
                   </details>
                 ))}
               </div>
@@ -240,20 +231,15 @@ export default function KitchenCostCalculatorPage() {
         {/* ── CTA — immersive, full-bleed ─────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Prefer to Talk It Through?
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Skip the Calculator —{" "}
-              <em className="not-italic font-semibold text-accent">Talk to a Human</em>
+              <em className="not-italic">Talk to a Human</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               We come to you and tell you honestly what&apos;s realistic. No charge, no obligation —
               just an honest conversation about your vision and a clear path forward.
             </p>

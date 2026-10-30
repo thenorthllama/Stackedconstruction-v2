@@ -9,30 +9,24 @@ export default function CTA() {
         <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
           {/* Left — heading */}
           <div>
-            <p className="mb-4 eyebrow text-warm-500">
-              Start the conversation
-            </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl lg:text-6xl">
-              Tell us what you
-              <br />
-              have in{" "}
-              <em className="not-italic font-semibold text-accent-dark">mind</em>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              Tell us about your project
             </h2>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-warm-700">
               We&apos;ll walk your space, talk through what&apos;s realistic at
               your budget, and show you the plan before anyone picks up a tool.
               No charge, no obligation, and no pressure to decide on the spot.
             </p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-warm-500">
+            <p className="mt-4 max-w-md text-base font-semibold leading-relaxed text-warm-900">
               We reply within one business day.
             </p>
 
-            <p className="mt-6 eyebrow text-warm-600">
+            <p className="mt-6 text-sm font-medium text-warm-700">
               Licensed &amp; Insured · FL #CBC1269972
             </p>
 
             {/* Contact info below the copy */}
-            <div className="mt-10 flex flex-col gap-3 text-sm text-warm-600">
+            <div className="mt-10 flex flex-col gap-3 text-base text-warm-700">
               <a
                 href="tel:+12397850166"
                 className="inline-flex items-center gap-2 transition-colors hover:text-warm-900"

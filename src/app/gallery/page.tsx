@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryContent from "./gallery-content";
+import { HeroImage } from "@/components/ui/hero-image";
 
 export const metadata: Metadata = {
   title: { absolute: "Project Gallery | Stacked Construction" },
@@ -27,13 +28,8 @@ export default function GalleryPage() {
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/kitchen-modern-island.webp')" }}
-            role="img"
-            aria-label="Stacked Construction project gallery"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage src="/images/kitchen-modern-island.webp" alt="Stacked Construction project gallery" />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
@@ -41,11 +37,11 @@ export default function GalleryPage() {
               <p className="mb-5 eyebrow text-warm-400">
                 Our Portfolio
               </p>
-              <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Project{" "}
-                <em className="not-italic font-semibold text-accent">Gallery</em>
+                <em className="not-italic">Gallery</em>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
                 Every project tells a story of collaboration, craftsmanship, and
                 attention to detail. Explore our work across Southwest Florida.
               </p>
@@ -72,7 +68,7 @@ export default function GalleryPage() {
                   <p className="font-display text-5xl font-bold text-white lg:text-6xl">
                     {stat.value}
                   </p>
-                  <p className="mt-2 text-sm font-medium uppercase tracking-wider text-warm-500">
+                  <p className="mt-2 text-sm font-medium text-warm-300">
                     {stat.label}
                   </p>
                 </div>
@@ -85,22 +81,17 @@ export default function GalleryPage() {
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/kitchen-luxury-white.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Ready to Build{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 Something Beautiful?
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               Every great project starts with a conversation. Tell us about your
               vision and we&apos;ll show you what&apos;s possible.
             </p>

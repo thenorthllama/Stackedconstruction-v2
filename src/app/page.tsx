@@ -7,7 +7,6 @@ import Stakes, { PlanSteps } from "@/components/Stakes";
 import {
   AboutStatement,
   TeamList,
-  ProjectCategories,
   CaseStudies,
 } from "@/components/HomeEditorial";
 import Testimonials from "@/components/Testimonials";
@@ -15,6 +14,9 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
+// Proof first: a homeowner decides whether to trust us on finished work and
+// reviews, so those come straight after the offer. Services, process, and the
+// "why us" argument follow once there's a reason to keep reading.
 export default function Home() {
   return (
     <>
@@ -24,24 +26,21 @@ export default function Home() {
         <Hero />
         {/* 2. Instant proof — stats strip */}
         <TrustBar />
-        {/* 3. The stakes — the problem is the hook */}
-        <Stakes />
-        {/* 4. What we do — services, framed as solutions */}
+        {/* 3. Local proof — real finished projects */}
+        <CaseStudies />
+        {/* 4. Social proof — reviews */}
+        <Testimonials />
+        {/* 5. What we do — services, framed as solutions */}
         <Services />
-        {/* 5. The guide — empathy, then competency */}
-        <AboutStatement />
-        <TeamList />
         {/* 6. The plan — three steps */}
         <PlanSteps />
-        {/* 7. Visual interlude + service links */}
-        <ProjectCategories />
-        {/* 8. Local proof — numbered case studies, one per city */}
-        <CaseStudies />
-        {/* 9. Social proof — reviews */}
-        <Testimonials />
-        {/* 10. Objections — FAQ */}
+        {/* 7. Why us — the stakes, then the guide */}
+        <Stakes />
+        <AboutStatement />
+        <TeamList />
+        {/* 8. Objections — FAQ */}
         <FAQ />
-        {/* 11. Action — contact form */}
+        {/* 9. Action — contact form */}
         <CTA />
       </main>
       <Footer />

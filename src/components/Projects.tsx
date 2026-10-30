@@ -45,19 +45,17 @@ export default function Projects() {
         <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-5">
             <h2 className="font-display text-5xl font-bold leading-[1.02] text-warm-900 sm:text-6xl">
-              Recent
-              <br />
-              <em className="not-italic font-semibold text-accent-dark">Projects</em>
+              Recent{" "}<em className="not-italic">Projects</em>
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-4">
+          <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-4">
             From kitchens to complete home transformations, we bring your
             vision to life with expert craftsmanship and transparent pricing.
           </p>
           <div className="lg:col-span-3 lg:text-right">
             <a
               href="/gallery"
-              className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
+              className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors hover:bg-warm-800"
             >
               View All
               <span
@@ -85,7 +83,7 @@ export default function Projects() {
                     aria-label={`${project.title} — ${project.location}`}
                   />
                 </div>
-                <p className="mt-5 flex items-center gap-2 text-xs font-medium text-warm-500">
+                <p className="mt-5 flex items-center gap-2 text-xs font-medium text-warm-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-warm-400" aria-hidden="true" />
                   {project.location}
                 </p>

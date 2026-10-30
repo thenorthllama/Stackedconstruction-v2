@@ -1,6 +1,8 @@
 // Project portfolio data — powers /projects and /projects/[slug]
 // Copy describes only what is verifiable in the project photography.
 // Alt text carried over from the SEO image map produced with the photo set.
+// Keep the array newest first — the homepage case studies show the first four,
+// and /projects, the sitemap, and city/service pages pick up every entry.
 
 export interface ProjectImage {
   src: string;
@@ -13,6 +15,21 @@ export interface ProjectSection {
   heading: string;
   body: string;
   images: ProjectImage[];
+}
+
+export interface ProjectStory {
+  heading: string;
+  headingAccent: string;
+  paragraphs: string[];
+  /** Problem → plan → result beats shown under the narrative */
+  beats: { title: string; body: string }[];
+}
+
+export interface BeforeAfterPair {
+  title: string;
+  caption: string;
+  before: ProjectImage;
+  after: ProjectImage;
 }
 
 export interface ProjectData {
@@ -39,10 +56,212 @@ export interface ProjectData {
   hero: ProjectImage;
   gallery: ProjectImage[];
   sections?: ProjectSection[];
+  /** Narrative of how the project came about */
+  story?: ProjectStory;
+  beforeAfter?: BeforeAfterPair[];
+  /** Extra internal links for the Related Pages list */
+  relatedLinks?: { href: string; label: string }[];
   faqs: { question: string; answer: string }[];
 }
 
+const OC = "/images/projects/open-concept-kitchen-remodel-cape-coral";
+
 export const projects: ProjectData[] = [
+  // ───────────────────────────────────────────────────────────────────────────
+  {
+    slug: "sunken-living-room-open-kitchen-remodel-cape-coral",
+    name: "Open-Concept Kitchen & Sunken Living Room Removal",
+    shortName: "Open-Concept Flood Rebuild",
+    city: "Cape Coral",
+    citySlug: "cape-coral",
+    county: "Lee County",
+    service: "Kitchen Remodeling",
+    serviceSlug: "kitchen-remodeling",
+    headline: "From Flooded to",
+    headlineAccent: "Wide Open",
+    metaTitle: "Sunken Living Room Removal & Open Kitchen | Cape Coral",
+    metaDescription:
+      "A DIY plumbing leak flooded this Cape Coral home. We removed the sunken living room, leveled the house, and built an open kitchen with a 6-seat island.",
+    summary:
+      "A flooded Cape Coral pool home rebuilt on one level — sunken living room removed, galley kitchen opened into a white shaker kitchen with a six-seat island, and the house repainted inside and out.",
+    intro:
+      "What used to be three separate zones — a closed-in galley kitchen, a dining area, and a living room that stepped down below the rest of the house — is now one continuous room on a single level. The step-down is gone, and the same wood-look plank flooring runs uninterrupted from the kitchen to the pool sliders. The kitchen was rebuilt around a large center island with seating for six under three clear-glass pendants, backed by full runs of white shaker cabinetry and Colonial White granite countertops. The original vaulted ceiling and exposed wood beams stayed — against fresh white walls they finally read as a feature instead of fighting the tan paint. Outside, the house was repainted top to bottom, trading the old burgundy accents for a clean white that suits the palms and the white metal roof.",
+    specs: [
+      { label: "Layout", value: "Single-level open plan — kitchen, dining, and living in one room" },
+      { label: "Island", value: "Large center island with seating for six, paneled back" },
+      { label: "Cabinetry", value: "White shaker, brushed nickel bar pulls" },
+      { label: "Countertops", value: "Colonial White granite" },
+      { label: "Lighting", value: "Three clear-glass pendants with brass hardware, recessed cans" },
+      { label: "Flooring", value: "Wood-look plank, one continuous floor throughout" },
+      { label: "Ceiling", value: "Vaulted, original exposed wood beams kept" },
+      { label: "Paint", value: "Full interior and exterior repaint" },
+    ],
+    scope: [
+      "Sunken living room eliminated and the floor brought up to one continuous level",
+      "Closed-in galley kitchen opened into the main living and dining space",
+      "Full white shaker cabinet installation along the perimeter and island",
+      "Large center island built with seating for six and three glass pendants overhead",
+      "Colonial White granite countertops on the perimeter and island",
+      "Wood-look plank flooring run continuously from the kitchen to the pool sliders",
+      "Complete interior repaint, keeping the original vaulted ceiling and exposed beams",
+      "Complete exterior repaint, replacing the burgundy accents with clean white",
+    ],
+    hero: {
+      src: `${OC}-01.webp`,
+      alt: "Open-concept white shaker kitchen with a large granite island, glass pendants, and vaulted beamed ceiling in a Cape Coral, FL remodel",
+    },
+    story: {
+      heading: "It Started With a",
+      headingAccent: "Washing Machine",
+      paragraphs: [
+        "Our client owned this Cape Coral pool home and was renting it out. The tenant described himself as a plumber — he wasn't licensed — and decided to relocate the washing machine on his own. One of the valves he installed wasn't put in correctly. It failed, and the water went everywhere.",
+        "By the time the owner called us, the flooring and finishes were already coming out. We could have put everything back the way it was: the galley kitchen, the tile, the living room that dropped a step below the rest of the house. Instead we pitched a different idea. Since the floors were open anyway, this was the cheapest moment the house would ever have to fix its layout.",
+        "We proposed removing the sunken living room, putting the whole house on one level, and opening the kitchen into the living space with a large island at the center. The owner agreed — and while we were at it, we repainted the house inside and out.",
+      ],
+      beats: [
+        {
+          title: "The problem",
+          body: "An unlicensed washer relocation left a bad valve that failed and flooded the house.",
+        },
+        {
+          title: "The plan",
+          body: "Don't rebuild the old floor plan. Remove the step-down, level the house, and open the kitchen.",
+        },
+        {
+          title: "The result",
+          body: "One level, one floor, one room — an open kitchen with a six-seat island and a freshly painted house.",
+        },
+      ],
+    },
+    beforeAfter: [
+      {
+        title: "The sunken living room",
+        caption:
+          "The living room used to step down below the kitchen and dining area. Now it's one level, one floor, and one room from the kitchen to the far wall.",
+        before: {
+          src: `${OC}-before-01.webp`,
+          alt: "Before: sunken living room stepping down from the kitchen and dining area in a Cape Coral home",
+        },
+        after: {
+          src: `${OC}-07.webp`,
+          alt: "After: single-level open kitchen and dining area with white shaker cabinets and a large island in Cape Coral",
+        },
+      },
+      {
+        title: "The galley kitchen",
+        caption:
+          "Maple cabinets boxed the kitchen into a narrow galley. The rebuilt kitchen opens to the whole room, with a six-seat island at its center.",
+        before: {
+          src: `${OC}-before-04.webp`,
+          alt: "Before: narrow galley kitchen with maple cabinets and tile floor in a Cape Coral home",
+        },
+        after: {
+          src: `${OC}-03.webp`,
+          alt: "After: white shaker kitchen with a large granite island seating six under clear-glass pendants in Cape Coral",
+        },
+      },
+      {
+        title: "The living room",
+        caption:
+          "Same sliders, same pool view. The step-down and the tan walls are gone, and the floor now runs straight through from the kitchen.",
+        before: {
+          src: `${OC}-before-02.webp`,
+          alt: "Before: sunken living room with tan walls and a step-down edge facing the pool sliders in Cape Coral",
+        },
+        after: {
+          src: `${OC}-09.webp`,
+          alt: "After: bright single-level living room with white walls, wood-look flooring, and pool view in a Cape Coral remodel",
+        },
+      },
+      {
+        title: "The exterior",
+        caption:
+          "A full exterior repaint replaced the burgundy accents with clean white that suits the palms and the white metal roof.",
+        before: {
+          src: `${OC}-exterior-before.webp`,
+          alt: "Before: Cape Coral home exterior with burgundy accents and a white metal roof",
+        },
+        after: {
+          src: `${OC}-exterior-after.webp`,
+          alt: "After: freshly painted white Cape Coral pool home exterior with metal roof and palm trees",
+        },
+      },
+    ],
+    gallery: [
+      {
+        src: `${OC}-02.webp`,
+        alt: "Large granite kitchen island with six bar stools and three glass pendants in an open-concept Cape Coral kitchen",
+      },
+      {
+        src: `${OC}-03.webp`,
+        alt: "White shaker kitchen with island seating and vaulted ceiling beams in a Cape Coral, FL remodel by Stacked Construction",
+      },
+      {
+        src: `${OC}-04.webp`,
+        alt: "Long granite island and white shaker cabinets opening to the living room in a Cape Coral open-concept remodel",
+      },
+      {
+        src: `${OC}-05.webp`,
+        alt: "White shaker cabinets, Colonial White granite counters, and white range in a remodeled Cape Coral kitchen",
+      },
+      {
+        src: `${OC}-06.webp`,
+        alt: "Laundry closet with stacked washer-dryer beside white shaker kitchen cabinets in a Cape Coral home",
+      },
+      {
+        src: `${OC}-07.webp`,
+        alt: "Open dining area and kitchen on one level after removing a sunken living room in Cape Coral, FL",
+      },
+      {
+        src: `${OC}-08.webp`,
+        alt: "Dining area with paneled wainscoting and slider to the pool in a remodeled Cape Coral home",
+      },
+      {
+        src: `${OC}-09.webp`,
+        alt: "Single-level living room with white walls, exposed wood beams, and pool view in Cape Coral, FL",
+      },
+      {
+        src: `${OC}-exterior-after.webp`,
+        alt: "Freshly painted white exterior of a remodeled Cape Coral pool home by Stacked Construction",
+      },
+    ],
+    relatedLinks: [
+      {
+        href: "/blog/open-concept-kitchen-remodel-cape-coral",
+        label: "Open concept kitchen remodels in Cape Coral — guide",
+      },
+      { href: "/services/home-renovation", label: "Whole-home renovation in Southwest Florida" },
+      { href: "/services/flooring-tile", label: "Flooring and tile installation" },
+    ],
+    faqs: [
+      {
+        question: "Can you remove a sunken living room in a Florida home?",
+        answer:
+          "Yes. Most Cape Coral homes are built on a concrete slab, so the usual approach is to build the sunken area up to match the rest of the house and then run one continuous floor across both. It's structural work that needs a permit and inspections, and it's far less disruptive when the flooring is already coming out — which is exactly why it made sense on this job.",
+      },
+      {
+        question: "Should I rebuild the same layout after water damage?",
+        answer:
+          "Not automatically. Once flooring and finishes are torn out after a leak, the house is already partly opened up, so layout changes like removing a step-down or opening a kitchen cost less than they ever will again. It's worth getting a quote both ways — like-for-like and the layout you actually want — before the rebuild starts.",
+      },
+      {
+        question: "Will insurance pay for an upgraded layout after a flood?",
+        answer:
+          "That depends on your policy. Insurance typically covers restoring the damage, and upgrades beyond like-for-like are usually the owner's cost. We itemize the estimate so the repair portion and the upgrade portion are easy to separate for your adjuster.",
+      },
+      {
+        question: "Do I need a licensed plumber to move a washing machine?",
+        answer:
+          "If it means new supply valves, a new drain, or moving lines through walls, yes. That work usually needs a permit in Lee County, and a valve that isn't installed correctly sits under constant water pressure until the day it lets go — which is what flooded this house. A licensed plumber and a permit cost a lot less than a flood.",
+      },
+      {
+        question: "How long does a remodel like this take?",
+        answer:
+          "A single-level conversion plus a full kitchen rebuild and paint runs longer than a kitchen alone — typically several months depending on permit timing, cabinet lead times, and the condition of the slab. We give you a realistic schedule in the proposal and keep you updated as it moves.",
+      },
+    ],
+  },
+
   // ───────────────────────────────────────────────────────────────────────────
   {
     slug: "sage-green-kitchen-remodel-cape-coral",

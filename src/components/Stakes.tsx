@@ -12,23 +12,18 @@ export default function Stakes() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <p className="eyebrow mb-5 text-warm-500">Why it matters</p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-              The wrong builder costs
-              <br />
-              <em className="not-italic font-semibold text-accent-dark">
-                more than money
-              </em>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+              Bad builders cost more than money
             </h2>
             {/* Relocated from the hero, where it floated as an orphan above the
                 H1 and competed for first fixation. It opens this section
                 properly — the empathy statement that earns the stakes below. */}
-            <blockquote className="mt-7 border-l-2 border-accent-dark pl-6">
-              <p className="font-display text-xl leading-snug text-warm-900 sm:text-2xl">
+            <blockquote className="mt-7">
+              <p className="text-xl font-medium leading-snug text-warm-900 sm:text-2xl">
                 {guide.empathy}
               </p>
             </blockquote>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-warm-700">
               You already know this, which is probably why you&apos;ve been
               putting the project off. Almost everyone we sit down with has
               either lived through one of these or heard about it from a
@@ -37,14 +32,14 @@ export default function Stakes() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <ul className="divide-y divide-warm-200 border-t border-warm-200">
+            <ul className="space-y-5">
               {stakes.points.map((point) => (
-                <li key={point} className="flex items-start gap-4 py-5">
+                <li key={point} className="flex items-start gap-4">
                   <span
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-dark"
+                    className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-warm-900"
                     aria-hidden="true"
                   />
-                  <span className="text-base leading-relaxed text-warm-700">
+                  <span className="text-lg leading-relaxed text-warm-900">
                     {point}
                   </span>
                 </li>
@@ -53,17 +48,17 @@ export default function Stakes() {
 
             {/* The turn — swing back to the positive */}
             <div className="mt-10 rounded-3xl bg-warm-50 p-7 lg:p-8">
-              <p className="font-display text-xl font-semibold text-warm-900">
+              <p className="font-display text-2xl font-bold text-warm-900">
                 None of that is inevitable.
               </p>
-              <p className="mt-3 text-base leading-relaxed text-warm-600">
+              <p className="mt-3 text-base leading-relaxed text-warm-700">
                 It happens when nobody is accountable for the whole project.
                 We design and build with one team, so there&apos;s one plan, one
                 schedule, and one person answering your calls.
               </p>
               <Link
                 href="/process"
-                className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-colors hover:text-accent-dark"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-warm-900 underline underline-offset-4 transition-colors hover:text-accent-dark"
               >
                 See how we work
                 <svg
@@ -100,37 +95,27 @@ export function PlanSteps() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-5 text-warm-400">How we work</p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                Three steps, and you
-                <br />
-                <em className="not-italic font-semibold text-accent">
-                  always know the next one
-                </em>
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
+                Three steps, no guesswork
               </h2>
             </div>
-            <p className="max-w-sm text-sm leading-relaxed text-warm-300 lg:col-span-4 lg:col-start-9">
+            <p className="max-w-sm text-lg leading-relaxed text-warm-200 lg:col-span-4 lg:col-start-9">
               No mystery about what happens after you call. Here&apos;s the
               whole process, start to finish.
             </p>
           </div>
 
           <ol className="grid gap-10 lg:grid-cols-3 lg:gap-8">
-            {planStepsList.map((step) => (
-              <li
-                key={step.number}
-                className="border-t border-white/15 pt-7"
-              >
-                <div className="flex items-baseline gap-4">
-                  <span className="font-display text-4xl font-bold text-accent">
-                    {step.number}
-                  </span>
-                  <p className="eyebrow text-warm-400">{step.summary}</p>
-                </div>
-                <h3 className="mt-4 font-display text-2xl font-semibold text-white">
+            {planStepsList.map((step, i) => (
+              <li key={step.number} className="rounded-3xl bg-warm-800 p-8">
+                <span className="font-display text-5xl font-bold text-accent" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <h3 className="mt-5 font-display text-2xl font-bold text-white">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-warm-300">
+                <p className="mt-1 text-sm font-medium text-warm-300">{step.summary}</p>
+                <p className="mt-4 text-base leading-relaxed text-warm-200">
                   {step.body}
                 </p>
               </li>

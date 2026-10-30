@@ -34,9 +34,9 @@ export default function Process() {
             <p className="mb-4 eyebrow text-warm-400">
               How we work
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-white sm:text-5xl">
               You&apos;ll always know{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 the next step
               </em>
             </h2>
@@ -56,7 +56,7 @@ export default function Process() {
               <h3 className="mb-3 font-display text-lg font-semibold text-white">
                 {s.title}
               </h3>
-              <p className="text-sm leading-relaxed text-warm-500">
+              <p className="text-base leading-relaxed text-warm-300">
                 {s.description}
               </p>
             </div>

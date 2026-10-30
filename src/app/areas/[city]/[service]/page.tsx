@@ -9,6 +9,10 @@ import {
   getServiceBySlug,
   getAllCityServiceParams,
 } from "@/data/seo";
+import { HeroImage } from "@/components/ui/hero-image";
+import { serviceHeroes, pageHeroes } from "@/data/images";
+import { getProjectsByService } from "@/data/projects";
+import RelatedProjects from "@/components/RelatedProjects";
 
 // ---------------------------------------------------------------------------
 // Static params
@@ -94,13 +98,8 @@ export default async function CityServicePage({
         {/* ── Hero — cinematic, image-led ───────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`${service.name} in ${city.name}, Florida`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...(serviceHeroes[service.slug] ?? pageHeroes.default)} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[80vh] lg:px-10 lg:pb-24">
@@ -109,15 +108,15 @@ export default async function CityServicePage({
                 <p className="mb-5 eyebrow text-warm-400">
                   {city.county} &middot; {city.name}, {city.state}
                 </p>
-                <h1 className="max-w-4xl font-display text-4xl font-bold leading-[0.92] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+                <h1 className="max-w-5xl font-display text-4xl font-bold leading-[0.92] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
                   {service.name}{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     in {city.name}
                   </em>
-                  <span className="mt-3 block font-display text-2xl font-light text-warm-300 sm:text-3xl lg:text-4xl">
-                    Designed and built by one team
-                  </span>
                 </h1>
+                <p className="mt-4 text-2xl font-medium text-warm-200 sm:text-3xl">
+                  Designed and built by one team
+                </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <a
                 href="/contact"
@@ -143,22 +142,22 @@ export default async function CityServicePage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   {service.name} in {city.name}
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   We know these{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     houses
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
                   Licensed &amp; insured design-build contractor — FL
                   #CBC1269972. One team designs it and builds it.
                 </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   {serviceIntro}
                 </p>
                 <div className="mt-10 flex gap-8 border-t border-warm-200 pt-10">
@@ -216,9 +215,9 @@ export default async function CityServicePage({
               <p className="mb-4 eyebrow text-warm-400">
                 What&apos;s included
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                 What&apos;s in your{" "}
-                <em className="not-italic font-semibold text-accent">
+                <em className="not-italic">
                   proposal
                 </em>
               </h2>
@@ -228,9 +227,9 @@ export default async function CityServicePage({
                 {benefitsLeft.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + 1).padStart(2, "0")}
+                      {i + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -240,9 +239,9 @@ export default async function CityServicePage({
                 {benefitsRight.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + midpoint + 1).padStart(2, "0")}
+                      {i + midpoint + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -259,15 +258,12 @@ export default async function CityServicePage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
-                <p className="eyebrow mb-5 text-warm-500">How we work</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Three steps, and you{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
-                    always know the next one
-                  </em>
+                <p className="eyebrow mb-5 text-warm-600">How we work</p>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  Three steps, no guesswork
                 </h2>
               </div>
-              <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-4 lg:col-start-9">
+              <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-4 lg:col-start-9">
                 The same process on every project, whether it&apos;s one room or
                 the whole house.
               </p>
@@ -279,12 +275,12 @@ export default async function CityServicePage({
                     <span className="font-display text-3xl font-bold text-accent-dark">
                       {step.number}
                     </span>
-                    <p className="eyebrow text-warm-500">{step.summary}</p>
+                    <p className="eyebrow text-warm-600">{step.summary}</p>
                   </div>
                   <h3 className="mt-3 font-display text-xl font-semibold text-warm-900">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-warm-600">
+                  <p className="mt-2.5 text-base leading-relaxed text-warm-700">
                     {step.body}
                   </p>
                 </li>
@@ -296,7 +292,7 @@ export default async function CityServicePage({
               </p>
               <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
                 {promises.map((promise) => (
-                  <li key={promise} className="flex items-start gap-2.5 text-sm leading-relaxed text-warm-600">
+                  <li key={promise} className="flex items-start gap-2.5 text-base leading-relaxed text-warm-700">
                     <span className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark" aria-hidden="true" />
                     {promise}
                   </li>
@@ -311,13 +307,11 @@ export default async function CityServicePage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Service Area
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  {city.name}
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  {city.name}{" "}<em className="not-italic">
                     Neighborhoods
                   </em>
                 </h2>
@@ -336,19 +330,26 @@ export default async function CityServicePage({
           </div>
         </section>
 
+        <RelatedProjects
+          projects={[
+            ...getProjectsByService(service.slug).filter((p) => p.citySlug === city.slug),
+            ...getProjectsByService(service.slug).filter((p) => p.citySlug !== city.slug),
+          ]}
+          heading={`Recent ${service.name.toLowerCase()} projects`}
+          intro={`Finished homes in ${city.name} and nearby, photographed as we handed them over.`}
+        />
+
         {/* ── FAQ — editorial split with details ───────────────────── */}
         {localizedFaqs.length > 0 && (
           <section className="bg-warm-50 py-24 lg:py-36">
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-600">
                     Common Questions
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                    Frequently
-                    <br />
-                    <em className="not-italic font-semibold text-accent-dark">Asked</em>
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                    Frequently{" "}<em className="not-italic">Asked</em>
                   </h2>
                 </div>
                 <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -362,7 +363,7 @@ export default async function CityServicePage({
                           {faq.question}
                         </h3>
                         <svg
-                          className="mt-1 h-5 w-5 shrink-0 text-warm-400 transition-transform group-open:rotate-45"
+                          className="mt-1 h-5 w-5 shrink-0 text-warm-600 transition-transform group-open:rotate-45"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -376,7 +377,7 @@ export default async function CityServicePage({
                           />
                         </svg>
                       </summary>
-                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-600">
+                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-700">
                         {faq.answer}
                       </p>
                     </details>
@@ -387,9 +388,9 @@ export default async function CityServicePage({
               <div className="mt-16 border-t border-warm-200 pt-12 lg:mt-20 lg:pt-14">
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="eyebrow text-warm-500">Start Your Project</p>
+                    <p className="eyebrow text-warm-600">Start Your Project</p>
                     <p className="mt-2 font-display text-2xl font-bold leading-snug text-warm-900 sm:text-3xl">
-                      Questions answered? <em className="not-italic font-semibold text-accent-dark">Let&apos;s talk.</em>
+                      Questions answered? <em className="not-italic">Let&apos;s talk.</em>
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:items-center">
@@ -415,7 +416,7 @@ export default async function CityServicePage({
                     </a>
                     <a
                       href="/contact"
-                      className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-warm-500 hover:text-warm-900"
+                      className="inline-flex items-center justify-center rounded-full border border-warm-300 px-6 py-3 text-sm font-medium text-warm-900 transition-all hover:border-warm-500 hover:text-warm-900"
                     >
                       Request a Consultation
                     </a>
@@ -429,18 +430,13 @@ export default async function CityServicePage({
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 eyebrow text-warm-400">
               Start the conversation
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Let&apos;s walk your{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 {city.name} home
               </em>
             </h2>

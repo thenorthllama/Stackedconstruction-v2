@@ -8,7 +8,7 @@ function AnimatedHero() {
     <h1 className="font-display text-5xl leading-[0.95] font-bold tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
       From idea to
       <br />
-      <em className="not-italic font-semibold text-accent">finished home</em>
+      <em className="not-italic">finished home</em>
     </h1>
   );
 }

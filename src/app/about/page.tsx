@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "About Us — Licensed Design-Build",
   description:
-    "Licensed and insured remodeling company in Southwest Florida. Nearly a decade of experience in kitchen, bathroom, and full-home renovations built on trust, transparency, and disciplined execution.",
+    "Licensed and insured remodeling company in Southwest Florida. More than ten years of experience in kitchen, bathroom, and full-home renovations built on trust, transparency, and disciplined execution.",
   alternates: {
     canonical: "https://stackedconstruction.co/about",
   },
@@ -77,13 +79,8 @@ export default function AboutPage() {
         {/* ── Hero ────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Stacked Construction team at work"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...pageHeroes.about} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
@@ -92,20 +89,20 @@ export default function AboutPage() {
                 <p className="mb-5 eyebrow text-warm-400">
                   About Us
                 </p>
-                <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+                <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   Built on Trust,{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     Not Promises
                   </em>
                 </h1>
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm leading-relaxed text-warm-400">
+                  <p className="text-base leading-relaxed text-warm-200">
                     Licensed and insured remodeling across Southwest Florida.
-                    Nearly a decade of hands-on experience.
+                    More than ten years of hands-on experience.
                   </p>
-                  <p className="mt-3 text-xs text-warm-500">
+                  <p className="mt-3 text-sm text-warm-300">
                     FL License #CBC1269972
                   </p>
                 </div>
@@ -120,22 +117,22 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Who We Are
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   The Standard{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     Has Changed
                   </em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <div className="space-y-6 text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <div className="space-y-6 text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   <p>
                     We are a licensed and insured construction company specializing
                     in kitchen remodels, bathroom renovations, and full-home
-                    transformations. With nearly a decade of hands-on experience
+                    transformations. With more than ten years of hands-on experience
                     across hardscaping, cabinetry, granite, and interior
                     remodeling, the operation is built on a clear observation:
                     homeowners are not just buying a finished product — they are
@@ -160,7 +157,7 @@ export default function AboutPage() {
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       40+
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Projects
                     </p>
                   </div>
@@ -168,7 +165,7 @@ export default function AboutPage() {
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       10yr
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Experience
                     </p>
                   </div>
@@ -176,7 +173,7 @@ export default function AboutPage() {
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       5/5
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Rating
                     </p>
                   </div>
@@ -192,12 +189,12 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-2">
               <div>
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   Our Mission
                 </p>
                 <h2 className="mb-8 font-display text-3xl font-bold leading-[1.1] text-white sm:text-4xl">
                   Precision, Transparency,{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     Protection
                   </em>
                 </h2>
@@ -212,12 +209,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   Our Vision
                 </p>
                 <h2 className="mb-8 font-display text-3xl font-bold leading-[1.1] text-white sm:text-4xl">
                   Raising the{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     Standard
                   </em>
                 </h2>
@@ -239,20 +236,20 @@ export default function AboutPage() {
         <section className="bg-white py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="mb-4 eyebrow text-warm-500">
+              <p className="mb-4 eyebrow text-warm-600">
                 What Drives Us
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 The Objective Is{" "}
-                <em className="not-italic font-semibold text-accent-dark">Bigger</em>
+                <em className="not-italic">Bigger</em>
               </h2>
-              <p className="mt-8 text-lg leading-[1.8] text-warm-600 lg:text-xl">
+              <p className="mt-8 text-lg leading-[1.8] text-warm-700 lg:text-xl">
                 The objective is not just to complete a project. The objective is
                 to deliver a finished space that reflects the client&apos;s vision
                 while ensuring they felt informed, respected, and confident
                 throughout the entire process.
               </p>
-              <p className="mt-6 text-lg leading-[1.8] text-warm-600 lg:text-xl">
+              <p className="mt-6 text-lg leading-[1.8] text-warm-700 lg:text-xl">
                 The long-term direction is controlled growth — scaling into one
                 of the leading remodeling and construction companies in Southwest
                 Florida, with expansion into new home construction, while
@@ -269,16 +266,16 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   What We Stand For
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
                   Core{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     Values
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
                   These are not aspirational statements. They are operational
                   standards that define how every project is run and how every
                   decision is made.
@@ -292,13 +289,13 @@ export default function AboutPage() {
                       className="flex items-start gap-6 py-8 first:pt-0 last:pb-0"
                     >
                       <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                        {String(i + 1).padStart(2, "0")}
+                        {i + 1}
                       </span>
                       <div>
                         <h3 className="font-display text-xl font-semibold text-white sm:text-2xl">
                           {value.title}
                         </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-warm-500">
+                        <p className="mt-2 text-base leading-relaxed text-warm-300">
                           {value.description}
                         </p>
                       </div>
@@ -316,15 +313,15 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 grid gap-6 lg:grid-cols-2 lg:items-end">
               <div>
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Our Team
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-warm-900 sm:text-5xl">
                   The People{" "}
-                  <em className="not-italic font-semibold text-accent-dark">Behind the Work</em>
+                  <em className="not-italic">Behind the Work</em>
                 </h2>
               </div>
-              <p className="max-w-md text-base leading-relaxed text-warm-600 lg:text-right">
+              <p className="max-w-md text-base leading-relaxed text-warm-700 lg:text-right">
                 Meet the team bringing expertise, craft, and accountability to every remodeling project across Southwest Florida.
               </p>
             </div>
@@ -334,7 +331,7 @@ export default function AboutPage() {
                   name: "Junior Da Silva",
                   title: "Founder & Licensed Contractor",
                   credentials: "FL License #CBC1269972",
-                  description: "Founder and lead contractor with nearly a decade of hands-on remodeling experience. Builds every project on transparency, accountability, and craftsmanship.",
+                  description: "Founder and lead contractor with more than ten years of hands-on remodeling experience. Builds every project on transparency, accountability, and craftsmanship.",
                   href: "/about/junior-da-silva",
                 },
                 {
@@ -359,9 +356,9 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-warm-900">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-warm-600">{member.title}</p>
-                  <p className="mt-1 text-xs text-warm-400">{member.credentials}</p>
-                  <p className="mt-4 text-sm leading-relaxed text-warm-600">{member.description}</p>
+                  <p className="mt-1 text-sm font-medium text-warm-700">{member.title}</p>
+                  <p className="mt-1 text-sm text-warm-600">{member.credentials}</p>
+                  <p className="mt-4 text-base leading-relaxed text-warm-700">{member.description}</p>
                   <Link
                     href={member.href}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-warm-900 transition-colors hover:text-warm-600"
@@ -380,22 +377,17 @@ export default function AboutPage() {
         {/* ── CTA ─────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Let&apos;s Talk About{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 Your Vision
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               We come to you and tell you honestly what&apos;s realistic. No charge, no
               obligation — just an honest conversation about your project and a
               clear path forward.

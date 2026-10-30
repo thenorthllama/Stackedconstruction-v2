@@ -23,7 +23,13 @@
   --color-brand-ink: #1a1714;
 
   --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-playfair-display);
+  /* Headlines share the geometric sans with the body so they sit with the
+     rounded geometric logo; weight and tight tracking do the display work. */
+  --font-display: var(--font-dm-sans);
+}
+
+.font-display {
+  letter-spacing: -0.03em;
 }
 
 body {
@@ -109,15 +115,15 @@ section[id],
 
 /* ── Editorial primitives (reference design language) ──────────────────────── */
 
-/* Dotted eyebrow label: "• About Us" */
+/* Section label: "• About us". Readable size, sentence case — the old 11px
+   tracked caps were too small for the audience. */
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  font-size: 0.6875rem;
+  gap: 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .eyebrow::before {
@@ -190,14 +196,25 @@ section[id],
 
 /* ── Blog article prose styles ─────────────────────────────────────────────── */
 
+/* ~70 characters a line at 18px — comfortable reading for long articles */
+.prose-warm {
+  max-width: 70ch;
+}
+
 .prose-warm h2 {
   font-family: var(--font-display);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-warm-900);
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .prose-warm h2 {
+    font-size: 1.875rem;
+  }
 }
 
 .prose-warm h3 {
@@ -211,9 +228,9 @@ section[id],
 }
 
 .prose-warm p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--color-warm-600);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-warm-800);
   margin-bottom: 1.25rem;
 }
 
@@ -227,9 +244,9 @@ section[id],
 }
 
 .prose-warm li {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--color-warm-600);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-warm-800);
 }
 
 .prose-warm strong {
@@ -237,15 +254,19 @@ section[id],
   color: var(--color-warm-900);
 }
 
+/* Copper fails contrast as text colour, so links are ink with a copper underline */
 .prose-warm a {
-  color: var(--color-accent);
+  color: var(--color-warm-900);
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.15s ease;
+  text-decoration-color: var(--color-accent-dark);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
 }
 
 .prose-warm a:hover {
-  color: var(--color-accent-dark);
+  text-decoration-color: var(--color-warm-900);
 }
 
 .prose-warm > :first-child {

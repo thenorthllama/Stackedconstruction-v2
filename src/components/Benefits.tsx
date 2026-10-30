@@ -28,15 +28,13 @@ export default function Benefits() {
         <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
           {/* Left: heading + image placeholder */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
-            <p className="mb-4 eyebrow text-warm-500">
+            <p className="mb-4 eyebrow text-warm-600">
               Why Choose Us
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
-              Built on Trust,
-              <br />
-              <em className="not-italic font-semibold text-accent-dark">Delivered with Pride</em>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-warm-900 sm:text-[2.5rem]">
+              Built on Trust,{" "}<em className="not-italic">Delivered with Pride</em>
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-warm-600">
+            <p className="mt-6 text-base leading-relaxed text-warm-700">
               We&apos;re not the biggest contractor in Southwest Florida — and
               that&apos;s by design. We stay hands-on so every project gets the
               attention it deserves.
@@ -56,13 +54,13 @@ export default function Benefits() {
               <div key={benefit.title} className="py-8 first:pt-0 last:pb-0">
                 <div className="flex items-start gap-5">
                   <span className="font-display text-5xl font-bold leading-none text-warm-200">
-                    {String(i + 1).padStart(2, "0")}
+                    {i + 1}
                   </span>
                   <div>
                     <h3 className="mb-2 font-display text-xl font-semibold text-warm-900">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-warm-600">
+                    <p className="text-base leading-relaxed text-warm-700">
                       {benefit.description}
                     </p>
                   </div>

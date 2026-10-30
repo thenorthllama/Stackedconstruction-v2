@@ -10,7 +10,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
       itemScope
       itemType="https://schema.org/Person"
     >
-      <p className="mb-6 eyebrow text-warm-500">
+      <p className="mb-6 eyebrow text-warm-600">
         About the Author
       </p>
 
@@ -33,12 +33,12 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
             >
               <span itemProp="name">{author.name}</span>
             </Link>
-            <span className="text-sm text-warm-500" itemProp="jobTitle">
+            <span className="text-sm text-warm-600" itemProp="jobTitle">
               {author.title}
             </span>
           </div>
 
-          <p className="mt-3 text-sm leading-relaxed text-warm-600" itemProp="description">
+          <p className="mt-3 text-base leading-relaxed text-warm-700" itemProp="description">
             {author.shortBio}
           </p>
 
@@ -47,7 +47,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
             {author.credentials.map((cred) => (
               <span
                 key={cred.label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-warm-200 bg-warm-50 px-3 py-1 text-xs font-medium text-warm-700"
+                className="inline-flex items-center gap-1.5 rounded-full border border-warm-200 bg-warm-50 px-3 py-1 text-sm font-medium text-warm-700"
               >
                 {cred.verifyUrl ? (
                   <a
@@ -64,7 +64,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
                   </a>
                 ) : (
                   <>
-                    <svg className="h-3 w-3 text-warm-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <svg className="h-3 w-3 text-warm-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     {cred.value}
@@ -87,7 +87,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
                 href={author.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-warm-500 transition-colors hover:text-warm-900"
+                className="text-sm text-warm-600 transition-colors hover:text-warm-900"
                 aria-label={`${author.name} on Instagram`}
               >
                 Instagram
@@ -98,7 +98,7 @@ export default function AuthorBioCard({ author }: { author: AuthorData }) {
                 href={author.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-warm-500 transition-colors hover:text-warm-900"
+                className="text-sm text-warm-600 transition-colors hover:text-warm-900"
                 aria-label={`${author.name} on LinkedIn`}
               >
                 LinkedIn

@@ -12,22 +12,6 @@ const dmSans = localFont({
   display: "swap",
 });
 
-const playfairDisplay = localFont({
-  src: [
-    {
-      path: "../fonts/playfair-display-latin-wght-normal.woff2",
-      weight: "400 900",
-      style: "normal",
-    },
-    {
-      path: "../fonts/playfair-display-latin-wght-italic.woff2",
-      weight: "400 900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-playfair-display",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stackedconstruction.co"),
@@ -101,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className={`${dmSans.variable} ${playfairDisplay.variable} antialiased`}>
+      <body className={`${dmSans.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-N5ZBGB7P"

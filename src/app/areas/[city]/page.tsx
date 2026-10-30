@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import { cities, services, getCityBySlug } from "@/data/seo";
 import { getProjectsByCity } from "@/data/projects";
 import { planSteps, promises } from "@/data/brand";
+import { HeroImage } from "@/components/ui/hero-image";
+import { cityHeroes, pageHeroes } from "@/data/images";
 
 // ---------------------------------------------------------------------------
 // Static params
@@ -71,13 +73,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         {/* ── Hero — cinematic, image-led ───────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[70vh] bg-warm-900 lg:min-h-[80vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`Home remodeling in ${city.name}, Florida`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...(cityHeroes[city.slug] ?? pageHeroes.default)} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[80vh] lg:px-10 lg:pb-24">
@@ -86,9 +83,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <p className="mb-5 eyebrow text-warm-400">
                   {city.county} &middot; Southwest Florida
                 </p>
-                <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+                <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   {city.headline}{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     {city.headlineItalic}
                   </em>
                 </h1>
@@ -109,7 +106,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm leading-relaxed text-warm-400">
+                  <p className="text-base leading-relaxed text-warm-200">
                     Premium kitchen, bathroom, and whole-home renovation across
                     {" "}{city.name} and {city.county}.
                   </p>
@@ -125,24 +122,22 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   About {city.name}
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  We know these
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  We know these{" "}<em className="not-italic">
                     houses
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
                   Licensed &amp; insured design-build contractor — FL
                   #CBC1269972. We design it and build it with one team, so
                   nobody is guessing who&apos;s responsible.
                 </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   {city.intro}
                 </p>
                 <div className="mt-10 grid grid-cols-3 gap-8 border-t border-warm-200 pt-10">
@@ -150,7 +145,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       {city.population}
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Population
                     </p>
                   </div>
@@ -158,7 +153,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       {city.medianHomeValue}
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Median Home
                     </p>
                   </div>
@@ -166,7 +161,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       {city.county.split(" ")[0]}
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       County
                     </p>
                   </div>
@@ -185,10 +180,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <p className="mb-4 eyebrow text-warm-400">
                   What we do
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  Where we can help in
-                  <br />
-                  <em className="not-italic font-semibold text-accent">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
+                  Where we can help in{" "}<em className="not-italic">
                     {city.name}
                   </em>
                 </h2>
@@ -206,19 +199,19 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     >
                       <div className="flex items-start gap-6">
                         <span className="font-display text-4xl font-bold leading-none text-warm-800 transition-colors group-hover:text-warm-600">
-                          {String(i + 1).padStart(2, "0")}
+                          {i + 1}
                         </span>
                         <div>
                           <h3 className="font-display text-xl font-semibold text-white transition-colors group-hover:text-warm-300 sm:text-2xl">
                             {service.name}
                           </h3>
-                          <p className="mt-2 text-sm leading-relaxed text-warm-500">
+                          <p className="mt-2 text-base leading-relaxed text-warm-300">
                             {service.description}
                           </p>
                         </div>
                       </div>
                       <svg
-                        className="mt-2 h-5 w-5 shrink-0 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
+                        className="mt-2 h-5 w-5 shrink-0 text-warm-300 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -244,12 +237,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         <section className="bg-white py-24 lg:py-36">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 eyebrow text-warm-500">
+              <p className="mb-4 eyebrow text-warm-600">
                 Where We Work
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                 {city.name} Neighborhoods{" "}
-                <em className="not-italic font-semibold text-accent-dark">We Serve</em>
+                <em className="not-italic">We Serve</em>
               </h2>
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3 lg:grid-cols-4">
@@ -281,15 +274,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
-                <p className="eyebrow mb-5 text-warm-500">How we work</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Three steps, and you{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
-                    always know the next one
-                  </em>
+                <p className="eyebrow mb-5 text-warm-600">How we work</p>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  Three steps, no guesswork
                 </h2>
               </div>
-              <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-4 lg:col-start-9">
+              <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-4 lg:col-start-9">
                 The same process on every project, whether it&apos;s one room or
                 the whole house.
               </p>
@@ -301,12 +291,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     <span className="font-display text-3xl font-bold text-accent-dark">
                       {step.number}
                     </span>
-                    <p className="eyebrow text-warm-500">{step.summary}</p>
+                    <p className="eyebrow text-warm-600">{step.summary}</p>
                   </div>
                   <h3 className="mt-3 font-display text-xl font-semibold text-warm-900">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-warm-600">
+                  <p className="mt-2.5 text-base leading-relaxed text-warm-700">
                     {step.body}
                   </p>
                 </li>
@@ -318,7 +308,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </p>
               <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
                 {promises.map((promise) => (
-                  <li key={promise} className="flex items-start gap-2.5 text-sm leading-relaxed text-warm-600">
+                  <li key={promise} className="flex items-start gap-2.5 text-base leading-relaxed text-warm-700">
                     <span className="mt-[0.5em] h-1 w-1 shrink-0 rounded-full bg-accent-dark" aria-hidden="true" />
                     {promise}
                   </li>
@@ -335,14 +325,14 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
                 <div className="lg:col-span-7">
                   <p className="eyebrow mb-5 text-warm-900">Completed projects</p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                     Our Work in{" "}
-                    <em className="not-italic font-semibold text-accent-dark">
+                    <em className="not-italic">
                       {city.name}
                     </em>
                   </h2>
                 </div>
-                <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-5 lg:ml-auto lg:text-right">
+                <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-5 lg:ml-auto lg:text-right">
                   Photographed at handover — real {city.name} homes, not stock
                   photography.
                 </p>
@@ -362,7 +352,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                     <h3 className="mt-5 font-display text-xl font-semibold text-warm-900 transition-colors group-hover:text-accent-dark">
                       {project.name}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-warm-600">
+                    <p className="mt-2 text-base leading-relaxed text-warm-700">
                       {project.summary}
                     </p>
                   </Link>
@@ -378,12 +368,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4 lg:sticky lg:top-32">
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-600">
                     Local Knowledge
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                     {city.name}{" "}
-                    <em className="not-italic font-semibold text-accent-dark">
+                    <em className="not-italic">
                       Landmarks
                     </em>
                   </h2>
@@ -394,13 +384,13 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                       key={landmark.name}
                       className="py-10 first:pt-0 last:pb-0"
                     >
-                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+                      <p className="mb-2 text-sm font-semibold text-warm-600">
                         {landmark.type}
                       </p>
                       <h3 className="font-display text-xl font-semibold text-warm-900">
                         {landmark.name}
                       </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-warm-600">
+                      <p className="mt-3 text-base leading-relaxed text-warm-700">
                         {landmark.copy}
                       </p>
                     </div>
@@ -421,11 +411,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   <p className="mb-4 eyebrow text-warm-400">
                     In this area
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                    What we keep getting{" "}
-                    <em className="not-italic font-semibold text-accent">
-                      called about
-                    </em>
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
+                    What we get called for most
                   </h2>
                 </div>
                 <div className="lg:col-span-6 lg:col-start-7">
@@ -436,9 +423,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                         className="flex items-start gap-5 py-6 first:pt-0 last:pb-0"
                       >
                         <span className="font-display text-3xl font-bold leading-none text-warm-800">
-                          {String(i + 1).padStart(2, "0")}
+                          {i + 1}
                         </span>
-                        <p className="text-base leading-relaxed text-warm-400 pt-0.5">
+                        <p className="text-base leading-relaxed text-warm-200 pt-0.5">
                           {driver}
                         </p>
                       </div>
@@ -454,18 +441,13 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
             <p className="mb-5 eyebrow text-warm-400">
               Start the conversation
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Let&apos;s walk your{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 {city.name} home
               </em>
             </h2>

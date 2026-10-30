@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "Camila Lage — Design Consultant",
@@ -70,13 +72,8 @@ export default function CamilaLagePage() {
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Camila Lage, Interior Design Consultant at Stacked Construction"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/70 to-warm-900/40" />
+          <HeroImage {...pageHeroes.camila} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/70 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
@@ -84,16 +81,16 @@ export default function CamilaLagePage() {
               <div className="lg:col-span-8">
                 <Link
                   href="/about"
-                  className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-warm-400 transition-colors hover:text-warm-200"
+                  className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-warm-400 transition-colors hover:text-warm-200"
                 >
                   <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                   </svg>
                   About Stacked Construction
                 </Link>
-                <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                   Camila{" "}
-                  <em className="not-italic font-semibold text-accent">Lage</em>
+                  <em className="not-italic">Lage</em>
                 </h1>
                 <p className="mt-4 text-lg font-medium text-warm-400">
                   Interior Design Consultant
@@ -101,7 +98,7 @@ export default function CamilaLagePage() {
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm leading-relaxed text-warm-400">
+                  <p className="text-base leading-relaxed text-warm-200">
                     Helping SWFL homeowners translate vision into beautifully executed spaces.
                   </p>
                 </div>
@@ -116,13 +113,11 @@ export default function CamilaLagePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   About Camila
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Design With
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">Purpose</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Design With{" "}<em className="not-italic">Purpose</em>
                 </h2>
                 <div className="mt-8 space-y-3">
                   <div className="flex items-start gap-3">
@@ -140,7 +135,7 @@ export default function CamilaLagePage() {
                 </div>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <div className="space-y-6 text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <div className="space-y-6 text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   <p>
                     Camila Lage is the interior design consultant at Stacked Construction,
                     bringing a trained design eye to every kitchen, bathroom, and full-home
@@ -172,12 +167,12 @@ export default function CamilaLagePage() {
           <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 eyebrow text-warm-500">
+              <p className="mb-4 eyebrow text-warm-300">
                 Design Specialties
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                 Where Camila{" "}
-                <em className="not-italic font-semibold text-accent">Focuses</em>
+                <em className="not-italic">Focuses</em>
               </h2>
             </div>
             <div className="grid gap-px bg-warm-800 sm:grid-cols-2 lg:grid-cols-3">
@@ -191,7 +186,7 @@ export default function CamilaLagePage() {
               ].map((item, i) => (
                 <div key={i} className="bg-warm-900 p-8 lg:p-10">
                   <h3 className="mb-3 font-display text-xl font-semibold text-white">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-warm-500">{item.desc}</p>
+                  <p className="text-base leading-relaxed text-warm-300">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -204,13 +199,11 @@ export default function CamilaLagePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Written by Camila
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Design
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">Guides</em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Design{" "}<em className="not-italic">Guides</em>
                 </h2>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -223,7 +216,7 @@ export default function CamilaLagePage() {
                     <p className="font-display text-lg font-semibold leading-snug text-warm-900 transition-colors group-hover:text-warm-600 pr-4">
                       {article.title}
                     </p>
-                    <svg className="h-5 w-5 shrink-0 text-warm-400 transition-all group-hover:translate-x-1 group-hover:text-warm-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <svg className="h-5 w-5 shrink-0 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                   </Link>
@@ -244,15 +237,13 @@ export default function CamilaLagePage() {
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: "url('/images/hero-bg.webp')" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">Start Your Project</p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <p className="mb-5 eyebrow text-warm-300">Start Your Project</p>
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Ready to Design{" "}
-              <em className="not-italic font-semibold text-accent">Your Space?</em>
+              <em className="not-italic">Your Space?</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               Contact Stacked Construction for a consultation and let us help you design it and build it with one team.
             </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

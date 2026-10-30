@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { services } from "@/data/seo";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes, serviceHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: { absolute: "Design-Build Services in Southwest Florida | Stacked" },
@@ -26,13 +29,8 @@ export default function ServicesIndexPage() {
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Premium remodeling by Stacked Construction"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...pageHeroes.services} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
@@ -40,9 +38,9 @@ export default function ServicesIndexPage() {
               <p className="mb-5 eyebrow text-warm-300">
                 What we do
               </p>
-              <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Design and build,{" "}
-                <em className="not-italic font-semibold text-accent">
+                <em className="not-italic">
                   under one roof
                 </em>
               </h1>
@@ -67,35 +65,46 @@ export default function ServicesIndexPage() {
               >
                 <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
                   <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-                    {/* Number + label side */}
+                    {/* Photo side */}
                     <div
-                      className={`lg:col-span-4 ${
-                        isEven ? "" : "lg:col-start-9 lg:row-start-1"
+                      className={`lg:col-span-5 ${
+                        isEven ? "" : "lg:col-start-8 lg:row-start-1"
                       }`}
                     >
-                      <span className="block font-display text-8xl font-bold leading-none text-warm-200 lg:text-9xl">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <p className="mt-4 eyebrow text-warm-500">
-                        {service.shortName}
-                      </p>
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl bg-warm-100"
+                        tabIndex={-1}
+                        aria-hidden="true"
+                      >
+                        <Image
+                          src={(serviceHeroes[service.slug] ?? pageHeroes.default).src}
+                          alt={(serviceHeroes[service.slug] ?? pageHeroes.default).alt}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 40vw"
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
+                        />
+                      </Link>
                     </div>
 
                     {/* Content side */}
                     <div
-                      className={`lg:col-span-7 ${
+                      className={`lg:col-span-6 ${
                         isEven
-                          ? "lg:col-start-6"
+                          ? "lg:col-start-7"
                           : "lg:col-start-1 lg:row-start-1"
                       }`}
                     >
+                      <p className="mb-3 text-sm font-semibold text-warm-600">
+                        {service.shortName}
+                      </p>
                       <h2 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 sm:text-4xl lg:text-5xl">
                         {service.headline}{" "}
-                        <em className="not-italic font-semibold text-accent-dark">
+                        <em className="not-italic">
                           {service.headlineItalic}
                         </em>
                       </h2>
-                      <p className="mt-5 text-base leading-relaxed text-warm-600 lg:text-lg">
+                      <p className="mt-5 text-base leading-relaxed text-warm-700 lg:text-lg">
                         {service.description}
                       </p>
                       <Link
@@ -129,17 +138,12 @@ export default function ServicesIndexPage() {
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Not Sure Where{" "}
-              <em className="not-italic font-semibold text-accent">to Start?</em>
+              <em className="not-italic">to Start?</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               That&apos;s what the free consultation is for. Tell us about your
               home and your goals, and we&apos;ll help you find the right path
               forward.

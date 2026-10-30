@@ -19,9 +19,9 @@ export const authors: AuthorData[] = [
     slug: "junior-da-silva",
     title: "Founder & Licensed Building Contractor",
     shortBio:
-      "Founder of Stacked Construction and Florida-licensed building contractor (CBC1269972) with nearly a decade of hands-on remodeling experience across Southwest Florida.",
+      "Founder of Stacked Construction and Florida-licensed building contractor (CBC1269972) with more than ten years of hands-on remodeling experience across Southwest Florida.",
     fullBio: [
-      "Junior Da Silva is the founder and lead contractor of Stacked Construction, a licensed and insured home remodeling company serving Southwest Florida. With nearly a decade of hands-on experience in kitchen remodeling, bathroom renovation, hardscaping, cabinetry, and full-home transformations, Junior built Stacked Construction on a foundation of transparency, accountability, and craftsmanship.",
+      "Junior Da Silva is the founder and lead contractor of Stacked Construction, a licensed and insured home remodeling company serving Southwest Florida. With more than ten years of hands-on experience in kitchen remodeling, bathroom renovation, hardscaping, cabinetry, and full-home transformations, Junior built Stacked Construction on a foundation of transparency, accountability, and craftsmanship.",
       "Before founding Stacked Construction, Junior spent years working directly in the trades — learning every stage of a remodel from the ground up across Lee, Collier, and Charlotte counties. That ground-level experience gave him a clear view of where the industry fails homeowners: missed communication, lack of accountability, and inconsistent execution. Building this company was his answer to that.",
       "Today, Junior leads every project with a structured process designed to protect the client, control quality, and deliver a finished space that reflects their vision — on budget, on time, and with no surprises.",
     ],

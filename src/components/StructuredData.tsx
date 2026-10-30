@@ -96,6 +96,7 @@ export default function StructuredData() {
     description:
       "Premium home remodeling contractor serving Southwest Florida. Expert kitchen remodeling, bathroom renovation, outdoor living, and full home renovations across Naples, Bonita Springs, Fort Myers, and Cape Coral.",
     url: "https://stackedconstruction.co",
+    logo: "https://stackedconstruction.co/images/logo-stacked-dark.png",
     telephone: "+12397850166",
     email: "info@stackedconstruction.co",
     address: {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { projects, getProjectPhotoCount } from "@/data/projects";
+import { HeroImage } from "@/components/ui/hero-image";
 
 export const metadata: Metadata = {
   title: { absolute: "Renovation Projects in Southwest Florida | Stacked" },
@@ -52,21 +53,16 @@ export default function ProjectsPage() {
         {/* ── Hero ─────────────────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[50vh] overflow-hidden rounded-[2rem] bg-warm-900 lg:min-h-[60vh] lg:rounded-[2.5rem]">
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/images/projects/modern-wood-kitchen-remodel-naples-01.webp')" }}
-              role="img"
-              aria-label="Modern walnut kitchen remodel in Naples, Florida by Stacked Construction"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+            <HeroImage src="/images/projects/modern-wood-kitchen-remodel-naples-01.webp" alt="Modern walnut kitchen remodel in Naples, Florida by Stacked Construction" />
+            <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
             <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
             <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-7xl items-end px-6 pb-16 pt-40 lg:min-h-[60vh] lg:px-10 lg:pb-24">
               <div className="max-w-3xl">
                 <p className="eyebrow mb-5 text-warm-300">Our Work</p>
-                <h1 className="font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+                <h1 className="font-display text-[2.25rem] font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
                   Remodeling{" "}
-                  <em className="not-italic font-semibold text-accent">Projects</em>
+                  <em className="not-italic">Projects</em>
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
                   Completed kitchens and renovations across Naples, Bonita
@@ -84,14 +80,14 @@ export default function ProjectsPage() {
             <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <p className="eyebrow mb-5 text-warm-900">Recent case studies</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   Built in Your{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     Neighborhood
                   </em>
                 </h2>
               </div>
-              <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-5 lg:ml-auto lg:text-right">
+              <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-5 lg:ml-auto lg:text-right">
                 Every project below was designed, permitted, and built by our
                 team. Photos are of the finished work — no renderings, no stock.
               </p>
@@ -101,32 +97,26 @@ export default function ProjectsPage() {
               {projects.map((project, i) => (
                 <article
                   key={project.slug}
-                  className="grid gap-8 border-t border-warm-200 pt-12 lg:grid-cols-12 lg:items-center"
+                  className="grid gap-8 lg:grid-cols-12 lg:items-center"
                 >
                   <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-2 lg:col-start-8" : ""}`}>
-                    <div className="flex items-baseline gap-4">
-                      <span className="font-display text-lg font-semibold text-warm-400">
-                        {String(i + 1).padStart(2, "0")}
-                        <span className="text-warm-300"> / {String(projects.length).padStart(2, "0")}</span>
-                      </span>
-                      <p className="eyebrow text-warm-500">
-                        {project.city}, FL
-                      </p>
-                    </div>
-                    <h3 className="mt-4 font-display text-3xl font-semibold text-warm-900 sm:text-4xl">
+                    <h3 className="font-display text-2xl font-bold leading-tight text-warm-900 sm:text-3xl">
                       <Link href={`/projects/${project.slug}`} className="transition-colors hover:text-accent-dark">
                         {project.name}
                       </Link>
                     </h3>
-                    <p className="mt-4 max-w-md text-sm leading-relaxed text-warm-600">
+                    <p className="mt-2 text-sm font-medium text-warm-600">
+                      {project.city}, FL
+                    </p>
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-warm-700">
                       {project.summary}
                     </p>
-                    <p className="mt-4 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-4 text-sm font-medium text-warm-600">
                       {getProjectPhotoCount(project)} photos · {project.service}
                     </p>
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="group mt-8 inline-flex items-center gap-3 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
+                      className="group mt-8 inline-flex items-center gap-3 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors hover:bg-warm-800"
                     >
                       View project
                       <span
@@ -162,14 +152,14 @@ export default function ProjectsPage() {
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="bg-white py-24 lg:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
-            <p className="eyebrow mb-5 justify-center text-warm-500">
+            <p className="eyebrow mb-5 justify-center text-warm-600">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
               Want something like{" "}
-              <em className="not-italic font-semibold text-accent-dark">this?</em>
+              <em className="not-italic">this?</em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-warm-600">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-warm-700">
               Tell us about your space and we&apos;ll put together a detailed,
               line-item estimate — no pressure, no obligation.
             </p>

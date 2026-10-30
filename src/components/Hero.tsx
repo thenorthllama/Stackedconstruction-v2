@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useId, useState } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedHero } from "@/components/ui/animated-hero";
 import { brand, cta } from "@/data/brand";
@@ -87,14 +88,20 @@ export default function Hero() {
         {slides.map((slide, i) => (
           <div
             key={slide.image}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 motion-reduce:transition-none ${
+            className={`absolute inset-0 transition-opacity duration-1000 motion-reduce:transition-none ${
               i === active ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url('${slide.image}')` }}
-            role="img"
-            aria-label={slide.alt}
             aria-hidden={i !== active}
-          />
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              sizes="100vw"
+              priority={i === 0}
+              className="object-cover"
+            />
+          </div>
         ))}
 
         {/* Scrims. The third is new: it guarantees the right-hand proof column
@@ -112,12 +119,15 @@ export default function Hero() {
           <div className="grid w-full gap-12 lg:grid-cols-12 lg:items-end">
             {/* Offer */}
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-6 text-warm-300">Southwest Florida Design-Build</p>
               <AnimatedHero />
+              <p className="mt-8 max-w-xl text-lg leading-relaxed text-warm-100 sm:text-xl">
+                Design-build remodeling in Southwest Florida. One licensed team
+                designs it, prices it line by line, and builds it.
+              </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
                   href={cta.directHref}
-                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white py-2.5 pl-7 pr-2.5 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-warm-900"
+                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white py-2.5 pl-7 pr-2.5 text-base font-semibold text-warm-900 transition-all hover:bg-warm-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-warm-900"
                 >
                   {cta.direct}
                   <span
@@ -131,7 +141,7 @@ export default function Hero() {
                 </a>
                 <a
                   href={brand.phoneHref}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white transition-all hover:border-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-warm-900"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-medium text-white transition-all hover:border-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-warm-900"
                 >
                   Call {brand.phone}
                 </a>
@@ -140,20 +150,13 @@ export default function Hero() {
 
             {/* Proof column */}
             <div className="hidden lg:col-span-4 lg:col-start-9 lg:block">
-              <h2 className="font-display text-2xl font-semibold leading-snug text-white">
-                We design it and
-                <br />
-                we build it
+              <h2 className="font-display text-2xl font-bold leading-snug text-white">
+                What you can count on
               </h2>
-              <p className="mt-3 max-w-xs text-sm leading-relaxed text-warm-200">
-                One team from first sketch to final walk-through — so you
-                aren&apos;t the one relaying messages between a designer and a
-                builder.
-              </p>
-              <ul className="mt-6 space-y-2.5 border-t border-white/20 pt-5">
+              <ul className="mt-5 space-y-3">
                 {proofPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-warm-100">
-                    <span className="mt-[0.45em] h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                  <li key={item} className="flex items-start gap-3 text-base text-warm-100">
+                    <span className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                     {item}
                   </li>
                 ))}

@@ -111,7 +111,7 @@ export default function Header() {
         aria-hidden={scrolled}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-2 lg:px-10">
-          <span className="hidden text-[11px] font-medium uppercase tracking-[0.2em] text-warm-400 sm:block">
+          <span className="hidden text-sm font-medium text-warm-300 sm:block">
             Licensed &amp; insured · FL #{brand.license}
           </span>
           <span className="hidden text-warm-700 sm:block">·</span>
@@ -147,11 +147,11 @@ export default function Header() {
         >
           <Link href="/" className="block shrink-0" aria-label="Stacked Construction — home">
             <Image
-              src="/images/logo-dark.png"
+              src="/images/logo-stacked-dark.png"
               alt="Stacked Construction"
-              width={330}
-              height={60}
-              className="h-9 w-auto lg:h-11"
+              width={904}
+              height={288}
+              className="h-10 w-auto lg:h-12"
               priority
             />
           </Link>
@@ -177,7 +177,7 @@ export default function Header() {
               onToggle={() => setOpenMenu(openMenu === "areas" ? null : "areas")}
             >
               <div className="w-72 overflow-hidden rounded-3xl bg-white p-2.5 shadow-xl shadow-warm-900/10 ring-1 ring-warm-200">
-                <p className="px-4 pb-1.5 pt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-warm-400">
+                <p className="px-4 pb-1.5 pt-2 text-sm font-semibold text-warm-600">
                   Cities
                 </p>
                 <ul>
@@ -193,7 +193,7 @@ export default function Header() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-1 border-t border-warm-100 px-4 pb-1.5 pt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-warm-400">
+                <p className="mt-1 border-t border-warm-100 px-4 pb-1.5 pt-3 text-sm font-semibold text-warm-600">
                   Counties
                 </p>
                 <ul>
@@ -216,7 +216,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex min-h-11 items-center rounded-full px-3 text-[13px] font-medium uppercase tracking-wider text-warm-600 transition-colors hover:bg-warm-50 hover:text-warm-900"
+                className="inline-flex min-h-11 items-center rounded-full px-3 text-[15px] font-medium text-warm-800 transition-colors hover:bg-warm-50 hover:text-warm-900"
               >
                 {link.label}
               </Link>
@@ -365,7 +365,7 @@ function NavDropdown({
     >
       <button
         type="button"
-        className="inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 text-[13px] font-medium uppercase tracking-wider text-warm-600 transition-colors hover:bg-warm-50 hover:text-warm-900"
+        className="inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 text-[15px] font-medium text-warm-800 transition-colors hover:bg-warm-50 hover:text-warm-900"
         aria-expanded={isOpen}
         aria-haspopup="true"
         onClick={onToggle}
@@ -421,7 +421,7 @@ function DropdownList({
       <li className="mt-1 border-t border-warm-100 pt-1">
         <Link
           href={allHref}
-          className="block rounded-2xl px-4 py-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-colors hover:bg-warm-50"
+          className="block rounded-2xl px-4 py-2.5 text-[15px] font-semibold text-warm-900 transition-colors hover:bg-warm-50"
         >
           {allLabel} →
         </Link>

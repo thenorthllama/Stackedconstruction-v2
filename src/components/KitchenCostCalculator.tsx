@@ -80,12 +80,12 @@ function OptionCard({ selected, onClick, title, desc, tag }: OptionCardProps) {
       <div className="flex items-start justify-between gap-3">
         <span className="text-sm font-semibold">{title}</span>
         {tag && (
-          <span className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
+          <span className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-sm font-bold text-accent">
             {tag}
           </span>
         )}
       </div>
-      {desc && <p className={`mt-1 text-xs leading-relaxed ${selected ? "text-warm-300" : "text-warm-500"}`}>{desc}</p>}
+      {desc && <p className={`mt-1 text-sm leading-relaxed ${selected ? "text-warm-300" : "text-warm-300"}`}>{desc}</p>}
     </button>
   );
 }
@@ -200,14 +200,14 @@ export default function KitchenCostCalculator() {
       {stepKey !== "reveal" && (
         <div className="mb-8">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+            <span className="text-sm font-semibold text-warm-300">
               Step {idx + 1} of {total}
             </span>
             {idx > 0 && (
               <button
                 type="button"
                 onClick={goBack}
-                className="text-xs font-medium text-warm-400 transition-colors hover:text-white"
+                className="text-sm font-medium text-warm-400 transition-colors hover:text-white"
               >
                 &larr; Back
               </button>
@@ -248,7 +248,7 @@ export default function KitchenCostCalculator() {
             <div className="mt-6">
               <label className="mb-2 block text-sm font-semibold text-white">
                 Approx. linear feet of cabinets{" "}
-                <span className="font-normal text-warm-500">— fine-tune if you know it</span>
+                <span className="font-normal text-warm-300">— fine-tune if you know it</span>
               </label>
               <input
                 type="range"
@@ -260,7 +260,7 @@ export default function KitchenCostCalculator() {
                 className="w-full accent-white"
               />
               <p className="mt-2 text-sm font-bold text-white">
-                {state.cabLf} ft <span className="font-normal text-warm-500">of cabinet run — the single biggest cost driver</span>
+                {state.cabLf} ft <span className="font-normal text-warm-300">of cabinet run — the single biggest cost driver</span>
               </p>
             </div>
           )}
@@ -391,9 +391,9 @@ export default function KitchenCostCalculator() {
                   <span className={`block text-sm font-semibold ${selected ? "text-white" : "text-warm-300"}`}>
                     {addon.label}
                   </span>
-                  <span className="block text-xs text-warm-500">{addon.desc}</span>
+                  <span className="block text-sm text-warm-300">{addon.desc}</span>
                 </span>
-                <span className="shrink-0 text-xs font-bold text-warm-400">+{formatCurrency(price)}</span>
+                <span className="shrink-0 text-sm font-bold text-warm-400">+{formatCurrency(price)}</span>
               </button>
             );
           })}
@@ -408,7 +408,7 @@ export default function KitchenCostCalculator() {
             <select
               value={state.region}
               onChange={(e) => patch({ region: e.target.value as Region })}
-              className="w-full rounded-lg border border-warm-700 bg-warm-900/60 px-4 py-3.5 text-sm text-white focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500"
+              className="w-full rounded-lg border border-warm-700 bg-warm-900/60 px-4 py-3.5 text-base text-white focus:border-warm-500 focus:outline-none focus:ring-1 focus:ring-warm-500"
             >
               {(Object.keys(REGIONS) as Region[]).map((key) => (
                 <option key={key} value={key} className="bg-warm-900">
@@ -449,19 +449,19 @@ export default function KitchenCostCalculator() {
       {/* ── LEAD GATE ────────────────────────────────────────── */}
       {stepKey === "gate" && (
         <div>
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-400">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-sm font-semibold text-emerald-400">
             Your custom estimate is ready
           </div>
           <h2 className="mb-3 font-display text-2xl font-bold text-white">
             Where should we send your line-item estimate?
           </h2>
-          <p className="mb-6 text-sm leading-relaxed text-warm-400">
+          <p className="mb-6 text-base leading-relaxed text-warm-200">
             Enter your details to unlock your full price breakdown, plus a free
             &ldquo;ways to save&rdquo; sheet specific to your project.
           </p>
           <div className="space-y-4">
             <div>
-              <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+              <label className="mb-1.5 block text-sm font-semibold text-warm-300">
                 Full Name
               </label>
               <input
@@ -475,7 +475,7 @@ export default function KitchenCostCalculator() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+              <label className="mb-1.5 block text-sm font-semibold text-warm-300">
                 Email Address
               </label>
               <input
@@ -488,7 +488,7 @@ export default function KitchenCostCalculator() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500">
+              <label className="mb-1.5 block text-sm font-semibold text-warm-300">
                 Mobile Phone
               </label>
               <input
@@ -510,7 +510,7 @@ export default function KitchenCostCalculator() {
           >
             {submitting ? "Calculating..." : "Reveal My Estimate →"}
           </button>
-          <p className="mt-4 text-center text-xs text-warm-600">
+          <p className="mt-4 text-center text-sm text-warm-300">
             No spam, no obligation. We respect your inbox.
           </p>
         </div>
@@ -525,10 +525,10 @@ export default function KitchenCostCalculator() {
             </p>
             <p className="font-display text-4xl font-bold leading-none text-white sm:text-5xl">
               {formatCurrency(est.low)}
-              <span className="mx-2 font-sans text-2xl font-normal text-warm-500">&ndash;</span>
+              <span className="mx-2 font-sans text-2xl font-normal text-warm-300">&ndash;</span>
               {formatCurrency(est.high)}
             </p>
-            <p className="mt-3 text-xs text-warm-500">Based on real Stacked Construction projects in {est.regionLabel}</p>
+            <p className="mt-3 text-sm text-warm-300">Based on real Stacked Construction projects in {est.regionLabel}</p>
           </div>
 
           <div className="mt-6 overflow-hidden rounded-xl border border-warm-700/50">
@@ -555,14 +555,14 @@ export default function KitchenCostCalculator() {
               </span>
             </div>
           </div>
-          <p className="mt-3 text-xs leading-relaxed text-warm-600">
+          <p className="mt-3 text-sm leading-relaxed text-warm-700">
             Range reflects normal variation in materials, site conditions & final
             selections. Your exact quote is confirmed at your free consult.
           </p>
 
           <div className="mt-8 rounded-xl border border-warm-700 bg-gradient-to-br from-warm-800 to-warm-900 p-6">
             <h3 className="mb-2 font-display text-lg font-bold text-white">Ready to lock in this price?</h3>
-            <p className="mb-5 text-sm leading-relaxed text-warm-400">
+            <p className="mb-5 text-base leading-relaxed text-warm-200">
               Book your free, no-pressure in-home consult. We&apos;ll confirm your
               exact scope, walk your materials, and hand you a clean line-item
               quote.
@@ -575,13 +575,13 @@ export default function KitchenCostCalculator() {
             </a>
           </div>
 
-          <p className="mt-6 text-center text-[11px] leading-relaxed text-warm-600">
+          <p className="mt-6 text-center text-[11px] leading-relaxed text-warm-700">
             This instant estimate is a planning tool, not a formal quote. Final
             pricing depends on an on-site assessment of your home, selections &
             conditions. FL License #CBC1269972.
           </p>
           <div className="mt-4 text-center">
-            <button type="button" onClick={restart} className="text-xs font-medium text-warm-500 hover:text-white">
+            <button type="button" onClick={restart} className="text-sm font-medium text-warm-300 hover:text-white">
               &#8634; Start over
             </button>
           </div>

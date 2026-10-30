@@ -50,34 +50,33 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="bg-warm-50 py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-6 lg:px-10">
-        <div className="mb-16 text-center">
-          <p className="mb-4 eyebrow justify-center text-warm-500">
-            FAQ
-          </p>
-          <h2 className="font-display text-4xl font-bold leading-[1.1] text-warm-900 sm:text-5xl">
-            Common{" "}
-            <em className="not-italic font-semibold text-accent-dark">Questions</em>
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:gap-20 lg:px-10">
+        <div className="lg:col-span-4">
+          <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+            Common questions
           </h2>
+          <p className="mt-5 text-lg leading-relaxed text-warm-700">
+            The things homeowners ask us most before a remodel starts.
+          </p>
         </div>
 
-        <dl className="divide-y divide-warm-200">
+        <dl className="space-y-3 lg:col-span-8">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
-              <div key={faq.question} className="py-6">
+              <div key={faq.question} className="rounded-2xl bg-white px-5 py-4 sm:px-6 sm:py-5">
                 <dt>
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between text-left"
+                    className="flex min-h-11 w-full items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-900 focus-visible:ring-offset-4"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                     aria-expanded={isOpen}
                   >
-                    <span className="font-display text-lg font-semibold text-warm-900 pr-8">
+                    <span className="pr-6 text-base font-semibold text-warm-900 sm:text-lg">
                       {faq.question}
                     </span>
                     <span
-                      className={`shrink-0 text-xl text-warm-500 transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
+                      className={`shrink-0 text-2xl text-warm-900 transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
                       aria-hidden="true"
                     >
                       +
@@ -85,7 +84,7 @@ export default function FAQ() {
                   </button>
                 </dt>
                 {isOpen && (
-                  <dd className="mt-4 pr-12 text-base leading-relaxed text-warm-600">
+                  <dd className="mt-3 pr-12 text-base leading-relaxed text-warm-700">
                     {faq.answer}
                   </dd>
                 )}

@@ -66,19 +66,19 @@ export const success = {
 /** The plan — the same three steps everywhere on the site. */
 export const planSteps = [
   {
-    number: "01",
+    number: "1",
     title: "Consultation",
     summary: "We come to you",
     body: "We walk your space, listen to how you want to live in it, and talk honestly about scope and budget before anyone draws anything.",
   },
   {
-    number: "02",
+    number: "2",
     title: "Design & Proposal",
     summary: "See it before we build it",
     body: "We design the space and hand you a line-item proposal. You see the whole picture — drawings, selections, and real numbers — before a tool comes out.",
   },
   {
-    number: "03",
+    number: "3",
     title: "Build",
     summary: "One team, start to finish",
     body: "We pull the permits, schedule the trades, and keep you updated without you having to ask — through final walk-through.",

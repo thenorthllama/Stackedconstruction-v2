@@ -11,6 +11,8 @@ import {
   getRelatedArticles,
 } from "@/data/blog";
 import { getAuthorByName } from "@/data/authors";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 // ─── Static generation ──────────────────────────────────────────────────────────
 
@@ -128,14 +130,8 @@ export default async function BlogArticlePage({
         {/* ── Hero — cinematic article header ──────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 lg:min-h-[70vh] overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url('${article.image ?? "/images/hero-bg.webp"}')` }}
-            role="img"
-            aria-label={article.imageAlt ?? article.title}
-            title={article.imageTitle ?? article.title}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage src={article.image ?? pageHeroes.blog.src} alt={article.image ? (article.imageAlt ?? article.title) : pageHeroes.blog.alt} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:min-h-[70vh] lg:px-10 lg:pb-24">
@@ -144,12 +140,12 @@ export default async function BlogArticlePage({
                 <div className="mb-5 flex items-center gap-4">
                   <Link
                     href={`/blog/category/${article.cluster}`}
-                    className="text-[11px] font-semibold uppercase tracking-[0.3em] text-accent transition-colors hover:text-accent-dark"
+                    className="text-sm font-semibold text-accent transition-colors hover:text-accent-dark"
                   >
                     {cluster?.name ?? article.cluster}
                   </Link>
                 </div>
-                <h1 className="max-w-3xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+                <h1 className="max-w-5xl font-display text-4xl font-bold leading-[1.02] text-white sm:text-5xl">
                   {article.title}
                 </h1>
                 <div className="mt-8 flex items-center gap-4 text-sm text-warm-400">
@@ -160,7 +156,7 @@ export default async function BlogArticlePage({
               </div>
               <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                 <div className="border-l border-warm-500/30 pl-6">
-                  <p className="text-sm leading-relaxed text-warm-400">
+                  <p className="text-base leading-relaxed text-warm-200">
                     {article.excerpt}
                   </p>
                 </div>
@@ -178,7 +174,7 @@ export default async function BlogArticlePage({
               <aside className="lg:col-span-3 lg:sticky lg:top-32">
                 <nav className="space-y-8">
                   <div>
-                    <p className="mb-3 eyebrow text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-600">
                       Category
                     </p>
                     <Link
@@ -189,7 +185,7 @@ export default async function BlogArticlePage({
                     </Link>
                   </div>
                   <div>
-                    <p className="mb-3 eyebrow text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-600">
                       Published
                     </p>
                     <time
@@ -200,14 +196,14 @@ export default async function BlogArticlePage({
                     </time>
                   </div>
                   <div>
-                    <p className="mb-3 eyebrow text-warm-500">
+                    <p className="mb-3 eyebrow text-warm-600">
                       Read Time
                     </p>
                     <p className="text-sm text-warm-700">{article.readTime}</p>
                   </div>
                   {article.author && (
                     <div>
-                      <p className="mb-3 eyebrow text-warm-500">
+                      <p className="mb-3 eyebrow text-warm-600">
                         Written By
                       </p>
                       {authorData ? (
@@ -219,7 +215,7 @@ export default async function BlogArticlePage({
                           >
                             {authorData.name}
                           </Link>
-                          <p className="mt-0.5 text-xs text-warm-500">{authorData.title}</p>
+                          <p className="mt-0.5 text-sm text-warm-600">{authorData.title}</p>
                         </div>
                       ) : (
                         <p className="text-sm font-medium text-warm-900">{article.author}</p>
@@ -227,7 +223,7 @@ export default async function BlogArticlePage({
                     </div>
                   )}
                   <div className="rounded-xl bg-warm-900 p-5">
-                    <p className="eyebrow text-warm-500">
+                    <p className="eyebrow text-warm-300">
                       Start Your Project
                     </p>
                     <p className="mt-2.5 font-display text-lg font-semibold leading-snug text-white">
@@ -255,7 +251,7 @@ export default async function BlogArticlePage({
                     </a>
                     <Link
                       href="/contact"
-                      className="mt-2 flex w-full items-center justify-center gap-1.5 py-2 text-sm font-medium text-warm-400 transition-colors hover:text-white"
+                      className="mt-2 flex w-full items-center justify-center gap-1.5 py-2 text-sm font-medium text-warm-300 transition-colors hover:text-white"
                     >
                       Request a Consultation
                       <svg
@@ -273,7 +269,7 @@ export default async function BlogArticlePage({
                         />
                       </svg>
                     </Link>
-                    <p className="mt-3.5 text-center text-[10px] text-warm-700">
+                    <p className="mt-3.5 text-center text-sm text-warm-300">
                       Licensed · FL #CBC1269972
                     </p>
                   </div>
@@ -321,12 +317,12 @@ export default async function BlogArticlePage({
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-300">
                     Keep Reading
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
                     Related{" "}
-                    <em className="not-italic font-semibold text-accent">
+                    <em className="not-italic">
                       Articles
                     </em>
                   </h2>
@@ -340,7 +336,7 @@ export default async function BlogArticlePage({
                         className="group flex items-center justify-between py-8 first:pt-0 last:pb-0"
                       >
                         <div className="pr-6">
-                          <p className="mb-2 eyebrow text-accent">
+                          <p className="mb-2 eyebrow text-warm-300">
                             {clusters.find(
                               (c) => c.slug === related.cluster
                             )?.name ?? related.cluster}
@@ -348,7 +344,7 @@ export default async function BlogArticlePage({
                           <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors group-hover:text-warm-300 sm:text-2xl">
                             {related.title}
                           </h3>
-                          <div className="mt-3 flex items-center gap-3 text-xs text-warm-600">
+                          <div className="mt-3 flex items-center gap-3 text-sm text-warm-300">
                             <time dateTime={related.publishedAt}>
                               {new Date(
                                 related.publishedAt
@@ -363,7 +359,7 @@ export default async function BlogArticlePage({
                           </div>
                         </div>
                         <svg
-                          className="h-5 w-5 shrink-0 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
+                          className="h-5 w-5 shrink-0 text-warm-300 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -389,22 +385,17 @@ export default async function BlogArticlePage({
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Let&apos;s Talk About{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 your project
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               We come to you and tell you honestly what&apos;s realistic. No charge, no
               obligation — just a straight conversation about your project and a
               clear path forward.

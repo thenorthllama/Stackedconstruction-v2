@@ -69,9 +69,9 @@ export default function ProcessPage() {
             <p className="mb-4 eyebrow text-warm-400">
               How we work
             </p>
-            <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
               You&apos;ll always know{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 the next step
               </em>
             </h1>
@@ -92,14 +92,14 @@ export default function ProcessPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-5">
-                <p className="eyebrow mb-5 text-warm-500">What you can hold us to</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <p className="eyebrow mb-5 text-warm-600">What you can hold us to</p>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   Six promises we make{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     to every client
                   </em>
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-warm-600">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-warm-700">
                   These aren&apos;t marketing lines. They&apos;re how we run
                   every project, and you should expect the same from anyone you
                   hire.
@@ -108,8 +108,8 @@ export default function ProcessPage() {
               <ol className="divide-y divide-warm-200 border-t border-warm-200 lg:col-span-6 lg:col-start-7">
                 {promises.map((promise, i) => (
                   <li key={promise} className="flex items-start gap-5 py-5">
-                    <span className="font-display text-lg font-semibold text-warm-400">
-                      {String(i + 1).padStart(2, "0")}
+                    <span className="font-display text-lg font-semibold text-warm-600">
+                      {i + 1}
                     </span>
                     <span className="text-base leading-relaxed text-warm-700">
                       {promise}
@@ -125,9 +125,9 @@ export default function ProcessPage() {
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
-            <h2 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.1] text-white sm:text-5xl">
               Step one is a{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 conversation
               </em>
             </h2>

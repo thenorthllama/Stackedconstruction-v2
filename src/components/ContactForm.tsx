@@ -200,7 +200,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
   const isDark = variant === "dark";
 
   const inputBase =
-    "w-full rounded-xl px-4 py-3 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
+    "w-full rounded-xl px-4 py-3 text-base transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
   const inputTheme = isDark
     ? "border border-warm-700 bg-warm-900/60 text-white placeholder:text-warm-500 focus-visible:ring-white focus-visible:ring-offset-warm-900"
     : "border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus-visible:ring-accent-dark focus-visible:ring-offset-white";
@@ -210,8 +210,8 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
     `${inputBase} ${inputTheme} ${errors[field] ? errorRing : ""}`;
 
   const labelClasses = isDark
-    ? "mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-400"
-    : "mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.2em] text-warm-500";
+    ? "mb-1.5 block text-sm font-semibold text-warm-200"
+    : "mb-1.5 block text-sm font-semibold text-warm-800";
 
   const shellClasses = isDark
     ? "rounded-[1.75rem] border border-warm-700/50 bg-warm-800/50 p-7 backdrop-blur-sm lg:p-9"
@@ -276,7 +276,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
           <p
             ref={stepHeadingRef}
             tabIndex={-1}
-            className={`text-[11px] font-semibold uppercase tracking-[0.2em] focus:outline-none ${
+            className={`text-sm font-semibold focus:outline-none ${
               isDark ? "text-warm-400" : "text-warm-500"
             }`}
           >
@@ -287,7 +287,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             <button
               type="button"
               onClick={() => setStep(1)}
-              className={`text-[11px] font-semibold uppercase tracking-[0.2em] underline underline-offset-2 ${
+              className={`text-sm font-semibold underline underline-offset-2 ${
                 isDark ? "text-warm-300 hover:text-white" : "text-warm-500 hover:text-warm-900"
               }`}
             >
@@ -353,7 +353,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             <div>
               <label htmlFor="contact-description" className={labelClasses}>
                 What are you thinking about?{" "}
-                <span className={isDark ? "text-warm-500" : "text-warm-400"}>
+                <span className={isDark ? "text-warm-300" : "text-warm-600"}>
                   (optional)
                 </span>
               </label>
@@ -378,7 +378,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               Continue
             </CtaButton>
 
-            <p className={`text-center text-xs leading-relaxed ${isDark ? "text-warm-400" : "text-warm-500"}`}>
+            <p className={`text-center text-sm leading-relaxed ${isDark ? "text-warm-300" : "text-warm-600"}`}>
               {cta.reassurance}
             </p>
           </>
@@ -443,7 +443,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
             <div aria-live="polite" aria-atomic="true">
               {formError && (
                 <p
-                  className={`rounded-xl px-4 py-3 text-sm ${
+                  className={`rounded-xl px-4 py-3 text-base ${
                     isDark
                       ? "border border-red-400/40 bg-red-400/10 text-red-200"
                       : "border border-red-200 bg-red-50 text-red-700"
@@ -466,7 +466,7 @@ export default function ContactForm({ variant = "light" }: ContactFormProps) {
               {cta.direct}
             </CtaButton>
 
-            <p className={`text-center text-xs leading-relaxed ${isDark ? "text-warm-400" : "text-warm-500"}`}>
+            <p className={`text-center text-sm leading-relaxed ${isDark ? "text-warm-300" : "text-warm-600"}`}>
               {cta.reassurance}
             </p>
           </>
@@ -522,7 +522,7 @@ function Field({
       <label htmlFor={id} className={labelClasses}>
         {label}
         {optional && (
-          <span className={isDark ? " text-warm-500" : " text-warm-400"}>
+          <span className={isDark ? " text-warm-300" : " text-warm-600"}>
             {" "}
             (optional)
           </span>
@@ -541,14 +541,14 @@ function Field({
         aria-describedby={describedBy || undefined}
       />
       {hint && !error && (
-        <p id={hintId} className={`mt-1.5 text-xs ${hintClass ?? "text-warm-500"}`}>
+        <p id={hintId} className={`mt-1.5 text-sm ${hintClass ?? "text-warm-600"}`}>
           {hint}
         </p>
       )}
       {error && (
         <p
           id={errorId}
-          className={`mt-1.5 text-xs font-medium ${isDark ? "text-red-300" : "text-red-600"}`}
+          className={`mt-1.5 text-sm font-medium ${isDark ? "text-red-300" : "text-red-600"}`}
         >
           {error}
         </p>

@@ -8,13 +8,13 @@ export default function NotFound() {
       <Header />
       <main className="bg-warm-50">
         <section className="mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center px-6 py-32 text-center lg:px-10">
-          <p className="mb-4 eyebrow text-warm-500">
+          <p className="mb-4 eyebrow text-warm-600">
             Page Not Found
           </p>
           <h1 className="font-display text-6xl font-bold text-warm-900 sm:text-7xl lg:text-8xl">
             404
           </h1>
-          <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-warm-600">
+          <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-warm-700">
             The page you&apos;re looking for doesn&apos;t exist or has been
             moved. Let&apos;s get you back on track.
           </p>

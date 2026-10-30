@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { articles, clusters, getArticlesByCluster } from "@/data/blog";
+import { HeroImage } from "@/components/ui/hero-image";
+import { pageHeroes } from "@/data/images";
 
 export const metadata: Metadata = {
   title: "Renovation Guides & Articles",
@@ -32,13 +34,8 @@ export default function BlogIndexPage() {
         {/* ── Hero — cinematic ─────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
           <div className="relative min-h-[60vh] bg-warm-900 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label="Stacked Construction remodeling articles"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/30" />
+          <HeroImage {...pageHeroes.blog} />
+          <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/65 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
           <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl items-end px-6 pb-16 pt-32 lg:px-10 lg:pb-24">
@@ -46,11 +43,11 @@ export default function BlogIndexPage() {
               <p className="mb-5 eyebrow text-warm-400">
                 Insights &amp; Guides
               </p>
-              <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.92] text-white sm:text-6xl lg:text-7xl">
                 Remodeling{" "}
-                <em className="not-italic font-semibold text-accent">Articles</em>
+                <em className="not-italic">Articles</em>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-400">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-200">
                 Expert advice, planning tips, and design inspiration to help
                 Southwest Florida homeowners make confident remodeling decisions.
               </p>
@@ -65,12 +62,12 @@ export default function BlogIndexPage() {
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-600">
                     Featured Article
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                     Latest{" "}
-                    <em className="not-italic font-semibold text-accent-dark">
+                    <em className="not-italic">
                       Article
                     </em>
                   </h2>
@@ -80,17 +77,17 @@ export default function BlogIndexPage() {
                     href={`/blog/${featuredArticle.slug}`}
                     className="group block"
                   >
-                    <p className="mb-3 eyebrow text-accent">
+                    <p className="mb-3 eyebrow text-warm-700">
                       {clusters.find((c) => c.slug === featuredArticle.cluster)
                         ?.name ?? featuredArticle.cluster}
                     </p>
                     <h3 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 transition-colors group-hover:text-warm-700 sm:text-4xl">
                       {featuredArticle.title}
                     </h3>
-                    <p className="mt-4 text-base leading-relaxed text-warm-600 lg:text-lg">
+                    <p className="mt-4 text-base leading-relaxed text-warm-700 lg:text-lg">
                       {featuredArticle.excerpt}
                     </p>
-                    <div className="mt-6 flex items-center gap-4 text-sm text-warm-500">
+                    <div className="mt-6 flex items-center gap-4 text-sm text-warm-600">
                       <time dateTime={featuredArticle.publishedAt}>
                         {new Date(
                           featuredArticle.publishedAt
@@ -134,12 +131,12 @@ export default function BlogIndexPage() {
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="mb-14 flex items-end justify-between gap-6">
                 <div>
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-300">
                     Fresh Off the Press
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                     Recent{" "}
-                    <em className="not-italic font-semibold text-accent">Posts</em>
+                    <em className="not-italic">Posts</em>
                   </h2>
                 </div>
                 <Link
@@ -162,7 +159,7 @@ export default function BlogIndexPage() {
                   >
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
                       <div className="lg:flex-1">
-                        <p className="mb-3 eyebrow text-accent">
+                        <p className="mb-3 eyebrow text-warm-300">
                           {clusters.find((c) => c.slug === recentArticles[0].cluster)?.name ?? recentArticles[0].cluster}
                         </p>
                         <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
@@ -170,10 +167,10 @@ export default function BlogIndexPage() {
                         </h3>
                       </div>
                       <div className="lg:w-80 lg:shrink-0">
-                        <p className="text-sm leading-relaxed text-warm-400 lg:text-base">
+                        <p className="text-base leading-relaxed text-warm-200 lg:text-base">
                           {recentArticles[0].excerpt}
                         </p>
-                        <div className="mt-4 flex items-center gap-3 text-xs text-warm-600">
+                        <div className="mt-4 flex items-center gap-3 text-sm text-warm-300">
                           <time dateTime={recentArticles[0].publishedAt}>
                             {new Date(recentArticles[0].publishedAt).toLocaleDateString("en-US", {
                               month: "short",
@@ -211,16 +208,16 @@ export default function BlogIndexPage() {
                         href={`/blog/${article.slug}`}
                         className={`group block py-10 ${i === 1 ? "sm:pl-10" : "sm:pr-10"}`}
                       >
-                        <p className="mb-3 eyebrow text-accent">
+                        <p className="mb-3 eyebrow text-warm-300">
                           {clusters.find((c) => c.slug === article.cluster)?.name ?? article.cluster}
                         </p>
                         <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors group-hover:text-warm-300 sm:text-2xl">
                           {article.title}
                         </h3>
-                        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-warm-500">
+                        <p className="mt-3 line-clamp-2 text-base leading-relaxed text-warm-300">
                           {article.excerpt}
                         </p>
-                        <div className="mt-4 flex items-center gap-2 text-xs text-warm-600">
+                        <div className="mt-4 flex items-center gap-2 text-sm text-warm-300">
                           <time dateTime={article.publishedAt}>
                             {new Date(article.publishedAt).toLocaleDateString("en-US", {
                               month: "short",
@@ -244,10 +241,10 @@ export default function BlogIndexPage() {
                   >
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
                       <div className="lg:order-1 lg:flex-1">
-                        <p className="text-sm leading-relaxed text-warm-400 lg:text-base">
+                        <p className="text-base leading-relaxed text-warm-200 lg:text-base">
                           {recentArticles[3].excerpt}
                         </p>
-                        <div className="mt-4 flex items-center gap-3 text-xs text-warm-600">
+                        <div className="mt-4 flex items-center gap-3 text-sm text-warm-300">
                           <time dateTime={recentArticles[3].publishedAt}>
                             {new Date(recentArticles[3].publishedAt).toLocaleDateString("en-US", {
                               month: "short",
@@ -273,7 +270,7 @@ export default function BlogIndexPage() {
                         </span>
                       </div>
                       <div className="lg:order-2 lg:w-80 lg:shrink-0">
-                        <p className="mb-3 eyebrow text-accent">
+                        <p className="mb-3 eyebrow text-warm-300">
                           {clusters.find((c) => c.slug === recentArticles[3].cluster)?.name ?? recentArticles[3].cluster}
                         </p>
                         <h3 className="font-display text-2xl font-bold leading-[1.1] text-white transition-colors group-hover:text-warm-300 sm:text-3xl lg:text-4xl">
@@ -309,13 +306,13 @@ export default function BlogIndexPage() {
                   <div className="lg:col-span-4">
                     <p
                       className={`mb-4 eyebrow ${
-                        isEven ? "text-warm-500" : "text-warm-500"
+                        isEven ? "text-warm-700" : "text-warm-300"
                       }`}
                     >
                       Topic
                     </p>
                     <h2
-                      className={`font-display text-4xl font-bold leading-[1.05] sm:text-5xl ${
+                      className={`font-display text-[2rem] font-bold leading-[1.05] sm:text-5xl ${
                         isEven ? "text-warm-900" : "text-white"
                       }`}
                     >
@@ -323,7 +320,7 @@ export default function BlogIndexPage() {
                     </h2>
                     <p
                       className={`mt-4 text-base leading-relaxed ${
-                        isEven ? "text-warm-600" : "text-warm-500"
+                        isEven ? "text-warm-700" : "text-warm-300"
                       }`}
                     >
                       {cluster.description}
@@ -378,15 +375,15 @@ export default function BlogIndexPage() {
                               {article.title}
                             </h3>
                             <p
-                              className={`mt-2 line-clamp-2 text-sm leading-relaxed ${
-                                isEven ? "text-warm-600" : "text-warm-500"
+                              className={`mt-2 line-clamp-2 text-base leading-relaxed ${
+                                isEven ? "text-warm-700" : "text-warm-300"
                               }`}
                             >
                               {article.excerpt}
                             </p>
                             <div
-                              className={`mt-3 flex items-center gap-3 text-xs ${
-                                isEven ? "text-warm-500" : "text-warm-600"
+                              className={`mt-3 flex items-center gap-3 text-sm ${
+                                isEven ? "text-warm-600" : "text-warm-300"
                               }`}
                             >
                               <time dateTime={article.publishedAt}>
@@ -405,8 +402,8 @@ export default function BlogIndexPage() {
                           <svg
                             className={`h-5 w-5 shrink-0 transition-all group-hover:translate-x-1 ${
                               isEven
-                                ? "text-warm-400 group-hover:text-warm-900"
-                                : "text-warm-600 group-hover:text-warm-300"
+                                ? "text-warm-600 group-hover:text-warm-900"
+                                : "text-warm-300 group-hover:text-white"
                             }`}
                             fill="none"
                             viewBox="0 0 24 24"
@@ -433,22 +430,17 @@ export default function BlogIndexPage() {
         {/* ── CTA — immersive ──────────────────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start the conversation
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Done reading? Let&apos;s{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 talk
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               We come to you, walk the space, and tell you honestly what&apos;s realistic. Schedule a
               consultation and let&apos;s talk about your project.
             </p>

@@ -29,11 +29,11 @@ export default function Footer() {
           <div>
             <div className="mb-5">
               <Image
-                src="/images/logo-dark.png"
+                src="/images/logo-stacked-dark.png"
                 alt="Stacked Construction"
-                width={300}
-                height={54}
-                className="h-[54px] w-auto"
+                width={904}
+                height={288}
+                className="h-16 w-auto"
               />
             </div>
             <p className="mb-6 text-sm leading-relaxed text-warm-600">
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="mb-5 eyebrow text-warm-500">
+            <h3 className="mb-5 eyebrow text-warm-600">
               Services
             </h3>
             <ul className="space-y-3">
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="mb-5 eyebrow text-warm-500">
+            <h3 className="mb-5 eyebrow text-warm-600">
               Service Areas
             </h3>
             <ul className="space-y-3">
@@ -114,14 +114,14 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-warm-600">
+            <p className="mt-4 text-sm text-warm-600">
               Also serving {secondaryAreas.join(", ")}
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 eyebrow text-warm-500">
+            <h3 className="mb-5 eyebrow text-warm-600">
               Contact
             </h3>
             <address className="not-italic">
@@ -153,7 +153,7 @@ export default function Footer() {
                     Find us on Google
                   </a>
                 </li>
-                <li className="pt-2 text-xs text-warm-600">
+                <li className="pt-2 text-sm text-warm-600">
                   Mon–Fri: 7am–6pm
                   <br />
                   Sat: 8am–2pm
@@ -162,7 +162,7 @@ export default function Footer() {
             </address>
 
             <div className="mt-6">
-              <h3 className="mb-3 eyebrow text-warm-500">
+              <h3 className="mb-3 eyebrow text-warm-600">
                 Quick Links
               </h3>
               <ul className="space-y-2">
@@ -211,7 +211,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-warm-200 pt-8 text-center text-xs text-warm-600">
+        <div className="mt-14 border-t border-warm-200 pt-8 text-center text-sm text-warm-600">
           <p>
             &copy; {new Date().getFullYear()} Stacked Construction. All rights
             reserved. Serving Naples, Bonita Springs, Fort Myers, and Cape Coral.

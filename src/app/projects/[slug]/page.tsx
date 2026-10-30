@@ -99,7 +99,8 @@ export default async function ProjectPage({
     project.hero,
     ...project.gallery,
     ...(project.sections?.flatMap((s) => s.images) ?? []),
-  ];
+    ...(project.beforeAfter?.flatMap((p) => [p.before, p.after]) ?? []),
+  ].filter((img, i, arr) => arr.findIndex((o) => o.src === img.src) === i);
 
   const projectSchema = {
     "@context": "https://schema.org",
@@ -157,7 +158,7 @@ export default async function ProjectPage({
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/55 to-warm-900/25" />
+            <div className="absolute inset-0 bg-gradient-to-r from-warm-900/90 via-warm-900/60 to-warm-900/55" />
             <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/20 to-transparent" />
 
             <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-end px-6 pb-16 pt-40 lg:min-h-[80vh] lg:px-10 lg:pb-24">
@@ -165,7 +166,7 @@ export default async function ProjectPage({
                 <div className="lg:col-span-8">
                   {/* Breadcrumb */}
                   <nav aria-label="Breadcrumb" className="mb-6">
-                    <ol className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-widest text-warm-300">
+                    <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-warm-300">
                       <li>
                         <Link href="/projects" className="transition-colors hover:text-white">
                           Projects
@@ -182,9 +183,9 @@ export default async function ProjectPage({
                       </li>
                     </ol>
                   </nav>
-                  <h1 className="max-w-3xl font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+                  <h1 className="max-w-5xl font-display text-[2.25rem] font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
                     {project.headline}{" "}
-                    <em className="not-italic font-semibold text-accent">
+                    <em className="not-italic">
                       {project.headlineAccent}
                     </em>
                   </h1>
@@ -195,15 +196,15 @@ export default async function ProjectPage({
                 <div className="hidden lg:col-span-3 lg:col-start-10 lg:block">
                   <dl className="space-y-4 border-l border-white/20 pl-6 text-sm">
                     <div>
-                      <dt className="text-xs uppercase tracking-widest text-warm-400">Location</dt>
+                      <dt className="text-sm text-warm-400">Location</dt>
                       <dd className="mt-1 text-white">{project.city}, FL</dd>
                     </div>
                     <div>
-                      <dt className="text-xs uppercase tracking-widest text-warm-400">Service</dt>
+                      <dt className="text-sm text-warm-400">Service</dt>
                       <dd className="mt-1 text-white">{project.service}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs uppercase tracking-widest text-warm-400">County</dt>
+                      <dt className="text-sm text-warm-400">County</dt>
                       <dd className="mt-1 text-white">{project.county}</dd>
                     </div>
                   </dl>
@@ -213,30 +214,151 @@ export default async function ProjectPage({
           </div>
         </section>
 
+        {/* ── Story ────────────────────────────────────────────────── */}
+        {project.story && (
+          <section className="bg-white py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+              <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+                <div className="lg:col-span-4">
+                  <p className="eyebrow mb-5 text-warm-600">The backstory</p>
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                    {project.story.heading}{" "}
+                    <em className="not-italic">
+                      {project.story.headingAccent}
+                    </em>
+                  </h2>
+                </div>
+                <div className="space-y-6 lg:col-span-7 lg:col-start-6">
+                  {project.story.paragraphs.map((p) => (
+                    <p key={p.slice(0, 40)} className="text-lg leading-[1.8] text-warm-700">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <ol className="mt-16 grid gap-5 md:grid-cols-3 lg:mt-20">
+                {project.story.beats.map((beat, i) => (
+                  <li
+                    key={beat.title}
+                    className="rounded-3xl border border-warm-200 bg-warm-50 p-8"
+                  >
+                    <span className="font-display text-lg font-semibold text-accent-dark">
+                      {i + 1}
+                    </span>
+                    <h3 className="mt-4 font-display text-2xl font-bold text-warm-900">
+                      {beat.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-warm-700">
+                      {beat.body}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        )}
+
+        {/* ── Before & after ───────────────────────────────────────── */}
+        {project.beforeAfter && project.beforeAfter.length > 0 && (
+          <section
+            className="bg-warm-50 px-3 py-6 lg:px-4"
+            aria-labelledby="before-after-heading"
+          >
+            <div className="overflow-hidden rounded-[2rem] bg-warm-900 py-24 lg:rounded-[2.5rem] lg:py-32">
+              <div className="mx-auto max-w-7xl px-6 lg:px-10">
+                <div className="mb-16 max-w-2xl">
+                  <p className="eyebrow mb-5 text-warm-400">Before &amp; after</p>
+                  <h2
+                    id="before-after-heading"
+                    className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl"
+                  >
+                    Same House,{" "}
+                    <em className="not-italic">
+                      New Floor Plan
+                    </em>
+                  </h2>
+                </div>
+
+                <div className="space-y-20 lg:space-y-28">
+                  {project.beforeAfter.map((pair, i) => (
+                    <figure key={pair.title}>
+                      <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
+                        {(
+                          [
+                            ["Before", pair.before],
+                            ["After", pair.after],
+                          ] as const
+                        ).map(([label, image]) => (
+                          <div
+                            key={label}
+                            className="relative aspect-[3/2] overflow-hidden rounded-3xl bg-warm-800"
+                          >
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              sizes="(max-width: 640px) 100vw, 50vw"
+                              loading="lazy"
+                              className="object-cover"
+                            />
+                            <span
+                              className={`absolute left-4 top-4 rounded-full px-4 py-1.5 text-sm font-semibold ${
+                                label === "After"
+                                  ? "bg-white text-warm-900"
+                                  : "bg-warm-900/80 text-white backdrop-blur-sm"
+                              }`}
+                            >
+                              {label}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                      <figcaption className="mt-6 grid gap-3 lg:grid-cols-12">
+                        <span className="flex items-baseline gap-4 lg:col-span-4">
+                          <span className="font-display text-lg font-semibold text-warm-300">
+                            {i + 1}
+                          </span>
+                          <span className="font-display text-2xl font-bold text-white">
+                            {pair.title}
+                          </span>
+                        </span>
+                        <span className="max-w-xl text-base leading-relaxed text-warm-300 lg:col-span-7 lg:col-start-6">
+                          {pair.caption}
+                        </span>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── Intro + specs ────────────────────────────────────────── */}
         <section className="bg-warm-50 py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="eyebrow mb-5 text-warm-500">About the project</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <p className="eyebrow mb-5 text-warm-600">About the project</p>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   The{" "}
-                  <em className="not-italic font-semibold text-accent-dark">Details</em>
+                  <em className="not-italic">Details</em>
                 </h2>
-                <p className="mt-6 text-sm text-warm-500">
+                <p className="mt-6 text-sm text-warm-600">
                   {photoCount} photos of the finished work
                 </p>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600">{project.intro}</p>
+                <p className="text-lg leading-[1.8] text-warm-700">{project.intro}</p>
 
                 <dl className="mt-12 grid gap-x-10 gap-y-6 border-t border-warm-200 pt-10 sm:grid-cols-2">
                   {project.specs.map((spec) => (
                     <div key={spec.label}>
-                      <dt className="text-xs font-semibold uppercase tracking-widest text-warm-500">
+                      <dt className="text-sm font-semibold text-warm-600">
                         {spec.label}
                       </dt>
-                      <dd className="mt-1.5 text-sm leading-relaxed text-warm-900">
+                      <dd className="mt-1.5 text-base leading-relaxed text-warm-900">
                         {spec.value}
                       </dd>
                     </div>
@@ -253,14 +375,14 @@ export default async function ProjectPage({
             <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-6">
                 <p className="eyebrow mb-5 text-warm-900">Gallery</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
                   {project.city}{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     Walkthrough
                   </em>
                 </h2>
               </div>
-              <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:col-span-5 lg:col-start-8 lg:ml-auto lg:text-right">
+              <p className="max-w-sm text-base leading-relaxed text-warm-700 lg:col-span-5 lg:col-start-8 lg:ml-auto lg:text-right">
                 Photographed at handover. Every image is this project — nothing
                 staged from another job.
               </p>
@@ -290,7 +412,7 @@ export default async function ProjectPage({
                   </h2>
                 </div>
                 <div className="lg:col-span-7 lg:col-start-6">
-                  <p className="text-lg leading-[1.8] text-warm-600">
+                  <p className="text-lg leading-[1.8] text-warm-700">
                     {section.body}
                   </p>
                 </div>
@@ -315,11 +437,11 @@ export default async function ProjectPage({
               <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-4">
                   <p className="eyebrow mb-5 text-warm-400">Scope of work</p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
                     What We{" "}
-                    <em className="not-italic font-semibold text-accent">Did</em>
+                    <em className="not-italic">Did</em>
                   </h2>
-                  <p className="mt-6 max-w-sm text-sm leading-relaxed text-warm-300">
+                  <p className="mt-6 max-w-sm text-base leading-relaxed text-warm-300">
                     Permits, inspections, and subcontractor scheduling handled
                     in-house — one point of contact from demo to final
                     walk-through.
@@ -328,8 +450,8 @@ export default async function ProjectPage({
                 <ul className="divide-y divide-white/10 border-t border-white/10 lg:col-span-7 lg:col-start-6">
                   {project.scope.map((item, i) => (
                     <li key={item} className="flex items-start gap-5 py-5">
-                      <span className="font-display text-lg font-semibold text-warm-500">
-                        {String(i + 1).padStart(2, "0")}
+                      <span className="font-display text-lg font-semibold text-warm-300">
+                        {i + 1}
                       </span>
                       <span className="text-base leading-relaxed text-warm-100">
                         {item}
@@ -347,10 +469,10 @@ export default async function ProjectPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="eyebrow mb-5 text-warm-500">FAQ</p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+                <p className="eyebrow mb-5 text-warm-600">FAQ</p>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
                   Common{" "}
-                  <em className="not-italic font-semibold text-accent-dark">
+                  <em className="not-italic">
                     Questions
                   </em>
                 </h2>
@@ -369,7 +491,7 @@ export default async function ProjectPage({
                         </svg>
                       </span>
                     </summary>
-                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-warm-600">
+                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-warm-700">
                       {faq.answer}
                     </p>
                   </details>
@@ -384,10 +506,10 @@ export default async function ProjectPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="eyebrow mb-5 text-warm-500">Keep exploring</p>
+                <p className="eyebrow mb-5 text-warm-600">Keep exploring</p>
                 <h2 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 sm:text-4xl">
                   Related{" "}
-                  <em className="not-italic font-semibold text-accent-dark">Pages</em>
+                  <em className="not-italic">Pages</em>
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
@@ -400,7 +522,7 @@ export default async function ProjectPage({
                       <span className="text-base font-medium text-warm-900">
                         {project.service} in Southwest Florida
                       </span>
-                      <span aria-hidden="true" className="text-warm-500">→</span>
+                      <span aria-hidden="true" className="text-warm-600">→</span>
                     </Link>
                   </li>
                   <li>
@@ -411,7 +533,7 @@ export default async function ProjectPage({
                       <span className="text-base font-medium text-warm-900">
                         Remodeling in {project.city}, FL
                       </span>
-                      <span aria-hidden="true" className="text-warm-500">→</span>
+                      <span aria-hidden="true" className="text-warm-600">→</span>
                     </Link>
                   </li>
                   <li>
@@ -422,9 +544,22 @@ export default async function ProjectPage({
                       <span className="text-base font-medium text-warm-900">
                         Kitchen remodeling in {project.city}
                       </span>
-                      <span aria-hidden="true" className="text-warm-500">→</span>
+                      <span aria-hidden="true" className="text-warm-600">→</span>
                     </Link>
                   </li>
+                  {project.relatedLinks?.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="flex items-center justify-between gap-6 py-5 transition-colors hover:text-accent-dark"
+                      >
+                        <span className="text-base font-medium text-warm-900">
+                          {link.label}
+                        </span>
+                        <span aria-hidden="true" className="text-warm-600">→</span>
+                      </Link>
+                    </li>
+                  ))}
                   {others.map((other) => (
                     <li key={other.slug}>
                       <Link
@@ -434,7 +569,7 @@ export default async function ProjectPage({
                         <span className="text-base font-medium text-warm-900">
                           {other.name} — {other.city}
                         </span>
-                        <span aria-hidden="true" className="text-warm-500">→</span>
+                        <span aria-hidden="true" className="text-warm-600">→</span>
                       </Link>
                     </li>
                   ))}
@@ -447,16 +582,16 @@ export default async function ProjectPage({
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="bg-white py-24 lg:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-10">
-            <p className="eyebrow mb-5 justify-center text-warm-500">
+            <p className="eyebrow mb-5 justify-center text-warm-600">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl">
               Planning a {project.city}{" "}
-              <em className="not-italic font-semibold text-accent-dark">
+              <em className="not-italic">
                 remodel?
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-warm-600">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-warm-700">
               Tell us about your space and we&apos;ll put together a detailed,
               line-item estimate. Licensed &amp; insured Florida general
               contractor, FL #CBC1269972.

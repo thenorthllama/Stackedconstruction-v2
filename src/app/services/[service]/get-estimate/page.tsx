@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LandingForm from "@/components/LandingForm";
+import { HeroImage } from "@/components/ui/hero-image";
+import { serviceHeroes, pageHeroes } from "@/data/images";
 
 // ─── Static generation ──────────────────────────────────────────────────────────
 
@@ -52,13 +54,8 @@ export default async function ServiceLandingPage({
       <main id="main">
         {/* ── Full-screen hero with vertically centered content ──── */}
         <section className="bg-warm-50 px-3 pt-2 lg:px-4">
-          <div className="relative flex min-h-screen items-start bg-warm-900 lg:items-center overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-            role="img"
-            aria-label={`${service.name} project by Stacked Construction`}
-          />
+          <div className="relative flex min-h-svh items-start bg-warm-900 lg:items-center overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
+          <HeroImage {...(serviceHeroes[service.slug] ?? pageHeroes.default)} />
           <div className="absolute inset-0 bg-gradient-to-r from-warm-900/95 via-warm-900/80 to-warm-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/40 to-transparent" />
 
@@ -74,13 +71,13 @@ export default async function ServiceLandingPage({
                 <p className="mb-5 eyebrow text-warm-400">
                   Request a Consultation
                 </p>
-                <h1 className="max-w-xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
+                <h1 className="max-w-5xl font-display text-4xl font-bold leading-[0.95] text-white sm:text-5xl">
                   {service.headline}{" "}
-                  <em className="not-italic font-semibold text-accent">
+                  <em className="not-italic">
                     {service.headlineItalic}
                   </em>
                 </h1>
-                <p className="mt-6 max-w-lg text-lg leading-relaxed text-warm-400">
+                <p className="mt-6 max-w-lg text-lg leading-relaxed text-warm-200">
                   {service.description}
                 </p>
 
@@ -88,19 +85,19 @@ export default async function ServiceLandingPage({
                 <div className="mt-12 grid grid-cols-3 gap-8 border-t border-warm-700/50 pt-10">
                   <div>
                     <p className="font-display text-3xl font-bold text-white lg:text-4xl">40+</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-300">
                       Projects
                     </p>
                   </div>
                   <div>
                     <p className="font-display text-3xl font-bold text-white lg:text-4xl">5/5</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-300">
                       Rating
                     </p>
                   </div>
                   <div>
                     <p className="font-display text-3xl font-bold text-white lg:text-4xl">10+</p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-300">
                       Years
                     </p>
                   </div>
@@ -125,19 +122,15 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
               <div className="lg:col-span-4">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   Our Approach
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  Why homeowners
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">
-                    for {service.shortName}
-                  </em>
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  Why homeowners choose Stacked
                 </h2>
               </div>
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="text-lg leading-[1.8] text-warm-600 lg:text-xl">
+                <p className="text-lg leading-[1.8] text-warm-700 lg:text-xl">
                   {service.intro}
                 </p>
                 <div className="mt-10 grid grid-cols-3 gap-8 border-t border-warm-200 pt-10">
@@ -145,7 +138,7 @@ export default async function ServiceLandingPage({
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       40+
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Projects
                     </p>
                   </div>
@@ -153,7 +146,7 @@ export default async function ServiceLandingPage({
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       5/5
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Rating
                     </p>
                   </div>
@@ -161,7 +154,7 @@ export default async function ServiceLandingPage({
                     <p className="font-display text-3xl font-bold text-warm-900 lg:text-4xl">
                       10+
                     </p>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-widest text-warm-500">
+                    <p className="mt-1 text-sm font-medium text-warm-600">
                       Years
                     </p>
                   </div>
@@ -176,12 +169,12 @@ export default async function ServiceLandingPage({
           <div className="relative bg-warm-900 py-24 lg:py-36 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mb-16 max-w-2xl">
-              <p className="mb-4 eyebrow text-warm-500">
+              <p className="mb-4 eyebrow text-warm-300">
                 What&apos;s Included
               </p>
-              <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
+              <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
                 {service.shortName}{" "}
-                <em className="not-italic font-semibold text-accent">
+                <em className="not-italic">
                   Scope of Work
                 </em>
               </h2>
@@ -191,9 +184,9 @@ export default async function ServiceLandingPage({
                 {benefitsLeft.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + 1).padStart(2, "0")}
+                      {i + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -203,9 +196,9 @@ export default async function ServiceLandingPage({
                 {benefitsRight.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-5 p-8 lg:p-10">
                     <span className="font-display text-4xl font-bold leading-none text-warm-800">
-                      {String(i + midpoint + 1).padStart(2, "0")}
+                      {i + midpoint + 1}
                     </span>
-                    <p className="text-base leading-relaxed text-warm-400 pt-1">
+                    <p className="text-base leading-relaxed text-warm-200 pt-1">
                       {benefit}
                     </p>
                   </div>
@@ -221,26 +214,24 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-4 lg:sticky lg:top-32">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-600">
                   How we work
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                  You&apos;ll always know
-                  <br />
-                  <em className="not-italic font-semibold text-accent-dark">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                  You&apos;ll always know{" "}<em className="not-italic">
                     the next step
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-600">
-                  Three steps from first conversation to final walk-through.
+                <p className="mt-6 text-base leading-relaxed text-warm-700">
+                  From first conversation to final walk-through.
                 </p>
               </div>
               <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
                 {[
-                  { step: "01", title: "Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
-                  { step: "02", title: "Design & Proposal", desc: "We design the space and hand you a line-item proposal — drawings, selections, and real numbers — before a tool comes out." },
-                  { step: "03", title: "Build", desc: "We pull the permits, schedule the trades, and keep you updated without you having to ask — through final walk-through." },
-                  { step: "04", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
+                  { step: "1", title: "Consultation", desc: "We visit your home, listen to your vision, assess the space, and discuss your goals and budget — no pressure, no commitment." },
+                  { step: "2", title: "Design & Proposal", desc: "We design the space and hand you a line-item proposal — drawings, selections, and real numbers — before a tool comes out." },
+                  { step: "3", title: "Build", desc: "We pull the permits, schedule the trades, and keep you updated without you having to ask — through final walk-through." },
+                  { step: "4", title: "Final Walk-Through", desc: "We walk every detail together. If anything isn't perfect, we make it right before the project is complete." },
                 ].map((s) => (
                   <div key={s.step} className="py-10 first:pt-0 last:pb-0">
                     <div className="flex items-start gap-6">
@@ -251,7 +242,7 @@ export default async function ServiceLandingPage({
                         <h3 className="mb-2 font-display text-xl font-semibold text-warm-900">
                           {s.title}
                         </h3>
-                        <p className="text-sm leading-relaxed text-warm-600">
+                        <p className="text-base leading-relaxed text-warm-700">
                           {s.desc}
                         </p>
                       </div>
@@ -269,17 +260,15 @@ export default async function ServiceLandingPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
               <div className="lg:col-span-5">
-                <p className="mb-4 eyebrow text-warm-500">
+                <p className="mb-4 eyebrow text-warm-300">
                   Where We Work
                 </p>
-                <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl">
-                  {service.shortName} Experts
-                  <br />
-                  <em className="not-italic font-semibold text-accent">
+                <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-[2.5rem]">
+                  {service.shortName} Experts{" "}<em className="not-italic">
                     Across SWFL
                   </em>
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-warm-500">
+                <p className="mt-6 text-base leading-relaxed text-warm-300">
                   We provide expert {service.name.toLowerCase()} across three
                   counties and six major cities in Southwest Florida.
                 </p>
@@ -296,12 +285,12 @@ export default async function ServiceLandingPage({
                         <span className="font-display text-2xl font-semibold text-white transition-colors group-hover:text-warm-300">
                           {city.name}
                         </span>
-                        <span className="ml-4 text-xs font-medium uppercase tracking-widest text-warm-600">
+                        <span className="ml-4 text-sm font-medium text-warm-300">
                           {city.county}
                         </span>
                       </div>
                       <svg
-                        className="h-5 w-5 text-warm-600 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
+                        className="h-5 w-5 text-warm-300 transition-all group-hover:translate-x-1 group-hover:text-warm-300"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -329,13 +318,11 @@ export default async function ServiceLandingPage({
             <div className="mx-auto max-w-7xl px-6 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-4">
-                  <p className="mb-4 eyebrow text-warm-500">
+                  <p className="mb-4 eyebrow text-warm-600">
                     Common Questions
                   </p>
-                  <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl">
-                    Frequently
-                    <br />
-                    <em className="not-italic font-semibold text-accent-dark">Asked</em>
+                  <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-[2.5rem]">
+                    Frequently{" "}<em className="not-italic">Asked</em>
                   </h2>
                 </div>
                 <div className="space-y-0 divide-y divide-warm-200 lg:col-span-7 lg:col-start-6">
@@ -349,7 +336,7 @@ export default async function ServiceLandingPage({
                           {faq.question}
                         </h3>
                         <svg
-                          className="mt-1 h-5 w-5 shrink-0 text-warm-400 transition-transform group-open:rotate-45"
+                          className="mt-1 h-5 w-5 shrink-0 text-warm-600 transition-transform group-open:rotate-45"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -363,7 +350,7 @@ export default async function ServiceLandingPage({
                           />
                         </svg>
                       </summary>
-                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-600">
+                      <p className="mt-4 pr-12 text-base leading-relaxed text-warm-700">
                         {faq.answer}
                       </p>
                     </details>
@@ -377,22 +364,17 @@ export default async function ServiceLandingPage({
         {/* ── CTA — immersive, full-bleed ──────────────────────────── */}
         <section className="bg-warm-50 px-3 py-6 lg:px-4">
           <div className="relative bg-warm-900 py-28 lg:py-40 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem]">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-            style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/80 to-warm-900" />
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
-            <p className="mb-5 eyebrow text-warm-500">
+            <p className="mb-5 eyebrow text-warm-300">
               Start Your Project
             </p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-display text-[1.75rem] font-bold leading-[1.05] text-white sm:text-5xl">
               Let&apos;s Talk About{" "}
-              <em className="not-italic font-semibold text-accent">
+              <em className="not-italic">
                 your {service.shortName.toLowerCase()}
               </em>
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-500">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-300">
               We come to you and tell you honestly what&apos;s realistic. No charge, no
               obligation — just a straight conversation about your project and a
               clear path forward.

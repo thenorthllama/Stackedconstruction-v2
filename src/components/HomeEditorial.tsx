@@ -1,55 +1,57 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/data/projects";
 
-/* ── About — founder-led section (najlepszeokna: "30 Lat Precyzji" + quote) ── */
+/* ── About — founder-led section ──────────────────────────────────────────── */
 
 export function AboutStatement() {
   return (
-    <section className="bg-warm-50 py-24 lg:py-32" aria-label="About Stacked Construction">
+    <section className="bg-warm-50 py-24 lg:py-32" aria-labelledby="about-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-16 max-w-3xl">
-          <p className="eyebrow mb-5 text-warm-900">About Us</p>
-          <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl lg:text-6xl">
-            You should be excited
-            <br />
-            <em className="not-italic font-semibold text-accent-dark">
-              about this, not anxious
-            </em>
+        <div className="mb-14 max-w-3xl">
+          <h2
+            id="about-heading"
+            className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl"
+          >
+            You should be excited, not anxious
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-600">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-700">
             We&apos;re not the biggest contractor in Southwest Florida, and
             that&apos;s deliberate. Junior is on your project. You&apos;ll know
-            who is in your home and who to call — for ten years and 40+
+            who is in your home and who to call — for more than ten years and 40+
             projects, that hasn&apos;t changed.
           </p>
         </div>
 
         {/* Founder quote block */}
         <div className="grid gap-10 rounded-[2rem] bg-white p-8 lg:grid-cols-12 lg:items-center lg:p-14">
-          <div className="lg:col-span-8">
-            <h3 className="font-display text-2xl font-semibold text-warm-900 sm:text-3xl">
+          <div className="lg:col-span-7">
+            <h3 className="font-display text-2xl font-bold text-warm-900">
               No surprises. That&apos;s the whole point.
             </h3>
-            <blockquote className="mt-5 max-w-2xl text-base leading-relaxed text-warm-600">
+            <blockquote className="mt-5 max-w-2xl text-lg leading-relaxed text-warm-700">
               &ldquo;I lead every project with a structured process designed to
               protect the client, control quality, and deliver a finished space
               that reflects your vision — on budget, on time, and with no
               surprises.&rdquo;
             </blockquote>
-            <p className="mt-6 font-display text-lg font-semibold text-warm-900">
+            <p className="mt-6 text-base font-semibold text-warm-900">
               Junior Da Silva
             </p>
-            <p className="text-sm text-warm-500">
+            <p className="text-sm text-warm-600">
               Founder &amp; Licensed Building Contractor · FL #CBC1269972
             </p>
           </div>
-          <div className="lg:col-span-4">
-            <div
-              className="aspect-[4/3] w-full rounded-3xl bg-cover bg-center"
-              style={{ backgroundImage: "url('/images/kitchen-warm-craftsman.webp')" }}
-              role="img"
-              aria-label="Warm craftsman kitchen remodel by Stacked Construction"
-            />
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-warm-100">
+              <Image
+                src="/images/kitchen-warm-craftsman.webp"
+                alt="Warm craftsman kitchen remodel by Stacked Construction"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -57,13 +59,13 @@ export function AboutStatement() {
   );
 }
 
-/* ── Team — list rows (reference: "• Our Architects") ─────────────────────── */
+/* ── Team — one card per person ───────────────────────────────────────────── */
 
 const team = [
   {
     name: "Junior Da Silva",
     role: "Founder & Licensed Building Contractor",
-    note: "Florida-licensed building contractor (CBC1269972) with nearly a decade of hands-on remodeling experience across Southwest Florida.",
+    note: "Florida-licensed building contractor (CBC1269972) with more than ten years of hands-on remodeling experience across Southwest Florida.",
     href: "/about/junior-da-silva",
   },
   {
@@ -82,47 +84,39 @@ const team = [
 
 export function TeamList() {
   return (
-    <section className="bg-white py-24 lg:py-32" aria-label="Our team">
+    <section className="bg-white py-24 lg:py-32" aria-labelledby="team-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-12 max-w-2xl">
-          <p className="eyebrow mb-5 text-warm-900">Our Team</p>
-          <h2 className="font-display text-3xl font-bold leading-[1.1] text-warm-900 sm:text-4xl">
-            The people who will actually be{" "}
-            <em className="not-italic font-semibold text-accent-dark">
-              in your home
-            </em>
+          <h2
+            id="team-heading"
+            className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl"
+          >
+            Who will be in your home
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-warm-600">
+          <p className="mt-5 text-lg leading-relaxed text-warm-700">
             Not a call center. These are the three people you&apos;ll be working
             with, and their licenses and credentials are public.
           </p>
         </div>
-        <div className="divide-y divide-warm-200 border-t border-warm-200">
+        <div className="grid gap-5 lg:grid-cols-3">
           {team.map((member) => (
-            <div
-              key={member.name}
-              className="grid gap-4 py-8 lg:grid-cols-12 lg:items-center"
-            >
-              <div className="lg:col-span-4">
-                <h3 className="font-display text-2xl font-semibold text-warm-900">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-sm text-warm-500">{member.role}</p>
-              </div>
-              <p className="text-sm leading-relaxed text-warm-600 lg:col-span-5">
+            <div key={member.name} className="flex flex-col rounded-3xl bg-warm-50 p-8">
+              <h3 className="font-display text-2xl font-bold text-warm-900">
+                {member.name}
+              </h3>
+              <p className="mt-1 text-sm text-warm-600">{member.role}</p>
+              <p className="mt-5 flex-1 text-base leading-relaxed text-warm-700">
                 {member.note}
               </p>
-              <div className="lg:col-span-3 lg:text-right">
-                <Link
-                  href={member.href}
-                  className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-colors hover:text-accent-dark"
-                >
-                  View Profile
-                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-              </div>
+              <Link
+                href={member.href}
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-warm-900 transition-colors hover:text-accent-dark"
+              >
+                View {member.name.split(" ")[0]}&apos;s profile
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
             </div>
           ))}
         </div>
@@ -131,136 +125,75 @@ export function TeamList() {
   );
 }
 
-/* ── Project Categories — dark image section (reference) ──────────────────── */
+/* ── Case studies — editorial rows ────────────────────────────────────────── */
 
-const categories = [
-  { name: "Kitchen Remodeling", href: "/services/kitchen-remodeling" },
-  { name: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
-  { name: "Outdoor Living & Kitchens", href: "/services/outdoor-living" },
-  { name: "Full Home Renovation", href: "/services/home-renovation" },
-  { name: "Flooring & Tile", href: "/services/flooring-tile" },
-];
+/** Homepage shows the newest projects only; /projects lists them all */
+const HOME_CASE_STUDY_LIMIT = 4;
 
-export function ProjectCategories() {
-  return (
-    <section className="bg-warm-50 px-3 py-6 lg:px-4" aria-label="Project categories">
-      <div className="relative overflow-hidden rounded-[2rem] bg-warm-900 lg:rounded-[2.5rem]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/kitchen-poolside-oak.webp')" }}
-          role="img"
-          aria-label="Poolside oak kitchen remodel by Stacked Construction in Bonita Springs"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-warm-900/85 via-warm-900/55 to-warm-900/25" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-6">
-              <h2 className="font-display text-5xl font-bold leading-[1.02] text-white sm:text-6xl">
-                Design and build,
-                <br />
-                <em className="not-italic font-semibold text-accent">
-                  under one roof
-                </em>
-              </h2>
-            </div>
-            <div className="lg:col-span-4">
-              <ul className="space-y-4">
-                {categories.map((c) => (
-                  <li key={c.href}>
-                    <Link
-                      href={c.href}
-                      className="eyebrow text-warm-100 transition-colors hover:text-white"
-                    >
-                      {c.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="lg:col-span-2 lg:text-right">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-white py-2.5 pl-7 pr-2.5 text-sm font-semibold text-warm-900 transition-all hover:bg-warm-100"
-              >
-                Request a Consultation
-                <span
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-warm-900 text-white transition-transform duration-300 group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                >
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Case studies — editorial rows (reference: "• Recent case studies") ───── */
-
-const caseStudies = projects.map((p) => ({
-  title: p.name,
+const caseStudies = projects.slice(0, HOME_CASE_STUDY_LIMIT).map((p) => ({
+  title: p.shortName,
   location: `${p.city}, FL`,
   href: `/projects/${p.slug}`,
   description: p.summary,
   image: p.hero.src,
   alt: p.hero.alt,
-  cta: "View project",
 }));
 
 export function CaseStudies() {
   return (
-    <section className="bg-warm-50 py-24 lg:py-32" aria-label="Recent case studies">
+    <section className="bg-white py-24 lg:py-32" aria-labelledby="work-heading">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {/* Header — local-proof framing */}
-        <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
+        <div className="mb-16 grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-5 text-warm-900">Recent case studies</p>
-            <h2 className="font-display text-4xl font-bold leading-[1.05] text-warm-900 sm:text-5xl lg:text-6xl">
-              Built in Your
-              <br />
-              <em className="not-italic font-semibold text-accent-dark">Neighborhood</em>
+            <h2
+              id="work-heading"
+              className="font-display text-[1.75rem] font-bold leading-[1.05] text-warm-900 sm:text-5xl"
+            >
+              Built in your neighborhood
             </h2>
           </div>
-          <div className="lg:col-span-5 lg:text-right">
-            <p className="max-w-sm text-sm leading-relaxed text-warm-600 lg:ml-auto">
-              Real homes in Naples, Bonita Springs, Fort Myers, and Cape Coral.
-              Every photo is finished work we handed over — no renderings, no
-              stock.
-            </p>
-          </div>
+          <p className="max-w-md text-lg leading-relaxed text-warm-700 lg:col-span-5">
+            Real homes in Naples, Bonita Springs, Fort Myers, and Cape Coral,
+            photographed as we handed them over.
+          </p>
         </div>
 
-        <div className="space-y-16 lg:space-y-20">
+        <div className="space-y-20 lg:space-y-28">
           {caseStudies.map((cs, i) => (
-            <div
-              key={cs.title}
-              className="grid gap-8 border-t border-warm-200 pt-12 lg:grid-cols-12 lg:items-center"
+            <article
+              key={cs.href}
+              className="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-12"
             >
-              <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-2 lg:col-start-8" : ""}`}>
-                <div className="flex items-baseline gap-4">
-                  <span className="font-display text-lg font-semibold text-warm-400">
-                    {String(i + 1).padStart(2, "0")}{" "}
-                    <span className="text-warm-300">/ {String(caseStudies.length).padStart(2, "0")}</span>
-                  </span>
-                  <p className="eyebrow text-warm-500">{cs.location}</p>
-                </div>
-                <h3 className="mt-4 font-display text-3xl font-semibold text-warm-900 sm:text-4xl">
+              <div className={`lg:col-span-7 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                <Link
+                  href={cs.href}
+                  className="group relative block aspect-[16/10] w-full overflow-hidden rounded-[2rem] bg-warm-100"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                >
+                  <Image
+                    src={cs.image}
+                    alt={cs.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
+                  />
+                </Link>
+              </div>
+              <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                <h3 className="font-display text-2xl font-bold leading-tight text-warm-900 sm:text-3xl">
                   {cs.title}
                 </h3>
-                <p className="mt-4 max-w-md text-sm leading-relaxed text-warm-600">
+                <p className="mt-2 text-sm font-medium text-warm-600">{cs.location}</p>
+                <p className="mt-4 max-w-md text-base leading-relaxed text-warm-700">
                   {cs.description}
                 </p>
                 <Link
                   href={cs.href}
-                  className="group mt-8 inline-flex items-center gap-3 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-[13px] font-semibold uppercase tracking-wider text-white transition-colors hover:bg-warm-800"
+                  className="group mt-7 inline-flex items-center gap-3 rounded-full bg-warm-900 py-2 pl-6 pr-2 text-sm font-semibold text-white transition-colors hover:bg-warm-800"
                 >
-                  {cs.cta}
+                  View project
+                  <span className="sr-only">: {cs.title}</span>
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-warm-900 transition-transform duration-300 group-hover:translate-x-0.5"
                     aria-hidden="true"
@@ -271,24 +204,16 @@ export function CaseStudies() {
                   </span>
                 </Link>
               </div>
-              <div className={`lg:col-span-6 ${i % 2 === 1 ? "lg:order-1 lg:col-start-1" : "lg:col-start-7"}`}>
-                <div
-                  className="aspect-[16/10] w-full rounded-[2rem] bg-cover bg-center"
-                  style={{ backgroundImage: `url('${cs.image}')` }}
-                  role="img"
-                  aria-label={cs.alt}
-                />
-              </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16">
           <Link
             href="/projects"
-            className="group inline-flex items-center gap-3 rounded-full border border-warm-900/25 py-2.5 pl-7 pr-2.5 text-[13px] font-semibold uppercase tracking-wider text-warm-900 transition-all hover:border-warm-900"
+            className="group inline-flex items-center gap-3 rounded-full border border-warm-900/25 py-2.5 pl-7 pr-2.5 text-sm font-semibold text-warm-900 transition-colors hover:border-warm-900"
           >
-            View all projects
+            See all projects
             <span
               className="flex h-9 w-9 items-center justify-center rounded-full bg-warm-900 text-white transition-transform duration-300 group-hover:translate-x-0.5"
               aria-hidden="true"
